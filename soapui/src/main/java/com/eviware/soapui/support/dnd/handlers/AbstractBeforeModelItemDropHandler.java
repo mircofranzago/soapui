@@ -22,73 +22,73 @@ public abstract class AbstractBeforeModelItemDropHandler<T1 extends ModelItem, T
 		super( sourceClass, targetClass );
 	}
 
-	@Override
+	
 	boolean canCopyAfter( T1 source, T2 target )
 	{
 		return false;
 	}
 
-	@Override
+	
 	boolean canMoveAfter( T1 source, T2 target )
 	{
 		return false;
 	}
 
-	@Override
+	
 	boolean copyAfter( T1 source, T2 target )
 	{
 		return false;
 	}
 
-	@Override
+	
 	String getCopyAfterInfo( T1 source, T2 target )
 	{
 		return null;
 	}
 
-	@Override
+	
 	String getMoveAfterInfo( T1 source, T2 target )
 	{
 		return null;
 	}
 
-	@Override
+	
 	boolean moveAfter( T1 source, T2 target )
 	{
 		return false;
 	}
 
-	@Override
+	
 	boolean canCopyOn( T1 source, T2 target )
 	{
 		return false;
 	}
 
-	@Override
+	
 	boolean canMoveOn( T1 source, T2 target )
 	{
 		return false;
 	}
 
-	@Override
+	
 	boolean copyOn( T1 source, T2 target )
 	{
 		return false;
 	}
 
-	@Override
+	
 	String getCopyOnInfo( T1 source, T2 target )
 	{
 		return null;
 	}
 
-	@Override
+	
 	String getMoveOnInfo( T1 source, T2 target )
 	{
 		return null;
 	}
 
-	@Override
+	
 	boolean moveOn( T1 source, T2 target )
 	{
 		return false;

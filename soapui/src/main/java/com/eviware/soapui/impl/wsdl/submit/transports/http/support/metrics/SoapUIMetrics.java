@@ -168,7 +168,7 @@ public class SoapUIMetrics extends HttpConnectionMetricsImpl
 		}
 	}
 
-	@Override
+	
 	public String toString()
 	{
 		StringBuffer sb = new StringBuffer();
@@ -181,7 +181,7 @@ public class SoapUIMetrics extends HttpConnectionMetricsImpl
 		return sb.toString();
 	}
 
-	@Override
+	
 	public boolean equals( Object o )
 	{
 		if( this == o )
@@ -197,7 +197,7 @@ public class SoapUIMetrics extends HttpConnectionMetricsImpl
 		return this.toString().equals( that.toString() );
 	}
 
-	@Override
+	
 	public int hashCode()
 	{
 		return toString().hashCode();

@@ -28,31 +28,31 @@ public class StubbedDialogs implements XDialogs
 	private List<Boolean> valuesToReturnFromConfirm = new ArrayList<Boolean>();
 	private int currentValueToReturnFromConfirm = 0;
 
-	@Override
+	
 	public void showErrorMessage( String message )
 	{
 		errorMessages.add( message );
 	}
 
-	@Override
+	
 	public void showInfoMessage( String message )
 	{
 		infoMessages.add( message );
 	}
 
-	@Override
+	
 	public void showInfoMessage( String message, String title )
 	{
 		infoMessages.add( message );
 	}
 
-	@Override
+	
 	public void showExtendedInfo( String title, String description, String content, Dimension size )
 	{
 
 	}
 
-	@Override
+	
 	public boolean confirm( String question, String title )
 	{
 		confirmations.add( new Confirmation( question, title ) );
@@ -68,7 +68,7 @@ public class StubbedDialogs implements XDialogs
 		return false;
 	}
 
-	@Override
+	
 	public Boolean confirmOrCancel( String question, String title )
 	{
 		confirmations.add( new Confirmation( question, title ) );
@@ -89,65 +89,65 @@ public class StubbedDialogs implements XDialogs
 		return returnValue;
 	}
 
-	@Override
+	
 	public int yesYesToAllOrNo( String question, String title )
 	{
 		return 0;
 	}
 
-	@Override
+	
 	public String prompt( String question, String title, String value )
 	{
 		prompts.add( new Prompt( question, title, value ) );
 		return mockingPromptValue ? ( String )valueToReturnFromPrompt : value;
 	}
 
-	@Override
+	
 	public String prompt( String question, String title )
 	{
 		prompts.add( new Prompt( question, title, null ) );
 		return mockingPromptValue ? (String)valueToReturnFromPrompt : null;
 	}
 
-	@Override
+	
 	public Object prompt( String question, String title, Object[] objects )
 	{
 		prompts.add( new Prompt( question, title, objects ) );
 		return mockingPromptValue ? valueToReturnFromPrompt : objects[0];
 	}
 
-	@Override
+	
 	public Object prompt( String question, String title, Object[] objects, String value )
 	{
 		prompts.add( new Prompt( question, title, objects ) );
 		return value;
 	}
 
-	@Override
+	
 	public char[] promptPassword( String question, String title )
 	{
 		return new char[0];
 	}
 
-	@Override
+	
 	public XProgressDialog createProgressDialog( String label, int length, String initialValue, boolean canCancel )
 	{
 		return new NullProgressDialog();
 	}
 
-	@Override
+	
 	public boolean confirmExtendedInfo( String title, String description, String content, Dimension size )
 	{
 		return false;
 	}
 
-	@Override
+	
 	public Boolean confirmOrCancleExtendedInfo( String title, String description, String content, Dimension size )
 	{
 		return null;
 	}
 
-	@Override
+	
 	public String selectXPath( String title, String info, String xml, String xpath )
 	{
 		return null;
@@ -212,7 +212,7 @@ public class StubbedDialogs implements XDialogs
 			this.value = value;
 		}
 
-		@Override
+		
 		public String toString()
 		{
 			return "Prompt{" +
@@ -235,7 +235,7 @@ public class StubbedDialogs implements XDialogs
 			this.title = title;
 		}
 
-		@Override
+		
 		public String toString()
 		{
 			return "Confirmation{" +
@@ -249,7 +249,7 @@ public class StubbedDialogs implements XDialogs
 	{
 		return new TypeSafeMatcher<List<Prompt>>()
 		{
-			@Override
+			
 			public boolean matchesSafely( List<Prompt> prompts )
 			{
 				for( Prompt prompt : prompts )
@@ -262,7 +262,7 @@ public class StubbedDialogs implements XDialogs
 				return false;
 			}
 
-			@Override
+			
 			public void describeTo( Description description )
 			{
 				description.appendText( "a Prompt list with a prompt with the value '" + value + "'" );
@@ -274,7 +274,7 @@ public class StubbedDialogs implements XDialogs
 	{
 		return new TypeSafeMatcher<List<Confirmation>>()
 		{
-			@Override
+			
 			public boolean matchesSafely( List<Confirmation> confirmations )
 			{
 				for( Confirmation confirmation : confirmations )
@@ -287,7 +287,7 @@ public class StubbedDialogs implements XDialogs
 				return false;
 			}
 
-			@Override
+			
 			public void describeTo( Description description )
 			{
 				description.appendText( "a Confirm list with a confirm with the question '" + question + "'" );

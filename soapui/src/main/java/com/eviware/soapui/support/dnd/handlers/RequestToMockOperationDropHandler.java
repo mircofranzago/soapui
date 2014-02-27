@@ -27,19 +27,19 @@ public class RequestToMockOperationDropHandler extends
 		super( WsdlRequest.class, WsdlMockOperation.class );
 	}
 
-	@Override
+	
 	boolean canCopyAfter( WsdlRequest source, WsdlMockOperation target )
 	{
 		return source.getOperation() == target.getOperation();
 	}
 
-	@Override
+	
 	boolean canMoveAfter( WsdlRequest source, WsdlMockOperation target )
 	{
 		return source.getOperation() == target.getOperation();
 	}
 
-	@Override
+	
 	boolean copyAfter( WsdlRequest source, WsdlMockOperation target )
 	{
 		return addRequestToMockOperation( source, target );
@@ -56,19 +56,19 @@ public class RequestToMockOperationDropHandler extends
 		return true;
 	}
 
-	@Override
+	
 	boolean moveAfter( WsdlRequest source, WsdlMockOperation target )
 	{
 		return addRequestToMockOperation( source, target );
 	}
 
-	@Override
+	
 	String getCopyAfterInfo( WsdlRequest source, WsdlMockOperation target )
 	{
 		return "Add Request [" + source.getName() + "] to MockOperation [" + target.getName() + "]";
 	}
 
-	@Override
+	
 	String getMoveAfterInfo( WsdlRequest source, WsdlMockOperation target )
 	{
 		return getCopyAfterInfo( source, target );

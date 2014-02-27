@@ -64,7 +64,7 @@ public final class ExtendedTraceMethod extends HttpTrace implements ExtendedHttp
 		httpMethodSupport.afterReadResponse( session );
 	}
 
-	@Override
+	
 	public String getResponseCharSet()
 	{
 		return httpMethodSupport.getResponseCharset();

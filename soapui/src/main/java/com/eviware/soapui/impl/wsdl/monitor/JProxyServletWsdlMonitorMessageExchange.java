@@ -95,7 +95,7 @@ public class JProxyServletWsdlMonitorMessageExchange extends WsdlMonitorMessageE
 		return targetURL == null ? null : targetURL.toString();
 	}
 
-	@Override
+	
 	public void discard()
 	{
 		operation = null;
@@ -116,38 +116,38 @@ public class JProxyServletWsdlMonitorMessageExchange extends WsdlMonitorMessageE
 		discarded = true;
 	}
 
-	@Override
+	
 	public Response getResponse()
 	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
+	
 	public long getRequestContentLength()
 	{
 		return request == null ? -1 : request.length;
 	}
 
-	@Override
+	
 	public String getRequestHost()
 	{
 		return requestHost;
 	}
 
-	@Override
+	
 	public long getResponseContentLength()
 	{
 		return response == null ? -1 : response.length;
 	}
 
-	@Override
+	
 	public URL getTargetUrl()
 	{
 		return this.targetURL;
 	}
 
-	@Override
+	
 	public void prepare( IncomingWss incomingRequestWss, IncomingWss incomingResponseWss )
 	{
 		parseRequestData( incomingRequestWss );
@@ -197,7 +197,7 @@ public class JProxyServletWsdlMonitorMessageExchange extends WsdlMonitorMessageE
 		}
 	}
 
-	@Override
+	
 	public Operation getModelItem()
 	{
 		return operation;

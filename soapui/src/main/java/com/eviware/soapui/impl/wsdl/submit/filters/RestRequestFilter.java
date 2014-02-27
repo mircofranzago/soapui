@@ -23,7 +23,7 @@ import com.eviware.soapui.model.iface.SubmitContext;
 
 public class RestRequestFilter extends HttpRequestFilter
 {
-	@Override
+	
 	public void filterRestRequest( SubmitContext context, RestRequestInterface request )
 	{
 		filterHttpRequest( context, request );

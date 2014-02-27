@@ -34,19 +34,19 @@ public class TestStepToTestStepDropHandler extends AbstractBeforeAfterModelItemD
 				target.getTestCase().getIndexOfTestStep( target ) + 1 );
 	}
 
-	@Override
+	
 	boolean canCopyAfter( WsdlTestStep source, WsdlTestStep target )
 	{
 		return !SoapUI.getTestMonitor().hasRunningTest( target.getTestCase() );
 	}
 
-	@Override
+	
 	boolean canMoveAfter( WsdlTestStep source, WsdlTestStep target )
 	{
 		return source != target;
 	}
 
-	@Override
+	
 	String getCopyAfterInfo( WsdlTestStep source, WsdlTestStep target )
 	{
 		return source.getTestCase() == target.getTestCase() ? "Copy TestStep [" + source.getName()
@@ -54,7 +54,7 @@ public class TestStepToTestStepDropHandler extends AbstractBeforeAfterModelItemD
 				+ "] to TestCase [" + target.getTestCase().getName() + "]";
 	}
 
-	@Override
+	
 	String getMoveAfterInfo( WsdlTestStep source, WsdlTestStep target )
 	{
 		return source.getTestCase() == target.getTestCase() ? "Move TestStep [" + source.getName()
@@ -62,38 +62,38 @@ public class TestStepToTestStepDropHandler extends AbstractBeforeAfterModelItemD
 				+ "] to TestCase [" + target.getTestCase().getName() + "]";
 	}
 
-	@Override
+	
 	boolean canCopyBefore( WsdlTestStep source, WsdlTestStep target )
 	{
 		return true;
 	}
 
-	@Override
+	
 	boolean canMoveBefore( WsdlTestStep source, WsdlTestStep target )
 	{
 		return source != target;
 	}
 
-	@Override
+	
 	boolean copyBefore( WsdlTestStep source, WsdlTestStep target )
 	{
 		return DragAndDropSupport.copyTestStep( source, target.getTestCase(),
 				target.getTestCase().getIndexOfTestStep( target ) );
 	}
 
-	@Override
+	
 	String getCopyBeforeInfo( WsdlTestStep source, WsdlTestStep target )
 	{
 		return getCopyAfterInfo( source, target );
 	}
 
-	@Override
+	
 	String getMoveBeforeInfo( WsdlTestStep source, WsdlTestStep target )
 	{
 		return getMoveAfterInfo( source, target );
 	}
 
-	@Override
+	
 	boolean moveBefore( WsdlTestStep source, WsdlTestStep target )
 	{
 		return DragAndDropSupport.moveTestStep( source, target.getTestCase(),

@@ -19,7 +19,7 @@ public class NanoStopwatch implements Stopwatch
 
 	protected long stop;
 
-	@Override
+	
 	public long getDuration()
 	{
 		long nanoTime = stop - start;
@@ -29,13 +29,13 @@ public class NanoStopwatch implements Stopwatch
 		return msTime;
 	}
 
-	@Override
+	
 	public void start()
 	{
 		start = getCurrentTime();
 	}
 
-	@Override
+	
 	public void stop()
 	{
 		stop = getCurrentTime();
@@ -51,7 +51,7 @@ public class NanoStopwatch implements Stopwatch
 		return stop;
 	}
 
-	@Override
+	
 	public void reset()
 	{
 		start = 0;
@@ -64,7 +64,7 @@ public class NanoStopwatch implements Stopwatch
 		return System.currentTimeMillis();
 	}
 
-	@Override
+	
 	public void add( long value )
 	{
 		stop += value;

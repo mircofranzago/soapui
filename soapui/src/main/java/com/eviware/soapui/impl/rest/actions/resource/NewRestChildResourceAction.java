@@ -37,7 +37,7 @@ public class NewRestChildResourceAction extends NewRestResourceActionBase<RestRe
 	}
 
 
-	@Override
+	
 	protected List<RestResource> getResourcesFor( RestResource item )
 	{
 		List<RestResource> returnValue = new ArrayList<RestResource>( );
@@ -46,7 +46,7 @@ public class NewRestChildResourceAction extends NewRestResourceActionBase<RestRe
 		return returnValue;
 	}
 
-	@Override
+	
 	protected RestResource addResourceTo( RestResource parentResource, String name, String path )
 	{
 		return parentResource.addNewChildResource( name, path );

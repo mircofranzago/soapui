@@ -126,7 +126,7 @@ public class HttpHtmlResponseView extends AbstractXmlEditorView<HttpResponseDocu
 		return panel;
 	}
 
-	@Override
+	
 	public void release()
 	{
 		super.release();
@@ -242,7 +242,7 @@ public class HttpHtmlResponseView extends AbstractXmlEditorView<HttpResponseDocu
 		}
 	}
 
-	@Override
+	
 	public void setXml( String xml )
 	{
 	}
@@ -264,7 +264,7 @@ public class HttpHtmlResponseView extends AbstractXmlEditorView<HttpResponseDocu
 			putValue( Action.SHORT_DESCRIPTION, "Start recording" );
 		}
 
-		@Override
+		
 		public void actionPerformed( ActionEvent arg0 )
 		{
 			if( browser == null )

@@ -63,7 +63,7 @@ class ParametersField extends JPanel
 		textField.addMouseListener( new MouseAdapter()
 		{
 
-			@Override
+			
 			public void mouseClicked( MouseEvent e )
 			{
 				final ParameterFinder finder = new ParameterFinder( textField.getText() );
@@ -80,7 +80,7 @@ class ParametersField extends JPanel
 		} );
 		textField.addCaretListener( new CaretListener()
 		{
-			@Override
+			
 			public void caretUpdate( final CaretEvent e )
 			{
 				lastSelectedPosition = e.getDot();
@@ -100,7 +100,7 @@ class ParametersField extends JPanel
 		setToolTipText( text );
 	}
 
-	@Override
+	
 	public void setToolTipText( String text )
 	{
 		super.setToolTipText( text );
@@ -161,7 +161,7 @@ class ParametersField extends JPanel
 			getRootPane().setDefaultButton( closeButton );
 			closeButton.addActionListener( new ActionListener()
 			{
-				@Override
+				
 				public void actionPerformed( ActionEvent e )
 				{
 					close();
@@ -187,43 +187,43 @@ class ParametersField extends JPanel
 
 		private class CloseAction implements Action
 		{
-			@Override
+			
 			public Object getValue( String key )
 			{
 				return null;
 			}
 
-			@Override
+			
 			public void putValue( String key, Object value )
 			{
 
 			}
 
-			@Override
+			
 			public void setEnabled( boolean b )
 			{
 
 			}
 
-			@Override
+			
 			public boolean isEnabled()
 			{
 				return true;
 			}
 
-			@Override
+			
 			public void addPropertyChangeListener( PropertyChangeListener listener )
 			{
 
 			}
 
-			@Override
+			
 			public void removePropertyChangeListener( PropertyChangeListener listener )
 			{
 
 			}
 
-			@Override
+			
 			public void actionPerformed( ActionEvent e )
 			{
 				close();

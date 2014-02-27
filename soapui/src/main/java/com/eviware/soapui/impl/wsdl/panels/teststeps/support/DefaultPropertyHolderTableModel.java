@@ -98,13 +98,13 @@ public class DefaultPropertyHolderTableModel<T extends TestPropertyHolder> exten
 		return !getPropertyAtRow( rowIndex ).isReadOnly();
 	}
 
-	@Override
+	
 	public Class<?> getColumnClass( int columnIndex )
 	{
 		return String.class;
 	}
 
-	@Override
+	
 	public void setValueAt( Object aValue, int rowIndex, int columnIndex )
 	{
 		TestProperty property = getPropertyAtRow( rowIndex );
@@ -175,7 +175,7 @@ public class DefaultPropertyHolderTableModel<T extends TestPropertyHolder> exten
 		return null;
 	}
 
-	@Override
+	
 	public void propertyValueChanged( Property property )
 	{
 		fireTableDataChanged();
@@ -186,13 +186,13 @@ public class DefaultPropertyHolderTableModel<T extends TestPropertyHolder> exten
 		fireTableDataChanged();
 	}
 
-	@Override
+	
 	public void propertyChange( PropertyChangeEvent evt )
 	{
 		fireTableDataChanged();
 	}
 
-	@Override
+	
 	public void moveProperty( String name, int oldIndex, int newIndex )
 	{
 		( ( MutableTestPropertyHolder )params ).moveProperty( name, newIndex );

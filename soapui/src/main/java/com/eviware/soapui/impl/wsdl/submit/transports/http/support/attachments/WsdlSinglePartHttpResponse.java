@@ -68,7 +68,7 @@ public class WsdlSinglePartHttpResponse extends SinglePartHttpResponse implement
 		return wssResult;
 	}
 
-	@Override
+	
 	public WsdlRequest getRequest()
 	{
 		return ( WsdlRequest )super.getRequest();

@@ -40,13 +40,13 @@ public class MaliciousAttachmentSecurityScanFactory extends AbstractSecurityScan
 		return testStep instanceof WsdlTestRequestStep;
 	}
 
-	@Override
+	
 	public AbstractSecurityScan buildSecurityScan( TestStep testStep, SecurityScanConfig config, ModelItem parent )
 	{
 		return new MaliciousAttachmentSecurityScan( testStep, config, parent, "/malicious_attachment_scan.gif" );
 	}
 
-	@Override
+	
 	public SecurityScanConfig createNewSecurityScan( String name )
 	{
 		SecurityScanConfig securityCheckConfig = SecurityScanConfig.Factory.newInstance();

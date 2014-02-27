@@ -147,7 +147,7 @@ public class GroovyEditor extends JPanel implements JEditorStatusBarTarget, Prop
 		editArea.setComponentPopupMenu( popup );
 	}
 
-	@Override
+	
 	public void setEnabled( boolean enabled )
 	{
 		super.setEnabled( enabled );
@@ -227,7 +227,7 @@ public class GroovyEditor extends JPanel implements JEditorStatusBarTarget, Prop
 			}
 		}
 
-		@Override
+		
 		public void settingsReloaded()
 		{
 			// TODO Auto-generated method stub

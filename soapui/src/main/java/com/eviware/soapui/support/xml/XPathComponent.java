@@ -59,7 +59,7 @@ public class XPathComponent
 				+ braces;
 	}
 
-	@Override
+	
 	public String toString()
 	{
 		if( prefix != null )

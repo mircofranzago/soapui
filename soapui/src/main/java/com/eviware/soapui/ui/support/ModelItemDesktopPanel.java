@@ -130,7 +130,7 @@ public abstract class ModelItemDesktopPanel<T extends ModelItem> extends JPanel 
 			notifyPropertyChange( DesktopPanel.ICON_PROPERTY, null, getIcon() );
 	}
 
-	@Override
+	
 	public boolean onClose( boolean canCancel )
 	{
 		return release();

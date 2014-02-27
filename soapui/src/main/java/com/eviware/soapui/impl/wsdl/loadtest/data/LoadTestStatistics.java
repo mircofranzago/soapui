@@ -483,7 +483,7 @@ public final class LoadTestStatistics extends AbstractTableModel implements Runn
 			totalAverageSum = 0;
 		}
 
-		@Override
+		
 		public void afterTestStep( LoadTestRunner loadTestRunner, LoadTestRunContext context, TestCaseRunner testRunner,
 				TestCaseRunContext runContext, TestStepResult testStepResult )
 		{
@@ -547,7 +547,7 @@ public final class LoadTestStatistics extends AbstractTableModel implements Runn
 			pushSamples( samples, sizes, sampleCounts, testRunner.getStartTime(), testRunner.getTimeTaken(), true );
 		}
 
-		@Override
+		
 		public void afterLoadTest( LoadTestRunner loadTestRunner, LoadTestRunContext context )
 		{
 			stop();

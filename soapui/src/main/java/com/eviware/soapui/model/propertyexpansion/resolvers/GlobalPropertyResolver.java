@@ -167,13 +167,13 @@ public class GlobalPropertyResolver implements PropertyResolver
 			{
 			}
 
-			@Override
+			
 			public boolean isRequestPart()
 			{
 				return false;
 			}
 
-			@Override
+			
 			public SchemaType getSchemaType()
 			{
 				return XmlBeans.getBuiltinTypeSystem().findType( getType() );
@@ -315,13 +315,13 @@ public class GlobalPropertyResolver implements PropertyResolver
 				System.setProperty( key.toString(), value );
 			}
 
-			@Override
+			
 			public boolean isRequestPart()
 			{
 				return false;
 			}
 
-			@Override
+			
 			public SchemaType getSchemaType()
 			{
 				return XmlBeans.getBuiltinTypeSystem().findType( getType() );

@@ -45,7 +45,7 @@ public class WsdlMessageExchangeTestStepResult extends WsdlTestStepResult implem
 				exchanges.add( messageExchange );
 	}
 
-	@Override
+	
 	public void discard()
 	{
 		super.discard();

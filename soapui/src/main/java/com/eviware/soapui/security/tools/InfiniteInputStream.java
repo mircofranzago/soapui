@@ -15,7 +15,7 @@ public class InfiniteInputStream extends InputStream
 		byteLimit = maxSize;
 	}
 
-	@Override
+	
 	public int read() throws IOException
 	{
 		if( bytesSent >= byteLimit )

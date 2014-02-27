@@ -55,7 +55,7 @@ public class SoapMonitorDesktopPanel extends DefaultDesktopPanel
 		p.setPreferredSize( new Dimension( 700, 600 ) );
 	}
 
-	@Override
+	
 	public boolean onClose( boolean canCancel )
 	{
 		if( soapMonitor.isRunning() && canCancel )
@@ -71,7 +71,7 @@ public class SoapMonitorDesktopPanel extends DefaultDesktopPanel
 		return true;
 	}
 
-	@Override
+	
 	public boolean dependsOn( ModelItem modelItem )
 	{
 		return modelItem == project;

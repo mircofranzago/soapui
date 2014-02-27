@@ -251,7 +251,7 @@ public class WSIAnalyzeAction extends AbstractToolsAction<Interface>
 			return modelItem.getSettings().getBoolean( WSISettings.SHOW_LOG );
 		}
 
-		@Override
+		
 		protected void beforeProcess( ProcessBuilder processBuilder, RunnerContext context )
 		{
 			processBuilder.environment().put( "WSI_HOME", wsiDir );

@@ -33,19 +33,19 @@ public class TestStepToTestStepsDropHandler extends
 		return DragAndDropSupport.moveTestStep( source, target.getTestCase(), 0 );
 	}
 
-	@Override
+	
 	boolean canCopyAfter( WsdlTestStep source, WsdlTestStepsModelItem target )
 	{
 		return true;
 	}
 
-	@Override
+	
 	boolean canMoveAfter( WsdlTestStep source, WsdlTestStepsModelItem target )
 	{
 		return true;
 	}
 
-	@Override
+	
 	String getCopyAfterInfo( WsdlTestStep source, WsdlTestStepsModelItem target )
 	{
 		return source.getTestCase() == target.getTestCase() ? "Copy TestStep [" + source.getName()
@@ -53,7 +53,7 @@ public class TestStepToTestStepsDropHandler extends
 				+ "] to TestCase [" + target.getTestCase().getName() + "]";
 	}
 
-	@Override
+	
 	String getMoveAfterInfo( WsdlTestStep source, WsdlTestStepsModelItem target )
 	{
 		return source.getTestCase() == target.getTestCase() ? "Move TestStep [" + source.getName()

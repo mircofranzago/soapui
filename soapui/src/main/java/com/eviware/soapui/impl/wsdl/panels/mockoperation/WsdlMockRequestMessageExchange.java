@@ -37,13 +37,13 @@ public class WsdlMockRequestMessageExchange extends AbstractWsdlMessageExchange<
 		return request.getHttpRequest().getRequestURI();
 	}
 
-	@Override
+	
 	public Response getResponse()
 	{
 		return null;
 	}
 
-	@Override
+	
 	public WsdlOperation getOperation()
 	{
 		return getModelItem().getOperation();

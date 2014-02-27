@@ -194,7 +194,7 @@ public class XPathContainsAssertion extends WsdlMessageAssertion implements Requ
 		setConfiguration( createConfiguration() );
 	}
 
-	@Override
+	
 	protected String internalAssertResponse( MessageExchange messageExchange, SubmitContext context )
 			throws AssertionException
 	{
@@ -406,7 +406,7 @@ public class XPathContainsAssertion extends WsdlMessageAssertion implements Requ
 		}
 	}
 
-	@Override
+	
 	public boolean configure()
 	{
 		if( configurationDialog == null )
@@ -427,7 +427,7 @@ public class XPathContainsAssertion extends WsdlMessageAssertion implements Requ
 		configurationDialog.setTitle( "XPath Match Configuration" );
 		configurationDialog.addWindowListener( new WindowAdapter()
 		{
-			@Override
+			
 			public void windowOpened( WindowEvent event )
 			{
 				SwingUtilities.invokeLater( new Runnable()
@@ -778,7 +778,7 @@ public class XPathContainsAssertion extends WsdlMessageAssertion implements Requ
 		}
 	}
 
-	@Override
+	
 	protected String internalAssertRequest( MessageExchange messageExchange, SubmitContext context )
 			throws AssertionException
 	{
@@ -798,7 +798,7 @@ public class XPathContainsAssertion extends WsdlMessageAssertion implements Requ
 		return pathArea;
 	}
 
-	@Override
+	
 	public PropertyExpansion[] getPropertyExpansions()
 	{
 		List<PropertyExpansion> result = new ArrayList<PropertyExpansion>();
@@ -833,26 +833,26 @@ public class XPathContainsAssertion extends WsdlMessageAssertion implements Requ
 			super( XPathContainsAssertion.ID, XPathContainsAssertion.LABEL, XPathContainsAssertion.class );
 		}
 
-		@Override
+		
 		public String getCategory()
 		{
 			return AssertionCategoryMapping.VALIDATE_RESPONSE_CONTENT_CATEGORY;
 		}
 
-		@Override
+		
 		public Class<? extends WsdlMessageAssertion> getAssertionClassType()
 		{
 			return XPathContainsAssertion.class;
 		}
 
-		@Override
+		
 		public AssertionListEntry getAssertionListEntry()
 		{
 			return new AssertionListEntry( XPathContainsAssertion.ID, XPathContainsAssertion.LABEL,
 					XPathContainsAssertion.DESCRIPTION );
 		}
 
-		@Override
+		
 		public boolean canAssert( TestPropertyHolder modelItem, String property )
 		{
 			if( !modelItem.getProperty( property ).getSchemaType().isPrimitiveType() )

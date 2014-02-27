@@ -62,7 +62,7 @@ public class MockResponseScriptInspector extends AbstractXmlInspector
 		return panel;
 	}
 
-	@Override
+	
 	public void activate()
 	{
 		responseScriptEditor.requestFocusInWindow();
@@ -96,7 +96,7 @@ public class MockResponseScriptInspector extends AbstractXmlInspector
 		return toolBar;
 	}
 
-	@Override
+	
 	public void release()
 	{
 		super.release();
@@ -195,7 +195,7 @@ public class MockResponseScriptInspector extends AbstractXmlInspector
 		}
 	}
 
-	@Override
+	
 	public boolean isEnabledFor( EditorView<XmlDocument> view )
 	{
 		return true;

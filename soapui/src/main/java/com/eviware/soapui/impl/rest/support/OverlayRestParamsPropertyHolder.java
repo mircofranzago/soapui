@@ -39,7 +39,7 @@ public class OverlayRestParamsPropertyHolder implements RestParamsPropertyHolder
 		overlay.addParameter( prop );
 	}
 
-	@Override
+	
 	public void setParameterLocation( RestParamProperty parameter, NewRestResourceActionBase.ParamLocation newLocation )
 	{
 		overlay.setParameterLocation( parameter, newLocation );

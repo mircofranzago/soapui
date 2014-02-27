@@ -43,7 +43,7 @@ public class JettyServer extends org.mortbay.jetty.Server
 		SoapUI.getLogMonitor().getLogArea( "jetty log" ).addLogger( log.getName(), true );
 	}
 
-	@Override
+	
 	public void handle( final org.mortbay.jetty.HttpConnection connection ) throws IOException, ServletException
 	{
 		final Request request = connection.getRequest();

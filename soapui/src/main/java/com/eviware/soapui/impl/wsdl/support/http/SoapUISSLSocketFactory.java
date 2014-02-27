@@ -59,18 +59,18 @@ public class SoapUISSLSocketFactory extends SSLSocketFactory
 		// trust everyone!
 		X509TrustManager tm = new X509TrustManager()
 		{
-			@Override
+			
 			public X509Certificate[] getAcceptedIssuers()
 			{
 				return null;
 			}
 
-			@Override
+			
 			public void checkClientTrusted( X509Certificate[] certs, String authType )
 			{
 			}
 
-			@Override
+			
 			public void checkServerTrusted( X509Certificate[] certs, String authType )
 			{
 			}
@@ -124,7 +124,7 @@ public class SoapUISSLSocketFactory extends SSLSocketFactory
 		return socket;
 	}
 
-	@Override
+	
 	public Socket createSocket( HttpParams params ) throws IOException
 	{
 		String sslConfig = ( String )params.getParameter( SoapUIHttpRoute.SOAPUI_SSL_CONFIG );
@@ -189,7 +189,7 @@ public class SoapUISSLSocketFactory extends SSLSocketFactory
 	/**
 	 * @since 4.1
 	 */
-	@Override
+	
 	public Socket connectSocket( final Socket socket, final InetSocketAddress remoteAddress,
 			final InetSocketAddress localAddress, final HttpParams params ) throws IOException, UnknownHostException,
 			ConnectTimeoutException
@@ -261,7 +261,7 @@ public class SoapUISSLSocketFactory extends SSLSocketFactory
 	/**
 	 * @since 4.1
 	 */
-	@Override
+	
 	public Socket createLayeredSocket( final Socket socket, final String host, final int port, final boolean autoClose )
 			throws IOException, UnknownHostException
 	{

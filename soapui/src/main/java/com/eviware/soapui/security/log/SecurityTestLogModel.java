@@ -59,7 +59,7 @@ public class SecurityTestLogModel extends AbstractListModel
 		}
 	}
 
-	@Override
+	
 	public int getSize()
 	{
 		return items.size();

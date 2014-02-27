@@ -60,7 +60,7 @@ public class SecurityConfigurationDialog extends SimpleDialog
 		return securityCheck;
 	}
 
-	@Override
+	
 	protected Component buildContent()
 	{
 		JPanel mainPanel = new JPanel();
@@ -167,7 +167,7 @@ public class SecurityConfigurationDialog extends SimpleDialog
 
 		strategy.addFormFieldListener( new XFormFieldListener()
 		{
-			@Override
+			
 			public void valueChanged( XFormField sourceField, String newValue, String oldValue )
 			{
 
@@ -185,7 +185,7 @@ public class SecurityConfigurationDialog extends SimpleDialog
 		delay.addFormFieldListener( new XFormFieldListener()
 		{
 
-			@Override
+			
 			public void valueChanged( XFormField sourceField, String newValue, String oldValue )
 			{
 				try
@@ -206,7 +206,7 @@ public class SecurityConfigurationDialog extends SimpleDialog
 		applyToFailedTests.addFormFieldListener( new XFormFieldListener()
 		{
 
-			@Override
+			
 			public void valueChanged( XFormField sourceField, String newValue, String oldValue )
 			{
 				securityCheck.setApplyForFailedTestStep( Boolean.parseBoolean( newValue ) );
@@ -217,7 +217,7 @@ public class SecurityConfigurationDialog extends SimpleDialog
 		runOnlyOnce.addFormFieldListener( new XFormFieldListener()
 		{
 
-			@Override
+			
 			public void valueChanged( XFormField sourceField, String newValue, String oldValue )
 			{
 				securityCheck.setRunOnlyOnce( Boolean.parseBoolean( newValue ) );
@@ -227,7 +227,7 @@ public class SecurityConfigurationDialog extends SimpleDialog
 		return ( ( JFormDialog )strategyDialog ).getPanel();
 	}
 
-	@Override
+	
 	protected boolean handleOk()
 	{
 		result = true;

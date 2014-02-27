@@ -337,7 +337,7 @@ public class AMFRequest extends AbstractAnimatableModelItem<ModelItemConfig> imp
 		return icon;
 	}
 
-	@Override
+	
 	public void setIcon( ImageIcon icon )
 	{
 		getTestStep().setIcon( icon );
@@ -641,7 +641,7 @@ public class AMFRequest extends AbstractAnimatableModelItem<ModelItemConfig> imp
 		return null;
 	}
 
-	@Override
+	
 	public String getAuthType()
 	{
 		return null;

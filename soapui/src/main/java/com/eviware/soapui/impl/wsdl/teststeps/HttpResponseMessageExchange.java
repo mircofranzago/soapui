@@ -57,7 +57,7 @@ public class HttpResponseMessageExchange extends AbstractMessageExchange<HttpReq
 		return response == null ? getModelItem().getRequestContent() : response.getRequestContent();
 	}
 
-	@Override
+	
 	public String getResponseContentAsXml()
 	{
 		if( response == null )

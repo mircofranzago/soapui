@@ -236,7 +236,7 @@ public class WsdlTestRequestDesktopPanel extends AbstractWsdlRequestDesktopPanel
 		logArea.addLine( DateUtil.formatFull( new Date( startTime ) ) + " - " + message );
 	}
 
-	@Override
+	
 	public void afterSubmit( Submit submit, SubmitContext context )
 	{
 		super.afterSubmit( submit, context );

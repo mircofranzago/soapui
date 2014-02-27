@@ -194,7 +194,7 @@ public class BurstLoadStrategy extends AbstractLoadStrategy
 		return builder.finish();
 	}
 
-	@Override
+	
 	public boolean allowThreadCountChangeDuringRun()
 	{
 		return false;

@@ -135,14 +135,14 @@ public class JPropertiesTable<T> extends JPanel
 		return title;
 	}
 
-	@Override
+	
 	public void removeNotify()
 	{
 		getTableModel().release();
 		super.removeNotify();
 	}
 
-	@Override
+	
 	public void addNotify()
 	{
 		getTableModel().attach();
@@ -539,7 +539,7 @@ public class JPropertiesTable<T> extends JPanel
 			}
 		}
 
-		@Override
+		
 		public Component prepareRenderer( TableCellRenderer renderer, int row, int column )
 		{
 			Component defaultRenderer = super.prepareRenderer( renderer, row, column );
@@ -550,7 +550,7 @@ public class JPropertiesTable<T> extends JPanel
 			return defaultRenderer;
 		}
 
-		@Override
+		
 		public boolean getShowVerticalLines()
 		{
 			return !UISupport.isMac();

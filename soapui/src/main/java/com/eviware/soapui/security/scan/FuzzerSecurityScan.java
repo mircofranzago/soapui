@@ -71,7 +71,7 @@ public class FuzzerSecurityScan extends AbstractSecurityScanWithProperties
 		fuzzerScanConfig.setNumberOfRequest( DEFAULT_NUMBER_OF_REQUESTS );
 	}
 
-	@Override
+	
 	protected void execute( SecurityTestRunner runner, TestStep testStep, SecurityTestRunContext context )
 	{
 		StringToStringMap parameters = new StringToStringMap();
@@ -120,7 +120,7 @@ public class FuzzerSecurityScan extends AbstractSecurityScanWithProperties
 
 	}
 
-	@Override
+	
 	protected boolean hasNext( TestStep testStep2, SecurityTestRunContext context )
 	{
 		if( numberOfRequests == null )
@@ -142,7 +142,7 @@ public class FuzzerSecurityScan extends AbstractSecurityScanWithProperties
 		}
 	}
 
-	@Override
+	
 	public JComponent getAdvancedSettingsPanel()
 	{
 		FuzzerScanAdvancedConfigPanel configPanel = new FuzzerScanAdvancedConfigPanel( fuzzerScanConfig );
@@ -150,7 +150,7 @@ public class FuzzerSecurityScan extends AbstractSecurityScanWithProperties
 		return dialog.getPanel();
 	}
 
-	@Override
+	
 	public void release()
 	{
 		if( dialog != null )
@@ -159,26 +159,26 @@ public class FuzzerSecurityScan extends AbstractSecurityScanWithProperties
 		super.release();
 	}
 
-	@Override
+	
 	public String getConfigDescription()
 	{
 		return "Configuration for Fuzzing Security Scan";
 	}
 
-	@Override
+	
 	public String getConfigName()
 	{
 		return "Configuration for Fuzzing Security Scan";
 	}
 
-	@Override
+	
 	public String getHelpURL()
 	{
 		// TODO: change to proper help url
 		return HelpUrls.SECURITY_SCANS_OVERVIEW;
 	}
 
-	@Override
+	
 	public String getType()
 	{
 		return TYPE;

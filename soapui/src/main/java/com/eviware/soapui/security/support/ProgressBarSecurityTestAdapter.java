@@ -94,7 +94,7 @@ public class ProgressBarSecurityTestAdapter
 			counterLabel.setText( "" );
 		}
 
-		@Override
+		
 		public void beforeSecurityScan( TestCaseRunner testRunner, SecurityTestRunContext runContext,
 				SecurityScan securityCheck )
 		{
@@ -110,7 +110,7 @@ public class ProgressBarSecurityTestAdapter
 			}
 		}
 
-		@Override
+		
 		public void afterSecurityScan( TestCaseRunner testRunner, SecurityTestRunContext runContext,
 				SecurityScanResult securityCheckResult )
 		{
@@ -138,14 +138,14 @@ public class ProgressBarSecurityTestAdapter
 			// runContext.getCurrentCheckOnSecurityTestIndex() + 1 );
 		}
 
-		@Override
+		
 		public void beforeStep( TestCaseRunner testRunner, SecurityTestRunContext runContext,
 				TestStepResult testStepResult )
 		{
 			previousMaxCheckPosition = progressBar.getValue();
 		}
 
-		@Override
+		
 		public void afterStep( TestCaseRunner testRunner, SecurityTestRunContext runContext, SecurityTestStepResult result )
 		{
 			int currentStepChecksCount = securityTest.getTestStepSecurityScansCount( result.getTestStep().getId() );
@@ -173,7 +173,7 @@ public class ProgressBarSecurityTestAdapter
 			// progressBar.setValue( progressBar.getMaximum() );
 		}
 
-		@Override
+		
 		public void afterSecurityScanRequest( TestCaseRunner testRunner, SecurityTestRunContext runContext,
 				SecurityScanRequestResult securityCheckReqResult )
 		{

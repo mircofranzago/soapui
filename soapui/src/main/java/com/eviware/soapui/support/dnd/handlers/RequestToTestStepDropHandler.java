@@ -31,19 +31,19 @@ public class RequestToTestStepDropHandler extends AbstractBeforeAfterModelItemDr
 		super( WsdlRequest.class, WsdlTestStep.class );
 	}
 
-	@Override
+	
 	boolean canCopyAfter( WsdlRequest source, WsdlTestStep target )
 	{
 		return true;
 	}
 
-	@Override
+	
 	boolean canMoveAfter( WsdlRequest source, WsdlTestStep target )
 	{
 		return true;
 	}
 
-	@Override
+	
 	boolean copyAfter( WsdlRequest source, WsdlTestStep target )
 	{
 		return addRequestToTestCase( source, target.getTestCase(), target.getTestCase().getIndexOfTestStep( target ) + 1 );
@@ -73,55 +73,55 @@ public class RequestToTestStepDropHandler extends AbstractBeforeAfterModelItemDr
 		return ( ( AddRequestToTestCaseAction )action ).addRequest( testCase, source, index ) != null;
 	}
 
-	@Override
+	
 	boolean moveAfter( WsdlRequest source, WsdlTestStep target )
 	{
 		return addRequestToTestCase( source, target.getTestCase(), target.getTestCase().getIndexOfTestStep( target ) + 1 );
 	}
 
-	@Override
+	
 	String getCopyAfterInfo( WsdlRequest source, WsdlTestStep target )
 	{
 		return "Add Request [" + source.getName() + "] to TestCase [" + target.getTestCase().getName() + "]";
 	}
 
-	@Override
+	
 	String getMoveAfterInfo( WsdlRequest source, WsdlTestStep target )
 	{
 		return getCopyAfterInfo( source, target );
 	}
 
-	@Override
+	
 	boolean canCopyBefore( WsdlRequest source, WsdlTestStep target )
 	{
 		return addRequestToTestCase( source, target.getTestCase(), target.getTestCase().getIndexOfTestStep( target ) );
 	}
 
-	@Override
+	
 	boolean canMoveBefore( WsdlRequest source, WsdlTestStep target )
 	{
 		return true;
 	}
 
-	@Override
+	
 	boolean copyBefore( WsdlRequest source, WsdlTestStep target )
 	{
 		return false;
 	}
 
-	@Override
+	
 	String getCopyBeforeInfo( WsdlRequest source, WsdlTestStep target )
 	{
 		return getCopyAfterInfo( source, target );
 	}
 
-	@Override
+	
 	String getMoveBeforeInfo( WsdlRequest source, WsdlTestStep target )
 	{
 		return getCopyAfterInfo( source, target );
 	}
 
-	@Override
+	
 	boolean moveBefore( WsdlRequest source, WsdlTestStep target )
 	{
 		return addRequestToTestCase( source, target.getTestCase(), target.getTestCase().getIndexOfTestStep( target ) );

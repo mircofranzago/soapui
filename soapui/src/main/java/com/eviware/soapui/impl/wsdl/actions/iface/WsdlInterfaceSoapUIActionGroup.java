@@ -30,7 +30,7 @@ public class WsdlInterfaceSoapUIActionGroup extends DefaultSoapUIActionGroup<Wsd
 		super( id, name );
 	}
 
-	@Override
+	
 	public SoapUIActionMappingList<WsdlInterface> getActionMappings( WsdlInterface modelItem )
 	{
 		SoapUIActionMappingList<WsdlInterface> actionMappings = super.getActionMappings( modelItem );

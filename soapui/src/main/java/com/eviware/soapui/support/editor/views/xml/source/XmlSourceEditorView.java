@@ -298,7 +298,7 @@ public class XmlSourceEditorView<T extends ModelItem> extends AbstractXmlEditorV
 		}
 	}
 
-	@Override
+	
 	public void release()
 	{
 		super.release();
@@ -333,7 +333,7 @@ public class XmlSourceEditorView<T extends ModelItem> extends AbstractXmlEditorV
 				putValue( Action.ACCELERATOR_KEY, UISupport.getKeyStroke( "ctrl F" ) );
 		}
 
-		@Override
+		
 		public void actionPerformed( ActionEvent arg0 )
 		{
 			show();
@@ -500,7 +500,7 @@ public class XmlSourceEditorView<T extends ModelItem> extends AbstractXmlEditorV
 				super( "Find/Find Next" );
 			}
 
-			@Override
+			
 			public void actionPerformed( ActionEvent e )
 			{
 				SearchContext context = createSearchContext();
@@ -525,7 +525,7 @@ public class XmlSourceEditorView<T extends ModelItem> extends AbstractXmlEditorV
 				super( "Replace/Replace Next" );
 			}
 
-			@Override
+			
 			public void actionPerformed( ActionEvent e )
 			{
 				SearchContext context = createSearchAndReplaceContext();
@@ -551,7 +551,7 @@ public class XmlSourceEditorView<T extends ModelItem> extends AbstractXmlEditorV
 				super( "Replace All" );
 			}
 
-			@Override
+			
 			public void actionPerformed( ActionEvent e )
 			{
 				SearchContext context = createSearchAndReplaceContext();
@@ -603,7 +603,7 @@ public class XmlSourceEditorView<T extends ModelItem> extends AbstractXmlEditorV
 	//			}
 	//		}
 	//
-	//		@Override
+	//		
 	//		public void actionPerformed( ActionEvent e )
 	//		{
 	//			editorScrollPane.setLineNumbersEnabled( !editorScrollPane.getLineNumbersEnabled() );
@@ -671,31 +671,31 @@ public class XmlSourceEditorView<T extends ModelItem> extends AbstractXmlEditorV
 			textArea = area;
 		}
 
-		@Override
+		
 		public void addCaretListener( CaretListener listener )
 		{
 			textArea.addCaretListener( listener );
 		}
 
-		@Override
+		
 		public int getCaretPosition()
 		{
 			return textArea.getCaretPosition();
 		}
 
-		@Override
+		
 		public void removeCaretListener( CaretListener listener )
 		{
 			textArea.removeCaretListener( listener );
 		}
 
-		@Override
+		
 		public int getLineStartOffset( int line ) throws Exception
 		{
 			return textArea.getLineStartOffset( line );
 		}
 
-		@Override
+		
 		public int getLineOfOffset( int offset ) throws Exception
 		{
 			return textArea.getLineOfOffset( offset );

@@ -56,21 +56,21 @@ public class TestStepComboBoxModel extends AbstractListModel implements ComboBox
 
 	private final class InternalTestSuiteListener extends TestSuiteListenerAdapter
 	{
-		@Override
+		
 		public void testStepAdded( TestStep testStep, int index )
 		{
 			if( testStep.getTestCase() == testCase )
 				fireIntervalAdded( TestStepComboBoxModel.this, index, index );
 		}
 
-		@Override
+		
 		public void testStepMoved( TestStep testStep, int fromIndex, int offset )
 		{
 			if( testStep.getTestCase() == testCase )
 				fireContentsChanged( TestStepComboBoxModel.this, fromIndex, fromIndex + offset );
 		}
 
-		@Override
+		
 		public void testStepRemoved( TestStep testStep, int index )
 		{
 			if( testStep.getTestCase() == testCase )

@@ -195,7 +195,7 @@ public class RestServiceDesktopPanel extends ModelItemDesktopPanel<RestService>
 		tree.addTreeSelectionListener( new InternalTreeSelectionListener() );
 		tree.addMouseListener( new MouseAdapter()
 		{
-			@Override
+			
 			public void mouseClicked( MouseEvent arg0 )
 			{
 				if( arg0.getClickCount() > 1 )
@@ -667,7 +667,7 @@ public class RestServiceDesktopPanel extends ModelItemDesktopPanel<RestService>
 			return lineNumber == null ? -1 : lineNumber.getLine() - 1;
 		}
 
-		@Override
+		
 		public String toString()
 		{
 			return name;
@@ -857,7 +857,7 @@ public class RestServiceDesktopPanel extends ModelItemDesktopPanel<RestService>
 			return restService.getOperationCount();
 		}
 
-		@Override
+		
 		public String getColumnName( int column )
 		{
 			switch( column )

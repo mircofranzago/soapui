@@ -32,7 +32,7 @@ public class CreateNewEmptyTestCase implements Resolver
 		return "Create new empty test case";
 	}
 
-	@Override
+	
 	public String toString()
 	{
 		return getDescription();

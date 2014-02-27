@@ -137,7 +137,7 @@ public class RestTestRequestStep extends WsdlTestStepWithProperties implements R
 		// init properties
 		addProperty( new TestStepBeanProperty( "Request", false, testRequest, "requestContent", this, true )
 		{
-			@Override
+			
 			public String getDefaultValue()
 			{
 				return createDefaultRequestContent();
@@ -176,7 +176,7 @@ public class RestTestRequestStep extends WsdlTestStepWithProperties implements R
 				return super.getSchemaType();
 			}
 
-			@Override
+			
 			public QName getType()
 			{
 				return getSchemaType().getName();
@@ -187,7 +187,7 @@ public class RestTestRequestStep extends WsdlTestStepWithProperties implements R
 		addProperty( new TestStepBeanProperty( WsdlTestStepWithProperties.RESPONSE_AS_XML, true, testRequest,
 				"responseContentAsXml", this )
 		{
-			@Override
+			
 			public String getDefaultValue()
 			{
 				return createDefaultResponseXmlContent();
@@ -221,7 +221,7 @@ public class RestTestRequestStep extends WsdlTestStepWithProperties implements R
 				return super.getSchemaType();
 			}
 
-			@Override
+			
 			public QName getType()
 			{
 				return getSchemaType().getName();
@@ -230,7 +230,7 @@ public class RestTestRequestStep extends WsdlTestStepWithProperties implements R
 
 		addProperty( new TestStepBeanProperty( "Response", true, testRequest, "responseContentAsString", this )
 		{
-			@Override
+			
 			public String getDefaultValue()
 			{
 				return createDefaultRawResponseContent();
@@ -239,7 +239,7 @@ public class RestTestRequestStep extends WsdlTestStepWithProperties implements R
 
 		addProperty( new DefaultTestStepProperty( "RawRequest", true, this )
 		{
-			@Override
+			
 			public String getValue()
 			{
 				HttpResponse response = testRequest.getResponse();
@@ -278,7 +278,7 @@ public class RestTestRequestStep extends WsdlTestStepWithProperties implements R
 		}
 	}
 
-	@Override
+	
 	public void beforeSave()
 	{
 		super.beforeSave();
@@ -287,7 +287,7 @@ public class RestTestRequestStep extends WsdlTestStepWithProperties implements R
 			testRequest.beforeSave();
 	}
 
-	@Override
+	
 	public String getDescription()
 	{
 		return testRequest == null ? "<missing>" : testRequest.getDescription();
@@ -338,7 +338,7 @@ public class RestTestRequestStep extends WsdlTestStepWithProperties implements R
 		return getResource() == null ? null : getResource().createRequest( true );
 	}
 
-	@Override
+	
 	public Collection<Interface> getRequiredInterfaces()
 	{
 		ArrayList<Interface> result = new ArrayList<Interface>();
@@ -433,7 +433,7 @@ public class RestTestRequestStep extends WsdlTestStepWithProperties implements R
 		return getResource();
 	}
 
-	@Override
+	
 	public void release()
 	{
 		super.release();
@@ -458,7 +458,7 @@ public class RestTestRequestStep extends WsdlTestStepWithProperties implements R
 		}
 	}
 
-	@Override
+	
 	public void resetConfigOnMove( TestStepConfig config )
 	{
 		super.resetConfigOnMove( config );
@@ -563,7 +563,7 @@ public class RestTestRequestStep extends WsdlTestStepWithProperties implements R
 
 	public class InternalProjectListener extends ProjectListenerAdapter
 	{
-		@Override
+		
 		public void interfaceRemoved( Interface iface )
 		{
 			if( restResource != null && restResource.getInterface().equals( iface ) )
@@ -576,7 +576,7 @@ public class RestTestRequestStep extends WsdlTestStepWithProperties implements R
 
 	public class InternalInterfaceListener extends InterfaceListenerAdapter
 	{
-		@Override
+		
 		public void operationRemoved( Operation operation )
 		{
 			if( operation == restResource )
@@ -586,7 +586,7 @@ public class RestTestRequestStep extends WsdlTestStepWithProperties implements R
 			}
 		}
 
-		@Override
+		
 		public void operationUpdated( Operation operation )
 		{
 			if( operation == restResource )
@@ -596,7 +596,7 @@ public class RestTestRequestStep extends WsdlTestStepWithProperties implements R
 		}
 	}
 
-	@Override
+	
 	public boolean dependsOn( AbstractWsdlModelItem<?> modelItem )
 	{
 		if( modelItem instanceof Interface && getTestRequest().getOperation() != null
@@ -656,7 +656,7 @@ public class RestTestRequestStep extends WsdlTestStepWithProperties implements R
 		return getResource() == null ? null : getResource().getInterface();
 	}
 
-	@Override
+	
 	public ImageIcon getIcon()
 	{
 		return testRequest == null ? null : testRequest.getIcon();
@@ -667,7 +667,7 @@ public class RestTestRequestStep extends WsdlTestStepWithProperties implements R
 		return this;
 	}
 
-	@Override
+	
 	public void resolve( ResolveContext<?> context )
 	{
 		super.resolve( context );
@@ -681,7 +681,7 @@ public class RestTestRequestStep extends WsdlTestStepWithProperties implements R
 					getRequestStepConfig().getService() + "/" + getRequestStepConfig().getMethodName() ).addResolvers(
 					new RemoveTestStepResolver( this ), new ImportInterfaceResolver( this )
 					{
-						@Override
+						
 						protected boolean update()
 						{
 							RestMethod restMethod = findRestMethod();
@@ -696,7 +696,7 @@ public class RestTestRequestStep extends WsdlTestStepWithProperties implements R
 
 					}, new ChangeRestMethodResolver( this )
 					{
-						@Override
+						
 						public boolean update()
 						{
 							RestMethod restMethod = getSelectedRestMethod();
@@ -709,7 +709,7 @@ public class RestTestRequestStep extends WsdlTestStepWithProperties implements R
 							return true;
 						}
 
-						@Override
+						
 						protected Interface[] getInterfaces( WsdlProject project )
 						{
 							List<RestService> interfaces = ModelSupport.getChildren( project, RestService.class );
@@ -731,7 +731,7 @@ public class RestTestRequestStep extends WsdlTestStepWithProperties implements R
 		}
 	}
 
-	@Override
+	
 	public void prepare( TestCaseRunner testRunner, TestCaseRunContext testRunContext ) throws Exception
 	{
 		super.prepare( testRunner, testRunContext );
@@ -745,7 +745,7 @@ public class RestTestRequestStep extends WsdlTestStepWithProperties implements R
 	}
 
 	@SuppressWarnings( "unchecked" )
-	@Override
+	
 	public List<? extends ModelItem> getChildren()
 	{
 		return testRequest == null ? Collections.EMPTY_LIST : testRequest.getAssertionList();
@@ -763,7 +763,7 @@ public class RestTestRequestStep extends WsdlTestStepWithProperties implements R
 	 * getRequestStepConfig().getResourcePath()) .addResolvers(new
 	 * RemoveTestStepResolver(this), new ImportInterfaceResolver(this) {
 	 * 
-	 * @Override protected boolean update() { RestResource restResource =
+	 *  protected boolean update() { RestResource restResource =
 	 * findRestResource(); if (restResource == null) return false;
 	 * 
 	 * setResource(restResource); initRestTestRequest(); setDisabled(false);
@@ -771,7 +771,7 @@ public class RestTestRequestStep extends WsdlTestStepWithProperties implements R
 	 * 
 	 * }, new ChangeOperationResolver(this, "Resource") {
 	 * 
-	 * @Override public boolean update() { RestResource restResource =
+	 *  public boolean update() { RestResource restResource =
 	 * (RestResource) getSelectedOperation(); if (restResource == null) return
 	 * false;
 	 * 
@@ -1011,21 +1011,21 @@ public class RestTestRequestStep extends WsdlTestStepWithProperties implements R
 
 	private class InternalTestPropertyListener extends TestPropertyListenerAdapter
 	{
-		@Override
+		
 		public void propertyAdded( String name )
 		{
 			requestProperties.put( name, new RestTestStepProperty( name ) );
 			RestTestRequestStep.this.addProperty( requestProperties.get( name ), true );
 		}
 
-		@Override
+		
 		public void propertyRemoved( String name )
 		{
 			requestProperties.remove( name );
 			deleteProperty( name, true );
 		}
 
-		@Override
+		
 		public void propertyRenamed( String oldName, String newName )
 		{
 			RestTestStepProperty prop = requestProperties.remove( oldName );
@@ -1037,13 +1037,13 @@ public class RestTestRequestStep extends WsdlTestStepWithProperties implements R
 			RestTestRequestStep.this.propertyRenamed( oldName );
 		}
 
-		@Override
+		
 		public void propertyValueChanged( String name, String oldValue, String newValue )
 		{
 			firePropertyValueChanged( name, oldValue, newValue );
 		}
 
-		@Override
+		
 		public void propertyMoved( String name, int oldIndex, int newIndex )
 		{
 			firePropertyMoved( name, oldIndex, newIndex );
@@ -1109,13 +1109,13 @@ public class RestTestRequestStep extends WsdlTestStepWithProperties implements R
 			return getTestRequest();
 		}
 
-		@Override
+		
 		public boolean isRequestPart()
 		{
 			return true;
 		}
 
-		@Override
+		
 		public SchemaType getSchemaType()
 		{
 			return getTestRequest().getProperty( propertyName ).getSchemaType();

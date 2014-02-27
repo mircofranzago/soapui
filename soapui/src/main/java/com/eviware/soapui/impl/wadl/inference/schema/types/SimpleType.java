@@ -92,7 +92,7 @@ public class SimpleType implements Type
 		return this;
 	}
 
-	@Override
+	
 	public String toString()
 	{
 		return "";

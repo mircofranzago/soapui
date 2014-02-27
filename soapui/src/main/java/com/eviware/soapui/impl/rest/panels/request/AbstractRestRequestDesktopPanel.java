@@ -84,19 +84,19 @@ public abstract class AbstractRestRequestDesktopPanel<T extends ModelItem, T2 ex
 	}
 
 
-	@Override
+	
 	protected Submit doSubmit() throws SubmitException
 	{
 		return getRequest().submit( new WsdlSubmitContext( getModelItem() ), true );
 	}
 
-	@Override
+	
 	protected String getHelpUrl()
 	{
 		return null;
 	}
 
-	@Override
+	
 	protected JComponent buildToolbar()
 	{
 		if( getRequest().getResource() != null )
@@ -191,13 +191,13 @@ public abstract class AbstractRestRequestDesktopPanel<T extends ModelItem, T2 ex
 
 	private class InternalTestPropertyListener extends TestPropertyListenerAdapter
 	{
-		@Override
+		
 		public void propertyValueChanged( String name, String oldValue, String newValue )
 		{
 			updateUiValues();
 		}
 
-		@Override
+		
 		public void propertyAdded( String name )
 		{
 			updateUiValues();
@@ -205,13 +205,13 @@ public abstract class AbstractRestRequestDesktopPanel<T extends ModelItem, T2 ex
 			property.addPropertyChangeListener( restParamPropertyChangeListener );
 		}
 
-		@Override
+		
 		public void propertyRemoved( String name )
 		{
 			updateUiValues();
 		}
 
-		@Override
+		
 		public void propertyRenamed( String oldName, String newName )
 		{
 			updateUiValues();
@@ -291,7 +291,7 @@ public abstract class AbstractRestRequestDesktopPanel<T extends ModelItem, T2 ex
 	{
 
 
-		@Override
+		
 		public void propertyChange( PropertyChangeEvent evt )
 		{
 			if( evt.getPropertyName().equals( Interface.ENDPOINT_PROPERTY ) )

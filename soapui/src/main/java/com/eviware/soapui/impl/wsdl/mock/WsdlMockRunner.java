@@ -212,7 +212,7 @@ public class WsdlMockRunner extends AbstractMockRunner
 		}
 	}
 
-	@Override
+	
 	public MockResult dispatchHeadRequest( HttpServletRequest request, HttpServletResponse response )
 			throws DispatchException
 	{
@@ -350,7 +350,7 @@ public class WsdlMockRunner extends AbstractMockRunner
 		mockContext.clear();
 	}
 
-	@Override
+	
 	public MockResult dispatchRequest( HttpServletRequest request, HttpServletResponse response )
 			throws DispatchException
 	{

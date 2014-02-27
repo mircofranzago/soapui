@@ -85,7 +85,7 @@ public class SchemaUtils
 				}
 			}
 
-			@Override
+			
 			public void settingsReloaded()
 			{
 				// TODO Auto-generated method stub

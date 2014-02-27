@@ -97,7 +97,7 @@ public class ThreadCountChangeLoadStrategy extends AbstractLoadStrategy
 		return false;
 	}
 
-	@Override
+	
 	public void recalculate( LoadTestRunner loadTestRunner, LoadTestRunContext context )
 	{
 		// calculate thread count

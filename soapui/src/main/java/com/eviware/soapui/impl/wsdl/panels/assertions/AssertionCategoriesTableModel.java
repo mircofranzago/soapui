@@ -28,13 +28,13 @@ public class AssertionCategoriesTableModel extends DefaultTableModel
 		listEntriesSet = keySet;
 	}
 
-	@Override
+	
 	public int getColumnCount()
 	{
 		return 1;
 	}
 
-	@Override
+	
 	public int getRowCount()
 	{
 		if( listEntriesSet != null )
@@ -47,7 +47,7 @@ public class AssertionCategoriesTableModel extends DefaultTableModel
 		}
 	}
 
-	@Override
+	
 	public Object getValueAt( int row, int column )
 	{
 		if( listEntriesSet != null )

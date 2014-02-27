@@ -27,7 +27,7 @@ public class VersionUpdateAction extends AbstractAction
 		putValue( Action.SHORT_DESCRIPTION, "Checks if newer version is available" );
 	}
 
-	@Override
+	
 	public void actionPerformed( ActionEvent e )
 	{
 		new SoapUIVersionUpdate().checkForNewVersion( true );

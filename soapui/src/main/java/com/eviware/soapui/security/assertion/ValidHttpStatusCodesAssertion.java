@@ -71,7 +71,7 @@ public class ValidHttpStatusCodesAssertion extends WsdlMessageAssertion implemen
 		codes = reader.readString( CODES, "" );
 	}
 
-	@Override
+	
 	protected String internalAssertResponse( MessageExchange messageExchange, SubmitContext context )
 			throws AssertionException
 	{
@@ -131,19 +131,19 @@ public class ValidHttpStatusCodesAssertion extends WsdlMessageAssertion implemen
 					ValidHttpStatusCodesAssertion.class, new Class[] { SecurityScan.class, AbstractHttpRequest.class } );
 		}
 
-		@Override
+		
 		public String getCategory()
 		{
 			return AssertionCategoryMapping.STATUS_CATEGORY;
 		}
 
-		@Override
+		
 		public Class<? extends WsdlMessageAssertion> getAssertionClassType()
 		{
 			return ValidHttpStatusCodesAssertion.class;
 		}
 
-		@Override
+		
 		public AssertionListEntry getAssertionListEntry()
 		{
 			return new AssertionListEntry( ValidHttpStatusCodesAssertion.ID, ValidHttpStatusCodesAssertion.LABEL,
@@ -151,7 +151,7 @@ public class ValidHttpStatusCodesAssertion extends WsdlMessageAssertion implemen
 		}
 	}
 
-	@Override
+	
 	protected String internalAssertRequest( MessageExchange messageExchange, SubmitContext context )
 			throws AssertionException
 	{
@@ -165,7 +165,7 @@ public class ValidHttpStatusCodesAssertion extends WsdlMessageAssertion implemen
 		return builder.finish();
 	}
 
-	@Override
+	
 	public boolean configure()
 	{
 		if( dialog == null )

@@ -18,19 +18,19 @@ public class InvalidTypesSecurityScanFactory extends AbstractSecurityScanFactory
 				"Tries to break application and get information on system", "/invalid_types_scan.gif" );
 	}
 
-	@Override
+	
 	public AbstractSecurityScan buildSecurityScan( TestStep testStep, SecurityScanConfig config, ModelItem parent )
 	{
 		return new InvalidTypesSecurityScan( testStep, config, parent, "/invalid_types_scan.gif" );
 	}
 
-	@Override
+	
 	public boolean canCreate( TestStep testStep )
 	{
 		return testStep instanceof WsdlTestRequestStep || testStep instanceof RestTestRequestStep;
 	}
 
-	@Override
+	
 	public SecurityScanConfig createNewSecurityScan( String name )
 	{
 		SecurityScanConfig securityCheckConfig = SecurityScanConfig.Factory.newInstance();

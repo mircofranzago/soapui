@@ -65,7 +65,7 @@ public class PropertyTransfersTestStep extends WsdlTestStepWithProperties implem
 		}
 	}
 
-	@Override
+	
 	public void afterLoad()
 	{
 		TestStepConfig config = getConfig();
@@ -93,7 +93,7 @@ public class PropertyTransfersTestStep extends WsdlTestStepWithProperties implem
 		return transferStepConfig;
 	}
 
-	@Override
+	
 	public void resetConfigOnMove( TestStepConfig config )
 	{
 		super.resetConfigOnMove( config );
@@ -169,7 +169,7 @@ public class PropertyTransfersTestStep extends WsdlTestStepWithProperties implem
 		return result;
 	}
 
-	@Override
+	
 	public boolean cancel()
 	{
 		canceled = true;
@@ -210,7 +210,7 @@ public class PropertyTransfersTestStep extends WsdlTestStepWithProperties implem
 		return result;
 	}
 
-	@Override
+	
 	public void release()
 	{
 		super.release();
@@ -239,7 +239,7 @@ public class PropertyTransfersTestStep extends WsdlTestStepWithProperties implem
 			this.values.add( values );
 		}
 
-		@Override
+		
 		public ActionList getActions()
 		{
 			if( !addedAction )
@@ -266,7 +266,7 @@ public class PropertyTransfersTestStep extends WsdlTestStepWithProperties implem
 			return values == null ? null : values.get( index );
 		}
 
-		@Override
+		
 		public void discard()
 		{
 			super.discard();
@@ -275,7 +275,7 @@ public class PropertyTransfersTestStep extends WsdlTestStepWithProperties implem
 			values = null;
 		}
 
-		@Override
+		
 		public void writeTo( PrintWriter writer )
 		{
 			super.writeTo( writer );
@@ -329,7 +329,7 @@ public class PropertyTransfersTestStep extends WsdlTestStepWithProperties implem
 		return result.toArray( new PropertyExpansion[result.size()] );
 	}
 
-	@Override
+	
 	public boolean hasProperties()
 	{
 		return false;
@@ -353,7 +353,7 @@ public class PropertyTransfersTestStep extends WsdlTestStepWithProperties implem
 		return result.toArray( new XPathReference[result.size()] );
 	}
 
-	@Override
+	
 	public void resolve( ResolveContext<?> context )
 	{
 		super.resolve( context );

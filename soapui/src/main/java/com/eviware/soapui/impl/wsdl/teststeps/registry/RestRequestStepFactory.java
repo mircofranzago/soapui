@@ -235,7 +235,7 @@ public class RestRequestStepFactory extends WsdlTestStepFactory
 	// UISupport.OPTIONS_ICON );
 	// }
 
-	@Override
+	
 	public boolean canAddTestStepToTestCase( WsdlTestCase testCase )
 	{
 		for( Interface iface : testCase.getTestSuite().getProject().getInterfaceList() )

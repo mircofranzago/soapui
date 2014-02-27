@@ -107,7 +107,7 @@ public class CrossSiteScriptingScan extends AbstractSecurityScanWithProperties
 
 	}
 
-	@Override
+	
 	protected void initAssertions()
 	{
 		super.initAssertions();
@@ -128,7 +128,7 @@ public class CrossSiteScriptingScan extends AbstractSecurityScanWithProperties
 				.toArray( new String[defaultParameterExposureStrings.size()] ) );
 	}
 
-	@Override
+	
 	public void updateSecurityConfig( SecurityScanConfig config )
 	{
 		super.updateSecurityConfig( config );
@@ -139,7 +139,7 @@ public class CrossSiteScriptingScan extends AbstractSecurityScanWithProperties
 		}
 	}
 
-	@Override
+	
 	protected void execute( SecurityTestRunner securityTestRunner, TestStep testStep, SecurityTestRunContext context )
 	{
 		sendToContext( context, testStep, securityTestRunner );
@@ -179,7 +179,7 @@ public class CrossSiteScriptingScan extends AbstractSecurityScanWithProperties
 		context.remove( TEST_STEP );
 	}
 
-	@Override
+	
 	public JComponent getComponent()
 	{
 		JPanel p = UISupport.createEmptyPanel( 5, 75, 0, 5 );
@@ -187,14 +187,14 @@ public class CrossSiteScriptingScan extends AbstractSecurityScanWithProperties
 		return p;
 	}
 
-	@Override
+	
 	public String getType()
 	{
 		return TYPE;
 	}
 
 	@SuppressWarnings( "unchecked" )
-	@Override
+	
 	protected boolean hasNext( TestStep testStep, SecurityTestRunContext context )
 	{
 		if( !context.hasProperty( PropertyMutation.REQUEST_MUTATIONS_STACK ) )
@@ -350,25 +350,25 @@ public class CrossSiteScriptingScan extends AbstractSecurityScanWithProperties
 		return value.replaceAll( "&lt;", "<" );
 	}
 
-	@Override
+	
 	public String getConfigDescription()
 	{
 		return "Configures parameter exposure security scan";
 	}
 
-	@Override
+	
 	public String getConfigName()
 	{
 		return "Cross Site Scripting Scan";
 	}
 
-	@Override
+	
 	public String getHelpURL()
 	{
 		return "http://soapui.org/Security/cross-site-scripting.html";
 	}
 
-	@Override
+	
 	public JComponent getAdvancedSettingsPanel()
 	{
 		dialog = ( JFormDialog )ADialogBuilder.buildDialog( AdvancedSettings.class );
@@ -379,7 +379,7 @@ public class CrossSiteScriptingScan extends AbstractSecurityScanWithProperties
 		stringField.getComponent().addPropertyChangeListener( "options", new PropertyChangeListener()
 		{
 
-			@Override
+			
 			public void propertyChange( PropertyChangeEvent evt )
 			{
 				String[] newOptions = ( String[] )evt.getNewValue();
@@ -422,7 +422,7 @@ public class CrossSiteScriptingScan extends AbstractSecurityScanWithProperties
 		return dialog.getPanel();
 	}
 
-	@Override
+	
 	public void release()
 	{
 		if( dialog != null )

@@ -119,7 +119,7 @@ public abstract class AbstractSecurityScan extends AbstractWsdlModelItem<Securit
 			setDisabled( false );
 	}
 
-	@Override
+	
 	public void copyConfig( SecurityScanConfig config )
 	{
 		super.setConfig( config );
@@ -277,7 +277,7 @@ public abstract class AbstractSecurityScan extends AbstractWsdlModelItem<Securit
 	/**
 	 * Overide if SecurityScan have Optional component
 	 */
-	@Override
+	
 	public JComponent getComponent()
 	{
 		return null;
@@ -405,7 +405,7 @@ public abstract class AbstractSecurityScan extends AbstractWsdlModelItem<Securit
 		}
 	}
 
-	@Override
+	
 	public TestAssertion addAssertion( String label )
 	{
 		PropertyChangeNotifier notifier = new PropertyChangeNotifier();
@@ -464,7 +464,7 @@ public abstract class AbstractSecurityScan extends AbstractWsdlModelItem<Securit
 			}
 	}
 
-	@Override
+	
 	public void removeAssertion( TestAssertion assertion )
 	{
 		PropertyChangeNotifier notifier = new PropertyChangeNotifier();
@@ -481,7 +481,7 @@ public abstract class AbstractSecurityScan extends AbstractWsdlModelItem<Securit
 		}
 	}
 
-	@Override
+	
 	public TestAssertion moveAssertion( int ix, int offset )
 	{
 		WsdlMessageAssertion assertion = getAssertionAt( ix );
@@ -498,31 +498,31 @@ public abstract class AbstractSecurityScan extends AbstractWsdlModelItem<Securit
 		}
 	}
 
-	@Override
+	
 	public WsdlMessageAssertion getAssertionAt( int c )
 	{
 		return assertionsSupport.getAssertionAt( c );
 	}
 
-	@Override
+	
 	public void addAssertionsListener( AssertionsListener listener )
 	{
 		assertionsSupport.addAssertionsListener( listener );
 	}
 
-	@Override
+	
 	public void removeAssertionsListener( AssertionsListener listener )
 	{
 		assertionsSupport.removeAssertionsListener( listener );
 	}
 
-	@Override
+	
 	public int getAssertionCount()
 	{
 		return assertionsSupport.getAssertionCount();
 	}
 
-	@Override
+	
 	public AssertionStatus getAssertionStatus()
 	{
 		int cnt = getAssertionCount();
@@ -542,7 +542,7 @@ public abstract class AbstractSecurityScan extends AbstractWsdlModelItem<Securit
 		return securityScanResult != null ? securityScanResult.getStatus() : ResultStatus.UNKNOWN;
 	}
 
-	@Override
+	
 	public String getAssertableContent()
 	{
 		if( testStep instanceof Assertable )
@@ -559,25 +559,25 @@ public abstract class AbstractSecurityScan extends AbstractWsdlModelItem<Securit
 	 * Decided to go with assertions on request and response so we can implement
 	 * "men in the middle" attacks using monitor.
 	 */
-	@Override
+	
 	public AssertableType getAssertableType()
 	{
 		return AssertableType.BOTH;
 	}
 
-	@Override
+	
 	public TestAssertion getAssertionByName( String name )
 	{
 		return assertionsSupport.getAssertionByName( name );
 	}
 
-	@Override
+	
 	public List<TestAssertion> getAssertionList()
 	{
 		return new ArrayList<TestAssertion>( assertionsSupport.getAssertionList() );
 	}
 
-	@Override
+	
 	public Map<String, TestAssertion> getAssertions()
 	{
 		return assertionsSupport.getAssertions();
@@ -593,13 +593,13 @@ public abstract class AbstractSecurityScan extends AbstractWsdlModelItem<Securit
 		return assertionsSupport;
 	}
 
-	@Override
+	
 	public TestAssertion cloneAssertion( TestAssertion source, String name )
 	{
 		return assertionsSupport.cloneAssertion( source, name );
 	}
 
-	@Override
+	
 	public String getDefaultAssertableContent()
 	{
 		if( testStep instanceof Assertable )
@@ -608,7 +608,7 @@ public abstract class AbstractSecurityScan extends AbstractWsdlModelItem<Securit
 		return null;
 	}
 
-	@Override
+	
 	public Interface getInterface()
 	{
 		if( testStep instanceof WsdlTestRequestStep )
@@ -617,7 +617,7 @@ public abstract class AbstractSecurityScan extends AbstractWsdlModelItem<Securit
 		return null;
 	}
 
-	@Override
+	
 	public ModelItem getModelItem()
 	{
 		return this;
@@ -727,13 +727,13 @@ public abstract class AbstractSecurityScan extends AbstractWsdlModelItem<Securit
 	/**
 	 * Overide if SecurityScan needs advanced settings
 	 */
-	@Override
+	
 	public JComponent getAdvancedSettingsPanel()
 	{
 		return null;
 	}
 
-	@Override
+	
 	public SecurityScanResult getSecurityScanResult()
 	{
 		return securityScanResult;
@@ -750,31 +750,31 @@ public abstract class AbstractSecurityScan extends AbstractWsdlModelItem<Securit
 		getSecurityScanRequestResult().addMessage( message );
 	}
 
-	@Override
+	
 	public void addWsdlAssertion( String assertionLabel )
 	{
 		assertionsSupport.addWsdlAssertion( assertionLabel );
 	}
 
-	@Override
+	
 	public boolean isApplyForFailedStep()
 	{
 		return getConfig().getApplyForFailedStep();
 	}
 
-	@Override
+	
 	public void setApplyForFailedTestStep( boolean apply )
 	{
 		getConfig().setApplyForFailedStep( apply );
 	}
 
-	@Override
+	
 	public boolean isRunOnlyOnce()
 	{
 		return getConfig().getRunOnlyOnce();
 	}
 
-	@Override
+	
 	public void setRunOnlyOnce( boolean runOnlyOnce )
 	{
 		getConfig().setRunOnlyOnce( runOnlyOnce );
@@ -809,13 +809,13 @@ public abstract class AbstractSecurityScan extends AbstractWsdlModelItem<Securit
 		pcs.removePropertyChangeListener( listener );
 	}
 
-	@Override
+	
 	public boolean isSkipFurtherRunning()
 	{
 		return skipFurtherRunning;
 	}
 
-	@Override
+	
 	public void setSkipFurtherRunning( boolean skipFurtherRunning )
 	{
 		this.skipFurtherRunning = skipFurtherRunning;

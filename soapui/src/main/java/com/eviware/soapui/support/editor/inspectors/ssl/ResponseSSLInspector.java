@@ -57,7 +57,7 @@ public class ResponseSSLInspector extends AbstractXmlInspector implements Proper
 		return panel;
 	}
 
-	@Override
+	
 	public void release()
 	{
 		super.release();
@@ -132,7 +132,7 @@ public class ResponseSSLInspector extends AbstractXmlInspector implements Proper
 		setEnabled( response != null && response.getSSLInfo() != null );
 	}
 
-	@Override
+	
 	public boolean isEnabledFor( EditorView<XmlDocument> view )
 	{
 		return true;

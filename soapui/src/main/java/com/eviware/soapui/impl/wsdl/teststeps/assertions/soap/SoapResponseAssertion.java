@@ -46,7 +46,7 @@ public class SoapResponseAssertion extends WsdlMessageAssertion implements Respo
 		super( assertionConfig, assertable, false, false, false, true );
 	}
 
-	@Override
+	
 	protected String internalAssertResponse( MessageExchange messageExchange, SubmitContext context )
 			throws AssertionException
 	{
@@ -85,19 +85,19 @@ public class SoapResponseAssertion extends WsdlMessageAssertion implements Respo
 			super( SoapResponseAssertion.ID, SoapResponseAssertion.LABEL, SoapResponseAssertion.class, WsdlRequest.class );
 		}
 
-		@Override
+		
 		public String getCategory()
 		{
 			return AssertionCategoryMapping.STATUS_CATEGORY;
 		}
 
-		@Override
+		
 		public Class<? extends WsdlMessageAssertion> getAssertionClassType()
 		{
 			return SoapResponseAssertion.class;
 		}
 
-		@Override
+		
 		public AssertionListEntry getAssertionListEntry()
 		{
 			return new AssertionListEntry( SoapResponseAssertion.ID, SoapResponseAssertion.LABEL,
@@ -105,7 +105,7 @@ public class SoapResponseAssertion extends WsdlMessageAssertion implements Respo
 		}
 	}
 
-	@Override
+	
 	protected String internalAssertRequest( MessageExchange messageExchange, SubmitContext context )
 			throws AssertionException
 	{

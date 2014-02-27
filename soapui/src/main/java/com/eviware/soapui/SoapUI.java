@@ -307,7 +307,7 @@ public class SoapUI
 		searchField = new JTextField( 20 );
 		searchField.addKeyListener( new KeyAdapter()
 		{
-			@Override
+			
 			public void keyTyped( KeyEvent e )
 			{
 				if( e.getKeyChar() == '\n' )
@@ -640,7 +640,7 @@ public class SoapUI
 				if( isAutoUpdateVersion() ){
 					new Thread( new Runnable()
 					{
-						@Override
+						
 						public void run()
 						{
 							new SoapUIVersionUpdate().checkForNewVersion( false );
@@ -703,7 +703,7 @@ public class SoapUI
 
 	private final class InternalDesktopListener extends DesktopListenerAdapter
 	{
-		@Override
+		
 		public void desktopPanelSelected( DesktopPanel desktopPanel )
 		{
 			ModelItem modelItem = desktopPanel.getModelItem();
@@ -714,14 +714,14 @@ public class SoapUI
 
 	private final class MainFrameWindowListener extends WindowAdapter
 	{
-		@Override
+		
 		public void windowClosing( WindowEvent e )
 		{
 			if( onExit() )
 				frame.dispose();
 		}
 
-		@Override
+		
 		public void windowClosed( WindowEvent e )
 		{
 			System.out.println( "exiting.." );
@@ -1316,7 +1316,7 @@ public class SoapUI
 		{
 			desktop.addDesktopListener( new DesktopListenerAdapter()
 			{
-				@Override
+				
 				public void desktopPanelCreated( DesktopPanel desktopPanel )
 				{
 					if( desktopPanel != urlDesktopPanel && urlDesktopPanel != null )
@@ -1686,7 +1686,7 @@ public class SoapUI
 
 	private static class AutoSaveTimerTask extends TimerTask
 	{
-		@Override
+		
 		public void run()
 		{
 			SwingUtilities.invokeLater( new Runnable()
@@ -1728,7 +1728,7 @@ public class SoapUI
 
 	private static class GCTimerTask extends TimerTask
 	{
-		@Override
+		
 		public void run()
 		{
 			System.gc();
@@ -1799,7 +1799,7 @@ public class SoapUI
 			}
 			frame.addWindowListener( new WindowAdapter()
 			{
-				@Override
+				
 				public void windowClosing( WindowEvent event )
 				{
 					try

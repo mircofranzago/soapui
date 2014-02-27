@@ -415,7 +415,7 @@ public class RestMethod extends AbstractWsdlModelItem<RestMethodConfig> implemen
 		return getRequestList();
 	}
 
-	@Override
+	
 	public void release()
 	{
 		( ( AbstractSoapUIDesktop )SoapUI.getDesktop() ).closeDependantPanels( this );

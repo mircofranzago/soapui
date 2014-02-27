@@ -335,7 +335,7 @@ public class WsdlProjectTestSuitesTabPanel extends JPanel
 			project.setBeforeRunScript( text );
 		}
 
-		@Override
+		
 		public Action createRunAction()
 		{
 			return new AbstractAction()
@@ -374,7 +374,7 @@ public class WsdlProjectTestSuitesTabPanel extends JPanel
 			project.setAfterRunScript( text );
 		}
 
-		@Override
+		
 		public Action createRunAction()
 		{
 			return new AbstractAction()

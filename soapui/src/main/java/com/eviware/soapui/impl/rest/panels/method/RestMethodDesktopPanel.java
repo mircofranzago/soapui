@@ -72,7 +72,7 @@ public class RestMethodDesktopPanel extends ModelItemDesktopPanel<RestMethod>
 		return UISupport.createTabPanel( tabs, false );
 	}
 
-	@Override
+	
 	public String getTitle()
 	{
 		return getName( getModelItem() );
@@ -83,7 +83,7 @@ public class RestMethodDesktopPanel extends ModelItemDesktopPanel<RestMethod>
 		return paramsTable;
 	}
 
-	@Override
+	
 	protected boolean release()
 	{
 		paramsTable.release();
@@ -128,7 +128,7 @@ public class RestMethodDesktopPanel extends ModelItemDesktopPanel<RestMethod>
 		return toolbar;
 	}
 
-	@Override
+	
 	public boolean dependsOn( ModelItem modelItem )
 	{
 		return getModelItem().dependsOn( modelItem );
@@ -139,7 +139,7 @@ public class RestMethodDesktopPanel extends ModelItemDesktopPanel<RestMethod>
 		return release();
 	}
 
-	@Override
+	
 	public void propertyChange( PropertyChangeEvent evt )
 	{
 		super.propertyChange( evt );

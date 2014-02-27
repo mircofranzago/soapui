@@ -222,7 +222,7 @@ public class SecurityScanResult implements SecurityResult
 		return tl.toString();
 	}
 
-	@Override
+	
 	public String getResultType()
 	{
 		return TYPE;
@@ -238,7 +238,7 @@ public class SecurityScanResult implements SecurityResult
 		return hasRequestsWithWarnings;
 	}
 
-	@Override
+	
 	public ResultStatus getExecutionProgressStatus()
 	{
 		return executionProgressStatus;
@@ -274,7 +274,7 @@ public class SecurityScanResult implements SecurityResult
 		
 	}
 
-	@Override
+	
 	public ResultStatus getLogIconStatus()
 	{
 		return logIconStatus;

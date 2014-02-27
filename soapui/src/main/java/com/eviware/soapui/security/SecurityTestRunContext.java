@@ -73,7 +73,7 @@ public class SecurityTestRunContext extends WsdlTestRunContext
 		this.currentScanIndex = currentScanIndex;
 	}
 
-	@Override
+	
 	public Object get( Object key )
 	{
 		if( "currentStep".equals( key ) )

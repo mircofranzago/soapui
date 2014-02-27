@@ -168,14 +168,14 @@ public class WsdlProjectTestCase extends JettyTestCaseBase
 	{
 		WsdlProject wsdlProject = new WsdlProject( null, null, true, isOpen, PROJECT_NAME, null )
 		{
-			@Override
+			
 			public SaveStatus saveIn( File projectFile ) throws IOException
 			{
 				// always return success for the actual save step
 				return SaveStatus.SUCCESS;
 			}
 
-			@Override
+			
 			public File createFile( String path )
 			{
 				return file;

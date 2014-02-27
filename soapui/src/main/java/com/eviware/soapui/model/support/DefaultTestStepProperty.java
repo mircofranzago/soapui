@@ -194,7 +194,7 @@ public class DefaultTestStepProperty implements TestStepProperty, RenameableTest
 		return requestPart;
 	}
 
-	@Override
+	
 	public SchemaType getSchemaType()
 	{
 		return XmlString.type;

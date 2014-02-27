@@ -18,7 +18,7 @@ public class IntegerBoundary extends AbstractBoundary
 {
 	private static final String AVAILABLE_VALUES = "1234567890";
 
-	@Override
+	
 	public String outOfBoundary( int restrictionAttribute, String value )
 	{
 		switch( restrictionAttribute )

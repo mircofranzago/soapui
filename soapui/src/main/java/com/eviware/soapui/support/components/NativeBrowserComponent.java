@@ -123,7 +123,7 @@ public class NativeBrowserComponent implements nsIWebProgressListener, nsIWeakRe
 
 	private final static class InternalHttpSecurityHandler implements HttpSecurityHandler
 	{
-		@Override
+		
 		public HttpSecurityAction onSecurityProblem( Set<SecurityProblem> arg0 )
 		{
 			return HttpSecurityAction.CONTINUE;
@@ -132,7 +132,7 @@ public class NativeBrowserComponent implements nsIWebProgressListener, nsIWeakRe
 
 	private final class InternalNavigationAdapter extends NavigationAdapter
 	{
-		@Override
+		
 		public void navigationFinished( NavigationFinishedEvent evt )
 		{
 			if( evt.getUrl().equals( SoapUI.PUSH_PAGE_URL ) && !( evt.getStatusCode().equals( NavigationStatusCode.OK ) ) )

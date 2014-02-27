@@ -108,14 +108,14 @@ public class JTestSuiteTestCaseList extends JPanel
 		}
 	}
 
-	@Override
+	
 	public void addNotify()
 	{
 		super.addNotify();
 		testSuite.addTestSuiteListener( testSuiteListener );
 	}
 
-	@Override
+	
 	public void removeNotify()
 	{
 		super.removeNotify();
@@ -145,7 +145,7 @@ public class JTestSuiteTestCaseList extends JPanel
 			}
 		}
 
-		@Override
+		
 		public void testCaseMoved( TestCase testCase, int index, int offset )
 		{
 			TestCaseListPanel testCaseListPanel = panels.get( testCase );
@@ -230,7 +230,7 @@ public class JTestSuiteTestCaseList extends JPanel
 			addMouseListener( new MouseAdapter()
 			{
 
-				@Override
+				
 				public void mousePressed( MouseEvent e )
 				{
 					requestFocus();

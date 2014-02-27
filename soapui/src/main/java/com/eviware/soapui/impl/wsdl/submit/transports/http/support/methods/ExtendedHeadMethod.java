@@ -63,7 +63,7 @@ public final class ExtendedHeadMethod extends HttpHead implements ExtendedHttpMe
 		httpMethodSupport.afterReadResponse( session );
 	}
 
-	@Override
+	
 	public String getResponseCharSet()
 	{
 		return httpMethodSupport.getResponseCharset();

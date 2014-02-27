@@ -106,7 +106,7 @@ public class ProgressBarSecurityTestStepAdapter
 
 		private int totalAlertsCounter;
 
-		@Override
+		
 		public void beforeStep( TestCaseRunner testRunner, SecurityTestRunContext runContext, TestStepResult tsr )
 		{
 			if( tsr.getTestStep().getId().equals( testStep.getId() ) )
@@ -129,7 +129,7 @@ public class ProgressBarSecurityTestStepAdapter
 			}
 		}
 
-		@Override
+		
 		public void beforeRun( TestCaseRunner testRunner, SecurityTestRunContext runContext )
 		{
 
@@ -148,7 +148,7 @@ public class ProgressBarSecurityTestStepAdapter
 			}
 		}
 
-		@Override
+		
 		public void afterStep( TestCaseRunner testRunner, SecurityTestRunContext runContext, SecurityTestStepResult result )
 		{
 			if( runContext.getCurrentStep().getId().equals( testStep.getId() ) )
@@ -194,7 +194,7 @@ public class ProgressBarSecurityTestStepAdapter
 			( ( DefaultTreeModel )tree.getModel() ).nodeChanged( node );
 		}
 
-		@Override
+		
 		public void beforeSecurityScan( TestCaseRunner testRunner, SecurityTestRunContext runContext,
 				SecurityScan securityScan )
 		{
@@ -287,7 +287,7 @@ public class ProgressBarSecurityTestStepAdapter
 			}
 		}
 
-		@Override
+		
 		public void afterSecurityScanRequest( TestCaseRunner testRunner, SecurityTestRunContext runContext,
 				SecurityScanRequestResult securityCheckReqResult )
 		{

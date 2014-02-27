@@ -64,7 +64,7 @@ public class MalformedXmlAdvancedSettingsPanel
 		dialog.getFormField( AdvancedSettings.INSERT_NEW_ELEMENT ).addFormFieldListener( new XFormFieldListener()
 		{
 
-			@Override
+			
 			public void valueChanged( XFormField sourceField, String newValue, String oldValue )
 			{
 				configuration.setInsertNewElement( Boolean.parseBoolean( newValue ) );
@@ -73,7 +73,7 @@ public class MalformedXmlAdvancedSettingsPanel
 		dialog.getFormField( AdvancedSettings.NEW_ELEMENT_VALUE ).addFormFieldListener( new XFormFieldListener()
 		{
 
-			@Override
+			
 			public void valueChanged( XFormField sourceField, String newValue, String oldValue )
 			{
 				configuration.setNewElementValue( newValue );
@@ -82,7 +82,7 @@ public class MalformedXmlAdvancedSettingsPanel
 		dialog.getFormField( AdvancedSettings.CHANGE_TAG_NAME ).addFormFieldListener( new XFormFieldListener()
 		{
 
-			@Override
+			
 			public void valueChanged( XFormField sourceField, String newValue, String oldValue )
 			{
 				configuration.setChangeTagName( Boolean.parseBoolean( newValue ) );
@@ -91,7 +91,7 @@ public class MalformedXmlAdvancedSettingsPanel
 		dialog.getFormField( AdvancedSettings.LEAVE_TAG_OPEN ).addFormFieldListener( new XFormFieldListener()
 		{
 
-			@Override
+			
 			public void valueChanged( XFormField sourceField, String newValue, String oldValue )
 			{
 				configuration.setLeaveTagOpen( Boolean.parseBoolean( newValue ) );
@@ -100,7 +100,7 @@ public class MalformedXmlAdvancedSettingsPanel
 		dialog.getFormField( AdvancedSettings.MUTATE_ATTRIBUTES ).addFormFieldListener( new XFormFieldListener()
 		{
 
-			@Override
+			
 			public void valueChanged( XFormField sourceField, String newValue, String oldValue )
 			{
 				attributeConfig.setMutateAttributes( Boolean.parseBoolean( newValue ) );
@@ -109,7 +109,7 @@ public class MalformedXmlAdvancedSettingsPanel
 		dialog.getFormField( AdvancedSettings.INSERT_INVALID_CHARS ).addFormFieldListener( new XFormFieldListener()
 		{
 
-			@Override
+			
 			public void valueChanged( XFormField sourceField, String newValue, String oldValue )
 			{
 				attributeConfig.setInsertInvalidChars( Boolean.parseBoolean( newValue ) );
@@ -118,7 +118,7 @@ public class MalformedXmlAdvancedSettingsPanel
 		dialog.getFormField( AdvancedSettings.LEAVE_ATTRIBUTE_OPEN ).addFormFieldListener( new XFormFieldListener()
 		{
 
-			@Override
+			
 			public void valueChanged( XFormField sourceField, String newValue, String oldValue )
 			{
 				attributeConfig.setLeaveAttributeOpen( Boolean.parseBoolean( newValue ) );
@@ -127,7 +127,7 @@ public class MalformedXmlAdvancedSettingsPanel
 		dialog.getFormField( AdvancedSettings.ADD_NEW_ATTRIBUTE ).addFormFieldListener( new XFormFieldListener()
 		{
 
-			@Override
+			
 			public void valueChanged( XFormField sourceField, String newValue, String oldValue )
 			{
 				attributeConfig.setAddNewAttribute( Boolean.parseBoolean( newValue ) );
@@ -136,7 +136,7 @@ public class MalformedXmlAdvancedSettingsPanel
 		dialog.getFormField( AdvancedSettings.NEW_ATTRIBUTE_NAME ).addFormFieldListener( new XFormFieldListener()
 		{
 
-			@Override
+			
 			public void valueChanged( XFormField sourceField, String newValue, String oldValue )
 			{
 				attributeConfig.setNewAttributeName( newValue );
@@ -145,7 +145,7 @@ public class MalformedXmlAdvancedSettingsPanel
 		dialog.getFormField( AdvancedSettings.NEW_ATTRIBUTE_VALUE ).addFormFieldListener( new XFormFieldListener()
 		{
 
-			@Override
+			
 			public void valueChanged( XFormField sourceField, String newValue, String oldValue )
 			{
 				attributeConfig.setNewAttributeValue( newValue );
@@ -154,7 +154,7 @@ public class MalformedXmlAdvancedSettingsPanel
 		dialog.getFormField( AdvancedSettings.INSERT_INVALID_CHARACTER ).addFormFieldListener( new XFormFieldListener()
 		{
 
-			@Override
+			
 			public void valueChanged( XFormField sourceField, String newValue, String oldValue )
 			{
 				configuration.setInsertInvalidCharacter( Boolean.parseBoolean( newValue ) );

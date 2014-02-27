@@ -391,7 +391,7 @@ public class JdbcRequest extends AbstractAnimatableModelItem<ModelItemConfig> im
 		return icon;
 	}
 
-	@Override
+	
 	public void setIcon( ImageIcon icon )
 	{
 		getTestStep().setIcon( icon );
@@ -407,7 +407,7 @@ public class JdbcRequest extends AbstractAnimatableModelItem<ModelItemConfig> im
 		return null;
 	}
 
-	@Override
+	
 	public String getAuthType()
 	{
 		return null;

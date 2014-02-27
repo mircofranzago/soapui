@@ -178,7 +178,7 @@ public abstract class AbstractPathPropertySupport
 							"Select File", extension, fileType, file.getParent() )
 					{
 
-						@Override
+						
 						public boolean apply( File newFile )
 						{
 							set( newFile.getAbsolutePath(), notify );
@@ -217,7 +217,7 @@ public abstract class AbstractPathPropertySupport
 					context.addPathToResolve( modelItem, errorDescription, source, new ResolveContext.DirectoryResolver(
 							"Select Directory", source )
 					{
-						@Override
+						
 						public boolean apply( File newFile )
 						{
 							set( newFile.getAbsolutePath(), notify );

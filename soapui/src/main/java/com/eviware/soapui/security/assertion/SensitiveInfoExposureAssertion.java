@@ -114,7 +114,7 @@ public class SensitiveInfoExposureAssertion extends WsdlMessageAssertion impleme
 		sensitiveInformationTableModel = new SensitiveInformationTableModel( siph );
 	}
 
-	@Override
+	
 	protected String internalAssertResponse( MessageExchange messageExchange, SubmitContext context )
 			throws AssertionException
 	{
@@ -242,19 +242,19 @@ public class SensitiveInfoExposureAssertion extends WsdlMessageAssertion impleme
 					SensitiveInfoExposureAssertion.class, new Class[] { SecurityScan.class, AbstractHttpRequest.class } );
 		}
 
-		@Override
+		
 		public String getCategory()
 		{
 			return AssertionCategoryMapping.SECURITY_CATEGORY;
 		}
 
-		@Override
+		
 		public Class<? extends WsdlMessageAssertion> getAssertionClassType()
 		{
 			return SensitiveInfoExposureAssertion.class;
 		}
 
-		@Override
+		
 		public AssertionListEntry getAssertionListEntry()
 		{
 			return new AssertionListEntry( SensitiveInfoExposureAssertion.ID, SensitiveInfoExposureAssertion.LABEL,
@@ -262,7 +262,7 @@ public class SensitiveInfoExposureAssertion extends WsdlMessageAssertion impleme
 		}
 	}
 
-	@Override
+	
 	protected String internalAssertRequest( MessageExchange messageExchange, SubmitContext context )
 			throws AssertionException
 	{
@@ -279,7 +279,7 @@ public class SensitiveInfoExposureAssertion extends WsdlMessageAssertion impleme
 		return builder.finish();
 	}
 
-	@Override
+	
 	public boolean configure()
 	{
 		if( dialog == null )
@@ -343,7 +343,7 @@ public class SensitiveInfoExposureAssertion extends WsdlMessageAssertion impleme
 
 	}
 
-	@Override
+	
 	public void release()
 	{
 		if( dialog != null )
@@ -381,7 +381,7 @@ public class SensitiveInfoExposureAssertion extends WsdlMessageAssertion impleme
 			putValue( Action.SHORT_DESCRIPTION, "Adds a token to assertion" );
 		}
 
-		@Override
+		
 		public void actionPerformed( ActionEvent arg0 )
 		{
 			String newToken = "";
@@ -422,7 +422,7 @@ public class SensitiveInfoExposureAssertion extends WsdlMessageAssertion impleme
 			putValue( Action.SHORT_DESCRIPTION, "Removes token from assertion" );
 		}
 
-		@Override
+		
 		public void actionPerformed( ActionEvent arg0 )
 		{
 			sensitiveInformationTableModel.removeRows( tokenTable.getSelectedRows() );

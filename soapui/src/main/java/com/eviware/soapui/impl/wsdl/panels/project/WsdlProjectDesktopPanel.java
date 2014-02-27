@@ -321,7 +321,7 @@ public class WsdlProjectDesktopPanel extends ModelItemDesktopPanel<WsdlProject>
 		descriptionArea = new JUndoableTextArea( getModelItem().getDescription() );
 		descriptionArea.getDocument().addDocumentListener( new DocumentListenerAdapter()
 		{
-			@Override
+			
 			public void update( Document document )
 			{
 				getModelItem().setDescription( descriptionArea.getText() );
@@ -359,7 +359,7 @@ public class WsdlProjectDesktopPanel extends ModelItemDesktopPanel<WsdlProject>
 		return panel;
 	}
 
-	@Override
+	
 	public boolean dependsOn( ModelItem modelItem )
 	{
 		return modelItem == getModelItem();
@@ -410,19 +410,19 @@ public class WsdlProjectDesktopPanel extends ModelItemDesktopPanel<WsdlProject>
 			super( new String[] { "log", "project" }, WsdlProjectDesktopPanel.this.getModelItem(), "Load" );
 		}
 
-		@Override
+		
 		public String getScript()
 		{
 			return WsdlProjectDesktopPanel.this.getModelItem().getAfterLoadScript();
 		}
 
-		@Override
+		
 		public void setScript( String text )
 		{
 			WsdlProjectDesktopPanel.this.getModelItem().setAfterLoadScript( text );
 		}
 
-		@Override
+		
 		public Action getRunAction()
 		{
 			return new AfterLoadScriptRunAction();
@@ -457,19 +457,19 @@ public class WsdlProjectDesktopPanel extends ModelItemDesktopPanel<WsdlProject>
 			super( new String[] { "log", "project" }, WsdlProjectDesktopPanel.this.getModelItem(), "Save" );
 		}
 
-		@Override
+		
 		public String getScript()
 		{
 			return WsdlProjectDesktopPanel.this.getModelItem().getBeforeSaveScript();
 		}
 
-		@Override
+		
 		public void setScript( String text )
 		{
 			WsdlProjectDesktopPanel.this.getModelItem().setBeforeSaveScript( text );
 		}
 
-		@Override
+		
 		public Action getRunAction()
 		{
 			return new BeforeSaveScriptRunAction();

@@ -748,7 +748,7 @@ public class SecurityTest extends AbstractTestPropertyHolderWsdlModelItem<Securi
 		}
 	}
 
-	@Override
+	
 	public List<? extends ModelItem> getChildren()
 	{
 		List<ModelItem> result = new ArrayList<ModelItem>();

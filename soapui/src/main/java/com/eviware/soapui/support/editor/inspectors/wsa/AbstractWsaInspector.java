@@ -51,7 +51,7 @@ public abstract class AbstractWsaInspector extends AbstractXmlInspector
 		return mainPanel;
 	}
 
-	@Override
+	
 	public void release()
 	{
 		super.release();
@@ -64,7 +64,7 @@ public abstract class AbstractWsaInspector extends AbstractXmlInspector
 	{
 	};
 
-	@Override
+	
 	public boolean isEnabledFor( EditorView<XmlDocument> view )
 	{
 		return !view.getViewId().equals( RawXmlEditorFactory.VIEW_ID );

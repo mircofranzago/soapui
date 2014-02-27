@@ -350,7 +350,7 @@ public class MockAsWar
 
 			boolean pathNameExcluded = FluentIterable.from( excludes ).anyMatch( new Predicate<String>()
 			{
-				@Override
+				
 				public boolean apply( @Nullable String s )
 				{
 					if (file == null || s == null || file.getName().isEmpty()){

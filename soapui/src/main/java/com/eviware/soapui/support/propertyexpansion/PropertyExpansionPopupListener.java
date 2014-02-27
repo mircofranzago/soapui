@@ -75,17 +75,17 @@ public class PropertyExpansionPopupListener implements PopupMenuListener
 		this.targetMenu = transferMenu;
 	}
 
-	@Override
+	
 	public void popupMenuCanceled( PopupMenuEvent arg0 )
 	{
 	}
 
-	@Override
+	
 	public void popupMenuWillBecomeInvisible( PopupMenuEvent arg0 )
 	{
 	}
 
-	@Override
+	
 	public void popupMenuWillBecomeVisible( PopupMenuEvent arg0 )
 	{
 		// create transfer menus
@@ -224,7 +224,7 @@ public class PropertyExpansionPopupListener implements PopupMenuListener
 			this.sourceStep = testStep;
 		}
 
-		@Override
+		
 		public void actionPerformed( ActionEvent arg0 )
 		{
 			if( sourceProperty == null && sourceStep instanceof MutableTestPropertyHolder )

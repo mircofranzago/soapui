@@ -30,20 +30,20 @@ public class XPathInjectionSecurityScanFactory extends AbstractSecurityScanFacto
 				"Preforms a scan for XPath Injection Vulerabilities", "/xpath_injection_scan.gif" );
 	}
 
-	@Override
+	
 	public AbstractSecurityScan buildSecurityScan( TestStep testStep, SecurityScanConfig config, ModelItem parent )
 	{
 		return new XPathInjectionSecurityScan( testStep, config, parent, "/xpath_injection_scan.gif" );
 	}
 
-	@Override
+	
 	public boolean canCreate( TestStep testStep )
 	{
 		return testStep instanceof WsdlTestRequestStep || testStep instanceof RestTestRequestStep
 				|| testStep instanceof HttpTestRequestStep;
 	}
 
-	@Override
+	
 	public SecurityScanConfig createNewSecurityScan( String name )
 	{
 		SecurityScanConfig securityCheckConfig = SecurityScanConfig.Factory.newInstance();

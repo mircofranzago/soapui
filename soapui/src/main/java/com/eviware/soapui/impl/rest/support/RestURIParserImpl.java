@@ -98,7 +98,7 @@ public class RestURIParserImpl implements RestURIParser
 		return !endpoint.matches( ".*[\\\\]+.*" );
 	}
 
-	@Override
+	
 	public String getEndpoint()
 	{
 		String endpoint;
@@ -119,7 +119,7 @@ public class RestURIParserImpl implements RestURIParser
 		return endpoint;
 	}
 
-	@Override
+	
 	public String getResourceName()
 	{
 		String path = getResourcePath();
@@ -141,13 +141,13 @@ public class RestURIParserImpl implements RestURIParser
 		return capitalizedResourceName;
 	}
 
-	@Override
+	
 	public String getScheme()
 	{
 		return scheme;
 	}
 
-	@Override
+	
 	public String getResourcePath()
 	{
 		String path = resourcePath;
@@ -156,7 +156,7 @@ public class RestURIParserImpl implements RestURIParser
 		return path;
 	}
 
-	@Override
+	
 	public String getQuery()
 	{
 		return query;

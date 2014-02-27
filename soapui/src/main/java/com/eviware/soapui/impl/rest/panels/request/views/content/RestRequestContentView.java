@@ -51,7 +51,7 @@ public class RestRequestContentView extends HttpRequestContentView
 	{
 		RestParamsTableModel model = new RestParamsTableModel( restRequest.getParams() )
 		{
-			@Override
+			
 			public String getColumnName( int columnIndex )
 			{
 				if( columnIndex == 1 )

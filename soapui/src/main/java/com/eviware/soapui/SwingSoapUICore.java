@@ -98,7 +98,7 @@ public class SwingSoapUICore extends DefaultSoapUICore
 				+ "actions" : actionsDir, getExtensionClassLoader() );
 	}
 
-	@Override
+	
 	protected Settings initSettings( String fileName )
 	{
 		String fn = fileName;

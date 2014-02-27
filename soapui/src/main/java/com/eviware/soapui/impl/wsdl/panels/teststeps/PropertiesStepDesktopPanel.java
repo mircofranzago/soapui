@@ -85,7 +85,7 @@ public class PropertiesStepDesktopPanel extends ModelItemDesktopPanel<WsdlProper
 		toolbar.add( new JLabel( "Load from:" ) );
 		sourceField = new JTextField( testStep.getSource(), 20 )
 		{
-			@Override
+			
 			public String getToolTipText( MouseEvent event )
 			{
 				return testStep.getSource( true );
@@ -115,7 +115,7 @@ public class PropertiesStepDesktopPanel extends ModelItemDesktopPanel<WsdlProper
 		toolbar.add( new JLabel( "Save to:" ) );
 		targetField = new JTextField( testStep.getTarget(), 20 )
 		{
-			@Override
+			
 			public String getToolTipText( MouseEvent event )
 			{
 				return testStep.getTarget( true );
@@ -284,7 +284,7 @@ public class PropertiesStepDesktopPanel extends ModelItemDesktopPanel<WsdlProper
 		super.propertyChange( evt );
 	}
 
-	@Override
+	
 	protected boolean release()
 	{
 		testStep.removePropertyChangeListener( this );

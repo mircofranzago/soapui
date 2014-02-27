@@ -142,14 +142,14 @@ public class RestRepresentationsTable extends JPanel implements PropertyChangeLi
 			return null;
 		}
 
-		@Override
+		
 		public boolean isCellEditable( int rowIndex, int columnIndex )
 		{
 			return !readOnly && columnIndex > 0 && columnIndex < 3
 					&& !( data.get( rowIndex ).getType().equals( RestRepresentation.Type.REQUEST ) && columnIndex == 2 );
 		}
 
-		@Override
+		
 		public void setValueAt( Object value, int rowIndex, int columnIndex )
 		{
 			if( readOnly )
@@ -187,7 +187,7 @@ public class RestRepresentationsTable extends JPanel implements PropertyChangeLi
 			}
 		}
 
-		@Override
+		
 		public String getColumnName( int column )
 		{
 			switch( column )

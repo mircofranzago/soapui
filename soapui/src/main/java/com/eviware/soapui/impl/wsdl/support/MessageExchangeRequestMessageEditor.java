@@ -61,7 +61,7 @@ public class MessageExchangeRequestMessageEditor extends
 		}
 	}
 
-	@Override
+	
 	public void propertyChange( PropertyChangeEvent evt )
 	{
 		if( evt.getSource() == messageExchangeModelItem
@@ -75,7 +75,7 @@ public class MessageExchangeRequestMessageEditor extends
 		}
 	}
 
-	@Override
+	
 	public void release()
 	{
 		super.release();

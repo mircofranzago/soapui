@@ -85,20 +85,20 @@ public class TcpMonWsdlMonitorMessageExchange extends WsdlMonitorMessageExchange
 		return targetUrl == null ? null : targetUrl.toString();
 	}
 
-	@Override
+	
 	public WsdlOperation getOperation()
 	{
 		return operation;
 	}
 
-	@Override
+	
 	public Response getResponse()
 	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
+	
 	public Operation getModelItem()
 	{
 		return operation;
@@ -184,7 +184,7 @@ public class TcpMonWsdlMonitorMessageExchange extends WsdlMonitorMessageExchange
 		return capturedResponseData;
 	}
 
-	@Override
+	
 	public boolean hasRawData()
 	{
 		return true;
@@ -452,14 +452,14 @@ public class TcpMonWsdlMonitorMessageExchange extends WsdlMonitorMessageExchange
 		// | File Templates.
 	}
 
-	@Override
+	
 	public String getRequestMethod()
 	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
+	
 	public Map<String, String> getHttpRequestParameters()
 	{
 		// TODO Auto-generated method stub

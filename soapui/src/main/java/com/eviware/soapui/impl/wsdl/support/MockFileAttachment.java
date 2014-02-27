@@ -36,7 +36,7 @@ public class MockFileAttachment extends FileAttachment<WsdlMockResponse>
 		super( response, file, cache, response.getConfig().addNewAttachment() );
 	}
 
-	@Override
+	
 	public AttachmentType getAttachmentType()
 	{
 		if( getPart() == null || getModelItem().getAttachmentPart( getPart() ) == null )
@@ -57,7 +57,7 @@ public class MockFileAttachment extends FileAttachment<WsdlMockResponse>
 		}
 	}
 
-	@Override
+	
 	public String getId()
 	{
 		return null;

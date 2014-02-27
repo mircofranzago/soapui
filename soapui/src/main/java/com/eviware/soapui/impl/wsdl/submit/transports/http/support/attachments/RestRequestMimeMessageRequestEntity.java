@@ -95,7 +95,7 @@ public class RestRequestMimeMessageRequestEntity extends AbstractHttpEntity
 		}
 	}
 
-	@Override
+	
 	public InputStream getContent() throws IOException, IllegalStateException
 	{
 		try
@@ -108,7 +108,7 @@ public class RestRequestMimeMessageRequestEntity extends AbstractHttpEntity
 		}
 	}
 
-	@Override
+	
 	public boolean isStreaming()
 	{
 		return false;

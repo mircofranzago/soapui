@@ -263,7 +263,7 @@ public class WsdlProjectRunner extends AbstractTestRunner<WsdlProject, WsdlProje
 
 	private class InternalTestSuiteRunListener extends TestSuiteRunListenerAdapter
 	{
-		@Override
+		
 		public void afterRun( TestSuiteRunner testRunner, TestSuiteRunContext runContext )
 		{
 			finishRunner( testRunner );

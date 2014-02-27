@@ -166,13 +166,13 @@ public class RestTestRequestDesktopPanel extends AbstractRestRequestDesktopPanel
 		}
 	}
 
-	@Override
+	
 	protected void addTopToolbarComponents( JXToolBar toolBar )
 	{
 		//RestTestRequestDesktopPanel does not need any extra top toolbar component
 	}
 
-	@Override
+	
 	protected void addBottomToolbar( JPanel panel )
 	{
 		if( getRequest().getResource() != null  )
@@ -195,7 +195,7 @@ public class RestTestRequestDesktopPanel extends AbstractRestRequestDesktopPanel
 		}
 	}
 
-	@Override
+	
 	protected void updateUiValues()
 	{
 		updateFullPathLabel();
@@ -212,7 +212,7 @@ public class RestTestRequestDesktopPanel extends AbstractRestRequestDesktopPanel
 		}
 	}
 
-	@Override
+	
 	protected void insertButtons( JXToolBar toolbar )
 	{
 		addAssertionButton = createActionButton( new AddAssertionAction( getRequest() ), true );
@@ -276,7 +276,7 @@ public class RestTestRequestDesktopPanel extends AbstractRestRequestDesktopPanel
 		logArea.addLine( DateUtil.formatFull( new Date( startTime ) ) + " - " + message );
 	}
 
-	@Override
+	
 	public void afterSubmit( Submit submit, SubmitContext context )
 	{
 		super.afterSubmit( submit, context );
@@ -402,7 +402,7 @@ public class RestTestRequestDesktopPanel extends AbstractRestRequestDesktopPanel
 
 	private class RestMethodListCellRenderer extends DefaultListCellRenderer
 	{
-		@Override
+		
 		public Component getListCellRendererComponent( JList list, Object value, int index, boolean isSelected,
 																	  boolean cellHasFocus )
 		{

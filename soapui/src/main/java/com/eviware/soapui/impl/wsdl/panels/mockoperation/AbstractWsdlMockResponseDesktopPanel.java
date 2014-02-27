@@ -121,7 +121,7 @@ public class AbstractWsdlMockResponseDesktopPanel<T extends ModelItem, T2 extend
 		addFocusListener( new FocusAdapter()
 		{
 
-			@Override
+			
 			public void focusGained( FocusEvent e )
 			{
 				if( requestTabs.getSelectedIndex() == 1 || responseHasFocus )

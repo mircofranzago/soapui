@@ -102,7 +102,7 @@ public class RawXmlEditorFactory implements ResponseEditorViewFactory, RequestEd
 			request.addPropertyChangeListener( WsdlRequest.RESPONSE_PROPERTY, this );
 		}
 
-		@Override
+		
 		public void propertyChange( PropertyChangeEvent evt )
 		{
 			if( evt.getPropertyName().equals( WsdlRequest.RESPONSE_PROPERTY ) )
@@ -111,7 +111,7 @@ public class RawXmlEditorFactory implements ResponseEditorViewFactory, RequestEd
 			}
 		}
 
-		@Override
+		
 		public String getContent()
 		{
 			if( request.getResponse() == null || request.getResponse().getRawRequestData() == null
@@ -127,7 +127,7 @@ public class RawXmlEditorFactory implements ResponseEditorViewFactory, RequestEd
 				return new String( rawRequestData );
 		}
 
-		@Override
+		
 		public void release()
 		{
 			request.removePropertyChangeListener( WsdlRequest.RESPONSE_PROPERTY, this );
@@ -147,7 +147,7 @@ public class RawXmlEditorFactory implements ResponseEditorViewFactory, RequestEd
 			request.addPropertyChangeListener( WsdlRequest.RESPONSE_PROPERTY, this );
 		}
 
-		@Override
+		
 		public void propertyChange( PropertyChangeEvent evt )
 		{
 			if( evt.getPropertyName().equals( WsdlRequest.RESPONSE_PROPERTY ) )
@@ -156,7 +156,7 @@ public class RawXmlEditorFactory implements ResponseEditorViewFactory, RequestEd
 			}
 		}
 
-		@Override
+		
 		public String getContent()
 		{
 			if( request.getResponse() == null || request.getResponse().getRawResponseData() == null
@@ -172,7 +172,7 @@ public class RawXmlEditorFactory implements ResponseEditorViewFactory, RequestEd
 				return new String( rawResponseData );
 		}
 
-		@Override
+		
 		public void release()
 		{
 			request.removePropertyChangeListener( WsdlRequest.RESPONSE_PROPERTY, this );
@@ -192,7 +192,7 @@ public class RawXmlEditorFactory implements ResponseEditorViewFactory, RequestEd
 			response.addPropertyChangeListener( WsdlMockResponse.MOCKRESULT_PROPERTY, this );
 		}
 
-		@Override
+		
 		public void propertyChange( PropertyChangeEvent evt )
 		{
 			if( evt.getPropertyName().equals( WsdlMockResponse.MOCKRESULT_PROPERTY ) )
@@ -201,7 +201,7 @@ public class RawXmlEditorFactory implements ResponseEditorViewFactory, RequestEd
 			}
 		}
 
-		@Override
+		
 		public String getContent()
 		{
 			if( request.getMockResult() == null )
@@ -211,7 +211,7 @@ public class RawXmlEditorFactory implements ResponseEditorViewFactory, RequestEd
 					.getMockRequest().getRawRequestData() );
 		}
 
-		@Override
+		
 		public void release()
 		{
 			request.removePropertyChangeListener( WsdlMockResponse.MOCKRESULT_PROPERTY, this );
@@ -231,7 +231,7 @@ public class RawXmlEditorFactory implements ResponseEditorViewFactory, RequestEd
 			response.addPropertyChangeListener( WsdlMockResponse.MOCKRESULT_PROPERTY, this );
 		}
 
-		@Override
+		
 		public void propertyChange( PropertyChangeEvent evt )
 		{
 			if( evt.getPropertyName().equals( WsdlMockResponse.MOCKRESULT_PROPERTY ) )
@@ -240,7 +240,7 @@ public class RawXmlEditorFactory implements ResponseEditorViewFactory, RequestEd
 			}
 		}
 
-		@Override
+		
 		public String getContent()
 		{
 			if( request.getMockResult() == null )
@@ -252,7 +252,7 @@ public class RawXmlEditorFactory implements ResponseEditorViewFactory, RequestEd
 			return buildRawContent( headers, data );
 		}
 
-		@Override
+		
 		public void release()
 		{
 			request.removePropertyChangeListener( WsdlMockResponse.MOCKRESULT_PROPERTY, this );
@@ -293,7 +293,7 @@ public class RawXmlEditorFactory implements ResponseEditorViewFactory, RequestEd
 			this.response = response;
 		}
 
-		@Override
+		
 		public String getContent()
 		{
 			MessageExchange me = response.getMessageExchange();
@@ -312,7 +312,7 @@ public class RawXmlEditorFactory implements ResponseEditorViewFactory, RequestEd
 			this.request = request;
 		}
 
-		@Override
+		
 		public String getContent()
 		{
 			MessageExchange me = request.getMessageExchange();
@@ -333,13 +333,13 @@ public class RawXmlEditorFactory implements ResponseEditorViewFactory, RequestEd
 			request.addPropertyChangeListener( AMFRequest.AMF_RESPONSE_PROPERTY, this );
 		}
 
-		@Override
+		
 		public void propertyChange( PropertyChangeEvent evt )
 		{
 			setXml( "" );
 		}
 
-		@Override
+		
 		public String getContent()
 		{
 			if( request.getResponse() == null )
@@ -354,7 +354,7 @@ public class RawXmlEditorFactory implements ResponseEditorViewFactory, RequestEd
 				return new String( rawResponseData );
 		}
 
-		@Override
+		
 		public void release()
 		{
 			request.removePropertyChangeListener( AMFRequest.AMF_RESPONSE_PROPERTY, this );
@@ -374,13 +374,13 @@ public class RawXmlEditorFactory implements ResponseEditorViewFactory, RequestEd
 			request.addPropertyChangeListener( AMFRequest.AMF_RESPONSE_PROPERTY, this );
 		}
 
-		@Override
+		
 		public void propertyChange( PropertyChangeEvent evt )
 		{
 			setXml( "" );
 		}
 
-		@Override
+		
 		public String getContent()
 		{
 			if( request.getResponse() == null )
@@ -395,7 +395,7 @@ public class RawXmlEditorFactory implements ResponseEditorViewFactory, RequestEd
 				return new String( rawRequestData );
 		}
 
-		@Override
+		
 		public void release()
 		{
 			request.removePropertyChangeListener( AMFRequest.AMF_RESPONSE_PROPERTY, this );

@@ -48,7 +48,7 @@ public class JdbcResponse extends AbstractResponse<JdbcRequest>
 		return "text/xml";
 	}
 
-	@Override
+	
 	public byte[] getRawRequestData()
 	{
 		return rawSql.getBytes();

@@ -113,7 +113,7 @@ public class RestResource extends AbstractWsdlModelItem<RestResourceConfig> impl
 		return parentResource == null ? getInterface() : parentResource;
 	}
 
-	@Override
+	
 	public List<? extends ModelItem> getChildren()
 	{
 		List<ModelItem> result = new ArrayList<ModelItem>();
@@ -468,7 +468,7 @@ public class RestResource extends AbstractWsdlModelItem<RestResourceConfig> impl
 		return newMethod;
 	}
 
-	@Override
+	
 	public void release()
 	{
 		super.release();
@@ -605,13 +605,13 @@ public class RestResource extends AbstractWsdlModelItem<RestResourceConfig> impl
 
 	private class PathChanger implements TestPropertyListener
 	{
-		@Override
+		
 		public void propertyAdded( String name )
 		{
 			params.getProperty( name ).addPropertyChangeListener( styleChangeListener );
 		}
 
-		@Override
+		
 		public void propertyRemoved( String name )
 		{
 			if( doesParameterExist( name ) && isTemplateProperty( name ) )
@@ -632,7 +632,7 @@ public class RestResource extends AbstractWsdlModelItem<RestResourceConfig> impl
 			return property != null && property.getStyle() == RestParamsPropertyHolder.ParameterStyle.TEMPLATE;
 		}
 
-		@Override
+		
 		public void propertyRenamed( String oldName, String newName )
 		{
 			if( isTemplateProperty( newName ) ) // Since the property is already renamed, we look for the new name
@@ -641,20 +641,20 @@ public class RestResource extends AbstractWsdlModelItem<RestResourceConfig> impl
 			}
 		}
 
-		@Override
+		
 		public void propertyValueChanged( String name, String oldValue, String newValue )
 		{
 
 		}
 
-		@Override
+		
 		public void propertyMoved( String name, int oldIndex, int newIndex )
 		{
 
 		}
 	}
 
-	@Override
+	
 	public String toString()
 	{
 		return "RestResource: " + getFullPath();
@@ -662,7 +662,7 @@ public class RestResource extends AbstractWsdlModelItem<RestResourceConfig> impl
 
 	private class StyleChangeListener implements PropertyChangeListener
 	{
-		@Override
+		
 		public void propertyChange( PropertyChangeEvent evt )
 		{
 			if( evt.getPropertyName().equals( XmlBeansRestParamsTestPropertyHolder.PROPERTY_STYLE ) && getPath() != null )

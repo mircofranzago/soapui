@@ -110,7 +110,7 @@ public class MaliciousAttachmentSecurityScan extends AbstractSecurityScan implem
 		}
 	}
 
-	@Override
+	
 	public void updateSecurityConfig( SecurityScanConfig config )
 	{
 		super.updateSecurityConfig( config );
@@ -256,7 +256,7 @@ public class MaliciousAttachmentSecurityScan extends AbstractSecurityScan implem
 		}
 	}
 
-	@Override
+	
 	protected void execute( SecurityTestRunner securityTestRunner, TestStep testStep, SecurityTestRunContext context )
 	{
 		try
@@ -275,7 +275,7 @@ public class MaliciousAttachmentSecurityScan extends AbstractSecurityScan implem
 		}
 	}
 
-	@Override
+	
 	public String getType()
 	{
 		return TYPE;
@@ -327,7 +327,7 @@ public class MaliciousAttachmentSecurityScan extends AbstractSecurityScan implem
 
 	}
 
-	@Override
+	
 	public JComponent getComponent()
 	{
 		if( mutationsPanel == null )
@@ -337,7 +337,7 @@ public class MaliciousAttachmentSecurityScan extends AbstractSecurityScan implem
 		return mutationsPanel.getPanel();
 	}
 
-	@Override
+	
 	protected boolean hasNext( TestStep testStep, SecurityTestRunContext context )
 	{
 		AbstractHttpRequest<?> request = ( AbstractHttpRequest<?> )getRequest( testStep );
@@ -352,25 +352,25 @@ public class MaliciousAttachmentSecurityScan extends AbstractSecurityScan implem
 		return hasNext;
 	}
 
-	@Override
+	
 	public String getConfigDescription()
 	{
 		return "Configures malicious attachment security scan";
 	}
 
-	@Override
+	
 	public String getConfigName()
 	{
 		return "Malicious Attachment Security Scan";
 	}
 
-	@Override
+	
 	public String getHelpURL()
 	{
 		return "http://soapui.org/Security/malicious-attachment.html";
 	}
 
-	@Override
+	
 	public JComponent getAdvancedSettingsPanel()
 	{
 		if( advancedSettingsPanel == null )
@@ -379,7 +379,7 @@ public class MaliciousAttachmentSecurityScan extends AbstractSecurityScan implem
 		return advancedSettingsPanel.getPanel();
 	}
 
-	@Override
+	
 	public void copyConfig( SecurityScanConfig config )
 	{
 		super.copyConfig( config );
@@ -395,7 +395,7 @@ public class MaliciousAttachmentSecurityScan extends AbstractSecurityScan implem
 		}
 	}
 
-	@Override
+	
 	public void release()
 	{
 		if( advancedSettingsPanel != null )
@@ -447,7 +447,7 @@ public class MaliciousAttachmentSecurityScan extends AbstractSecurityScan implem
 		}
 	}
 
-	@Override
+	
 	public void propertyChange( PropertyChangeEvent evt )
 	{
 		if( AttachmentContainer.ATTACHMENTS_PROPERTY.equals( evt.getPropertyName() ) )

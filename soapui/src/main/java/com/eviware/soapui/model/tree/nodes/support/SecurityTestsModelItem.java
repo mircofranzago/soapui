@@ -48,14 +48,14 @@ public class SecurityTestsModelItem extends EmptyModelItem
 		return testCase.getSettings();
 	}
 
-	@Override
+	
 	public void release()
 	{
 		super.release();
 		testCase.getTestSuite().removeTestSuiteListener( listener );
 	}
 
-	@Override
+	
 	public String getName()
 	{
 		return createLabel( testCase );
@@ -68,21 +68,21 @@ public class SecurityTestsModelItem extends EmptyModelItem
 
 	public class InternalTestSuiteListener extends TestSuiteListenerAdapter implements TestSuiteListener
 	{
-		@Override
+		
 		public void securityTestAdded( SecurityTest securityTest )
 		{
 			if( securityTest.getTestCase() == testCase )
 				updateLabel();
 		}
 
-		@Override
+		
 		public void securityTestRemoved( SecurityTest securityTest )
 		{
 			if( securityTest.getTestCase() == testCase )
 				updateLabel();
 		}
 
-		@Override
+		
 		public void testCaseRemoved( TestCase testCase )
 		{
 			if( testCase == SecurityTestsModelItem.this.testCase )

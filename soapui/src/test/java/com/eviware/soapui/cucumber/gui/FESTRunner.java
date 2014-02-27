@@ -55,7 +55,7 @@ class FESTRunner
 		try {
 			DialogFinder dialog = findDialog( new GenericTypeMatcher<Dialog>( Dialog.class )
 			{
-				@Override
+				
 				protected boolean isMatching( Dialog t )
 				{
 					return t.isVisible();

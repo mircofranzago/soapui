@@ -17,7 +17,7 @@ public class ModelItemMatchers
 	public static Matcher<ModelItem> belongsTo(final Project project) {
 		return new TypeSafeMatcher<ModelItem>()
 		{
-			@Override
+			
 			public boolean matchesSafely( ModelItem modelItem )
 			{
 				ModelItem parent;
@@ -29,7 +29,7 @@ public class ModelItemMatchers
 				return false;
 			}
 
-			@Override
+			
 			public void describeTo( Description description )
 			{
 				description.appendText("an item in the project " + project);
@@ -41,13 +41,13 @@ public class ModelItemMatchers
 	{
 		return new TypeSafeMatcher<WsdlTestSuite>()
 		{
-			@Override
+			
 			public boolean matchesSafely( WsdlTestSuite wsdlTestSuite )
 			{
 				return wsdlTestSuite.getTestCases().containsKey( testCaseName );
 			}
 
-			@Override
+			
 			public void describeTo( Description description )
 			{
 				description.appendText( "a TestSuite with a test case named " + testCaseName );
@@ -64,13 +64,13 @@ public class ModelItemMatchers
 	{
 		return new TypeSafeMatcher<RestParamsPropertyHolder>()
 		{
-			@Override
+			
 			public boolean matchesSafely( RestParamsPropertyHolder parameters )
 			{
 				return parameters.getProperty( parameterName ) != null;
 			}
 
-			@Override
+			
 			public void describeTo( Description description )
 			{
 				description.appendText("a parameters object containing the parameter ").appendText( parameterName );

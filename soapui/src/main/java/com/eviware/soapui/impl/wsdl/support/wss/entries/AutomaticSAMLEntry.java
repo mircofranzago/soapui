@@ -107,7 +107,7 @@ public class AutomaticSAMLEntry extends WssEntryBase
 	}
 
 	// FIXME How can we make FindBugs that these fields will always be initialized and be able to add NonNull annotations?
-	@Override
+	
 	protected void load( XmlObjectConfigurationReader reader )
 	{
 		samlVersion = reader.readString( "samlVersion", SAML_VERSION_1 );
@@ -124,7 +124,7 @@ public class AutomaticSAMLEntry extends WssEntryBase
 		attributeValues = readTableValues( reader, "attributeValues" );
 	}
 
-	@Override
+	
 	protected void save( XmlObjectConfigurationBuilder builder )
 	{
 		builder.add( "samlVersion", samlVersion );
@@ -141,7 +141,7 @@ public class AutomaticSAMLEntry extends WssEntryBase
 		saveTableValues( builder, attributeValues, "attributeValues" );
 	}
 
-	@Override
+	
 	protected JComponent buildUI()
 	{
 		wssContainerListener = new InternalWssContainerListener();
@@ -157,7 +157,7 @@ public class AutomaticSAMLEntry extends WssEntryBase
 		signedCheckBox = form.appendCheckBox( "signed", "Signed", null );
 		signedCheckBox.addItemListener( new ItemListener()
 		{
-			@Override
+			
 			public void itemStateChanged( ItemEvent e )
 			{
 				checkSigned();
@@ -169,7 +169,7 @@ public class AutomaticSAMLEntry extends WssEntryBase
 				new String[] { AUTHENTICATION_ASSERTION_TYPE, ATTRIBUTE_ASSERTION_TYPE, AUTHORIZATION_ASSERTION_TYPE },
 				"Choose the type of assertion" ).addItemListener( new ItemListener()
 		{
-			@Override
+			
 			public void itemStateChanged( ItemEvent e )
 			{
 				checkAssertionType();
@@ -186,7 +186,7 @@ public class AutomaticSAMLEntry extends WssEntryBase
 
 		cryptoComboBox.addItemListener( new ItemListener()
 		{
-			@Override
+			
 			public void itemStateChanged( ItemEvent e )
 			{
 				// FIXME This cases the drop down to be blank when changing keystore
@@ -414,7 +414,7 @@ public class AutomaticSAMLEntry extends WssEntryBase
 		}
 	}
 
-	@Override
+	
 	protected void addPropertyExpansions( PropertyExpansionsResult result )
 	{
 		super.addPropertyExpansions( result );
@@ -559,7 +559,7 @@ public class AutomaticSAMLEntry extends WssEntryBase
 
 	private final class InternalWssContainerListener extends WssContainerListenerAdapter
 	{
-		@Override
+		
 		public void cryptoUpdated( WssCrypto crypto )
 		{
 			if( crypto.getLabel().equals( getCrypto() ) )

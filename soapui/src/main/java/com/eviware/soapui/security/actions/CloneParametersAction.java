@@ -68,7 +68,7 @@ public class CloneParametersAction extends AbstractAction
 		this.securityScan = securityScan;
 	}
 
-	@Override
+	
 	public void actionPerformed( ActionEvent e )
 	{
 		XFormDialog dialog = createCloneParameterDialog();
@@ -96,7 +96,7 @@ public class CloneParametersAction extends AbstractAction
 			this.dialog = dialog;
 		}
 
-		@Override
+		
 		public void actionPerformed( ActionEvent arg0 )
 		{
 			if( dialog != null )
@@ -207,7 +207,7 @@ public class CloneParametersAction extends AbstractAction
 			this.dialog = dialog;
 		}
 
-		@Override
+		
 		public void actionPerformed( ActionEvent arg0 )
 		{
 			if( dialog != null )
@@ -233,7 +233,7 @@ public class CloneParametersAction extends AbstractAction
 			this.dialog = dialog;
 		}
 
-		@Override
+		
 		public void actionPerformed( ActionEvent arg0 )
 		{
 			if( dialog != null )

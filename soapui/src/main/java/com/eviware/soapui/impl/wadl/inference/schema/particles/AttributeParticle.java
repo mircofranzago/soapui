@@ -123,7 +123,7 @@ public class AttributeParticle implements Particle
 		context.getCursor().pop();
 	}
 
-	@Override
+	
 	public String toString()
 	{
 		StringBuilder s = new StringBuilder( "<" + schema.getPrefixForNamespace( Settings.xsdns ) + ":" + getPType()

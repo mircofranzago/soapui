@@ -57,7 +57,7 @@ public class ManualSAMLEntry extends WssEntryBase
 		super.init( config, container, TYPE );
 	}
 
-	@Override
+	
 	protected JComponent buildUI()
 	{
 		JPanel panel = new JPanel( new BorderLayout() );
@@ -74,7 +74,7 @@ public class ManualSAMLEntry extends WssEntryBase
 		editor.getDocument().addDocumentListener( new DocumentListenerAdapter()
 		{
 
-			@Override
+			
 			public void update( javax.swing.text.Document document )
 			{
 				samlAssertion = editor.getText();
@@ -87,14 +87,14 @@ public class ManualSAMLEntry extends WssEntryBase
 		return UISupport.addTitledBorder( panel, "Enter SAML Assertion" );
 	}
 
-	@Override
+	
 	protected void load( XmlObjectConfigurationReader reader )
 	{
 		samlAssertion = reader.readString( "samlAssertion", null );
 
 	}
 
-	@Override
+	
 	protected void save( XmlObjectConfigurationBuilder builder )
 	{
 		builder.add( "samlAssertion", samlAssertion );
@@ -133,7 +133,7 @@ public class ManualSAMLEntry extends WssEntryBase
 			editor.setText( samlAssertion );
 	}
 
-	@Override
+	
 	protected void addPropertyExpansions( PropertyExpansionsResult result )
 	{
 		super.addPropertyExpansions( result );

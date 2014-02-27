@@ -91,7 +91,7 @@ public class SQLInjectionScan extends AbstractSecurityScanWithProperties
 		sqlInjectionConfig.setSqlInjectionStringsArray( defaultSqlInjectionStrings );
 	}
 
-	@Override
+	
 	public void updateSecurityConfig( SecurityScanConfig config )
 	{
 		super.updateSecurityConfig( config );
@@ -102,7 +102,7 @@ public class SQLInjectionScan extends AbstractSecurityScanWithProperties
 		}
 	}
 
-	@Override
+	
 	public JComponent getComponent()
 	{
 		JPanel p = UISupport.createEmptyPanel( 5, 75, 0, 5 );
@@ -110,13 +110,13 @@ public class SQLInjectionScan extends AbstractSecurityScanWithProperties
 		return p;
 	}
 
-	@Override
+	
 	public String getType()
 	{
 		return TYPE;
 	}
 
-	@Override
+	
 	protected void execute( SecurityTestRunner securityTestRunner, TestStep testStep, SecurityTestRunContext context )
 	{
 		try
@@ -304,7 +304,7 @@ public class SQLInjectionScan extends AbstractSecurityScanWithProperties
 
 	}
 
-	@Override
+	
 	protected boolean hasNext( TestStep testStep, SecurityTestRunContext context )
 	{
 		boolean hasNext = false;
@@ -334,25 +334,25 @@ public class SQLInjectionScan extends AbstractSecurityScanWithProperties
 		return hasNext;
 	}
 
-	@Override
+	
 	public String getConfigDescription()
 	{
 		return "Configures SQL injection security scan";
 	}
 
-	@Override
+	
 	public String getConfigName()
 	{
 		return "SQL Injection Security Scan";
 	}
 
-	@Override
+	
 	public String getHelpURL()
 	{
 		return "http://soapui.org/Security/sql-injection.html";
 	}
 
-	@Override
+	
 	public JComponent getAdvancedSettingsPanel()
 	{
 		dialog = ( JFormDialog )ADialogBuilder.buildDialog( AdvancedSettings.class );
@@ -363,7 +363,7 @@ public class SQLInjectionScan extends AbstractSecurityScanWithProperties
 		stringField.getComponent().addPropertyChangeListener( "options", new PropertyChangeListener()
 		{
 
-			@Override
+			
 			public void propertyChange( PropertyChangeEvent evt )
 			{
 				String[] newOptions = ( String[] )evt.getNewValue();
@@ -413,7 +413,7 @@ public class SQLInjectionScan extends AbstractSecurityScanWithProperties
 		return dialog.getPanel();
 	}
 
-	@Override
+	
 	public void release()
 	{
 		if( dialog != null )
@@ -431,7 +431,7 @@ public class SQLInjectionScan extends AbstractSecurityScanWithProperties
 
 	}
 
-	@Override
+	
 	protected void clear()
 	{
 		parameterMutations.clear();

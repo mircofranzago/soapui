@@ -136,7 +136,7 @@ public class WsdlTestRequestStep extends WsdlTestStepWithProperties implements O
 		addProperty( new TestStepBeanProperty( "Domain", false, testRequest, "domain", this, false ) );
 		addProperty( new TestStepBeanProperty( "AuthType", false, testRequest, "authType", this,true) {
 			
-			@Override
+			
 			public String getDefaultValue()
 			{
 				// TODO Auto-generated method stub
@@ -146,13 +146,13 @@ public class WsdlTestRequestStep extends WsdlTestStepWithProperties implements O
 		
 		addProperty( new TestStepBeanProperty( "Request", false, testRequest, "requestContent", this, true )
 		{
-			@Override
+			
 			public String getDefaultValue()
 			{
 				return getOperation().createRequest( true );
 			}
 
-			@Override
+			
 			public SchemaType getSchemaType()
 			{
 				try
@@ -171,7 +171,7 @@ public class WsdlTestRequestStep extends WsdlTestStepWithProperties implements O
 				}
 			}
 
-			@Override
+			
 			public QName getType()
 			{
 				return getSchemaType().getName();
@@ -180,7 +180,7 @@ public class WsdlTestRequestStep extends WsdlTestStepWithProperties implements O
 		} );
 		addProperty( new TestStepBeanProperty( "Response", true, testRequest, "responseContent", this )
 		{
-			@Override
+			
 			public String getDefaultValue()
 			{
 				return getOperation().createResponse( true );
@@ -189,7 +189,7 @@ public class WsdlTestRequestStep extends WsdlTestStepWithProperties implements O
 
 		addProperty( new DefaultTestStepProperty( "RawRequest", true, this )
 		{
-			@Override
+			
 			public String getValue()
 			{
 				WsdlResponse response = testRequest.getResponse();
@@ -220,7 +220,7 @@ public class WsdlTestRequestStep extends WsdlTestStepWithProperties implements O
 			config.setName( testRequest.getName() );
 	}
 
-	@Override
+	
 	public WsdlTestStep clone( WsdlTestCase targetTestCase, String name )
 	{
 		beforeSave();
@@ -279,7 +279,7 @@ public class WsdlTestRequestStep extends WsdlTestStepWithProperties implements O
 		return requestStepConfig.getOperation();
 	}
 
-	@Override
+	
 	public void release()
 	{
 		super.release();
@@ -303,7 +303,7 @@ public class WsdlTestRequestStep extends WsdlTestStepWithProperties implements O
 		}
 	}
 
-	@Override
+	
 	public void resetConfigOnMove( TestStepConfig config )
 	{
 		super.resetConfigOnMove( config );
@@ -312,7 +312,7 @@ public class WsdlTestRequestStep extends WsdlTestStepWithProperties implements O
 		testRequest.updateConfig( requestStepConfig.getRequest() );
 	}
 
-	@Override
+	
 	public ImageIcon getIcon()
 	{
 		return testRequest == null ? null : testRequest.getIcon();
@@ -323,7 +323,7 @@ public class WsdlTestRequestStep extends WsdlTestStepWithProperties implements O
 		return testRequest;
 	}
 
-	@Override
+	
 	public void setName( String name )
 	{
 		super.setName( name );
@@ -543,7 +543,7 @@ public class WsdlTestRequestStep extends WsdlTestStepWithProperties implements O
 
 	public class InternalProjectListener extends ProjectListenerAdapter
 	{
-		@Override
+		
 		public void interfaceRemoved( Interface iface )
 		{
 			if( wsdlOperation != null && wsdlOperation.getInterface().equals( iface ) )
@@ -556,7 +556,7 @@ public class WsdlTestRequestStep extends WsdlTestStepWithProperties implements O
 
 	public class InternalInterfaceListener extends InterfaceListenerAdapter
 	{
-		@Override
+		
 		public void operationRemoved( Operation operation )
 		{
 			if( operation == wsdlOperation )
@@ -566,7 +566,7 @@ public class WsdlTestRequestStep extends WsdlTestStepWithProperties implements O
 			}
 		}
 
-		@Override
+		
 		public void operationUpdated( Operation operation )
 		{
 			if( operation == wsdlOperation )
@@ -576,7 +576,7 @@ public class WsdlTestRequestStep extends WsdlTestStepWithProperties implements O
 		}
 	}
 
-	@Override
+	
 	public boolean cancel()
 	{
 		if( submit == null )
@@ -587,7 +587,7 @@ public class WsdlTestRequestStep extends WsdlTestStepWithProperties implements O
 		return true;
 	}
 
-	@Override
+	
 	public Collection<Interface> getRequiredInterfaces()
 	{
 		ArrayList<Interface> result = new ArrayList<Interface>();
@@ -605,7 +605,7 @@ public class WsdlTestRequestStep extends WsdlTestStepWithProperties implements O
 		return "Request";
 	}
 
-	@Override
+	
 	public boolean dependsOn( AbstractWsdlModelItem<?> modelItem )
 	{
 		if( modelItem instanceof Interface && testRequest.getOperation().getInterface() == modelItem )
@@ -620,7 +620,7 @@ public class WsdlTestRequestStep extends WsdlTestStepWithProperties implements O
 		return false;
 	}
 
-	@Override
+	
 	public void beforeSave()
 	{
 		super.beforeSave();
@@ -629,13 +629,13 @@ public class WsdlTestRequestStep extends WsdlTestStepWithProperties implements O
 			testRequest.beforeSave();
 	}
 
-	@Override
+	
 	public String getDescription()
 	{
 		return testRequest == null ? "<missing>" : testRequest.getDescription();
 	}
 
-	@Override
+	
 	public void setDescription( String description )
 	{
 		if( testRequest != null )
@@ -662,7 +662,7 @@ public class WsdlTestRequestStep extends WsdlTestStepWithProperties implements O
 	}
 
 	@SuppressWarnings( "unchecked" )
-	@Override
+	
 	public List<? extends ModelItem> getChildren()
 	{
 		return testRequest == null ? Collections.EMPTY_LIST : testRequest.getAssertionList();
@@ -769,7 +769,7 @@ public class WsdlTestRequestStep extends WsdlTestStepWithProperties implements O
 		return testRequest.getAssertions();
 	}
 
-	@Override
+	
 	public void prepare( TestCaseRunner testRunner, TestCaseRunContext testRunContext ) throws Exception
 	{
 		super.prepare( testRunner, testRunContext );
@@ -804,7 +804,7 @@ public class WsdlTestRequestStep extends WsdlTestStepWithProperties implements O
 					new RemoveTestStepResolver( this ), new ImportInterfaceResolver( this )
 					{
 
-						@Override
+						
 						protected boolean update()
 						{
 							wsdlOperation = findWsdlOperation();
@@ -819,7 +819,7 @@ public class WsdlTestRequestStep extends WsdlTestStepWithProperties implements O
 					}, new ChangeOperationResolver( this, "Operation" )
 					{
 
-						@Override
+						
 						public boolean update()
 						{
 							WsdlOperation wsdlOperation = ( WsdlOperation )getSelectedOperation();

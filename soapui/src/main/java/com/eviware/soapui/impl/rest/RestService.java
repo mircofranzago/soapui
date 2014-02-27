@@ -236,7 +236,7 @@ public class RestService extends AbstractInterface<RestServiceConfig> implements
 		return result.toArray( new RestResource[result.size()] );
 	}
 
-	@Override
+	
 	public WadlDefinitionContext getDefinitionContext()
 	{
 		return getWadlContext();
@@ -250,7 +250,7 @@ public class RestService extends AbstractInterface<RestServiceConfig> implements
 		return wadlContext;
 	}
 
-	@Override
+	
 	public String getDefinition()
 	{
 		return getWadlUrl();
@@ -266,7 +266,7 @@ public class RestService extends AbstractInterface<RestServiceConfig> implements
 		return !isGenerated();
 	}
 
-	@Override
+	
 	public Operation[] getAllOperations()
 	{
 		List<RestResource> restResources = getAllResources();
@@ -291,7 +291,7 @@ public class RestService extends AbstractInterface<RestServiceConfig> implements
 
 	}
 
-	@Override
+	
 	public void release()
 	{
 		InferredSchemaManager.release( this );

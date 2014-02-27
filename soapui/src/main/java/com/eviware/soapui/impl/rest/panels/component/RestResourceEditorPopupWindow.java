@@ -61,7 +61,7 @@ class RestResourceEditorPopupWindow extends JDialog
 
 		JButton okButton = new JButton( new AbstractAction( "OK" )
 		{
-			@Override
+			
 			public void actionPerformed( ActionEvent e )
 			{
 				if( basePathTextField != null )
@@ -79,7 +79,7 @@ class RestResourceEditorPopupWindow extends JDialog
 
 		AbstractAction cancelAction = new AbstractAction( "Cancel" )
 		{
-			@Override
+			
 			public void actionPerformed( ActionEvent e )
 			{
 				dispose();
@@ -168,7 +168,7 @@ class RestResourceEditorPopupWindow extends JDialog
 	{
 		SwingUtilities.invokeLater( new Runnable()
 		{
-			@Override
+			
 			public void run()
 			{
 				innerTextField.requestFocusInWindow();
@@ -239,7 +239,7 @@ class RestResourceEditorPopupWindow extends JDialog
 			this.affectedRestResource = affectedRestResource;
 		}
 
-		@Override
+		
 		public void update( Document document )
 		{
 			int affectedRequestCount = getRequestCountForResource( affectedRestResource );

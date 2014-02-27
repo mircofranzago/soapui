@@ -128,7 +128,7 @@ public class WsdlMockOperationDesktopPanel extends ModelItemDesktopPanel<WsdlMoc
 		responseList = new JList( responseListModel );
 		responseList.addKeyListener( new ModelItemListKeyListener()
 		{
-			@Override
+			
 			public ModelItem getModelItemAt( int ix )
 			{
 				return getModelItem().getMockResponseAt( ix );
@@ -140,7 +140,7 @@ public class WsdlMockOperationDesktopPanel extends ModelItemDesktopPanel<WsdlMoc
 
 			private DefaultActionList defaultActions;
 
-			@Override
+			
 			protected ActionList getActionsForRow( JList list, int row )
 			{
 				ActionList actions = super.getActionsForRow( list, row );
@@ -157,7 +157,7 @@ public class WsdlMockOperationDesktopPanel extends ModelItemDesktopPanel<WsdlMoc
 				return actions;
 			}
 
-			@Override
+			
 			protected ActionList getDefaultActions()
 			{
 				if( defaultActions == null )
@@ -348,13 +348,13 @@ public class WsdlMockOperationDesktopPanel extends ModelItemDesktopPanel<WsdlMoc
 
 	private final class InternalProjectListener extends ProjectListenerAdapter
 	{
-		@Override
+		
 		public void interfaceAdded( Interface iface )
 		{
 			interfaceCombo.addItem( iface.getName() );
 		}
 
-		@Override
+		
 		public void interfaceRemoved( Interface iface )
 		{
 			if( interfaceCombo.getSelectedItem().equals( iface.getName() ) )
@@ -366,13 +366,13 @@ public class WsdlMockOperationDesktopPanel extends ModelItemDesktopPanel<WsdlMoc
 
 	private final class InternalInterfaceListener extends InterfaceListenerAdapter
 	{
-		@Override
+		
 		public void operationAdded( Operation operation )
 		{
 			operationCombo.addItem( operation.getName() );
 		}
 
-		@Override
+		
 		public void operationRemoved( Operation operation )
 		{
 			Object selectedItem = operationCombo.getSelectedItem();
@@ -385,7 +385,7 @@ public class WsdlMockOperationDesktopPanel extends ModelItemDesktopPanel<WsdlMoc
 			}
 		}
 
-		@Override
+		
 		public void operationUpdated( Operation operation )
 		{
 			ExtendedComboBoxModel model = ( ( ExtendedComboBoxModel )operationCombo.getModel() );

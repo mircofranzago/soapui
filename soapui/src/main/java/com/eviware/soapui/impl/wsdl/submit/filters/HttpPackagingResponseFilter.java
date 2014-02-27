@@ -29,7 +29,7 @@ import com.eviware.soapui.model.iface.SubmitContext;
 
 public class HttpPackagingResponseFilter extends AbstractRequestFilter
 {
-	@Override
+	
 	public void afterAbstractHttpResponse( SubmitContext context, AbstractHttpRequestInterface<?> request )
 	{
 		ExtendedHttpMethod httpMethod = ( ExtendedHttpMethod )context.getProperty( BaseHttpRequestTransport.HTTP_METHOD );

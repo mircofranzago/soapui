@@ -45,13 +45,13 @@ public class WsdlMockOperationPanelBuilder extends EmptyPanelBuilder<WsdlMockOpe
 		return table;
 	}
 
-	@Override
+	
 	public DesktopPanel buildDesktopPanel( WsdlMockOperation mockOperation )
 	{
 		return new WsdlMockOperationDesktopPanel( mockOperation );
 	}
 
-	@Override
+	
 	public boolean hasDesktopPanel()
 	{
 		return true;

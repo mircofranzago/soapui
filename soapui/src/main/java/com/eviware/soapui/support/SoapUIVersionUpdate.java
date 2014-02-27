@@ -118,7 +118,7 @@ public class SoapUIVersionUpdate
 				proxy = new Proxy( Proxy.Type.HTTP, new InetSocketAddress( proxyHost.getHostName(), proxyHost.getPort() ) );
 				Authenticator.setDefault( new Authenticator()
 				{
-					@Override
+					
 					protected PasswordAuthentication getPasswordAuthentication()
 					{
 						if( !getRequestingURL().getHost().equals( versionUrl.getHost() ) )
@@ -268,7 +268,7 @@ public class SoapUIVersionUpdate
 		}
 		SwingUtilities.invokeLater( new Runnable()
 		{
-			@Override
+			
 			public void run()
 			{
 				if( isNewReleaseAvailable() && ( !skipThisVersion() || helpAction ) )

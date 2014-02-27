@@ -42,7 +42,7 @@ public class WsdlSingleMessageExchangeTestStepResult extends WsdlTestStepResult
 		this.messageExchange = messageExchange;
 	}
 
-	@Override
+	
 	public ActionList getActions()
 	{
 		if( !addedAction )

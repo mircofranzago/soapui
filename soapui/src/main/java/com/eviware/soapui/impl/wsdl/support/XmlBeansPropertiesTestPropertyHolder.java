@@ -372,13 +372,13 @@ public class XmlBeansPropertiesTestPropertyHolder implements MutableTestProperty
 			return null;
 		}
 
-		@Override
+		
 		public boolean isRequestPart()
 		{
 			return false;
 		}
 
-		@Override
+		
 		public SchemaType getSchemaType()
 		{
 			if( virtualProperty != null )
@@ -387,7 +387,7 @@ public class XmlBeansPropertiesTestPropertyHolder implements MutableTestProperty
 			return XmlString.type;
 		}
 
-		@Override
+		
 		public boolean equals( Object obj )
 		{
 			if( obj instanceof TestProperty )
@@ -408,7 +408,7 @@ public class XmlBeansPropertiesTestPropertyHolder implements MutableTestProperty
 			}
 		}
 
-		@Override
+		
 		public int hashCode()
 		{
 			return super.hashCode();

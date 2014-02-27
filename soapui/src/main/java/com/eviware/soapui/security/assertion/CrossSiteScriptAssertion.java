@@ -105,7 +105,7 @@ public class CrossSiteScriptAssertion extends WsdlMessageAssertion implements Re
 		groovyEditorModel.setScript( script );
 	}
 
-	@Override
+	
 	protected String internalAssertResponse( MessageExchange messageExchange, SubmitContext context )
 			throws AssertionException
 	{
@@ -258,19 +258,19 @@ public class CrossSiteScriptAssertion extends WsdlMessageAssertion implements Re
 
 		}
 
-		@Override
+		
 		public String getCategory()
 		{
 			return "";
 		}
 
-		@Override
+		
 		public Class<? extends WsdlMessageAssertion> getAssertionClassType()
 		{
 			return CrossSiteScriptAssertion.class;
 		}
 
-		@Override
+		
 		public AssertionListEntry getAssertionListEntry()
 		{
 			return new AssertionListEntry( CrossSiteScriptAssertion.ID, CrossSiteScriptAssertion.LABEL,
@@ -278,7 +278,7 @@ public class CrossSiteScriptAssertion extends WsdlMessageAssertion implements Re
 		}
 	}
 
-	@Override
+	
 	protected String internalAssertRequest( MessageExchange messageExchange, SubmitContext context )
 			throws AssertionException
 	{
@@ -313,7 +313,7 @@ public class CrossSiteScriptAssertion extends WsdlMessageAssertion implements Re
 
 	private class GroovyEditorModel extends AbstractGroovyEditorModel
 	{
-		@Override
+		
 		public Action createRunAction()
 		{
 			return new AbstractAction()
@@ -391,7 +391,7 @@ public class CrossSiteScriptAssertion extends WsdlMessageAssertion implements Re
 				new XFormFieldListener()
 				{
 
-					@Override
+					
 					public void valueChanged( XFormField sourceField, String newValue, String oldValue )
 					{
 						groovyEditorComponent.setEnabled( new Boolean( newValue ) );
@@ -402,7 +402,7 @@ public class CrossSiteScriptAssertion extends WsdlMessageAssertion implements Re
 		groovyEditorComponent.setEnabled( checkSeparateHTML );
 	}
 
-	@Override
+	
 	public void release()
 	{
 		if( dialog != null )

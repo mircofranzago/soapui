@@ -184,7 +184,7 @@ public class JdbcRequestTestStepDesktopPanel extends ModelItemDesktopPanel<JdbcR
 		addFocusListener( new FocusAdapter()
 		{
 
-			@Override
+			
 			public void focusGained( FocusEvent e )
 			{
 				if( requestTabs.getSelectedIndex() == 1 || responseHasFocus )
@@ -271,7 +271,7 @@ public class JdbcRequestTestStepDesktopPanel extends ModelItemDesktopPanel<JdbcR
 		addFocusListener( new FocusAdapter()
 		{
 
-			@Override
+			
 			public void focusGained( FocusEvent e )
 			{
 				if( requestTabs.getSelectedIndex() == 1 || responseHasFocus )
@@ -294,12 +294,12 @@ public class JdbcRequestTestStepDesktopPanel extends ModelItemDesktopPanel<JdbcR
 	{
 		propertyHolderTable = new PropertyHolderTable( getModelItem() )
 		{
-			@Override
+			
 			protected DefaultPropertyHolderTableModel getPropertyHolderTableModel()
 			{
 				return new DefaultPropertyHolderTableModel( holder )
 				{
-					@Override
+					
 					public String[] getPropertyNames()
 					{
 						List<String> propertyNamesList = new ArrayList<String>();
@@ -462,7 +462,7 @@ public class JdbcRequestTestStepDesktopPanel extends ModelItemDesktopPanel<JdbcR
 		queryArea.getDocument().addDocumentListener( new DocumentListenerAdapter()
 		{
 
-			@Override
+			
 			public void update( Document document )
 			{
 				jdbcRequestTestStep.setQuery( queryArea.getText() );
@@ -479,7 +479,7 @@ public class JdbcRequestTestStepDesktopPanel extends ModelItemDesktopPanel<JdbcR
 		passField.getDocument().addDocumentListener( new DocumentListenerAdapter()
 		{
 
-			@Override
+			
 			public void update( Document document )
 			{
 				jdbcRequestTestStep.setPassword( configForm.getComponentValue( PASS_FIELD ) );
@@ -493,7 +493,7 @@ public class JdbcRequestTestStepDesktopPanel extends ModelItemDesktopPanel<JdbcR
 	{
 		connStrTextField.getDocument().addDocumentListener( new DocumentListenerAdapter()
 		{
-			@Override
+			
 			public void update( Document document )
 			{
 				jdbcRequestTestStep.setConnectionString( configForm.getComponentValue( CONNSTR_FIELD ) );
@@ -507,7 +507,7 @@ public class JdbcRequestTestStepDesktopPanel extends ModelItemDesktopPanel<JdbcR
 	{
 		driverTextField.getDocument().addDocumentListener( new DocumentListenerAdapter()
 		{
-			@Override
+			
 			public void update( Document document )
 			{
 				jdbcRequestTestStep.setDriver( configForm.getComponentValue( DRIVER_FIELD ) );

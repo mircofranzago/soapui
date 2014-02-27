@@ -71,13 +71,13 @@ public class WsdlDelayTestStep extends WsdlTestStepWithProperties implements Pro
 		addProperty( new DefaultTestStepProperty( "delay", true, new DefaultTestStepProperty.PropertyHandlerAdapter()
 		{
 
-			@Override
+			
 			public String getValue( DefaultTestStepProperty property )
 			{
 				return getDelayString();
 			}
 
-			@Override
+			
 			public void setValue( DefaultTestStepProperty property, String value )
 			{
 				setDelayString( value );
@@ -91,7 +91,7 @@ public class WsdlDelayTestStep extends WsdlTestStepWithProperties implements Pro
 		delayString = reader.readString( "delay", DEFAULT_DELAY );
 	}
 
-	@Override
+	
 	public String getLabel()
 	{
 		String str = running ? super.getName() + " [" + ( delay - timeWaited ) + "ms]" : super.getName() + " ["
@@ -103,13 +103,13 @@ public class WsdlDelayTestStep extends WsdlTestStepWithProperties implements Pro
 		return str;
 	}
 
-	@Override
+	
 	public String getDefaultSourcePropertyName()
 	{
 		return "delay";
 	}
 
-	@Override
+	
 	public String getDefaultTargetPropertyName()
 	{
 		return "delay";
@@ -129,7 +129,7 @@ public class WsdlDelayTestStep extends WsdlTestStepWithProperties implements Pro
 		config.setConfig( builder.finish() );
 	}
 
-	@Override
+	
 	public void resetConfigOnMove( TestStepConfig config )
 	{
 		super.resetConfigOnMove( config );
@@ -241,7 +241,7 @@ public class WsdlDelayTestStep extends WsdlTestStepWithProperties implements Pro
 		return result;
 	}
 
-	@Override
+	
 	public boolean cancel()
 	{
 		canceled = true;

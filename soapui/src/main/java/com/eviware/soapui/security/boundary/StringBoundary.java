@@ -18,7 +18,7 @@ public class StringBoundary extends AbstractBoundary
 {
 	public static final String AVAILABLE_VALUES = " abcdefghijklmnopqrstuvwxyz\n\t\r";
 
-	@Override
+	
 	public String outOfBoundary( int restrictionAttribute, String value )
 	{
 		switch( restrictionAttribute )

@@ -23,13 +23,13 @@ public abstract class AbstractExternalDependency implements ExternalDependency
 		this.path = path;
 	}
 
-	@Override
+	
 	public String getPath()
 	{
 		return path;
 	}
 
-	@Override
+	
 	public Type getType()
 	{
 		File file = new File( path );

@@ -56,7 +56,7 @@ public class SoapUIMockAsWarGenerator extends AbstractSoapUIRunner
 		System.exit( new SoapUIMockAsWarGenerator().runFromCommandLine( args ) );
 	}
 
-	@Override
+	
 	protected boolean processCommandLine( CommandLine cmd )
 	{
 		setEnableWebUI( cmd.hasOption( 'w' ) );
@@ -85,7 +85,7 @@ public class SoapUIMockAsWarGenerator extends AbstractSoapUIRunner
 		return true;
 	}
 
-	@Override
+	
 	protected SoapUIOptions initCommandLineOptions()
 	{
 		SoapUIOptions options = new SoapUIOptions( "wargenerator" );
@@ -103,7 +103,7 @@ public class SoapUIMockAsWarGenerator extends AbstractSoapUIRunner
 		return options;
 	}
 
-	@Override
+	
 	protected boolean runRunner() throws Exception
 	{
 		WsdlProject project = ( WsdlProject )ProjectFactoryRegistry.getProjectFactory( "wsdl" ).createNew(

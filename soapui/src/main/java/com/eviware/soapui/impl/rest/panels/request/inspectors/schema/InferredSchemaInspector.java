@@ -95,7 +95,7 @@ public class InferredSchemaInspector extends AbstractXmlInspector implements Sub
 		return tabs;
 	}
 
-	@Override
+	
 	public boolean isEnabledFor( EditorView<XmlDocument> view )
 	{
 		return !view.getViewId().equals( RawXmlEditorFactory.VIEW_ID );

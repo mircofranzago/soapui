@@ -369,7 +369,7 @@ public class DefaultEndpointStrategy implements EndpointStrategy, PropertyExpans
 
 	private class InternalProjectListener extends ProjectListenerAdapter
 	{
-		@Override
+		
 		public void interfaceAdded( Interface iface )
 		{
 			for( String endpoint : iface.getEndpoints() )
@@ -381,7 +381,7 @@ public class DefaultEndpointStrategy implements EndpointStrategy, PropertyExpans
 			iface.addPropertyChangeListener( AbstractInterface.ENDPOINT_PROPERTY, propertyChangeListener );
 		}
 
-		@Override
+		
 		public void interfaceRemoved( Interface iface )
 		{
 			iface.removePropertyChangeListener( AbstractInterface.ENDPOINT_PROPERTY, propertyChangeListener );

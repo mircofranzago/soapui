@@ -26,13 +26,13 @@ public abstract class JTableFactory
 
 	private static class DefaultJTableFactory extends JTableFactory
 	{
-		@Override
+		
 		public JTable makeJTable( TableModel tableModel )
 		{
 			return UISupport.isMac() ? makeStripedTable( tableModel ) : new JTable( tableModel );
 		}
 
-		@Override
+		
 		public JXTable makeJXTable( TableModel tableModel )
 		{
 			return UISupport.isMac() ? makeStripedJXTable( tableModel ) : new JXTable( tableModel );
@@ -42,7 +42,7 @@ public abstract class JTableFactory
 		{
 			JXTable stripedJxTable = new JXTable( tableModel )
 			{
-				@Override
+				
 				public Component prepareRenderer( TableCellRenderer renderer, int row, int column )
 				{
 					Component defaultRenderer = super.prepareRenderer( renderer, row, column );
@@ -50,7 +50,7 @@ public abstract class JTableFactory
 					return defaultRenderer;
 				}
 
-				@Override
+				
 				public boolean getShowVerticalLines()
 				{
 					return false;
@@ -64,7 +64,7 @@ public abstract class JTableFactory
 		{
 			JTable stripedTable = new JTable( tableModel )
 			{
-				@Override
+				
 				public Component prepareRenderer( TableCellRenderer renderer, int row, int column )
 				{
 					Component defaultRenderer = super.prepareRenderer( renderer, row, column );
@@ -72,7 +72,7 @@ public abstract class JTableFactory
 					return defaultRenderer;
 				}
 
-				@Override
+				
 				public boolean getShowVerticalLines()
 				{
 					return false;

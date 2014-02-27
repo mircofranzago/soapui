@@ -248,7 +248,7 @@ public class ComplexType implements Type
 		this.schema = schema;
 	}
 
-	@Override
+	
 	public String toString()
 	{
 		String xsdns = schema.getPrefixForNamespace( Settings.xsdns );

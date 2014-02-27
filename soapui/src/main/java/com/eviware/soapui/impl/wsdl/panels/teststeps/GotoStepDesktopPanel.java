@@ -285,7 +285,7 @@ public class GotoStepDesktopPanel extends ModelItemDesktopPanel<WsdlGotoTestStep
 
 	private final class SourceAreaDocumentListener extends DocumentListenerAdapter
 	{
-		@Override
+		
 		public void update( Document document )
 		{
 			int ix = conditionList.getSelectedIndex();
@@ -595,7 +595,7 @@ public class GotoStepDesktopPanel extends ModelItemDesktopPanel<WsdlGotoTestStep
 
 	private class InternalTestRunListener extends TestRunListenerAdapter
 	{
-		@Override
+		
 		public void afterStep( TestCaseRunner testRunner, TestCaseRunContext runContext, TestStepResult result )
 		{
 			if( result.getTestStep() == gotoStep )

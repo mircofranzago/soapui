@@ -175,7 +175,7 @@ public class NamespaceTable extends AbstractSwingXFormField<JPanel>
 		}
 	}
 
-	@Override
+	
 	public boolean isMultiRow()
 	{
 		return true;

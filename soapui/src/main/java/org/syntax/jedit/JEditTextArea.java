@@ -1672,7 +1672,7 @@ public class JEditTextArea extends JComponent implements Scrollable
 			this.document.removeDocumentListener( documentHandler );
 	}
 
-	@Override
+	
 	public void addNotify()
 	{
 		super.addNotify();
@@ -2099,7 +2099,7 @@ public class JEditTextArea extends JComponent implements Scrollable
 
 	class MouseHandler extends MouseAdapter
 	{
-		@Override
+		
 		public void mouseClicked( MouseEvent e )
 		{
 			if( popup != null && e.isPopupTrigger() )
@@ -2113,7 +2113,7 @@ public class JEditTextArea extends JComponent implements Scrollable
 			popup.show( painter, evt.getX(), evt.getY() );
 		}
 
-		@Override
+		
 		public void mouseReleased( MouseEvent e )
 		{
 			if( popup != null && e.isPopupTrigger() )

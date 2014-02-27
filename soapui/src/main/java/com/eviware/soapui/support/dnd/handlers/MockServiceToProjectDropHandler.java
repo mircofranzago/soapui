@@ -26,19 +26,19 @@ public class MockServiceToProjectDropHandler extends AbstractAfterModelItemDropH
 		super( WsdlMockService.class, WsdlProject.class );
 	}
 
-	@Override
+	
 	boolean canCopyAfter( WsdlMockService source, WsdlProject target )
 	{
 		return true;
 	}
 
-	@Override
+	
 	boolean canMoveAfter( WsdlMockService source, WsdlProject target )
 	{
 		return source.getProject() != target;
 	}
 
-	@Override
+	
 	boolean copyAfter( WsdlMockService source, WsdlProject target )
 	{
 		SoapUIAction<WsdlMockService> action = SoapUI.getActionRegistry().getAction(
@@ -62,7 +62,7 @@ public class MockServiceToProjectDropHandler extends AbstractAfterModelItemDropH
 		return true;
 	}
 
-	@Override
+	
 	boolean moveAfter( WsdlMockService source, WsdlProject target )
 	{
 		SoapUIAction<WsdlMockService> action = SoapUI.getActionRegistry().getAction(
@@ -80,13 +80,13 @@ public class MockServiceToProjectDropHandler extends AbstractAfterModelItemDropH
 		return true;
 	}
 
-	@Override
+	
 	String getCopyAfterInfo( WsdlMockService source, WsdlProject target )
 	{
 		return "Copy MockService [" + source.getName() + "] to Project [" + target.getName() + "]";
 	}
 
-	@Override
+	
 	String getMoveAfterInfo( WsdlMockService source, WsdlProject target )
 	{
 		return "Move MockService [" + source.getName() + "] to Project [" + target.getName() + "]";

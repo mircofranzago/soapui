@@ -108,7 +108,7 @@ public class MaliciousAttachmentMutationsPanel
 		JCheckBoxFormField remove = ( JCheckBoxFormField )tablesDialog.getFormField( MutationTables.REMOVE_FILE );
 		remove.addFormFieldListener( new XFormFieldListener()
 		{
-			@Override
+			
 			public void valueChanged( XFormField sourceField, String newValue, String oldValue )
 			{
 				int idx = holder.getFilesList().getList().getSelectedIndex();
@@ -156,7 +156,7 @@ public class MaliciousAttachmentMutationsPanel
 
 		table.getSelectionModel().addListSelectionListener( new ListSelectionListener()
 		{
-			@Override
+			
 			public void valueChanged( ListSelectionEvent e )
 			{
 				if( removeGeneratedButton != null )
@@ -195,7 +195,7 @@ public class MaliciousAttachmentMutationsPanel
 
 		table.getSelectionModel().addListSelectionListener( new ListSelectionListener()
 		{
-			@Override
+			
 			public void valueChanged( ListSelectionEvent e )
 			{
 				if( removeReplacementButton != null )
@@ -284,7 +284,7 @@ public class MaliciousAttachmentMutationsPanel
 			putValue( Action.SHORT_DESCRIPTION, "Add file" );
 		}
 
-		@Override
+		
 		public void actionPerformed( ActionEvent e )
 		{
 			if( fileChooser == null )
@@ -360,7 +360,7 @@ public class MaliciousAttachmentMutationsPanel
 			putValue( Action.SHORT_DESCRIPTION, "Generate file" );
 		}
 
-		@Override
+		
 		public void actionPerformed( ActionEvent e )
 		{
 			if( dialog == null )
@@ -447,7 +447,7 @@ public class MaliciousAttachmentMutationsPanel
 			this.table = table;
 		}
 
-		@Override
+		
 		public void actionPerformed( ActionEvent e )
 		{
 			int row = table.getSelectedRow();
@@ -489,7 +489,7 @@ public class MaliciousAttachmentMutationsPanel
 			this.table = table;
 		}
 
-		@Override
+		
 		public void actionPerformed( ActionEvent e )
 		{
 			int row = table.getSelectedRow();
@@ -542,7 +542,7 @@ public class MaliciousAttachmentMutationsPanel
 			putValue( Action.SMALL_ICON, UISupport.HELP_ICON );
 		}
 
-		@Override
+		
 		public void actionPerformed( ActionEvent e )
 		{
 			Tools.openURL( url );

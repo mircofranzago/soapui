@@ -392,7 +392,7 @@ public class WsdlRequest extends AbstractHttpRequest<WsdlRequestConfig> implemen
 		getSettings().setBoolean( WsdlRequest.SKIP_SOAP_ACTION, skipSoapAction );
 	}
 
-	@Override
+	
 	public void release()
 	{
 		super.release();
@@ -680,7 +680,7 @@ public class WsdlRequest extends AbstractHttpRequest<WsdlRequestConfig> implemen
 		return getOperation().getAction();
 	}
 
-	@Override
+	
 	public void propertyChange( PropertyChangeEvent evt )
 	{
 		if( evt.getSource() == wsrmConfig && evt.getPropertyName().equals( "version" ) )

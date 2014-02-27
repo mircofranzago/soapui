@@ -33,7 +33,7 @@ public class JTextFieldFormField extends AbstractSwingXFormField<JUndoableTextFi
 		getComponent().getDocument().addDocumentListener( new DocumentListenerAdapter()
 		{
 
-			@Override
+			
 			public void update( Document document )
 			{
 				String text = getComponent().getText();

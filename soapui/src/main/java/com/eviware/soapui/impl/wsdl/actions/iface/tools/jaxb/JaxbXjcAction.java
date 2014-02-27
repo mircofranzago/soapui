@@ -59,7 +59,7 @@ public class JaxbXjcAction extends AbstractToolsAction<Interface>
 		super( "JAXB 2.0 Artifacts", "Generates JAXB artifacts" );
 	}
 
-	@Override
+	
 	public boolean applies( Interface target )
 	{
 		Interface iface = ( Interface )target;

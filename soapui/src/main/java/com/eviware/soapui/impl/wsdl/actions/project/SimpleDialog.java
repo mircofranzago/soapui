@@ -110,7 +110,7 @@ public abstract class SimpleDialog extends JDialog
 
 	protected abstract boolean handleOk();
 
-	@Override
+	
 	public void setVisible( boolean b )
 	{
 		init();

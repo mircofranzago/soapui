@@ -41,7 +41,7 @@ public class GroovySecurityScanPanel extends SecurityScanConfigPanel
 		add( buildSetupScriptPanel( securityCheck ) );
 	}
 
-	@Override
+	
 	public void save()
 	{
 
@@ -49,7 +49,7 @@ public class GroovySecurityScanPanel extends SecurityScanConfigPanel
 
 	private class ScriptGroovyEditorModel extends AbstractGroovyEditorModel
 	{
-		@Override
+		
 		public Action createRunAction()
 		{
 			return new AbstractAction()

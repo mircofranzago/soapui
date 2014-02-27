@@ -1430,7 +1430,7 @@ public class PropertyTransfersDesktopPanel extends ModelItemDesktopPanel<Propert
 
 	private class InternalTestRunListener extends TestRunListenerAdapter
 	{
-		@Override
+		
 		public void afterStep( TestCaseRunner testRunner, TestCaseRunContext runContext, TestStepResult result )
 		{
 			if( result.getTestStep() == transferStep )
@@ -1442,7 +1442,7 @@ public class PropertyTransfersDesktopPanel extends ModelItemDesktopPanel<Propert
 
 	private class StepComboRenderer extends DefaultListCellRenderer
 	{
-		@Override
+		
 		public Component getListCellRendererComponent( JList list, Object value, int index, boolean isSelected,
 				boolean cellHasFocus )
 		{
@@ -1467,7 +1467,7 @@ public class PropertyTransfersDesktopPanel extends ModelItemDesktopPanel<Propert
 
 	private class PropertyComboRenderer extends DefaultListCellRenderer
 	{
-		@Override
+		
 		public Component getListCellRendererComponent( JList list, Object value, int index, boolean isSelected,
 				boolean cellHasFocus )
 		{

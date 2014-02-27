@@ -138,7 +138,7 @@ public class AMFHeadersInspectorFactory implements RequestInspectorFactory, Resp
 			getModelItem().setAmfHeaders( headers );
 		}
 
-		@Override
+		
 		public void release()
 		{
 			getModelItem().removePropertyChangeListener( AMFRequestTestStep.AMF_HEADERS_PROPERTY, this );
@@ -170,7 +170,7 @@ public class AMFHeadersInspectorFactory implements RequestInspectorFactory, Resp
 			}
 		}
 
-		@Override
+		
 		public void release()
 		{
 			request.removePropertyChangeListener( AMFRequest.AMF_RESPONSE_PROPERTY, this );

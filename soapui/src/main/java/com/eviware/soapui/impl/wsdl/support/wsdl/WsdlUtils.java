@@ -841,7 +841,7 @@ public class WsdlUtils
 	public static final class NonSchemaImportingWsdlReaderImpl extends WSDLReaderImpl
 	{
 		@SuppressWarnings( "unchecked" )
-		@Override
+		
 		protected ExtensibilityElement parseSchema( Class parentType, Element el, Definition def, ExtensionRegistry extReg )
 				throws WSDLException
 		{

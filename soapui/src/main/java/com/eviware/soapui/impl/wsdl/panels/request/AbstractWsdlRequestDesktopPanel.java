@@ -62,7 +62,7 @@ public abstract class AbstractWsdlRequestDesktopPanel<T extends ModelItem, T2 ex
 		super( modelItem, request );
 	}
 
-	@Override
+	
 	protected void init( T2 request )
 	{
 		recreateButton = createActionButton( new RecreateRequestAction( request ), true );

@@ -154,7 +154,7 @@ public class WsdlMockResponse extends AbstractWsdlModelItem<MockResponseConfig> 
 		propertyHolder.addProperty( "Request" );
 	}
 
-	@Override
+	
 	public void setConfig( MockResponseConfig config )
 	{
 		super.setConfig( config );
@@ -235,7 +235,7 @@ public class WsdlMockResponse extends AbstractWsdlModelItem<MockResponseConfig> 
 			return AUTO_RESPONSE_COMPRESSION;
 	}
 
-	@Override
+	
 	public ImageIcon getIcon()
 	{
 		return iconAnimator.getIcon();
@@ -364,7 +364,7 @@ public class WsdlMockResponse extends AbstractWsdlModelItem<MockResponseConfig> 
 		}
 	}
 
-	@Override
+	
 	public void release()
 	{
 		super.release();
@@ -932,7 +932,7 @@ public class WsdlMockResponse extends AbstractWsdlModelItem<MockResponseConfig> 
 		getSettings().setBoolean( WsdlMockResponse.ENABLE_INLINE_FILES, inlineFilesEnabled );
 	}
 
-	@Override
+	
 	public void beforeSave()
 	{
 		super.beforeSave();

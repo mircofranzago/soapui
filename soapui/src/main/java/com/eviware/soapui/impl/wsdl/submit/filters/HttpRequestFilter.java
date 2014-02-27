@@ -66,7 +66,7 @@ import java.util.List;
 public class HttpRequestFilter extends AbstractRequestFilter
 {
 	@SuppressWarnings( "deprecation" )
-	@Override
+	
 	public void filterHttpRequest( SubmitContext context, HttpRequestInterface<?> request )
 	{
 		HttpRequestBase httpMethod = ( HttpRequestBase )context.getProperty( BaseHttpRequestTransport.HTTP_METHOD );

@@ -47,7 +47,7 @@ public class AttachmentsInspector extends AbstractXmlInspector implements Proper
 		return attachmentsPanel;
 	}
 
-	@Override
+	
 	public void release()
 	{
 		super.release();
@@ -60,7 +60,7 @@ public class AttachmentsInspector extends AbstractXmlInspector implements Proper
 		setTitle( "Attachments (" + container.getAttachmentCount() + ")" );
 	}
 
-	@Override
+	
 	public boolean isEnabledFor( EditorView<XmlDocument> view )
 	{
 		return !view.getViewId().equals( RawXmlEditorFactory.VIEW_ID );

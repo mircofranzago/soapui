@@ -61,26 +61,26 @@ public class RestResourceTreeNode extends AbstractModelItemTreeNode<RestResource
 		}
 	}
 
-	@Override
+	
 	public SoapUITreeNode getParentTreeNode()
 	{
 		return restResource.getParentResource() == null ? super.getParentTreeNode() : getTreeModel().getTreeNode(
 				restResource.getParentResource() );
 	}
 
-	@Override
+	
 	public String toString()
 	{
 		return restResource.getName() + " [" + restResource.getFullPath() + "]";
 	}
 
-	@Override
+	
 	public int getChildCount()
 	{
 		return restResource.getRestMethodCount() + restResource.getChildResourceCount();
 	}
 
-	@Override
+	
 	public SoapUITreeNode getChildNode( int index )
 	{
 		int childCount = methodNodes.size();
@@ -90,7 +90,7 @@ public class RestResourceTreeNode extends AbstractModelItemTreeNode<RestResource
 			return resourceNodes.get( index - childCount );
 	}
 
-	@Override
+	
 	public int getIndexOfChild( Object child )
 	{
 		int result = methodNodes.indexOf( child );

@@ -90,7 +90,7 @@ public class WsdlMockResponseStepDesktopPanel extends
 		mockResponseStep.addAssertionsListener( assertionsListener );
 	}
 
-	@Override
+	
 	protected JComponent buildContent()
 	{
 		inspectorPanel = JInspectorPanelFactory.build( super.buildContent() );
@@ -163,7 +163,7 @@ public class WsdlMockResponseStepDesktopPanel extends
 		inspectorPanel.setContentComponent( null );
 	}
 
-	@Override
+	
 	protected void createToolbar( JXToolBar toolbar )
 	{
 		toolbar.addUnrelatedGap();
@@ -173,7 +173,7 @@ public class WsdlMockResponseStepDesktopPanel extends
 		pathField.getDocument().addDocumentListener( new DocumentListenerAdapter()
 		{
 
-			@Override
+			
 			public void update( Document document )
 			{
 				getModelItem().setPath( pathField.getText() );
@@ -189,7 +189,7 @@ public class WsdlMockResponseStepDesktopPanel extends
 		portField.getDocument().addDocumentListener( new DocumentListenerAdapter()
 		{
 
-			@Override
+			
 			public void update( Document document )
 			{
 				try
@@ -280,7 +280,7 @@ public class WsdlMockResponseStepDesktopPanel extends
 		return assertionsPanel;
 	}
 
-	@Override
+	
 	public boolean onClose( boolean canCancel )
 	{
 		getModelItem().getTestCase().removeTestRunListener( testRunListener );
@@ -314,19 +314,19 @@ public class WsdlMockResponseStepDesktopPanel extends
 
 	public class InternalTestRunListener extends TestRunListenerAdapter
 	{
-		@Override
+		
 		public void afterRun( TestCaseRunner testRunner, TestCaseRunContext runContext )
 		{
 			setEnabled( true );
 		}
 
-		@Override
+		
 		public void beforeRun( TestCaseRunner testRunner, TestCaseRunContext runContext )
 		{
 			setEnabled( false );
 		}
 
-		@Override
+		
 		public void beforeStep( TestCaseRunner testRunner, TestCaseRunContext runContext, TestStep testStep )
 		{
 			if( testStep == getModelItem() )
@@ -337,7 +337,7 @@ public class WsdlMockResponseStepDesktopPanel extends
 			}
 		}
 
-		@Override
+		
 		public void afterStep( TestCaseRunner testRunner, TestCaseRunContext runContext, TestStepResult result )
 		{
 			if( result.getTestStep() == getModelItem() )

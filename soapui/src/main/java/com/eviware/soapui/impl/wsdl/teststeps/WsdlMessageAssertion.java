@@ -467,7 +467,7 @@ public abstract class WsdlMessageAssertion extends AbstractModelItem implements 
 		assertionStatus = AssertionStatus.UNKNOWN;
 	}
 
-	@Override
+	
 	public int getIndexOfAssertion( TestAssertion assertion )
 	{
 		if( getConfig() instanceof GroupAssertionListConfig )

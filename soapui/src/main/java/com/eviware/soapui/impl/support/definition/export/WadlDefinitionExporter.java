@@ -57,7 +57,7 @@ public class WadlDefinitionExporter extends AbstractDefinitionExporter<RestServi
 				"declare namespace s='http://www.w3.org/2001/XMLSchema' .//s:include/@schemaLocation" };
 	}
 
-	@Override
+	
 	protected void postProcessing( XmlObject obj, InterfaceDefinitionPart part )
 	{
 		if( part.getType().equals( Constants.WADL11_NS ) )

@@ -59,7 +59,7 @@ public class SwitchDesktopPanelAction extends AbstractAction
 			UISupport.initDialogActions( null, dialog );
 			dialog.addWindowListener( new WindowAdapter()
 			{
-				@Override
+				
 				public void windowOpened( WindowEvent e )
 				{
 					initOnOpen();
@@ -79,13 +79,13 @@ public class SwitchDesktopPanelAction extends AbstractAction
 					} );
 				}
 
-				@Override
+				
 				public void windowDeactivated( WindowEvent e )
 				{
 					dialog.setVisible( false );
 				}
 
-				@Override
+				
 				public void windowLostFocus( WindowEvent e )
 				{
 					dialog.setVisible( false );
@@ -94,7 +94,7 @@ public class SwitchDesktopPanelAction extends AbstractAction
 			} );
 			dialog.addMouseListener( new MouseAdapter()
 			{
-				@Override
+				
 				public void mouseClicked( MouseEvent e )
 				{
 					dialog.setVisible( false );
@@ -103,7 +103,7 @@ public class SwitchDesktopPanelAction extends AbstractAction
 
 			desktopPanelsList.getDesktopPanelsList().addKeyListener( new KeyAdapter()
 			{
-				@Override
+				
 				public void keyPressed( KeyEvent e )
 				{
 					if( e.getKeyChar() == '\n' )
@@ -121,7 +121,7 @@ public class SwitchDesktopPanelAction extends AbstractAction
 			desktopPanelsList.getDesktopPanelsList().addMouseListener( new MouseAdapter()
 			{
 
-				@Override
+				
 				public void mouseClicked( MouseEvent e )
 				{
 					if( e.getClickCount() > 1 )

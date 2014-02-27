@@ -62,7 +62,7 @@ public class FileFormField extends AbstractSwingXFormField<JPanel> implements XF
 		textField.getDocument().addDocumentListener( new DocumentListenerAdapter()
 		{
 
-			@Override
+			
 			public void update( Document document )
 			{
 				String text = textField.getText();
@@ -118,7 +118,7 @@ public class FileFormField extends AbstractSwingXFormField<JPanel> implements XF
 		selectDirectoryButton.setEnabled( enabled );
 	}
 
-	@Override
+	
 	public boolean isEnabled()
 	{
 		return textField.isEnabled();

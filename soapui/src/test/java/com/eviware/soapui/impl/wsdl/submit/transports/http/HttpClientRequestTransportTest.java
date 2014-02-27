@@ -87,19 +87,19 @@ public class HttpClientRequestTransportTest
 
 	private class TestableHttpClientRequestTransport extends HttpClientRequestTransport
 	{
-		@Override
+		
 		protected HttpClientSupport.SoapUIHttpClient getSoapUIHttpClient()
 		{
 			return mock(HttpClientSupport.SoapUIHttpClient.class);
 		}
 
-		@Override
+		
 		protected int getDefaultHttpPort( ExtendedHttpMethod httpMethod, HttpClient httpClient )
 		{
 			return 80;
 		}
 
-		@Override
+		
 		protected HttpResponse submitRequest( ExtendedHttpMethod httpMethod, HttpContext httpContext ) throws IOException
 		{
 			methodExecuted = httpMethod;
@@ -119,7 +119,7 @@ public class HttpClientRequestTransportTest
 
 	private class StubbedRequestSetupFilter implements RequestFilter
 	{
-		@Override
+		
 		public void filterRequest( SubmitContext context, Request request )
 		{
 			ExtendedHttpMethod httpMethod = (ExtendedHttpMethod) context.getProperty( BaseHttpRequestTransport.HTTP_METHOD );
@@ -133,12 +133,12 @@ public class HttpClientRequestTransportTest
 			}
 		}
 
-		@Override
+		
 		public void afterRequest( SubmitContext context, Request request )
 		{
 		}
 
-		@Override
+		
 		public void afterRequest( SubmitContext context, Response response )
 		{
 		}
@@ -152,7 +152,7 @@ public class HttpClientRequestTransportTest
 		{
 			super( modelItem );
 		}
-		@Override
+		
 		public Object getProperty( String name )
 		{
 			return getProperty(name, null, null);

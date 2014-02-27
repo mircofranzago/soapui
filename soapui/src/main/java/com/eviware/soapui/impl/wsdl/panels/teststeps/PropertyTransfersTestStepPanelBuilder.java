@@ -40,7 +40,7 @@ public class PropertyTransfersTestStepPanelBuilder extends EmptyPanelBuilder<Pro
 		return true;
 	}
 
-	@Override
+	
 	public Component buildOverviewPanel( PropertyTransfersTestStep modelItem )
 	{
 		return buildDefaultProperties( modelItem, "PropertyTransfer Properties" );

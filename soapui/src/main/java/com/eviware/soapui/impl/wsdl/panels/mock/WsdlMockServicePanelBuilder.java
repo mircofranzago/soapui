@@ -37,7 +37,7 @@ public class WsdlMockServicePanelBuilder extends EmptyPanelBuilder<WsdlMockServi
 		return new WsdlMockServiceDesktopPanel( mockService );
 	}
 
-	@Override
+	
 	public boolean hasDesktopPanel()
 	{
 		return true;

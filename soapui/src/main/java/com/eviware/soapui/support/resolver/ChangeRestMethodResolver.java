@@ -69,7 +69,7 @@ public abstract class ChangeRestMethodResolver implements Resolver
 		return "Resolve: Select another REST Method";
 	}
 
-	@Override
+	
 	public String toString()
 	{
 		return getDescription();

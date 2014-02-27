@@ -39,7 +39,7 @@ public class SoapUIMockServlet extends HttpServlet
 	private WsdlProject project;
 	private static Logger logger = Logger.getLogger( SoapUIMockServlet.class.getName() );
 
-	@Override
+	
 	public void init() throws ServletException
 	{
 		super.init();
@@ -62,7 +62,7 @@ public class SoapUIMockServlet extends HttpServlet
 		}
 	}
 
-	@Override
+	
 	protected void service( HttpServletRequest request, HttpServletResponse response ) throws ServletException,
 			IOException
 	{

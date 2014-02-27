@@ -113,7 +113,7 @@ public class JInspectorPanelImpl extends JPanel implements PropertyChangeListene
 	{
 		inspectToolbar = new JXToolBar()
 		{
-			@Override
+			
 			public Dimension getMinimumSize()
 			{
 				return new Dimension( 10, 10 );

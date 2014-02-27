@@ -54,7 +54,7 @@ public class FuzzerScanAdvancedConfigPanel
 		minimal.addFormFieldListener( new XFormFieldListener()
 		{
 
-			@Override
+			
 			public void valueChanged( XFormField sourceField, String newValue, String oldValue )
 			{
 				try
@@ -80,7 +80,7 @@ public class FuzzerScanAdvancedConfigPanel
 		maximal.addFormFieldListener( new XFormFieldListener()
 		{
 
-			@Override
+			
 			public void valueChanged( XFormField sourceField, String newValue, String oldValue )
 			{
 				try
@@ -106,7 +106,7 @@ public class FuzzerScanAdvancedConfigPanel
 		numberOfRequest.addFormFieldListener( new XFormFieldListener()
 		{
 
-			@Override
+			
 			public void valueChanged( XFormField sourceField, String newValue, String oldValue )
 			{
 				try

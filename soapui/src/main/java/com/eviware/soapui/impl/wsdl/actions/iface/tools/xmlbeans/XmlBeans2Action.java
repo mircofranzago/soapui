@@ -64,7 +64,7 @@ public class XmlBeans2Action extends AbstractToolsAction<Interface>
 		super( "XmlBeans Classes", "Generates XmlBeans classes" );
 	}
 
-	@Override
+	
 	public boolean applies( Interface target )
 	{
 		Interface iface = ( Interface )target;

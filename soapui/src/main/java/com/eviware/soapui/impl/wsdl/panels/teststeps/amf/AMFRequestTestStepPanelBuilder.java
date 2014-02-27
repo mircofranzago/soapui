@@ -41,7 +41,7 @@ public class AMFRequestTestStepPanelBuilder extends EmptyPanelBuilder<AMFRequest
 		return true;
 	}
 
-	@Override
+	
 	public Component buildOverviewPanel( AMFRequestTestStep modelItem )
 	{
 		JPropertiesTable<AMFRequestTestStep> table = buildDefaultProperties( modelItem, "AMFRequestTestStep Properties" );

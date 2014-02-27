@@ -122,7 +122,7 @@ public class RestResourceEditorTest
 		return new TypeSafeMatcher<RestParamProperty>()
 		{
 
-			@Override
+			
 			public boolean matchesSafely( RestParamProperty restParamsPropertyHolder )
 			{
 				if( restParamsPropertyHolder == null || restParamsPropertyHolder.getValue() == null )
@@ -132,7 +132,7 @@ public class RestResourceEditorTest
 				return restParamsPropertyHolder.getValue().equals( value );
 			}
 
-			@Override
+			
 			public void describeTo( Description description )
 			{
 				description.appendText( String.format("Parameter with value %s", value) );

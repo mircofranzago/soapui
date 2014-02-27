@@ -90,7 +90,7 @@ public class UsernameEntry extends WssEntryBase
 		token.build( doc, secHeader );
 	}
 
-	@Override
+	
 	protected JComponent buildUI()
 	{
 		SimpleBindingForm form = new SimpleBindingForm( new PresentationModel<UsernameEntry>( this ) );
@@ -107,7 +107,7 @@ public class UsernameEntry extends WssEntryBase
 		return form.getPanel();
 	}
 
-	@Override
+	
 	protected void load( XmlObjectConfigurationReader reader )
 	{
 		addCreated = reader.readBoolean( "addCreated", true );
@@ -115,7 +115,7 @@ public class UsernameEntry extends WssEntryBase
 		passwordType = reader.readString( "passwordType", WSConstants.PASSWORD_DIGEST );
 	}
 
-	@Override
+	
 	protected void save( XmlObjectConfigurationBuilder builder )
 	{
 		builder.add( "addCreated", addCreated );

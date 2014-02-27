@@ -191,7 +191,7 @@ public class ProjectTreeNode extends AbstractModelItemTreeNode<Project>
 				throw new RuntimeException( "Removing unkown testSuite" );
 		}
 
-		@Override
+		
 		public void testSuiteMoved( TestSuite testSuite, int index, int offset )
 		{
 			testSuiteRemoved( testSuite );

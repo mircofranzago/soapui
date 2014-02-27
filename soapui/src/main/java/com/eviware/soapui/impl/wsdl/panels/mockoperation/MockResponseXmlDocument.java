@@ -77,7 +77,7 @@ public class MockResponseXmlDocument extends AbstractXmlDocument implements Prop
 		fireXmlChanged( ( String )arg0.getOldValue(), ( String )arg0.getNewValue() );
 	}
 
-	@Override
+	
 	public void release()
 	{
 		mockResponse.removePropertyChangeListener( WsdlMockResponse.RESPONSE_CONTENT_PROPERTY, this );

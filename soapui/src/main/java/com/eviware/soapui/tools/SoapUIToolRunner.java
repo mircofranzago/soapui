@@ -198,7 +198,7 @@ public class SoapUIToolRunner extends AbstractSoapUIRunner implements ToolHost, 
 	{
 	}
 
-	@Override
+	
 	protected SoapUIOptions initCommandLineOptions()
 	{
 		SoapUIOptions options = new SoapUIOptions( "toolrunner" );
@@ -214,7 +214,7 @@ public class SoapUIToolRunner extends AbstractSoapUIRunner implements ToolHost, 
 		return options;
 	}
 
-	@Override
+	
 	protected boolean processCommandLine( CommandLine cmd )
 	{
 		setTool( cmd.getOptionValue( "t" ) );

@@ -363,7 +363,7 @@ public class DefaultEndpointStrategyConfigurationPanel extends JPanel implements
 
 		public abstract int getPasswordColumnIndex();
 
-		@Override
+		
 		public boolean isCellEditable( int rowIndex, int columnIndex )
 		{
 			return true;
@@ -382,7 +382,7 @@ public class DefaultEndpointStrategyConfigurationPanel extends JPanel implements
 			return 5;
 		}
 
-		@Override
+		
 		public String getColumnName( int column )
 		{
 			switch( column )
@@ -402,7 +402,7 @@ public class DefaultEndpointStrategyConfigurationPanel extends JPanel implements
 			return null;
 		}
 
-		@Override
+		
 		public int getPasswordColumnIndex()
 		{
 			return 2;
@@ -430,7 +430,7 @@ public class DefaultEndpointStrategyConfigurationPanel extends JPanel implements
 			return null;
 		}
 
-		@Override
+		
 		public void setValueAt( Object aValue, int rowIndex, int columnIndex )
 		{
 			String endpoint = getEndpointAt( rowIndex );
@@ -479,7 +479,7 @@ public class DefaultEndpointStrategyConfigurationPanel extends JPanel implements
 			return 9;
 		}
 
-		@Override
+		
 		public String getColumnName( int column )
 		{
 			switch( column )
@@ -507,7 +507,7 @@ public class DefaultEndpointStrategyConfigurationPanel extends JPanel implements
 			return null;
 		}
 
-		@Override
+		
 		public int getPasswordColumnIndex()
 		{
 			return 2;
@@ -543,7 +543,7 @@ public class DefaultEndpointStrategyConfigurationPanel extends JPanel implements
 			return null;
 		}
 
-		@Override
+		
 		public void setValueAt( Object aValue, int rowIndex, int columnIndex )
 		{
 			String endpoint = getEndpointAt( rowIndex );
@@ -614,7 +614,7 @@ public class DefaultEndpointStrategyConfigurationPanel extends JPanel implements
 			this.wssContainer = wssContainer;
 		}
 
-		@Override
+		
 		public Component getTableCellEditorComponent( JTable table, Object value, boolean isSelected, int row, int column )
 		{
 			JComboBox comboBox = ( JComboBox )super.getTableCellEditorComponent( table, value, isSelected, row, column );
@@ -638,7 +638,7 @@ public class DefaultEndpointStrategyConfigurationPanel extends JPanel implements
 			this.wssContainer = wssContainer;
 		}
 
-		@Override
+		
 		public Component getTableCellEditorComponent( JTable table, Object value, boolean isSelected, int row, int column )
 		{
 			JComboBox comboBox = ( JComboBox )super.getTableCellEditorComponent( table, value, isSelected, row, column );
@@ -664,7 +664,7 @@ public class DefaultEndpointStrategyConfigurationPanel extends JPanel implements
 
 	public static class InternalRowCellrenderer extends DefaultCellRenderer
 	{
-		@Override
+		
 		public Component getTableCellRendererComponent( JTable table, Object value, boolean isSelected, boolean hasFocus,
 				int row, int column )
 		{

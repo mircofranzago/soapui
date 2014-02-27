@@ -209,7 +209,7 @@ public class WsdlGroovyScriptTestStep extends WsdlTestStepWithProperties impleme
 		notifyPropertyChanged( "script", oldScript, scriptText );
 	}
 
-	@Override
+	
 	public void release()
 	{
 		super.release();

@@ -121,7 +121,7 @@ public class ResolveContext<T extends AbstractWsdlModelItem<?>>
 			return resolved;
 		}
 
-		@Override
+		
 		public int hashCode()
 		{
 			final int prime = 31;
@@ -134,7 +134,7 @@ public class ResolveContext<T extends AbstractWsdlModelItem<?>>
 		}
 
 		@SuppressWarnings( "unchecked" )
-		@Override
+		
 		public boolean equals( Object obj )
 		{
 			if( this == obj )
@@ -286,7 +286,7 @@ public class ResolveContext<T extends AbstractWsdlModelItem<?>>
 			return title;
 		}
 
-		@Override
+		
 		public String toString()
 		{
 			return ( String )getDescription();

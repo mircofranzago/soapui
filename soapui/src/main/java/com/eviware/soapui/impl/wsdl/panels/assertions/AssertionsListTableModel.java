@@ -28,13 +28,13 @@ public class AssertionsListTableModel extends DefaultTableModel
 		this.listEntriesSet = listEntriesSet;
 	}
 
-	@Override
+	
 	public int getColumnCount()
 	{
 		return 1;
 	}
 
-	@Override
+	
 	public int getRowCount()
 	{
 		if( listEntriesSet != null )
@@ -47,7 +47,7 @@ public class AssertionsListTableModel extends DefaultTableModel
 		}
 	}
 
-	@Override
+	
 	public Object getValueAt( int rowIndex, int columnIndex )
 	{
 		if( listEntriesSet != null )

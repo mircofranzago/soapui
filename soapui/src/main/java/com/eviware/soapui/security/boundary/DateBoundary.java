@@ -23,13 +23,13 @@ public class DateBoundary extends AbstractBoundary
 	public static final String DATE_FORMAT = "yyyy-MM-dd'T00:00:00'";
 	
 	private static final ThreadLocal<SimpleDateFormat> simpleDateFormat = new ThreadLocal<SimpleDateFormat>() {
-		@Override
+		
 		protected SimpleDateFormat initialValue() {
 			return new SimpleDateFormat( DATE_FORMAT );
 		}
 	};
 
-	@Override
+	
 	public String outOfBoundary( int restrictionAttribute, String value )
 	{
 		switch( restrictionAttribute )

@@ -93,13 +93,13 @@ public class WsdlRequestMimeMessageRequestEntity extends AbstractHttpEntity
 		return null;
 	}
 
-	@Override
+	
 	public boolean isRepeatable()
 	{
 		return true;
 	}
 
-	@Override
+	
 	public void writeTo( OutputStream arg0 ) throws IOException
 	{
 		try
@@ -113,7 +113,7 @@ public class WsdlRequestMimeMessageRequestEntity extends AbstractHttpEntity
 		}
 	}
 
-	@Override
+	
 	public InputStream getContent() throws IOException
 	{
 		try
@@ -126,7 +126,7 @@ public class WsdlRequestMimeMessageRequestEntity extends AbstractHttpEntity
 		}
 	}
 
-	@Override
+	
 	public boolean isStreaming()
 	{
 		return false;
@@ -144,7 +144,7 @@ public class WsdlRequestMimeMessageRequestEntity extends AbstractHttpEntity
 			intLength = tempOut.toByteArray().length;
 		}
 
-		@Override
+		
 		public void write( int b ) throws IOException
 		{
 			size += intLength;

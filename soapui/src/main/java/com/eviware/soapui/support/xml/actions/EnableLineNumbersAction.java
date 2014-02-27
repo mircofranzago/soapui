@@ -38,7 +38,7 @@ public class EnableLineNumbersAction extends AbstractAction
 		}
 	}
 
-	@Override
+	
 	public void actionPerformed( ActionEvent e )
 	{
 		editorScrollPane.setLineNumbersEnabled( !editorScrollPane.getLineNumbersEnabled() );

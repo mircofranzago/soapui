@@ -38,7 +38,7 @@ public abstract class AbstractWssInspector extends AbstractXmlInspector
 		super( "WSS", "Displays WS-Security information for this response", true, WssInspectorFactory.INSPECTOR_ID );
 	}
 
-	@Override
+	
 	public void release()
 	{
 		super.release();
@@ -99,7 +99,7 @@ public abstract class AbstractWssInspector extends AbstractXmlInspector
 		}
 	}
 
-	@Override
+	
 	public boolean isEnabledFor( EditorView<XmlDocument> view )
 	{
 		return true;

@@ -38,7 +38,7 @@ public class WsdlRequestDesktopPanel extends AbstractWsdlRequestDesktopPanel<Wsd
 		super( request, request );
 	}
 
-	@Override
+	
 	protected void init( WsdlRequest request )
 	{
 		addToTestCaseButton = createActionButton( SwingActionDelegate.createDelegate(

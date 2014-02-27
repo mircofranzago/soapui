@@ -33,7 +33,7 @@ public class CategoriesListTable extends JXTable
 		this.selectableIndexes = selectableIndexes;
 	}
 
-	@Override
+	
 	public void changeSelection( int rowIndex, int columnIndex, boolean toggle, boolean extend )
 	{
 		if( !selectable )
@@ -60,7 +60,7 @@ public class CategoriesListTable extends JXTable
 		return selectableIndexes;
 	}
 
-	@Override
+	
 	public Component prepareRenderer( TableCellRenderer renderer, int row, int column )
 	{
 		Component defaultRenderer = super.prepareRenderer( renderer, row, column );
@@ -71,7 +71,7 @@ public class CategoriesListTable extends JXTable
 		return defaultRenderer;
 	}
 
-	@Override
+	
 	public boolean getShowVerticalLines()
 	{
 		return UISupport.isMac() ? false : super.getShowVerticalLines();

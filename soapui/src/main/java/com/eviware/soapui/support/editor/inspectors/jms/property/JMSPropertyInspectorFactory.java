@@ -76,7 +76,7 @@ public class JMSPropertyInspectorFactory implements RequestInspectorFactory, Res
 			super.propertyChange( evt );
 		}
 
-		@Override
+		
 		public void release()
 		{
 			super.release();

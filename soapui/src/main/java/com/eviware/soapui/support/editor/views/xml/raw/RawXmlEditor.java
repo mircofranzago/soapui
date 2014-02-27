@@ -40,7 +40,7 @@ public abstract class RawXmlEditor<T extends XmlDocument> extends AbstractXmlEdi
 		UISupport.addPreviewCorner( scrollPane, true );
 	}
 
-	@Override
+	
 	public void setXml( String xml )
 	{
 		textArea.setText( getContent() );

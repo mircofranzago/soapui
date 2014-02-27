@@ -76,13 +76,13 @@ public class RestParamsTableModel extends DirectAccessPropertyHolderTableModel<R
 		return mode == Mode.MINIMAL;
 	}
 
-	@Override
+	
 	public int getColumnCount()
 	{
 		return mode.columnTypes.length;
 	}
 
-	@Override
+	
 	public String getColumnName( int columnIndex )
 	{
 		if( isColumnIndexOutOfBound( columnIndex ) )
@@ -92,7 +92,7 @@ public class RestParamsTableModel extends DirectAccessPropertyHolderTableModel<R
 		return mode.columnNames[columnIndex];
 	}
 
-	@Override
+	
 	public Class<?> getColumnClass( int columnIndex )
 	{
 		if( isColumnIndexOutOfBound( columnIndex ) )
@@ -107,7 +107,7 @@ public class RestParamsTableModel extends DirectAccessPropertyHolderTableModel<R
 		return columnIndex < 0 || columnIndex >= mode.columnTypes.length;
 	}
 
-	@Override
+	
 	public boolean isCellEditable( int rowIndex, int columnIndex )
 	{
 		return true;
@@ -119,7 +119,7 @@ public class RestParamsTableModel extends DirectAccessPropertyHolderTableModel<R
 	}
 
 
-	@Override
+	
 	public Object getValueAt( int rowIndex, int columnIndex )
 	{
 		RestParamProperty prop = getParameterAt( rowIndex );
@@ -139,7 +139,7 @@ public class RestParamsTableModel extends DirectAccessPropertyHolderTableModel<R
 		return null;
 	}
 
-	@Override
+	
 	public void setValueAt( Object value, int rowIndex, int columnIndex )
 	{
 		RestParamProperty prop = getParameterAt( rowIndex );

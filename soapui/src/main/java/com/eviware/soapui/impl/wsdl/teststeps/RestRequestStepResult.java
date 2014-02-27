@@ -59,7 +59,7 @@ public class RestRequestStepResult extends WsdlTestStepResult implements Respons
 		super( ( WsdlTestStep )step );
 	}
 
-	@Override
+	
 	public Operation getOperation()
 	{
 		if( response == null )
@@ -69,7 +69,7 @@ public class RestRequestStepResult extends WsdlTestStepResult implements Respons
 		return response == null ? null : response.getRequest().getOperation();
 	}
 
-	@Override
+	
 	public ModelItem getModelItem()
 	{
 		if( response != null )
@@ -78,7 +78,7 @@ public class RestRequestStepResult extends WsdlTestStepResult implements Respons
 			return null;
 	}
 
-	@Override
+	
 	public String getRequestContent()
 	{
 		if( isDiscarded() )
@@ -92,13 +92,13 @@ public class RestRequestStepResult extends WsdlTestStepResult implements Respons
 		this.requestContent = requestContent;
 	}
 
-	@Override
+	
 	public HttpResponse getResponse()
 	{
 		return response;
 	}
 
-	@Override
+	
 	public ActionList getActions()
 	{
 		if( !addedAction )
@@ -145,7 +145,7 @@ public class RestRequestStepResult extends WsdlTestStepResult implements Respons
 		addProperty( "Encoding", encoding );
 	}
 
-	@Override
+	
 	public String getEndpoint()
 	{
 		return endpoint;
@@ -179,7 +179,7 @@ public class RestRequestStepResult extends WsdlTestStepResult implements Respons
 		addProperty( "Username", username );
 	}
 
-	@Override
+	
 	public void discard()
 	{
 		super.discard();
@@ -190,7 +190,7 @@ public class RestRequestStepResult extends WsdlTestStepResult implements Respons
 		assertedXPaths = null;
 	}
 
-	@Override
+	
 	public void writeTo( PrintWriter writer )
 	{
 		super.writeTo( writer );
@@ -239,19 +239,19 @@ public class RestRequestStepResult extends WsdlTestStepResult implements Respons
 			writer.println( "\r\n" + respContent );
 	}
 
-	@Override
+	
 	public StringToStringMap getProperties()
 	{
 		return properties;
 	}
 
-	@Override
+	
 	public String getProperty( String name )
 	{
 		return properties == null ? null : properties.get( name );
 	}
 
-	@Override
+	
 	public Attachment[] getRequestAttachments()
 	{
 		if( response == null || response.getRequest() == null )
@@ -260,7 +260,7 @@ public class RestRequestStepResult extends WsdlTestStepResult implements Respons
 		return response.getRequest().getAttachments();
 	}
 
-	@Override
+	
 	public StringToStringsMap getRequestHeaders()
 	{
 		if( response == null )
@@ -269,7 +269,7 @@ public class RestRequestStepResult extends WsdlTestStepResult implements Respons
 		return response.getRequestHeaders();
 	}
 
-	@Override
+	
 	public Attachment[] getResponseAttachments()
 	{
 		if( response == null )
@@ -278,7 +278,7 @@ public class RestRequestStepResult extends WsdlTestStepResult implements Respons
 		return response.getAttachments();
 	}
 
-	@Override
+	
 	public String getResponseContent()
 	{
 		if( isDiscarded() )
@@ -290,13 +290,13 @@ public class RestRequestStepResult extends WsdlTestStepResult implements Respons
 		return response.getContentAsString();
 	}
 
-	@Override
+	
 	public String getRequestContentAsXml()
 	{
 		return XmlUtils.seemsToBeXml( requestContent ) ? requestContent : "<not-xml/>";
 	}
 
-	@Override
+	
 	public String getResponseContentAsXml()
 	{
 		if( response == null )
@@ -304,7 +304,7 @@ public class RestRequestStepResult extends WsdlTestStepResult implements Respons
 		return response.getContentAsXml();
 	}
 
-	@Override
+	
 	public StringToStringsMap getResponseHeaders()
 	{
 		if( response == null )
@@ -313,7 +313,7 @@ public class RestRequestStepResult extends WsdlTestStepResult implements Respons
 		return response.getResponseHeaders();
 	}
 
-	@Override
+	
 	public long getTimestamp()
 	{
 		if( isDiscarded() || response == null )
@@ -322,14 +322,14 @@ public class RestRequestStepResult extends WsdlTestStepResult implements Respons
 		return response.getTimestamp();
 	}
 
-	@Override
+	
 	public AssertedXPath[] getAssertedXPathsForResponse()
 	{
 		return assertedXPaths == null ? new AssertedXPath[0] : assertedXPaths.toArray( new AssertedXPath[assertedXPaths
 				.size()] );
 	}
 
-	@Override
+	
 	public void addAssertedXPath( AssertedXPath assertedXPath )
 	{
 		if( assertedXPaths == null )
@@ -338,49 +338,49 @@ public class RestRequestStepResult extends WsdlTestStepResult implements Respons
 		assertedXPaths.add( assertedXPath );
 	}
 
-	@Override
+	
 	public MessageExchange[] getMessageExchanges()
 	{
 		return new MessageExchange[] { this };
 	}
 
-	@Override
+	
 	public byte[] getRawRequestData()
 	{
 		return response.getRawRequestData();
 	}
 
-	@Override
+	
 	public byte[] getRawResponseData()
 	{
 		return response.getRawResponseData();
 	}
 
-	@Override
+	
 	public Attachment[] getRequestAttachmentsForPart( String partName )
 	{
 		return null;
 	}
 
-	@Override
+	
 	public Attachment[] getResponseAttachmentsForPart( String partName )
 	{
 		return null;
 	}
 
-	@Override
+	
 	public boolean hasRawData()
 	{
 		return getRawResponseData() != null || getRawRequestData() != null;
 	}
 
-	@Override
+	
 	public boolean hasRequest( boolean b )
 	{
 		return true;
 	}
 
-	@Override
+	
 	public boolean hasResponse()
 	{
 		return response != null;

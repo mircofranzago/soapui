@@ -31,7 +31,7 @@ public class WsdlMessageAssertionSoapUIActionGroup extends DefaultSoapUIActionGr
 		super( id, name );
 	}
 
-	@Override
+	
 	public SoapUIActionMappingList<WsdlMessageAssertion> getActionMappings( WsdlMessageAssertion modelItem )
 	{
 		SoapUIActionMappingList<WsdlMessageAssertion> actions = super.getActionMappings( modelItem );

@@ -51,7 +51,7 @@ import java.net.UnknownHostException;
 public class HttpAuthenticationRequestFilter extends AbstractRequestFilter
 {
 
-	@Override
+	
 	public void filterAbstractHttpRequest( SubmitContext context, AbstractHttpRequest<?> wsdlRequest )
 	{
 		String username = PropertyExpander.expandProperties( context, wsdlRequest.getUsername() );

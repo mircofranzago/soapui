@@ -82,7 +82,7 @@ public class ResponseSLAAssertion extends WsdlMessageAssertion implements Respon
 		return "Response meets SLA";
 	}
 
-	@Override
+	
 	protected String internalAssertProperty( TestPropertyHolder source, String propertyName,
 			MessageExchange messageExchange, SubmitContext context ) throws AssertionException
 	{
@@ -145,19 +145,19 @@ public class ResponseSLAAssertion extends WsdlMessageAssertion implements Respon
 			super( ResponseSLAAssertion.ID, ResponseSLAAssertion.LABEL, ResponseSLAAssertion.class );
 		}
 
-		@Override
+		
 		public String getCategory()
 		{
 			return AssertionCategoryMapping.SLA_CATEGORY;
 		}
 
-		@Override
+		
 		public Class<? extends WsdlMessageAssertion> getAssertionClassType()
 		{
 			return ResponseSLAAssertion.class;
 		}
 
-		@Override
+		
 		public AssertionListEntry getAssertionListEntry()
 		{
 			return new AssertionListEntry( ResponseSLAAssertion.ID, ResponseSLAAssertion.LABEL,

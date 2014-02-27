@@ -31,7 +31,7 @@ public class JdbcMessageExchange extends AbstractNonHttpMessageExchange<JdbcRequ
 		this.response = response;
 	}
 
-	@Override
+	
 	public Response getResponse()
 	{
 		return response;

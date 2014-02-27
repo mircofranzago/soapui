@@ -77,7 +77,7 @@ public class SequenceContent implements Content
 		}
 	}
 
-	@Override
+	
 	public SequenceContentConfig save()
 	{
 		SequenceContentConfig xml = SequenceContentConfig.Factory.newInstance();
@@ -96,7 +96,7 @@ public class SequenceContent implements Content
 		return xml;
 	}
 
-	@Override
+	
 	public Content validate( Context context ) throws XmlException
 	{
 		XmlCursor cursor = context.getCursor();
@@ -146,7 +146,7 @@ public class SequenceContent implements Content
 		return this;
 	}
 
-	@Override
+	
 	public String toString( String attrs )
 	{
 		if( particles.size() == 0 )

@@ -45,19 +45,19 @@ public class RestMethodTreeNode extends AbstractModelItemTreeNode<RestMethod>
 		}
 	}
 
-	@Override
+	
 	public int getChildCount()
 	{
 		return requestNodes.size();
 	}
 
-	@Override
+	
 	public SoapUITreeNode getChildNode( int index )
 	{
 		return requestNodes.get( index );
 	}
 
-	@Override
+	
 	public int getIndexOfChild( Object child )
 	{
 		return requestNodes.indexOf( child );

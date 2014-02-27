@@ -34,20 +34,20 @@ public class RestRequestMethodModel extends DefaultComboBoxModel<RequestMethod> 
 		request.addPropertyChangeListener( this );
 	}
 
-	@Override
+	
 	public void setSelectedItem( Object anItem )
 	{
 		super.setSelectedItem( anItem );
 		request.setMethod( ( RequestMethod )anItem );
 	}
 
-	@Override
+	
 	public Object getSelectedItem()
 	{
 		return request.getMethod();
 	}
 
-	@Override
+	
 	public void propertyChange( PropertyChangeEvent evt )
 	{
 		fireContentsChanged( this, -1, -1 );

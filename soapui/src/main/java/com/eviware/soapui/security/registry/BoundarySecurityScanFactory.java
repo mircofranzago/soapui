@@ -35,7 +35,7 @@ public class BoundarySecurityScanFactory extends AbstractSecurityScanFactory
 				"/boundary_scan.gif" );
 	}
 
-	@Override
+	
 	public SecurityScanConfig createNewSecurityScan( String name )
 	{
 		SecurityScanConfig securityCheckConfig = SecurityScanConfig.Factory.newInstance();
@@ -44,13 +44,13 @@ public class BoundarySecurityScanFactory extends AbstractSecurityScanFactory
 		return securityCheckConfig;
 	}
 
-	@Override
+	
 	public AbstractSecurityScan buildSecurityScan( TestStep testStep, SecurityScanConfig config, ModelItem parent )
 	{
 		return new BoundarySecurityScan( testStep, config, parent, "/boundary_scan.gif" );
 	}
 
-	@Override
+	
 	public boolean canCreate( TestStep testStep )
 	{
 		return testStep instanceof WsdlTestRequestStep || testStep instanceof RestTestRequestStep;

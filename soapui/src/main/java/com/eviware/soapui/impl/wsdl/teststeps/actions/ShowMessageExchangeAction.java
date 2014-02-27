@@ -205,7 +205,7 @@ public class ShowMessageExchangeAction extends AbstractAction
 			super( title, description, component );
 		}
 
-		@Override
+		
 		public boolean onClose( boolean canCancel )
 		{
 			requestMessageEditor.release();
@@ -216,7 +216,7 @@ public class ShowMessageExchangeAction extends AbstractAction
 			return super.onClose( canCancel );
 		}
 
-		@Override
+		
 		public boolean dependsOn( ModelItem modelItem )
 		{
 			return ModelSupport.dependsOn( messageExchange.getModelItem(), modelItem );

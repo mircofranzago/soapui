@@ -248,7 +248,7 @@ public class WsdlInterfaceDesktopPanel extends ModelItemDesktopPanel<WsdlInterfa
 		tree.addMouseListener( new MouseAdapter()
 		{
 
-			@Override
+			
 			public void mouseClicked( MouseEvent arg0 )
 			{
 				if( arg0.getClickCount() > 1 )
@@ -344,7 +344,7 @@ public class WsdlInterfaceDesktopPanel extends ModelItemDesktopPanel<WsdlInterfa
 
 	private final class InternalProjectListener extends ProjectListenerAdapter
 	{
-		@Override
+		
 		public void interfaceUpdated( Interface iface )
 		{
 			if( iface == getModelItem() )
@@ -790,7 +790,7 @@ public class WsdlInterfaceDesktopPanel extends ModelItemDesktopPanel<WsdlInterfa
 			return lineNumber == null ? -1 : lineNumber.getLine() - 1;
 		}
 
-		@Override
+		
 		public String toString()
 		{
 			return name;
@@ -961,7 +961,7 @@ public class WsdlInterfaceDesktopPanel extends ModelItemDesktopPanel<WsdlInterfa
 		{
 			WSIAnalyzeAction action = new WSIAnalyzeAction()
 			{
-				@Override
+				
 				protected void showReport( File reportFile, String configFile ) throws Exception
 				{
 					reportPanel = new WSIReportPanel( reportFile, configFile, null, false );
@@ -1022,7 +1022,7 @@ public class WsdlInterfaceDesktopPanel extends ModelItemDesktopPanel<WsdlInterfa
 			return iface.getOperationCount();
 		}
 
-		@Override
+		
 		public String getColumnName( int column )
 		{
 			switch( column )

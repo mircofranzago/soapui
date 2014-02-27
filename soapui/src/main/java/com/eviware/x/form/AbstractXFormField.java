@@ -31,7 +31,7 @@ public abstract class AbstractXFormField<T> implements XFormField
 	{
 	}
 
-	@Override
+	
 	public boolean isVisible()
 	{
 		return true;

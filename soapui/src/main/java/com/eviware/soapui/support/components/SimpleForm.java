@@ -548,7 +548,7 @@ public class SimpleForm
 			this.label = label;
 		}
 
-		@Override
+		
 		public void propertyChange( PropertyChangeEvent evt )
 		{
 			label.setEnabled( ( Boolean )evt.getNewValue() );

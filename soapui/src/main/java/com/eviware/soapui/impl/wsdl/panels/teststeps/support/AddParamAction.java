@@ -60,7 +60,7 @@ public class AddParamAction extends AbstractAction
 				final TableCellEditor cellEditor1 = parameterTable.getCellEditor( row, 0 );
 				cellEditor1.addCellEditorListener( new CellEditorListener()
 				{
-					@Override
+					
 					public void editingStopped( ChangeEvent e )
 					{
 						cellEditor1.removeCellEditorListener( this );
@@ -73,7 +73,7 @@ public class AddParamAction extends AbstractAction
 						editTableCell( row, 1 );
 					}
 
-					@Override
+					
 					public void editingCanceled( ChangeEvent e )
 					{
 						cellEditor1.removeCellEditorListener( this );

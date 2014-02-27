@@ -26,14 +26,14 @@ public class RestRequestWithParamsMatcher extends TypeSafeMatcher<RestRequest>
 		return matcherToReturn;
 	}
 
-	@Override
+	
 	public boolean matchesSafely( RestRequest restRequest )
 	{
 		RestParamProperty property = restRequest.getParams().getProperty( parameterName );
 		return property != null && ( parameterValue == null || parameterValue.equals( parameterValue ) );
 	}
 
-	@Override
+	
 	public void describeTo( Description description )
 	{
 		description.appendText( "a REST requests having a parameter named '" + parameterName + "'" );

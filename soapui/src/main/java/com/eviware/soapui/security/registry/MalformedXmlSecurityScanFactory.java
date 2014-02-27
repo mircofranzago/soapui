@@ -27,19 +27,19 @@ public class MalformedXmlSecurityScanFactory extends AbstractSecurityScanFactory
 				"Preforms a scan for Malformed XML Vulerabilities", "/malformed_xml_scan.gif" );
 	}
 
-	@Override
+	
 	public AbstractSecurityScan buildSecurityScan( TestStep testStep, SecurityScanConfig config, ModelItem parent )
 	{
 		return new MalformedXmlSecurityScan( testStep, config, parent, "/malformed_xml_scan.gif" );
 	}
 
-	@Override
+	
 	public boolean canCreate( TestStep testStep )
 	{
 		return testStep instanceof WsdlTestRequestStep;
 	}
 
-	@Override
+	
 	public SecurityScanConfig createNewSecurityScan( String name )
 	{
 		SecurityScanConfig securityCheckConfig = SecurityScanConfig.Factory.newInstance();

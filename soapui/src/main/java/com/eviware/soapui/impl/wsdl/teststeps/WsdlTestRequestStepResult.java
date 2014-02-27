@@ -101,7 +101,7 @@ public class WsdlTestRequestStepResult extends WsdlTestStepResult implements Res
 		return response != null ? response : softResponse == null ? null : softResponse.get();
 	}
 
-	@Override
+	
 	public ActionList getActions()
 	{
 		if( !addedAction )

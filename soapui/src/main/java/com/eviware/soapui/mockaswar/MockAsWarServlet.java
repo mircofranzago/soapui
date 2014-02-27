@@ -246,7 +246,7 @@ public class MockAsWarServlet extends HttpServlet
 		 * (javax.servlet.http.HttpServletRequest,
 		 * javax.servlet.http.HttpServletResponse)
 		 */
-		@Override
+		
 		public void dispatchRequest( HttpServletRequest request, HttpServletResponse response ) throws DispatchException,
 				IOException
 		{
@@ -320,7 +320,7 @@ public class MockAsWarServlet extends HttpServlet
 		 * 
 		 * @see com.eviware.soapui.mockaswar.MockAsWarCoreInterface#stop()
 		 */
-		@Override
+		
 		public void stop()
 		{
 			for( MockRunner mockRunner : getMockRunners() )
@@ -335,7 +335,7 @@ public class MockAsWarServlet extends HttpServlet
 			this.servletContext = servletContext;
 		}
 
-		@Override
+		
 		protected MockEngine buildMockEngine()
 		{
 			return this;

@@ -37,7 +37,7 @@ public class CreateMissingPropertyResolver implements Resolver
 		return "Create new property";
 	}
 
-	@Override
+	
 	public String toString()
 	{
 		return getDescription();

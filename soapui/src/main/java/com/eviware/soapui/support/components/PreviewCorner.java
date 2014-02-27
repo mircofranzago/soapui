@@ -286,7 +286,7 @@ class PreviewPopup extends JPopupMenu implements MouseListener, MouseMotionListe
 		JPanel label = new JPanel()
 		{
 
-			@Override
+			
 			protected void paintComponent( Graphics g )
 			{
 				Composite composite = ( ( Graphics2D )g ).getComposite();

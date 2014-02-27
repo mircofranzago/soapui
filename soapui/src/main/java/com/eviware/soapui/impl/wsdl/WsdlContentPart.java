@@ -62,7 +62,7 @@ public class WsdlContentPart extends MessagePart.ContentPart
 		return partElementName;
 	}
 
-	@Override
+	
 	public SchemaGlobalElement getPartElement()
 	{
 		return partElement;

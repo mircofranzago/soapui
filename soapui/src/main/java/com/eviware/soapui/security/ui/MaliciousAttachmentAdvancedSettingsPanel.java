@@ -31,7 +31,7 @@ public class MaliciousAttachmentAdvancedSettingsPanel
 		dialog.getFormField( AdvancedSettings.REQUEST_TIMEOUT ).addFormFieldListener( new XFormFieldListener()
 		{
 
-			@Override
+			
 			public void valueChanged( XFormField sourceField, String newValue, String oldValue )
 			{
 

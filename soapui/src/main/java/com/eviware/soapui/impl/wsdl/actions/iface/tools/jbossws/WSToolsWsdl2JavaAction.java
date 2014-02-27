@@ -74,14 +74,14 @@ public class WSToolsWsdl2JavaAction extends AbstractToolsAction<Interface>
 		super( "JBossWS Artifacts", "Generates JBossWS artifacts using the jboss wstools utility" );
 	}
 
-	@Override
+	
 	public boolean applies( Interface target )
 	{
 		Interface iface = ( Interface )target;
 		return !iface.getProject().hasNature( Project.JBOSSWS_NATURE_ID );
 	}
 
-	@Override
+	
 	protected StringToStringMap initValues( Interface modelItem, Object param )
 	{
 		StringToStringMap values = super.initValues( modelItem, param );

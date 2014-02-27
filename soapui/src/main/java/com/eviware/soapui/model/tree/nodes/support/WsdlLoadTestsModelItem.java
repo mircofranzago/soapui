@@ -48,14 +48,14 @@ public class WsdlLoadTestsModelItem extends EmptyModelItem
 		return testCase.getSettings();
 	}
 
-	@Override
+	
 	public void release()
 	{
 		super.release();
 		testCase.getTestSuite().removeTestSuiteListener( listener );
 	}
 
-	@Override
+	
 	public String getName()
 	{
 		return createLabel( testCase );
@@ -68,21 +68,21 @@ public class WsdlLoadTestsModelItem extends EmptyModelItem
 
 	public class InternalTestSuiteListener extends TestSuiteListenerAdapter implements TestSuiteListener
 	{
-		@Override
+		
 		public void loadTestAdded( LoadTest loadTest )
 		{
 			if( loadTest.getTestCase() == testCase )
 				updateLabel();
 		}
 
-		@Override
+		
 		public void loadTestRemoved( LoadTest loadTest )
 		{
 			if( loadTest.getTestCase() == testCase )
 				updateLabel();
 		}
 
-		@Override
+		
 		public void testCaseRemoved( TestCase testCase )
 		{
 			if( testCase == WsdlLoadTestsModelItem.this.testCase )

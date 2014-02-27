@@ -45,7 +45,7 @@ public class JMSStatusAssertion extends WsdlMessageAssertion implements Response
 		super( assertionConfig, assertable, false, false, false, true );
 	}
 
-	@Override
+	
 	protected String internalAssertResponse( MessageExchange messageExchange, SubmitContext context )
 			throws AssertionException
 	{
@@ -59,7 +59,7 @@ public class JMSStatusAssertion extends WsdlMessageAssertion implements Response
 		return "JMS Status OK";
 	}
 
-	@Override
+	
 	protected String internalAssertRequest( MessageExchange messageExchange, SubmitContext context )
 			throws AssertionException
 	{
@@ -79,19 +79,19 @@ public class JMSStatusAssertion extends WsdlMessageAssertion implements Response
 			super( JMSStatusAssertion.ID, JMSStatusAssertion.LABEL, JMSStatusAssertion.class, WsdlRequest.class );
 		}
 
-		@Override
+		
 		public String getCategory()
 		{
 			return AssertionCategoryMapping.JMS_CATEGORY;
 		}
 
-		@Override
+		
 		public Class<? extends WsdlMessageAssertion> getAssertionClassType()
 		{
 			return JMSStatusAssertion.class;
 		}
 
-		@Override
+		
 		public AssertionListEntry getAssertionListEntry()
 		{
 			return new AssertionListEntry( JMSStatusAssertion.ID, JMSStatusAssertion.LABEL, JMSStatusAssertion.DESCRIPTION );

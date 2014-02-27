@@ -33,7 +33,7 @@ public class HeaderRequestInterceptor implements HttpRequestInterceptor
 {
 	public static final String SOAPUI_REQUEST_HEADERS = "soapui.request.headers";
 
-	@Override
+	
 	public void process( HttpRequest request, HttpContext context ) throws HttpException, IOException
 	{
 		List<Header> wHeaders = Arrays.asList( request.getAllHeaders() );

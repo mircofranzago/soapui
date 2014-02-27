@@ -84,7 +84,7 @@ public class ModelItemListDesktopPanel extends DefaultDesktopPanel
 		p.add( buildModelItemList(), BorderLayout.CENTER );
 	}
 
-	@Override
+	
 	public boolean onClose( boolean canCancel )
 	{
 		SoapUI.getNavigator().getMainTree().getModel().removeTreeModelListener( treeModelListener );
@@ -107,7 +107,7 @@ public class ModelItemListDesktopPanel extends DefaultDesktopPanel
 		listModel.addListDataListener( new ListDataListenerAdapter()
 		{
 
-			@Override
+			
 			public void intervalRemoved( ListDataEvent e )
 			{
 				if( listModel.isEmpty() )

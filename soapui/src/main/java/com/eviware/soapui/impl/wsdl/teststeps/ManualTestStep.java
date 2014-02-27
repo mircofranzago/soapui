@@ -80,7 +80,7 @@ public class ManualTestStep extends WsdlTestStepWithProperties implements Proper
 
 		addProperty( new DefaultTestStepProperty( "Result", true, new DefaultTestStepProperty.PropertyHandlerAdapter()
 		{
-			@Override
+			
 			public String getValue( DefaultTestStepProperty property )
 			{
 				return getLastResult() == null ? null : getLastResult().getResult();
@@ -100,7 +100,7 @@ public class ManualTestStep extends WsdlTestStepWithProperties implements Proper
 		return manualTestStepConfig;
 	}
 
-	@Override
+	
 	public WsdlTestStep clone( WsdlTestCase targetTestCase, String name )
 	{
 		beforeSave();
@@ -111,7 +111,7 @@ public class ManualTestStep extends WsdlTestStepWithProperties implements Proper
 		return result;
 	}
 
-	@Override
+	
 	public void release()
 	{
 		super.release();
@@ -163,19 +163,19 @@ public class ManualTestStep extends WsdlTestStepWithProperties implements Proper
 		return testStepResult;
 	}
 
-	@Override
+	
 	public boolean cancel()
 	{
 		return true;
 	}
 
-	@Override
+	
 	public String getDefaultSourcePropertyName()
 	{
 		return "Result";
 	}
 
-	@Override
+	
 	public String getDefaultTargetPropertyName()
 	{
 		return "ExpectedResult";

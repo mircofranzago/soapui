@@ -172,7 +172,7 @@ public class StringToStringMap extends HashMap<String, String>
 		this.equalsOnThis = equalsOnThis;
 	}
 
-	@Override
+	
 	public boolean equals( Object o )
 	{
 		return equalsOnThis ? this == o : super.equals( o );

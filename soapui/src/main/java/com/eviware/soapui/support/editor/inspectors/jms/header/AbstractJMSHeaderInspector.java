@@ -52,7 +52,7 @@ public abstract class AbstractJMSHeaderInspector extends AbstractXmlInspector
 		return mainPanel;
 	}
 
-	@Override
+	
 	public void release()
 	{
 		super.release();
@@ -63,7 +63,7 @@ public abstract class AbstractJMSHeaderInspector extends AbstractXmlInspector
 
 	public abstract void buildContent( SimpleBindingForm form );
 
-	@Override
+	
 	public boolean isEnabledFor( EditorView<XmlDocument> view )
 	{
 		return !view.getViewId().equals( RawXmlEditorFactory.VIEW_ID );

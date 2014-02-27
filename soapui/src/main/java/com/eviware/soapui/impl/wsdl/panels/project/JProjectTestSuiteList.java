@@ -108,14 +108,14 @@ public class JProjectTestSuiteList extends JPanel
 		}
 	}
 
-	@Override
+	
 	public void addNotify()
 	{
 		super.addNotify();
 		project.addProjectListener( testSuiteListener );
 	}
 
-	@Override
+	
 	public void removeNotify()
 	{
 		super.removeNotify();
@@ -229,7 +229,7 @@ public class JProjectTestSuiteList extends JPanel
 			addMouseListener( new MouseAdapter()
 			{
 
-				@Override
+				
 				public void mousePressed( MouseEvent e )
 				{
 					requestFocus();

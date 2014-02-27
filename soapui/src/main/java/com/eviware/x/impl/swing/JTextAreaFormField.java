@@ -72,7 +72,7 @@ public class JTextAreaFormField extends AbstractSwingXFormField<JComponent> impl
 		getTextArea().setColumns( columns );
 	}
 
-	@Override
+	
 	public boolean isMultiRow()
 	{
 		return true;

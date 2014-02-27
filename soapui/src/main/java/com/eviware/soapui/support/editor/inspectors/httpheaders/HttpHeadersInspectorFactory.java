@@ -219,7 +219,7 @@ public class HttpHeadersInspectorFactory implements RequestInspectorFactory, Res
 			this.inspector = inspector;
 		}
 
-		@Override
+		
 		public void release()
 		{
 			super.release();
@@ -257,7 +257,7 @@ public class HttpHeadersInspectorFactory implements RequestInspectorFactory, Res
 			getModelItem().setHttpHeaders( headers );
 		}
 
-		@Override
+		
 		public void release()
 		{
 			super.release();
@@ -287,7 +287,7 @@ public class HttpHeadersInspectorFactory implements RequestInspectorFactory, Res
 				return new StringToStringsMap();
 		}
 
-		@Override
+		
 		public void release()
 		{
 			super.release();
@@ -347,7 +347,7 @@ public class HttpHeadersInspectorFactory implements RequestInspectorFactory, Res
 			super.propertyChange( evt );
 		}
 
-		@Override
+		
 		public void release()
 		{
 			super.release();

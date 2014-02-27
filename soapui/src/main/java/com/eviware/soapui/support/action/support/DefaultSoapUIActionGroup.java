@@ -37,7 +37,7 @@ public class DefaultSoapUIActionGroup<T extends ModelItem> extends AbstractSoapU
 		return mappings;
 	}
 
-	@Override
+	
 	public SoapUIActionMapping<T> addMapping( String id, int index, SoapUIActionMapping<T> mapping )
 	{
 		if( index == -1 || index >= mappings.size() )
@@ -48,7 +48,7 @@ public class DefaultSoapUIActionGroup<T extends ModelItem> extends AbstractSoapU
 		return mapping;
 	}
 
-	@Override
+	
 	public SoapUIActionMapping<T> addMapping( String id, SoapUIActionMapping<T> mapping )
 	{
 		mappings.add( mapping );
@@ -56,7 +56,7 @@ public class DefaultSoapUIActionGroup<T extends ModelItem> extends AbstractSoapU
 		return mapping;
 	}
 
-	@Override
+	
 	public int getMappingIndex( String positionRef )
 	{
 		return ids.indexOf( positionRef );

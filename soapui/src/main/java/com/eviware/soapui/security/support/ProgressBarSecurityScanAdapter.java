@@ -84,7 +84,7 @@ public class ProgressBarSecurityScanAdapter extends SecurityTestRunListenerAdapt
 		securityCheck = null;
 	}
 
-	@Override
+	
 	public void afterSecurityScanRequest( TestCaseRunner testRunner, SecurityTestRunContext runContext,
 			SecurityScanRequestResult securityCheckReqResult )
 	{
@@ -147,7 +147,7 @@ public class ProgressBarSecurityScanAdapter extends SecurityTestRunListenerAdapt
 		}
 	}
 
-	@Override
+	
 	public void beforeRun( TestCaseRunner testRunner, SecurityTestRunContext runContext )
 	{
 		progressBar.setIndeterminate( false );
@@ -162,7 +162,7 @@ public class ProgressBarSecurityScanAdapter extends SecurityTestRunListenerAdapt
 
 	}
 
-	@Override
+	
 	public void afterSecurityScan( TestCaseRunner testRunner, SecurityTestRunContext runContext,
 			SecurityScanResult securityCheckResult )
 	{
@@ -220,7 +220,7 @@ public class ProgressBarSecurityScanAdapter extends SecurityTestRunListenerAdapt
 		}
 	}
 
-	@Override
+	
 	public void beforeSecurityScan( TestCaseRunner testRunner, SecurityTestRunContext runContext,
 			SecurityScan securityCheck )
 	{

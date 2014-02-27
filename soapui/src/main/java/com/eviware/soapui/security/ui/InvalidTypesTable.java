@@ -124,7 +124,7 @@ public class InvalidTypesTable extends JPanel
 			putValue( Action.SHORT_DESCRIPTION, "Removes type from security scan" );
 		}
 
-		@Override
+		
 		public void actionPerformed( ActionEvent e )
 		{
 			model.removeRows( table.getSelectedRows() );
@@ -141,7 +141,7 @@ public class InvalidTypesTable extends JPanel
 			putValue( Action.SHORT_DESCRIPTION, "Adds new type to use in security scan" );
 		}
 
-		@Override
+		
 		public void actionPerformed( ActionEvent arg0 )
 		{
 			XFormDialog dialog = ADialogBuilder.buildDialog( AddParameterActionDialog.class );
@@ -195,13 +195,13 @@ public class InvalidTypesTable extends JPanel
 			fireTableDataChanged();
 		}
 
-		@Override
+		
 		public boolean isCellEditable( int rowIndex, int columnIndex )
 		{
 			return columnIndex == 1;
 		}
 
-		@Override
+		
 		public void setValueAt( Object aValue, int rowIndex, int columnIndex )
 		{
 			SchemaTypeForSecurityScanConfig paramType = data.getTypesListList().get( rowIndex );
@@ -211,19 +211,19 @@ public class InvalidTypesTable extends JPanel
 			fireTableDataChanged();
 		}
 
-		@Override
+		
 		public String getColumnName( int column )
 		{
 			return columns[column];
 		}
 
-		@Override
+		
 		public int getColumnCount()
 		{
 			return 2;
 		}
 
-		@Override
+		
 		public int getRowCount()
 		{
 			if( data.getTypesListList() == null )
@@ -231,7 +231,7 @@ public class InvalidTypesTable extends JPanel
 			return data.getTypesListList().size();
 		}
 
-		@Override
+		
 		public Object getValueAt( int rowIndex, int columnIndex )
 		{
 			if( columnIndex == 0 )

@@ -216,7 +216,7 @@ public class JUndoableTextArea extends JTextArea implements Undoable, UndoableEd
 		return undoManager != null && undoManager.canUndo();
 	}
 
-	@Override
+	
 	public JComponent getEditComponent()
 	{
 		return this;

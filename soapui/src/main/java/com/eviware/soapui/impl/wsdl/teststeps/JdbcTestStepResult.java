@@ -55,7 +55,7 @@ public class JdbcTestStepResult extends WsdlTestStepResult implements AssertedXP
 	{
 	}
 
-	@Override
+	
 	public ActionList getActions()
 	{
 		if( !addedAction )

@@ -268,7 +268,7 @@ public class BodyPartAttachment implements Attachment
 			return "binary";
 	}
 
-	@Override
+	
 	public String getId()
 	{
 		return null;

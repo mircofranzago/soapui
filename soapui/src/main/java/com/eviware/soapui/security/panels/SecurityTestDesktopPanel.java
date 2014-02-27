@@ -467,7 +467,7 @@ public class SecurityTestDesktopPanel extends KeySensitiveModelItemDesktopPanel<
 		}
 	}
 
-	@Override
+	
 	protected boolean release()
 	{
 		testStepList.release();
@@ -530,7 +530,7 @@ public class SecurityTestDesktopPanel extends KeySensitiveModelItemDesktopPanel<
 
 	private class SetupScriptGroovyEditorModel extends AbstractGroovyEditorModel
 	{
-		@Override
+		
 		public Action createRunAction()
 		{
 			return new AbstractAction()
@@ -574,7 +574,7 @@ public class SecurityTestDesktopPanel extends KeySensitiveModelItemDesktopPanel<
 
 	private class TearDownScriptGroovyEditorModel extends AbstractGroovyEditorModel
 	{
-		@Override
+		
 		public Action createRunAction()
 		{
 			return new AbstractAction()
@@ -621,13 +621,13 @@ public class SecurityTestDesktopPanel extends KeySensitiveModelItemDesktopPanel<
 			super( list, testCase );
 		}
 
-		@Override
+		
 		public ModelItem getModelItemAtRow( int row )
 		{
 			return ( ModelItem )getList().getModel().getElementAt( row );
 		}
 
-		@Override
+		
 		public int getModelItemRow( ModelItem modelItem )
 		{
 			ListModel model = getList().getModel();
@@ -647,7 +647,7 @@ public class SecurityTestDesktopPanel extends KeySensitiveModelItemDesktopPanel<
 					getModelItemRow( modelItem ), true, true );
 		}
 
-		@Override
+		
 		public void setDragInfo( String dropInfo )
 		{
 			super.setDragInfo( dropInfo == null || dropInfo.length() == 0 ? null : dropInfo );
@@ -789,14 +789,14 @@ public class SecurityTestDesktopPanel extends KeySensitiveModelItemDesktopPanel<
 			updateStatusIcon( functionalStatus, functionalLogInspector );
 		}
 
-		@Override
+		
 		public void beforeSecurityScan( TestCaseRunner testRunner, SecurityTestRunContext runContext,
 				SecurityScan securityCheck )
 		{
 			securityTestLog.addSecurityScanResult( securityCheck );
 		}
 
-		@Override
+		
 		public void afterSecurityScan( TestCaseRunner testRunner, SecurityTestRunContext runContext,
 				SecurityScanResult securityCheckResult )
 		{
@@ -819,7 +819,7 @@ public class SecurityTestDesktopPanel extends KeySensitiveModelItemDesktopPanel<
 
 		}
 
-		@Override
+		
 		public void afterOriginalStep( TestCaseRunner testRunner, SecurityTestRunContext runContext,
 				SecurityTestStepResult result )
 		{
@@ -835,21 +835,21 @@ public class SecurityTestDesktopPanel extends KeySensitiveModelItemDesktopPanel<
 			}
 		}
 
-		@Override
+		
 		public void afterSecurityScanRequest( TestCaseRunner testRunner, SecurityTestRunContext runContext,
 				SecurityScanRequestResult securityCheckReqResult )
 		{
 			securityTestLog.addSecurityScanRequestResult( securityCheckReqResult );
 		}
 
-		@Override
+		
 		public void beforeStep( TestCaseRunner testRunner, SecurityTestRunContext runContext,
 				TestStepResult testStepResult )
 		{
 			startStepLogEntryAdded = securityTestLog.addSecurityTestStepResult( testStepResult.getTestStep() );
 		}
 
-		@Override
+		
 		public void afterStep( TestCaseRunner testRunner, SecurityTestRunContext runContext, SecurityTestStepResult result )
 		{
 			boolean hasChecksToProcess = securityTest.getTestStepSecurityScansCount( result.getTestStep().getId() ) > 0;
@@ -866,13 +866,13 @@ public class SecurityTestDesktopPanel extends KeySensitiveModelItemDesktopPanel<
 		}
 	}
 	
-	@Override
+	
 	protected void renameModelItem()
 	{
 		SoapUI.getActionRegistry().performAction( "RenameSecurityTestAction", getModelItem(), null );
 	}
 
-	@Override
+	
 	protected void cloneModelItem()
 	{
 		SoapUI.getActionRegistry().performAction( "CloneSecurityTestAction", getModelItem(), null );		

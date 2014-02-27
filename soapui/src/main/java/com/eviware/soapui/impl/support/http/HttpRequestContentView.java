@@ -89,7 +89,7 @@ public class HttpRequestContentView extends AbstractXmlEditorView<HttpRequestDoc
 	{
 		RestParamsTableModel restParamsTableModel = new RestParamsTableModel( httpRequest.getParams() )
 		{
-			@Override
+			
 			public String getColumnName( int column )
 			{
 				return column == 0 ? "Name" : "Value";
@@ -106,7 +106,7 @@ public class HttpRequestContentView extends AbstractXmlEditorView<HttpRequestDoc
 				return columnIndex == 0 ? prop.getName() : prop.getValue();
 			}
 
-			@Override
+			
 			public void setValueAt( Object value, int rowIndex, int columnIndex )
 			{
 				RestParamProperty prop = params.getPropertyAt( rowIndex );
@@ -119,7 +119,7 @@ public class HttpRequestContentView extends AbstractXmlEditorView<HttpRequestDoc
 		return new RestParamsTable( httpRequest.getParams(), false, restParamsTableModel, ParamLocation.RESOURCE, true, false );
 	}
 
-	@Override
+	
 	public void release()
 	{
 		super.release();
@@ -143,7 +143,7 @@ public class HttpRequestContentView extends AbstractXmlEditorView<HttpRequestDoc
 		contentEditor.getDocument().addDocumentListener( new DocumentListenerAdapter()
 		{
 
-			@Override
+			
 			public void update( Document document )
 			{
 				if( !updatingRequest )
@@ -287,7 +287,7 @@ public class HttpRequestContentView extends AbstractXmlEditorView<HttpRequestDoc
 		}
 	}
 
-	@Override
+	
 	public void setXml( String xml )
 	{
 	}

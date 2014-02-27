@@ -64,7 +64,7 @@ public final class ExtendedOptionsMethod extends HttpOptions implements Extended
 		httpMethodSupport.afterReadResponse( session );
 	}
 
-	@Override
+	
 	public String getResponseCharSet()
 	{
 		return httpMethodSupport.getResponseCharset();

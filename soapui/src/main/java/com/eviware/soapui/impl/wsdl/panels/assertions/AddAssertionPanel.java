@@ -151,7 +151,7 @@ public class AddAssertionPanel extends SimpleDialog
 		return assertable;
 	}
 
-	@Override
+	
 	protected Component buildContent()
 	{
 		JPanel mainPanel = new JPanel( new BorderLayout() );
@@ -219,7 +219,7 @@ public class AddAssertionPanel extends SimpleDialog
 		categoriesListTable.getSelectionModel().addListSelectionListener( new ListSelectionListener()
 		{
 
-			@Override
+			
 			public void valueChanged( ListSelectionEvent arg0 )
 			{
 				renderAssertionsTable();
@@ -320,7 +320,7 @@ public class AddAssertionPanel extends SimpleDialog
 		categoriesListTable.setEnabled( enable );
 	}
 
-	@Override
+	
 	protected boolean handleOk()
 	{
 		setVisible( false );
@@ -354,7 +354,7 @@ public class AddAssertionPanel extends SimpleDialog
 		return true;
 	}
 
-	@Override
+	
 	public ActionList buildActions( String url, boolean okAndCancel )
 	{
 		DefaultActionList actions = new DefaultActionList( "Actions" );
@@ -393,7 +393,7 @@ public class AddAssertionPanel extends SimpleDialog
 	private class InternalListSelectionListener implements ListSelectionListener
 	{
 
-		@Override
+		
 		public void valueChanged( ListSelectionEvent e )
 		{
 			if( assertionsTable.getSelectedRow() >= 0 )
@@ -409,7 +409,7 @@ public class AddAssertionPanel extends SimpleDialog
 
 	private class InternalHideDescListener implements ItemListener
 	{
-		@Override
+		
 		public void itemStateChanged( ItemEvent arg0 )
 		{
 			assertionsTable.getColumnModel().getColumn( 0 ).setCellRenderer( assertionEntryRenderer );
@@ -440,7 +440,7 @@ public class AddAssertionPanel extends SimpleDialog
 			this.assertable = assertable;
 		}
 
-		@Override
+		
 		public Component getTableCellRendererComponent( JTable table, Object value, boolean isSelected, boolean hasFocus,
 				int row, int column )
 		{
@@ -520,7 +520,7 @@ public class AddAssertionPanel extends SimpleDialog
 			this.assertable = assertable;
 		}
 
-		@Override
+		
 		public Component getTableCellRendererComponent( JTable table, Object value, boolean isSelected, boolean hasFocus,
 				int row, int column )
 		{
@@ -561,7 +561,7 @@ public class AddAssertionPanel extends SimpleDialog
 		return hideDescCB.isSelected();
 	}
 
-	@Override
+	
 	protected void beforeShow()
 	{
 		setSize( new Dimension( 650, 500 ) );
@@ -579,7 +579,7 @@ public class AddAssertionPanel extends SimpleDialog
 
 	public class AssertionListMouseAdapter extends MouseAdapter
 	{
-		@Override
+		
 		public void mouseClicked( MouseEvent e )
 		{
 			if( e.getClickCount() == 2 && !assertionsTable.getSelectionModel().isSelectionEmpty() )

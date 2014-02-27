@@ -89,98 +89,98 @@ public abstract class AbstractSAMLCallbackHandler implements SAMLCallbackHandler
 		setConfirmationMethod( confirmationMethodFriendlyName );
 	}
 
-	@Override
+	
 	public void setCertIdentifier( CERT_IDENTIFIER certIdentifier )
 	{
 		this.certIdentifier = certIdentifier;
 	}
 
-	@Override
+	
 	public void setCerts( X509Certificate[] certs )
 	{
 		this.certs = certs;
 	}
 
-	@Override
+	
 	public byte[] getEphemeralKey()
 	{
 		return ephemeralKey;
 	}
 
-	@Override
+	
 	public void setIssuer( String issuer )
 	{
 		this.issuer = issuer;
 	}
 
-	@Override
+	
 	public void setSubjectName( String subjectName )
 	{
 		this.subjectName = subjectName;
 	}
 
-	@Override
+	
 	public void setSubjectQualifier( String subjectQualifier )
 	{
 		this.subjectQualifier = subjectQualifier;
 	}
 
-	@Override
+	
 	public void setSubjectNameIDFormat( String subjectNameIDFormat )
 	{
 		this.subjectNameIDFormat = subjectNameIDFormat;
 	}
 
-	@Override
+	
 	public void setSubjectLocality( String ipAddress, String dnsAddress )
 	{
 		this.subjectLocalityIpAddress = ipAddress;
 		this.subjectLocalityDnsAddress = dnsAddress;
 	}
 
-	@Override
+	
 	public void setResource( String resource )
 	{
 		this.resource = resource;
 	}
 
-	@Override
+	
 	public void setCustomAttributeName( String customAttributeName )
 	{
 		this.customAttributeName = customAttributeName;
 	}
 
-	@Override
+	
 	public void setCustomAttributeValues( List<?> customAttributeValues )
 	{
 		this.customAttributeValues = customAttributeValues;
 	}
 
-	@Override
+	
 	public Crypto getCrypto()
 	{
 		return crypto;
 	}
 
-	@Override
+	
 	public void setCrypto( Crypto crypto )
 	{
 		this.crypto = crypto;
 	}
 
-	@Override
+	
 	public String getAlias()
 	{
 		return alias;
 	}
 
-	@Override
+	
 	public void setAlias( String alias )
 	{
 		this.alias = alias;
 	}
 
-	@Override
+	
 	public void setStatement( String statement )
 	{
 		if( statement.equals( AutomaticSAMLEntry.AUTHENTICATION_ASSERTION_TYPE ) )

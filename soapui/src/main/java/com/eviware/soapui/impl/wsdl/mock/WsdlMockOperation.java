@@ -135,7 +135,7 @@ public class WsdlMockOperation extends AbstractWsdlModelItem<MockOperationConfig
 		interfaceListener = new InternalInterfaceListener();
 	}
 
-	@Override
+	
 	public ImageIcon getIcon()
 	{
 		if( operation != null )
@@ -269,7 +269,7 @@ public class WsdlMockOperation extends AbstractWsdlModelItem<MockOperationConfig
 		}
 	}
 
-	@Override
+	
 	public void release()
 	{
 		super.release();
@@ -411,14 +411,14 @@ public class WsdlMockOperation extends AbstractWsdlModelItem<MockOperationConfig
 
 	private class InternalInterfaceListener extends InterfaceListenerAdapter
 	{
-		@Override
+		
 		public void operationUpdated( Operation operation )
 		{
 			if( operation == WsdlMockOperation.this.operation )
 				getConfig().setOperation( operation.getName() );
 		}
 
-		@Override
+		
 		public void operationRemoved( Operation operation )
 		{
 			if( operation == WsdlMockOperation.this.operation )
@@ -428,14 +428,14 @@ public class WsdlMockOperation extends AbstractWsdlModelItem<MockOperationConfig
 
 	private class InternalProjectListener extends ProjectListenerAdapter
 	{
-		@Override
+		
 		public void interfaceRemoved( Interface iface )
 		{
 			if( operation.getInterface() == iface )
 				getMockService().removeMockOperation( WsdlMockOperation.this );
 		}
 
-		@Override
+		
 		public void interfaceUpdated( Interface iface )
 		{
 			if( operation.getInterface() == iface )

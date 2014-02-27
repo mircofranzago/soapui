@@ -160,7 +160,7 @@ public abstract class AbstractHttpRequestDesktopPanel<T extends ModelItem, T2 ex
 		addFocusListener( new FocusAdapter()
 		{
 
-			@Override
+			
 			public void focusGained( FocusEvent e )
 			{
 				if( requestTabs.getSelectedIndex() == 1 || responseHasFocus )
@@ -393,7 +393,7 @@ public abstract class AbstractHttpRequestDesktopPanel<T extends ModelItem, T2 ex
 			}
 		}
 
-		@Override
+		
 		public void release()
 		{
 			super.release();
@@ -439,7 +439,7 @@ public abstract class AbstractHttpRequestDesktopPanel<T extends ModelItem, T2 ex
 			}
 		}
 
-		@Override
+		
 		public void release()
 		{
 			super.release();
@@ -735,7 +735,7 @@ public abstract class AbstractHttpRequestDesktopPanel<T extends ModelItem, T2 ex
 		return release();
 	}
 
-	@Override
+	
 	protected boolean release()
 	{
 		endpointsModel.release();

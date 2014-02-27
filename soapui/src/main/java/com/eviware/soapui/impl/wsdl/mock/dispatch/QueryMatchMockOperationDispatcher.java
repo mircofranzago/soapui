@@ -100,14 +100,14 @@ public class QueryMatchMockOperationDispatcher extends AbstractMockOperationDisp
 		mockOperation.addPropertyChangeListener( "mockResponses", this );
 	}
 
-	@Override
+	
 	public void release()
 	{
 		getMockOperation().removePropertyChangeListener( "mockResponses", this );
 		super.release();
 	}
 
-	@Override
+	
 	public JComponent getEditorComponent()
 	{
 		JSplitPane splitPane = UISupport.createHorizontalSplit( buildQueryListComponent(), buildQueryDetailComponent() );
@@ -741,7 +741,7 @@ public class QueryMatchMockOperationDispatcher extends AbstractMockOperationDisp
 			this.defaultForeground = getForeground();
 		}
 
-		@Override
+		
 		public Component getListCellRendererComponent( JList list, Object value, int index, boolean isSelected,
 				boolean cellHasFocus )
 		{

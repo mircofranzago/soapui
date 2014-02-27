@@ -289,7 +289,7 @@ public class RestRequest extends AbstractHttpRequest<RestRequestConfig> implemen
 		return this;
 	}
 
-	@Override
+	
 	public RestResource getOperation()
 	{
 		return method.getOperation();
@@ -400,19 +400,19 @@ public class RestRequest extends AbstractHttpRequest<RestRequestConfig> implemen
 			this.name = propertyAt.getName();
 		}
 
-		@Override
+		
 		public SchemaType getSchemaType()
 		{
 			return XmlString.type;
 		}
 
-		@Override
+		
 		public SchemaGlobalElement getPartElement()
 		{
 			return null;
 		}
 
-		@Override
+		
 		public QName getPartElementName()
 		{
 			return new QName( getName() );
@@ -451,19 +451,19 @@ public class RestRequest extends AbstractHttpRequest<RestRequestConfig> implemen
 
 	public class RestContentPart extends ContentPart implements MessagePart
 	{
-		@Override
+		
 		public SchemaGlobalElement getPartElement()
 		{
 			return null;
 		}
 
-		@Override
+		
 		public QName getPartElementName()
 		{
 			return null;
 		}
 
-		@Override
+		
 		public SchemaType getSchemaType()
 		{
 			return null;
@@ -524,7 +524,7 @@ public class RestRequest extends AbstractHttpRequest<RestRequestConfig> implemen
 		return response.getContentAsXml();
 	}
 
-	@Override
+	
 	public void release()
 	{
 		super.release();
@@ -672,7 +672,7 @@ public class RestRequest extends AbstractHttpRequest<RestRequestConfig> implemen
 		return jmsPropertyConfig;
 	}
 
-	@Override
+	
 	public String getMultiValueDelimiter()
 	{
 		return getConfig().getMultiValueDelimiter();

@@ -164,7 +164,7 @@ public class XmlSourceEditorViewFactory implements ResponseEditorViewFactory, Re
 			return validator.assertRequest( wsdlResponseMessageExchange, false );
 		}
 
-		@Override
+		
 		protected void buildUI()
 		{
 			super.buildUI();
@@ -303,7 +303,7 @@ public class XmlSourceEditorViewFactory implements ResponseEditorViewFactory, Re
 			super( xmlEditor, mockResponse, false );
 		}
 
-		@Override
+		
 		protected void buildUI()
 		{
 			super.buildUI();

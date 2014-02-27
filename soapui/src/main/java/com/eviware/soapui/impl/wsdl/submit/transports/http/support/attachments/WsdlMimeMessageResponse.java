@@ -176,7 +176,7 @@ public class WsdlMimeMessageResponse extends MimeMessageResponse implements Wsdl
 		}
 	}
 
-	@Override
+	
 	public WsdlRequest getRequest()
 	{
 		return ( WsdlRequest )super.getRequest();

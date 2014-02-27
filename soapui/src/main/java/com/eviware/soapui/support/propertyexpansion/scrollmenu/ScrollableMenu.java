@@ -126,7 +126,7 @@ public class ScrollableMenu extends JMenu implements ScrollableMenuContainer
 		return menuItem;
 	}
 
-	@Override
+	
 	public int getMenuComponentCount()
 	{
 		int result = super.getMenuComponentCount() - 2;

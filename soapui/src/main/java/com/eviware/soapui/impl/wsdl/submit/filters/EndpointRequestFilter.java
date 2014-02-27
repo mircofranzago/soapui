@@ -31,7 +31,7 @@ import org.apache.http.client.methods.HttpRequestBase;
 
 public class EndpointRequestFilter extends AbstractRequestFilter
 {
-	@Override
+	
 	public void filterAbstractHttpRequest( SubmitContext context, AbstractHttpRequest<?> request )
 	{
 		HttpRequestBase httpMethod = ( HttpRequestBase )context.getProperty( BaseHttpRequestTransport.HTTP_METHOD );

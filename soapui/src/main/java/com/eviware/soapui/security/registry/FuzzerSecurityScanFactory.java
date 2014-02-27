@@ -36,7 +36,7 @@ public class FuzzerSecurityScanFactory extends AbstractSecurityScanFactory
 				"/fuzzer_security_scan.gif" );
 	}
 
-	@Override
+	
 	public SecurityScanConfig createNewSecurityScan( String name )
 	{
 		SecurityScanConfig securityCheckConfig = SecurityScanConfig.Factory.newInstance();
@@ -45,13 +45,13 @@ public class FuzzerSecurityScanFactory extends AbstractSecurityScanFactory
 		return securityCheckConfig;
 	}
 
-	@Override
+	
 	public AbstractSecurityScan buildSecurityScan( TestStep testStep, SecurityScanConfig config, ModelItem parent )
 	{
 		return new FuzzerSecurityScan( testStep, config, parent, "/fuzzer_security_scan.gif" );
 	}
 
-	@Override
+	
 	public boolean canCreate( TestStep testStep )
 	{
 		return testStep instanceof WsdlTestRequestStep || testStep instanceof RestTestRequestStep

@@ -179,7 +179,7 @@ public abstract class ImportInterfaceResolver implements Resolver
 		return "Resolve: Import inteface";
 	}
 
-	@Override
+	
 	public String toString()
 	{
 		return getDescription();

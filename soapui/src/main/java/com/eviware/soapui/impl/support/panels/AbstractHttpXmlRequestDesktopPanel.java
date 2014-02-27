@@ -31,13 +31,13 @@ public abstract class AbstractHttpXmlRequestDesktopPanel<T extends ModelItem, T2
 		super( modelItem, requestItem );
 	}
 
-	@Override
+	
 	protected ModelItemXmlEditor<?, ?> buildRequestEditor()
 	{
 		return new HttpRequestMessageEditor( getRequest() );
 	}
 
-	@Override
+	
 	protected ModelItemXmlEditor<?, ?> buildResponseEditor()
 	{
 		return new HttpResponseMessageEditor( getRequest() );
@@ -83,7 +83,7 @@ public abstract class AbstractHttpXmlRequestDesktopPanel<T extends ModelItem, T2
 			return getRequest().getRequestContent();
 		}
 
-		@Override
+		
 		public void release()
 		{
 			super.release();

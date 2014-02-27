@@ -30,19 +30,19 @@ public class TestSuiteToTestSuiteDropHandler extends
 		super( WsdlTestSuite.class, WsdlTestSuite.class );
 	}
 
-	@Override
+	
 	boolean canCopyAfter( WsdlTestSuite source, WsdlTestSuite target )
 	{
 		return true;
 	}
 
-	@Override
+	
 	boolean canMoveAfter( WsdlTestSuite source, WsdlTestSuite target )
 	{
 		return source != target;
 	}
 
-	@Override
+	
 	boolean copyAfter( WsdlTestSuite source, WsdlTestSuite target )
 	{
 		WsdlTestSuite testCase = copyTestSuite( source, target.getProject(),
@@ -54,7 +54,7 @@ public class TestSuiteToTestSuiteDropHandler extends
 		return testCase != null;
 	}
 
-	@Override
+	
 	boolean moveAfter( WsdlTestSuite source, WsdlTestSuite target )
 	{
 		WsdlTestSuite testCase = moveTestSuite( source, target.getProject(),
@@ -66,32 +66,32 @@ public class TestSuiteToTestSuiteDropHandler extends
 		return testCase != null;
 	}
 
-	@Override
+	
 	String getCopyAfterInfo( WsdlTestSuite source, WsdlTestSuite target )
 	{
 		return "Copy TestSuite [" + source.getName() + "] to Project [" + target.getProject().getName() + "]";
 	}
 
-	@Override
+	
 	String getMoveAfterInfo( WsdlTestSuite source, WsdlTestSuite target )
 	{
 		return source == target ? "Move TestCase [" + source.getName() + "] within TestSuite" : "Move TestCase ["
 				+ source.getName() + "] to TestSuite in Project [" + target.getName() + "]";
 	}
 
-	@Override
+	
 	boolean canCopyBefore( WsdlTestSuite source, WsdlTestSuite target )
 	{
 		return true;
 	}
 
-	@Override
+	
 	boolean canMoveBefore( WsdlTestSuite source, WsdlTestSuite target )
 	{
 		return source != target;
 	}
 
-	@Override
+	
 	boolean copyBefore( WsdlTestSuite source, WsdlTestSuite target )
 	{
 		WsdlTestSuite testCase = copyTestSuite( source, source.getProject(),
@@ -103,19 +103,19 @@ public class TestSuiteToTestSuiteDropHandler extends
 		return testCase != null;
 	}
 
-	@Override
+	
 	String getCopyBeforeInfo( WsdlTestSuite source, WsdlTestSuite target )
 	{
 		return getCopyAfterInfo( source, target );
 	}
 
-	@Override
+	
 	String getMoveBeforeInfo( WsdlTestSuite source, WsdlTestSuite target )
 	{
 		return getMoveAfterInfo( source, target );
 	}
 
-	@Override
+	
 	boolean moveBefore( WsdlTestSuite source, WsdlTestSuite target )
 	{
 		WsdlTestSuite testCase = moveTestSuite( source, target.getProject(),

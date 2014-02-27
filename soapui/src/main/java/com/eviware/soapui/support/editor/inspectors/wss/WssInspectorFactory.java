@@ -76,7 +76,7 @@ public class WssInspectorFactory implements RequestInspectorFactory, ResponseIns
 			response.addPropertyChangeListener( WsdlMockResponse.MOCKRESULT_PROPERTY, this );
 		}
 
-		@Override
+		
 		public Vector<?> getWssResults()
 		{
 			return response.getMockResult() == null ? null : response.getMockResult().getRequestWssResult();
@@ -87,7 +87,7 @@ public class WssInspectorFactory implements RequestInspectorFactory, ResponseIns
 			update();
 		}
 
-		@Override
+		
 		public void release()
 		{
 			response.removePropertyChangeListener( WsdlMockResponse.MOCKRESULT_PROPERTY, this );
@@ -106,7 +106,7 @@ public class WssInspectorFactory implements RequestInspectorFactory, ResponseIns
 			item.addPropertyChangeListener( MessageExchangeModelItem.MESSAGE_EXCHANGE, this );
 		}
 
-		@Override
+		
 		public Vector<?> getWssResults()
 		{
 			return item.getMessageExchange() instanceof WsdlMessageExchange ? ( ( WsdlMessageExchange )item
@@ -118,7 +118,7 @@ public class WssInspectorFactory implements RequestInspectorFactory, ResponseIns
 			update();
 		}
 
-		@Override
+		
 		public void release()
 		{
 			item.removePropertyChangeListener( MessageExchangeModelItem.MESSAGE_EXCHANGE, this );
@@ -136,7 +136,7 @@ public class WssInspectorFactory implements RequestInspectorFactory, ResponseIns
 			response.addPropertyChangeListener( WsdlRequest.RESPONSE_PROPERTY, this );
 		}
 
-		@Override
+		
 		public Vector<?> getWssResults()
 		{
 			return response.getResponse() == null ? null : response.getResponse().getWssResult();
@@ -147,7 +147,7 @@ public class WssInspectorFactory implements RequestInspectorFactory, ResponseIns
 			update();
 		}
 
-		@Override
+		
 		public void release()
 		{
 			response.removePropertyChangeListener( WsdlRequest.RESPONSE_PROPERTY, this );
@@ -166,7 +166,7 @@ public class WssInspectorFactory implements RequestInspectorFactory, ResponseIns
 			item.addPropertyChangeListener( MessageExchangeModelItem.MESSAGE_EXCHANGE, this );
 		}
 
-		@Override
+		
 		public Vector<?> getWssResults()
 		{
 			return item.getMessageExchange() instanceof WsdlMessageExchange ? ( ( WsdlMessageExchange )item
@@ -178,7 +178,7 @@ public class WssInspectorFactory implements RequestInspectorFactory, ResponseIns
 			update();
 		}
 
-		@Override
+		
 		public void release()
 		{
 			item.removePropertyChangeListener( MessageExchangeModelItem.MESSAGE_EXCHANGE, this );

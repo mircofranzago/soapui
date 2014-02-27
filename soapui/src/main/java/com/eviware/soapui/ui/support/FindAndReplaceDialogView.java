@@ -51,7 +51,7 @@ public class FindAndReplaceDialogView extends AbstractAction
 		this.editArea = editArea;
 	}
 
-	@Override
+	
 	public void actionPerformed( ActionEvent arg0 )
 	{
 		show();
@@ -218,7 +218,7 @@ public class FindAndReplaceDialogView extends AbstractAction
 			super( "Find/Find Next" );
 		}
 
-		@Override
+		
 		public void actionPerformed( ActionEvent e )
 		{
 			SearchContext context = createSearchContext();
@@ -243,7 +243,7 @@ public class FindAndReplaceDialogView extends AbstractAction
 			super( "Replace/Replace Next" );
 		}
 
-		@Override
+		
 		public void actionPerformed( ActionEvent e )
 		{
 			SearchContext context = createSearchAndReplaceContext();
@@ -269,7 +269,7 @@ public class FindAndReplaceDialogView extends AbstractAction
 			super( "Replace All" );
 		}
 
-		@Override
+		
 		public void actionPerformed( ActionEvent e )
 		{
 			SearchContext context = createSearchAndReplaceContext();

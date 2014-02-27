@@ -26,19 +26,19 @@ public class OperationToMockServiceDropHandler extends
 		super( WsdlOperation.class, WsdlMockService.class );
 	}
 
-	@Override
+	
 	boolean canCopyAfter( WsdlOperation source, WsdlMockService target )
 	{
 		return source.getInterface().getProject() == target.getProject();
 	}
 
-	@Override
+	
 	boolean canMoveAfter( WsdlOperation source, WsdlMockService target )
 	{
 		return canCopyAfter( source, target );
 	}
 
-	@Override
+	
 	boolean copyAfter( WsdlOperation source, WsdlMockService target )
 	{
 		SoapUIAction<WsdlOperation> action = SoapUI.getActionRegistry().getAction(
@@ -48,19 +48,19 @@ public class OperationToMockServiceDropHandler extends
 		return a.addOperationToMockService( source, target );
 	}
 
-	@Override
+	
 	boolean moveAfter( WsdlOperation source, WsdlMockService target )
 	{
 		return copyAfter( source, target );
 	}
 
-	@Override
+	
 	String getCopyAfterInfo( WsdlOperation source, WsdlMockService target )
 	{
 		return "Add MockOperation for [" + source.getName() + "] to MockService [" + target.getName() + "]";
 	}
 
-	@Override
+	
 	String getMoveAfterInfo( WsdlOperation source, WsdlMockService target )
 	{
 		return getCopyAfterInfo( source, target );

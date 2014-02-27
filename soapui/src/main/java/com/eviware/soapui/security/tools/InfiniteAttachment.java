@@ -28,7 +28,7 @@ public class InfiniteAttachment extends RequestFileAttachment
 		return Attachment.AttachmentType.UNKNOWN;
 	}
 
-	@Override
+	
 	public String getContentType()
 	{
 		return "application/octet-stream";

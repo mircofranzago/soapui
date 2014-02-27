@@ -36,7 +36,7 @@ public class WsdlRequestWsrmPiggybackInspector extends AbstractWsrmInspector imp
 		this.request = request;
 	}
 
-	@Override
+	
 	public void release()
 	{
 		super.release();

@@ -58,7 +58,7 @@ public class PropertyTreeNode extends AbstractModelItemTreeNode<PropertyTreeNode
 		return name + " : " + value;
 	}
 
-	@Override
+	
 	public ActionList getActions()
 	{
 		if( !readOnly )

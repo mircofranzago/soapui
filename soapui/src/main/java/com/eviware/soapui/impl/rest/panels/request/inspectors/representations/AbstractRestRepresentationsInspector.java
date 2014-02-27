@@ -81,7 +81,7 @@ public abstract class AbstractRestRepresentationsInspector extends AbstractXmlIn
 		return restMethod;
 	}
 
-	@Override
+	
 	public boolean isEnabledFor( EditorView<XmlDocument> view )
 	{
 		return !view.getViewId().equals( RawXmlEditorFactory.VIEW_ID );
@@ -92,7 +92,7 @@ public abstract class AbstractRestRepresentationsInspector extends AbstractXmlIn
 		return true;
 	}
 
-	@Override
+	
 	public void release()
 	{
 		super.release();

@@ -38,13 +38,13 @@ import com.eviware.soapui.support.xml.XmlUtils;
 
 public class JUnitSecurityReportCollector extends JUnitReportCollector implements SecurityTestRunListener
 {
-	@Override
+	
 	public void afterOriginalStep( TestCaseRunner testRunner, SecurityTestRunContext runContext,
 			SecurityTestStepResult result )
 	{
 	}
 
-	@Override
+	
 	public void afterRun( TestCaseRunner testRunner, SecurityTestRunContext runContext )
 	{
 		TestCase testCase = testRunner.getTestCase();
@@ -99,37 +99,37 @@ public class JUnitSecurityReportCollector extends JUnitReportCollector implement
 		}
 	}
 
-	@Override
+	
 	public void afterSecurityScan( TestCaseRunner testRunner, SecurityTestRunContext runContext,
 			SecurityScanResult securityScanResult )
 	{
 
 	}
 
-	@Override
+	
 	public void afterSecurityScanRequest( TestCaseRunner testRunner, SecurityTestRunContext runContext,
 			SecurityScanRequestResult securityScanReqResult )
 	{
 	}
 
-	@Override
+	
 	public void afterStep( TestCaseRunner testRunner, SecurityTestRunContext runContext, SecurityTestStepResult result )
 	{
 	}
 
-	@Override
+	
 	public void beforeRun( TestCaseRunner testRunner, SecurityTestRunContext runContext )
 	{
 
 	}
 
-	@Override
+	
 	public void beforeSecurityScan( TestCaseRunner testRunner, SecurityTestRunContext runContext,
 			SecurityScan securityScan )
 	{
 	}
 
-	@Override
+	
 	public void beforeStep( TestCaseRunner testRunner, SecurityTestRunContext runContext, TestStepResult testStepResult )
 	{
 	}

@@ -59,7 +59,7 @@ public class AMFTestStepResult extends WsdlTestStepResult implements AssertedXPa
 	{
 	}
 
-	@Override
+	
 	public ActionList getActions()
 	{
 		if( !addedAction )

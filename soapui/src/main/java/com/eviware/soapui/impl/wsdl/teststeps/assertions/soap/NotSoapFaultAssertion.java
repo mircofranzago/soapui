@@ -73,7 +73,7 @@ public class NotSoapFaultAssertion extends WsdlMessageAssertion implements Respo
 		return null;
 	}
 
-	@Override
+	
 	protected String internalAssertRequest( MessageExchange messageExchange, SubmitContext context )
 			throws AssertionException
 	{
@@ -87,19 +87,19 @@ public class NotSoapFaultAssertion extends WsdlMessageAssertion implements Respo
 			super( NotSoapFaultAssertion.ID, NotSoapFaultAssertion.LABEL, NotSoapFaultAssertion.class, WsdlRequest.class );
 		}
 
-		@Override
+		
 		public String getCategory()
 		{
 			return AssertionCategoryMapping.STATUS_CATEGORY;
 		}
 
-		@Override
+		
 		public Class<? extends WsdlMessageAssertion> getAssertionClassType()
 		{
 			return NotSoapFaultAssertion.class;
 		}
 
-		@Override
+		
 		public AssertionListEntry getAssertionListEntry()
 		{
 			return new AssertionListEntry( NotSoapFaultAssertion.ID, NotSoapFaultAssertion.LABEL,

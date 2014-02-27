@@ -83,7 +83,7 @@ public class SoapUIMultiThreadedHttpConnectionManager extends ThreadSafeClientCo
 	 * 
 	 * @return the connection operator to use
 	 */
-	@Override
+	
 	protected ClientConnectionOperator createConnectionOperator( SchemeRegistry schreg )
 	{
 
@@ -101,7 +101,7 @@ public class SoapUIMultiThreadedHttpConnectionManager extends ThreadSafeClientCo
 			this.connMgr = connMgr;
 		}
 
-		@Override
+		
 		public void run()
 		{
 			try
@@ -238,14 +238,14 @@ public class SoapUIMultiThreadedHttpConnectionManager extends ThreadSafeClientCo
 			super( schemes );
 		}
 
-		@Override
+		
 		public OperatedClientConnection createConnection()
 		{
 			SoapUIDefaultClientConnection connection = new SoapUIDefaultClientConnection();
 			return connection;
 		}
 
-		@Override
+		
 		public void openConnection( final OperatedClientConnection conn, final HttpHost target, final InetAddress local,
 				final HttpContext context, final HttpParams params ) throws IOException
 		{
@@ -345,7 +345,7 @@ public class SoapUIMultiThreadedHttpConnectionManager extends ThreadSafeClientCo
 			super();
 		}
 
-		@Override
+		
 		/**
 		 * @since 4.1
 		 */
@@ -364,21 +364,21 @@ public class SoapUIMultiThreadedHttpConnectionManager extends ThreadSafeClientCo
 			super( tsccm, entry );
 		}
 
-		@Override
+		
 		protected ClientConnectionManager getManager()
 		{
 			// override needed only to make method visible in this package
 			return super.getManager();
 		}
 
-		@Override
+		
 		protected AbstractPoolEntry getPoolEntry()
 		{
 			// override needed only to make method visible in this package
 			return super.getPoolEntry();
 		}
 
-		@Override
+		
 		protected void detach()
 		{
 			// override needed only to make method visible in this package

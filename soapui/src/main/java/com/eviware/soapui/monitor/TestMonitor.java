@@ -238,13 +238,13 @@ public class TestMonitor
 			monitorTestSuite( testSuite );
 		}
 
-		@Override
+		
 		public void mockServiceAdded( MockService mockService )
 		{
 			monitorMockService( mockService );
 		}
 
-		@Override
+		
 		public void mockServiceRemoved( MockService mockService )
 		{
 			unmonitorMockService( mockService );
@@ -303,14 +303,14 @@ public class TestMonitor
 
 	private class InternalMockRunListener extends MockRunListenerAdapter
 	{
-		@Override
+		
 		public void onMockRunnerStart( MockRunner mockRunner )
 		{
 			runningMockServices.add( mockRunner );
 			notifyMockServiceStarted( mockRunner );
 		}
 
-		@Override
+		
 		public void onMockRunnerStop( MockRunner mockRunner )
 		{
 			runningMockServices.remove( mockRunner );

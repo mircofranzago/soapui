@@ -125,7 +125,7 @@ public class XmlBeansSettingsImpl implements Settings
 		}
 	}
 
-	@Override
+	
 	public void reloadSettings()
 	{
 		notifySettingsReloaded();
@@ -222,7 +222,7 @@ public class XmlBeansSettingsImpl implements Settings
 			}
 		}
 
-		@Override
+		
 		public void settingsReloaded()
 		{
 			notifySettingsReloaded();

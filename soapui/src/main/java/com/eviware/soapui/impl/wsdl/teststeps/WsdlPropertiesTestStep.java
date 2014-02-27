@@ -180,14 +180,14 @@ public class WsdlPropertiesTestStep extends WsdlTestStep implements MutableTestP
 		{
 			public StringList names = new StringList();
 
-			@Override
+			
 			public synchronized Object put( Object key, Object value )
 			{
 				names.add( key.toString() );
 				return super.put( key, value );
 			}
 
-			@Override
+			
 			public Enumeration<?> propertyNames()
 			{
 				return Collections.enumeration( names );
@@ -338,7 +338,7 @@ public class WsdlPropertiesTestStep extends WsdlTestStep implements MutableTestP
 		propertyHolderSupport.setPropertyValue( name, value );
 	}
 
-	@Override
+	
 	public void beforeSave()
 	{
 		super.beforeSave();
@@ -436,7 +436,7 @@ public class WsdlPropertiesTestStep extends WsdlTestStep implements MutableTestP
 		dependencies.add( new PathPropertyExternalDependency( sourceProperty ) );
 	}
 
-	@Override
+	
 	public void resolve( ResolveContext<?> context )
 	{
 		super.resolve( context );

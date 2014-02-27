@@ -38,7 +38,7 @@ public class HttpPatch extends HttpEntityEnclosingRequestBase
 		setURI( URI.create( uri ) );
 	}
 
-	@Override
+	
 	public String getMethod()
 	{
 		return METHOD_NAME;

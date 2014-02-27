@@ -46,7 +46,7 @@ public class SoapRequestAssertion extends WsdlMessageAssertion implements Reques
 		super( assertionConfig, assertable, false, false, false, false );
 	}
 
-	@Override
+	
 	protected String internalAssertRequest( MessageExchange messageExchange, SubmitContext context )
 			throws AssertionException
 	{
@@ -86,19 +86,19 @@ public class SoapRequestAssertion extends WsdlMessageAssertion implements Reques
 					WsdlMockResponseTestStep.class );
 		}
 
-		@Override
+		
 		public String getCategory()
 		{
 			return AssertionCategoryMapping.STATUS_CATEGORY;
 		}
 
-		@Override
+		
 		public Class<? extends WsdlMessageAssertion> getAssertionClassType()
 		{
 			return SoapRequestAssertion.class;
 		}
 
-		@Override
+		
 		public AssertionListEntry getAssertionListEntry()
 		{
 			return new AssertionListEntry( SoapRequestAssertion.ID, SoapRequestAssertion.LABEL,
@@ -106,7 +106,7 @@ public class SoapRequestAssertion extends WsdlMessageAssertion implements Reques
 		}
 	}
 
-	@Override
+	
 	protected String internalAssertResponse( MessageExchange messageExchange, SubmitContext context )
 			throws AssertionException
 	{

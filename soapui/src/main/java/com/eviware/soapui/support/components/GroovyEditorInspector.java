@@ -19,7 +19,7 @@ public class GroovyEditorInspector extends JComponentInspector<GroovyEditorCompo
 		super( component, title, description, true );
 	}
 
-	@Override
+	
 	public void activate()
 	{
 		getComponent().getEditor().requestFocusInWindow();

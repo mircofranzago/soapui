@@ -580,7 +580,7 @@ public class StandaloneDesktop extends AbstractSoapUIDesktop
 	 */
 	private class DesktopResizeListener implements ComponentListener
 	{
-		@Override
+		
 		public void componentResized( ComponentEvent e )
 		{
 			Iterator<DesktopPanel> iterator = deferredDesktopPanels.iterator();
@@ -596,18 +596,18 @@ public class StandaloneDesktop extends AbstractSoapUIDesktop
 			}
 		}
 
-		@Override
+		
 		public void componentMoved( ComponentEvent e )
 		{
 
 		}
 
-		@Override
+		
 		public void componentShown( ComponentEvent e )
 		{
 		}
 
-		@Override
+		
 		public void componentHidden( ComponentEvent e )
 		{
 

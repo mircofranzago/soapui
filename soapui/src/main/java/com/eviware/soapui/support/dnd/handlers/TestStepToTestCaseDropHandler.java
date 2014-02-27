@@ -22,31 +22,31 @@ public class TestStepToTestCaseDropHandler extends AbstractBeforeAfterModelItemD
 		super( WsdlTestStep.class, WsdlTestCase.class );
 	}
 
-	@Override
+	
 	boolean copyAfter( WsdlTestStep source, WsdlTestCase target )
 	{
 		return DragAndDropSupport.copyTestStep( source, target, -1 );
 	}
 
-	@Override
+	
 	boolean moveAfter( WsdlTestStep source, WsdlTestCase target )
 	{
 		return DragAndDropSupport.moveTestStep( source, target, -1 );
 	}
 
-	@Override
+	
 	boolean canCopyAfter( WsdlTestStep source, WsdlTestCase target )
 	{
 		return true;
 	}
 
-	@Override
+	
 	boolean canMoveAfter( WsdlTestStep source, WsdlTestCase target )
 	{
 		return true;
 	}
 
-	@Override
+	
 	String getCopyAfterInfo( WsdlTestStep source, WsdlTestCase target )
 	{
 		return source.getTestCase() == target ? "Copy TestStep [" + source.getName() + "] within TestCase ["
@@ -54,7 +54,7 @@ public class TestStepToTestCaseDropHandler extends AbstractBeforeAfterModelItemD
 				+ "]";
 	}
 
-	@Override
+	
 	String getMoveAfterInfo( WsdlTestStep source, WsdlTestCase target )
 	{
 		return source.getTestCase() == target ? "Move TestStep [" + source.getName() + "] within TestCase ["
@@ -62,37 +62,37 @@ public class TestStepToTestCaseDropHandler extends AbstractBeforeAfterModelItemD
 				+ "]";
 	}
 
-	@Override
+	
 	boolean canCopyBefore( WsdlTestStep source, WsdlTestCase target )
 	{
 		return true;
 	}
 
-	@Override
+	
 	boolean canMoveBefore( WsdlTestStep source, WsdlTestCase target )
 	{
 		return true;
 	}
 
-	@Override
+	
 	boolean copyBefore( WsdlTestStep source, WsdlTestCase target )
 	{
 		return DragAndDropSupport.copyTestStep( source, target, 0 );
 	}
 
-	@Override
+	
 	String getCopyBeforeInfo( WsdlTestStep source, WsdlTestCase target )
 	{
 		return getCopyAfterInfo( source, target );
 	}
 
-	@Override
+	
 	String getMoveBeforeInfo( WsdlTestStep source, WsdlTestCase target )
 	{
 		return getMoveAfterInfo( source, target );
 	}
 
-	@Override
+	
 	boolean moveBefore( WsdlTestStep source, WsdlTestCase target )
 	{
 		return DragAndDropSupport.moveTestStep( source, target, 0 );

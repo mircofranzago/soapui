@@ -28,14 +28,14 @@ public class NavigatorDragAndDropable extends JTreeDragAndDropable<ModelItem>
 		super( tree );
 	}
 
-	@Override
+	
 	public ModelItem getModelItemAtRow( int row )
 	{
 		TreePath pathForRow = getTree().getPathForRow( row );
 		return pathForRow == null ? null : ( ( SoapUITreeNode )pathForRow.getLastPathComponent() ).getModelItem();
 	}
 
-	@Override
+	
 	public int getRowForModelItem( ModelItem modelItem )
 	{
 		if( modelItem == null )
@@ -55,7 +55,7 @@ public class NavigatorDragAndDropable extends JTreeDragAndDropable<ModelItem>
 				getTree().isExpanded( row ), treeNode.isLeaf(), row, true );
 	}
 
-	@Override
+	
 	public void toggleExpansion( ModelItem last )
 	{
 		if( last == SoapUI.getWorkspace() )

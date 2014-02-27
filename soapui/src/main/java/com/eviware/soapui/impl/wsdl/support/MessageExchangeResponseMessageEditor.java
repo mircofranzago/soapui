@@ -41,7 +41,7 @@ public class MessageExchangeResponseMessageEditor extends
 		setEditable( false );
 	}
 
-	@Override
+	
 	public void propertyChange( PropertyChangeEvent evt )
 	{
 		if( evt.getSource() == messageExchangeModelItem
@@ -74,7 +74,7 @@ public class MessageExchangeResponseMessageEditor extends
 		}
 	}
 
-	@Override
+	
 	public void release()
 	{
 		super.release();

@@ -80,7 +80,7 @@ public class SimpleContainsAssertion extends WsdlMessageAssertion implements Req
 		return assertContent( context, messageExchange.getResponseContent(), "Response" );
 	}
 
-	@Override
+	
 	protected String internalAssertProperty( TestPropertyHolder source, String propertyName,
 			MessageExchange messageExchange, SubmitContext context ) throws AssertionException
 	{
@@ -210,7 +210,7 @@ public class SimpleContainsAssertion extends WsdlMessageAssertion implements Req
 				"Specify options", UISupport.OPTIONS_ICON );
 	}
 
-	@Override
+	
 	protected String internalAssertRequest( MessageExchange messageExchange, SubmitContext context )
 			throws AssertionException
 	{
@@ -233,26 +233,26 @@ public class SimpleContainsAssertion extends WsdlMessageAssertion implements Req
 			super( SimpleContainsAssertion.ID, SimpleContainsAssertion.LABEL, SimpleContainsAssertion.class );
 		}
 
-		@Override
+		
 		public String getCategory()
 		{
 			return AssertionCategoryMapping.VALIDATE_RESPONSE_CONTENT_CATEGORY;
 		}
 
-		@Override
+		
 		public Class<? extends WsdlMessageAssertion> getAssertionClassType()
 		{
 			return SimpleContainsAssertion.class;
 		}
 
-		@Override
+		
 		public AssertionListEntry getAssertionListEntry()
 		{
 			return new AssertionListEntry( SimpleContainsAssertion.ID, SimpleContainsAssertion.LABEL,
 					SimpleContainsAssertion.DESCRIPTION );
 		}
 
-		@Override
+		
 		public boolean canAssert( TestPropertyHolder modelItem, String property )
 		{
 			String content = modelItem.getPropertyValue( property );

@@ -108,7 +108,7 @@ public class WsdlTestRequest extends WsdlRequest implements Assertable, TestRequ
 			disabledRequestIcon = UISupport.createImageIcon( "/disabled_request.gif" );
 	}
 
-	@Override
+	
 	protected RequestIconAnimator<?> initIconAnimator()
 	{
 		return new TestRequestIconAnimator( this );
@@ -168,7 +168,7 @@ public class WsdlTestRequest extends WsdlRequest implements Assertable, TestRequ
 		{
 			messageExchange = getResponse() == null ? null : new WsdlResponseMessageExchange( this )
 			{
-				@Override
+				
 				public boolean hasResponse()
 				{// JMS tweak
 					String responseContent = getResponseContent();
@@ -316,7 +316,7 @@ public class WsdlTestRequest extends WsdlRequest implements Assertable, TestRequ
 		return currentStatus;
 	}
 
-	@Override
+	
 	public ImageIcon getIcon()
 	{
 		if( forLoadTest || UISupport.isHeadless() )
@@ -355,7 +355,7 @@ public class WsdlTestRequest extends WsdlRequest implements Assertable, TestRequ
 	 * Called when a testrequest is moved in a testcase
 	 */
 
-	@Override
+	
 	public void updateConfig( WsdlRequestConfig request )
 	{
 		super.updateConfig( request );
@@ -371,7 +371,7 @@ public class WsdlTestRequest extends WsdlRequest implements Assertable, TestRequ
 
 	}
 
-	@Override
+	
 	public void release()
 	{
 		super.release();
@@ -400,7 +400,7 @@ public class WsdlTestRequest extends WsdlRequest implements Assertable, TestRequ
 			super( modelItem, "/request.gif", "/exec_request", 4, "gif" );
 		}
 
-		@Override
+		
 		public boolean beforeSubmit( Submit submit, SubmitContext context )
 		{
 			if( SoapUI.getTestMonitor() != null
@@ -410,7 +410,7 @@ public class WsdlTestRequest extends WsdlRequest implements Assertable, TestRequ
 			return super.beforeSubmit( submit, context );
 		}
 
-		@Override
+		
 		public void afterSubmit( Submit submit, SubmitContext context )
 		{
 			if( submit.getRequest() == getTarget() )

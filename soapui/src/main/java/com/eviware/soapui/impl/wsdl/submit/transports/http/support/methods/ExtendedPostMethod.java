@@ -70,7 +70,7 @@ public final class ExtendedPostMethod extends HttpPost implements ExtendedEntity
 		httpMethodSupport.afterReadResponse( session );
 	}
 
-	@Override
+	
 	public String getResponseCharSet()
 	{
 		return httpMethodSupport.getResponseCharset();

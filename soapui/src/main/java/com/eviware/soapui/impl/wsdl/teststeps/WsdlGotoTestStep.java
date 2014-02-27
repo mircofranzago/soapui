@@ -72,7 +72,7 @@ public class WsdlGotoTestStep extends WsdlTestStepWithProperties implements XPat
 		}
 	}
 
-	@Override
+	
 	public void afterLoad()
 	{
 		TestStepConfig config = getConfig();

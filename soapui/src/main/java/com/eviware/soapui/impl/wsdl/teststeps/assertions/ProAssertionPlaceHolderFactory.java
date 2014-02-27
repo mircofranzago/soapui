@@ -33,54 +33,54 @@ public class ProAssertionPlaceHolderFactory implements TestAssertionFactory
 		this.type = type;
 	}
 
-	@Override
+	
 	public boolean canAssert( Assertable assertable )
 	{
 		// TODO Auto-generated method stub
 		return false;
 	}
 
-	@Override
+	
 	public boolean canAssert( TestPropertyHolder modelItem, String property )
 	{
 		// TODO Auto-generated method stub
 		return false;
 	}
 
-	@Override
+	
 	public TestAssertion buildAssertion( TestAssertionConfig config, Assertable assertable )
 	{
 		return new ProAssertionPlaceHolder( config, assertable );
 	}
 
-	@Override
+	
 	public Class<? extends WsdlMessageAssertion> getAssertionClassType()
 	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
+	
 	public String getAssertionId()
 	{
 		return type;
 	}
 
-	@Override
+	
 	public String getAssertionLabel()
 	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
+	
 	public AssertionListEntry getAssertionListEntry()
 	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
+	
 	public String getCategory()
 	{
 		// TODO Auto-generated method stub
@@ -101,7 +101,7 @@ public class ProAssertionPlaceHolderFactory implements TestAssertionFactory
 			this( config, assertable, false, false, false, false );
 		}
 
-		@Override
+		
 		protected String internalAssertResponse( MessageExchange messageExchange, SubmitContext context )
 				throws AssertionException
 		{
@@ -109,7 +109,7 @@ public class ProAssertionPlaceHolderFactory implements TestAssertionFactory
 			return null;
 		}
 
-		@Override
+		
 		protected String internalAssertRequest( MessageExchange messageExchange, SubmitContext context )
 				throws AssertionException
 		{
@@ -117,7 +117,7 @@ public class ProAssertionPlaceHolderFactory implements TestAssertionFactory
 			return null;
 		}
 
-		@Override
+		
 		protected String internalAssertProperty( TestPropertyHolder source, String propertyName,
 				MessageExchange messageExchange, SubmitContext context ) throws AssertionException
 		{
@@ -125,13 +125,13 @@ public class ProAssertionPlaceHolderFactory implements TestAssertionFactory
 			return null;
 		}
 		
-		@Override
+		
 		public AssertionStatus getStatus()
 		{
 			return assertionStatus.UNKNOWN;
 		}
 
-		@Override
+		
 		public boolean isDisabled()
 		{
 			return true;

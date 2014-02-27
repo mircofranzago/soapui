@@ -170,7 +170,7 @@ public class WsdlRunTestCaseStepDesktopPanel extends ModelItemDesktopPanel<WsdlR
 		return toolbar;
 	}
 
-	@Override
+	
 	public boolean dependsOn( ModelItem modelItem )
 	{
 		WsdlRunTestCaseTestStep callStep = getModelItem();

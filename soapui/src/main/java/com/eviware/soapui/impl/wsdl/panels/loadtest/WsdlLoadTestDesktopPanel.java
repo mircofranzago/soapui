@@ -623,7 +623,7 @@ public class WsdlLoadTestDesktopPanel extends KeySensitiveModelItemDesktopPanel<
 
 	private class SetupScriptGroovyEditorModel extends AbstractGroovyEditorModel
 	{
-		@Override
+		
 		public Action createRunAction()
 		{
 			return new AbstractAction()
@@ -665,7 +665,7 @@ public class WsdlLoadTestDesktopPanel extends KeySensitiveModelItemDesktopPanel<
 
 	private class TearDownScriptGroovyEditorModel extends AbstractGroovyEditorModel
 	{
-		@Override
+		
 		public Action createRunAction()
 		{
 			return new AbstractAction()
@@ -705,13 +705,13 @@ public class WsdlLoadTestDesktopPanel extends KeySensitiveModelItemDesktopPanel<
 		}
 	}
 
-	@Override
+	
 	protected void renameModelItem()
 	{
 		SoapUI.getActionRegistry().performAction( "RenameLoadTestAction", getModelItem(), null );
 	}
 
-	@Override
+	
 	protected void cloneModelItem()
 	{
 		SoapUI.getActionRegistry().performAction( "CloneLoadTestAction", getModelItem(), null );

@@ -72,21 +72,21 @@ public class TestSuiteTreeNode extends AbstractModelItemTreeNode<TestSuite>
 		propertiesTreeNode.release();
 	}
 
-	@Override
+	
 	public int getChildCount()
 	{
 		int propMod = getTreeModel().isShowProperties() ? 1 : 0;
 		return testCaseNodes.size() + propMod;
 	}
 
-	@Override
+	
 	public SoapUITreeNode getChildNode( int index )
 	{
 		int propMod = getTreeModel().isShowProperties() ? 1 : 0;
 		return index == 0 && propMod == 1 ? propertiesTreeNode : testCaseNodes.get( index - propMod );
 	}
 
-	@Override
+	
 	public int getIndexOfChild( Object child )
 	{
 		int propMod = getTreeModel().isShowProperties() ? 1 : 0;
@@ -167,7 +167,7 @@ public class TestSuiteTreeNode extends AbstractModelItemTreeNode<TestSuite>
 			testCaseAdded( testCase );
 		}
 
-		@Override
+		
 		public void securityTestAdded( SecurityTest securityTest )
 		{
 			TestCaseTreeNode testCaseTreeNode = ( TestCaseTreeNode )getTreeModel()
@@ -177,7 +177,7 @@ public class TestSuiteTreeNode extends AbstractModelItemTreeNode<TestSuite>
 
 		}
 
-		@Override
+		
 		public void securityTestRemoved( SecurityTest securityTest )
 		{
 			TestCaseTreeNode testCaseTreeNode = ( TestCaseTreeNode )getTreeModel()

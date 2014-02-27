@@ -45,7 +45,7 @@ public class DefaultPropertyExpansionContext extends StringToObjectMap implement
 		return keySet().toArray( new String[size()] );
 	}
 
-	@Override
+	
 	public Object get( Object key )
 	{
 		Object result = super.get( key );

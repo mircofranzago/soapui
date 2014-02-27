@@ -87,7 +87,7 @@ public class ProxyPrefs implements Prefs
 		proxyPrefForm.append( "Proxy Setting", radioPanel );
 		automatic.addActionListener( new ActionListener()
 		{
-			@Override
+			
 			public void actionPerformed( ActionEvent e )
 			{
 				autoProxy = true;
@@ -96,7 +96,7 @@ public class ProxyPrefs implements Prefs
 		} );
 		manual.addActionListener( new ActionListener()
 		{
-			@Override
+			
 			public void actionPerformed( ActionEvent e )
 			{
 				autoProxy = false;
@@ -105,7 +105,7 @@ public class ProxyPrefs implements Prefs
 		} );
 		none.addActionListener( new ActionListener()
 		{
-			@Override
+			
 			public void actionPerformed( ActionEvent e )
 			{
 				setManualProxyTextFieldsEnabled( false, false );

@@ -690,7 +690,7 @@ public class WsdlInterface extends AbstractInterface<WsdlInterfaceConfig>
 		}
 	}
 
-	@Override
+	
 	public void release()
 	{
 		super.release();
@@ -778,7 +778,7 @@ public class WsdlInterface extends AbstractInterface<WsdlInterfaceConfig>
 		}
 	}
 
-	@Override
+	
 	public void addExternalDependencies( List<ExternalDependency> dependencies )
 	{
 		super.addExternalDependencies( dependencies );
@@ -786,7 +786,7 @@ public class WsdlInterface extends AbstractInterface<WsdlInterfaceConfig>
 	}
 
 	@SuppressWarnings( "unchecked" )
-	@Override
+	
 	public void resolve( ResolveContext<?> context )
 	{
 		super.resolve( context );
@@ -805,7 +805,7 @@ public class WsdlInterface extends AbstractInterface<WsdlInterfaceConfig>
 							"Select WSDL File", "wsdl", "WSDL Files (*.wsdl)", file.getParent() )
 					{
 
-						@Override
+						
 						public boolean apply( File newFile )
 						{
 							try
@@ -898,7 +898,7 @@ public class WsdlInterface extends AbstractInterface<WsdlInterfaceConfig>
 		return AnonymousTypeConfig.OPTIONAL.toString();
 	}
 
-	@Override
+	
 	public WsdlContext getDefinitionContext()
 	{
 		return getWsdlContext();

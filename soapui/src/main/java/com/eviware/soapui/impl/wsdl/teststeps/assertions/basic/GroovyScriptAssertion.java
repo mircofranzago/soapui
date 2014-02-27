@@ -100,7 +100,7 @@ public class GroovyScriptAssertion extends WsdlMessageAssertion implements Reque
 		scriptEngine.setScript( scriptText );
 	}
 
-	@Override
+	
 	protected String internalAssertRequest( MessageExchange messageExchange, SubmitContext context )
 			throws AssertionException
 	{
@@ -130,21 +130,21 @@ public class GroovyScriptAssertion extends WsdlMessageAssertion implements Reque
 		}
 	}
 
-	@Override
+	
 	protected String internalAssertResponse( MessageExchange messageExchange, SubmitContext context )
 			throws AssertionException
 	{
 		return assertScript( messageExchange, context, SoapUI.ensureGroovyLog() );
 	}
 
-	@Override
+	
 	protected String internalAssertProperty( TestPropertyHolder source, String propertyName,
 			MessageExchange messageExchange, SubmitContext context ) throws AssertionException
 	{
 		return null;
 	}
 
-	@Override
+	
 	public boolean configure()
 	{
 		if( dialog == null )
@@ -417,7 +417,7 @@ public class GroovyScriptAssertion extends WsdlMessageAssertion implements Reque
 		}
 	}
 
-	@Override
+	
 	public void release()
 	{
 		super.release();
@@ -434,19 +434,19 @@ public class GroovyScriptAssertion extends WsdlMessageAssertion implements Reque
 			super( GroovyScriptAssertion.ID, GroovyScriptAssertion.LABEL, GroovyScriptAssertion.class );
 		}
 
-		@Override
+		
 		public String getCategory()
 		{
 			return AssertionCategoryMapping.SCRIPT_CATEGORY;
 		}
 
-		@Override
+		
 		public Class<? extends WsdlMessageAssertion> getAssertionClassType()
 		{
 			return GroovyScriptAssertion.class;
 		}
 
-		@Override
+		
 		public AssertionListEntry getAssertionListEntry()
 		{
 			return new AssertionListEntry( GroovyScriptAssertion.ID, GroovyScriptAssertion.LABEL,

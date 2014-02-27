@@ -95,7 +95,7 @@ public class SAML2CallbackHandler extends AbstractSAMLCallbackHandler
 		}
 	}
 
-	@Override
+	
 	public void setConfirmationMethod( String confirmationMethodFriendlyName )
 	{
 		if( confirmationMethodFriendlyName.equals( AutomaticSAMLEntry.HOLDER_OF_KEY_CONFIRMATION_METHOD ) )

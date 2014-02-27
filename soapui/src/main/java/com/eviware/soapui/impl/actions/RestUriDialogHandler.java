@@ -98,7 +98,7 @@ public class RestUriDialogHandler
 	{
 		initialKeyListener = new KeyAdapter()
 		{
-			@Override
+			
 			public void keyPressed( KeyEvent e )
 			{
 				resetUriField();
@@ -107,7 +107,7 @@ public class RestUriDialogHandler
 		textField.addKeyListener( initialKeyListener );
 		initialMouseListener = new MouseAdapter()
 		{
-			@Override
+			
 			public void mouseClicked( MouseEvent e )
 			{
 				resetUriField();

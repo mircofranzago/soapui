@@ -31,7 +31,7 @@ public class HttpCompressionRequestFilter extends AbstractRequestFilter
 {
 	private final static Logger log = Logger.getLogger( HttpCompressionRequestFilter.class );
 
-	@Override
+	
 	public void filterAbstractHttpRequest( SubmitContext context, AbstractHttpRequest<?> httpRequest )
 	{
 		Settings settings = httpRequest.getSettings();

@@ -30,19 +30,19 @@ public class RequestToTestCaseDropHandler extends AbstractBeforeAfterModelItemDr
 		super( WsdlRequest.class, WsdlTestCase.class );
 	}
 
-	@Override
+	
 	boolean canCopyAfter( WsdlRequest source, WsdlTestCase target )
 	{
 		return true;
 	}
 
-	@Override
+	
 	boolean canMoveAfter( WsdlRequest source, WsdlTestCase target )
 	{
 		return true;
 	}
 
-	@Override
+	
 	boolean copyAfter( WsdlRequest source, WsdlTestCase target )
 	{
 		return addRequestToTestCase( source, target, -1 );
@@ -72,55 +72,55 @@ public class RequestToTestCaseDropHandler extends AbstractBeforeAfterModelItemDr
 		return ( ( AddRequestToTestCaseAction )action ).addRequest( target, source, index ) != null;
 	}
 
-	@Override
+	
 	boolean moveAfter( WsdlRequest source, WsdlTestCase target )
 	{
 		return addRequestToTestCase( source, target, -1 );
 	}
 
-	@Override
+	
 	String getCopyAfterInfo( WsdlRequest source, WsdlTestCase target )
 	{
 		return "Add Request [" + source.getName() + "] to TestCase [" + target.getName() + "]";
 	}
 
-	@Override
+	
 	String getMoveAfterInfo( WsdlRequest source, WsdlTestCase target )
 	{
 		return getCopyAfterInfo( source, target );
 	}
 
-	@Override
+	
 	boolean canCopyBefore( WsdlRequest source, WsdlTestCase target )
 	{
 		return true;
 	}
 
-	@Override
+	
 	boolean canMoveBefore( WsdlRequest source, WsdlTestCase target )
 	{
 		return true;
 	}
 
-	@Override
+	
 	boolean copyBefore( WsdlRequest source, WsdlTestCase target )
 	{
 		return addRequestToTestCase( source, target, 0 );
 	}
 
-	@Override
+	
 	String getCopyBeforeInfo( WsdlRequest source, WsdlTestCase target )
 	{
 		return getCopyAfterInfo( source, target );
 	}
 
-	@Override
+	
 	String getMoveBeforeInfo( WsdlRequest source, WsdlTestCase target )
 	{
 		return getCopyAfterInfo( source, target );
 	}
 
-	@Override
+	
 	boolean moveBefore( WsdlRequest source, WsdlTestCase target )
 	{
 		return addRequestToTestCase( source, target, 0 );

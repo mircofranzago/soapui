@@ -72,7 +72,7 @@ public class ProPlaceholderStepFactory extends WsdlTestStepFactory
 			return new WsdlTestStepResult( this );
 		}
 
-		@Override
+		
 		public String getDescription()
 		{
 			return description;

@@ -62,7 +62,7 @@ public class WsdlHeaderPart extends MessagePart.HeaderPart
 		return partElementName;
 	}
 
-	@Override
+	
 	public SchemaGlobalElement getPartElement()
 	{
 		return partElement;

@@ -36,7 +36,7 @@ public class ModelItemListMouseListener extends AbstractListMouseListener
 		super( enablePopup );
 	}
 
-	@Override
+	
 	protected ActionList getActionsForRow( JList list, int row )
 	{
 		ModelItem item = ( ModelItem )list.getModel().getElementAt( row );

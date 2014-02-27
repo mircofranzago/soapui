@@ -28,7 +28,7 @@ public class TestStepNode extends DefaultMutableTreeNode
 				add( new SecurityScanNode( sc ) );
 	}
 
-	@Override
+	
 	public String toString()
 	{
 		return testStep.toString();

@@ -260,7 +260,7 @@ public class WsdlTestSuiteRunner extends AbstractTestRunner<WsdlTestSuite, WsdlT
 
 	private class ParallellTestRunListener extends TestRunListenerAdapter
 	{
-		@Override
+		
 		public void afterRun( TestCaseRunner testRunner, TestCaseRunContext runContext )
 		{
 			notifyAfterRunTestCase( testRunner );

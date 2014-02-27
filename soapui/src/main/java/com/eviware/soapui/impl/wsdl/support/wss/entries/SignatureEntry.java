@@ -65,7 +65,7 @@ public class SignatureEntry extends WssEntryBase
 		super.init( config, container, TYPE );
 	}
 
-	@Override
+	
 	protected JComponent buildUI()
 	{
 		SimpleBindingForm form = new SimpleBindingForm( new PresentationModel<SignatureEntry>( this ) );
@@ -116,14 +116,14 @@ public class SignatureEntry extends WssEntryBase
 		return new JScrollPane( form.getPanel() );
 	}
 
-	@Override
+	
 	public void release()
 	{
 		if( wssContainerListener != null )
 			getWssContainer().removeWssContainerListener( wssContainerListener );
 	}
 
-	@Override
+	
 	protected void load( XmlObjectConfigurationReader reader )
 	{
 		crypto = reader.readString( "crypto", null );
@@ -137,7 +137,7 @@ public class SignatureEntry extends WssEntryBase
 		parts = readTableValues( reader, "signaturePart" );
 	}
 
-	@Override
+	
 	protected void save( XmlObjectConfigurationBuilder builder )
 	{
 		builder.add( "crypto", crypto );
@@ -212,7 +212,7 @@ public class SignatureEntry extends WssEntryBase
 		}
 	}
 
-	@Override
+	
 	protected void addPropertyExpansions( PropertyExpansionsResult result )
 	{
 		super.addPropertyExpansions( result );
@@ -295,7 +295,7 @@ public class SignatureEntry extends WssEntryBase
 
 	private final class InternalWssContainerListener extends WssContainerListenerAdapter
 	{
-		@Override
+		
 		public void cryptoUpdated( WssCrypto crypto )
 		{
 			if( crypto.getLabel().equals( getCrypto() ) )

@@ -40,13 +40,13 @@ public class GroovySecurityScanFactory extends AbstractSecurityScanFactory
 		return true;
 	}
 
-	@Override
+	
 	public AbstractSecurityScan buildSecurityScan( TestStep testStep, SecurityScanConfig config, ModelItem parent )
 	{
 		return new GroovySecurityScan( testStep, config, parent, "/groovy_script_scan.gif" );
 	}
 
-	@Override
+	
 	public SecurityScanConfig createNewSecurityScan( String name )
 	{
 		SecurityScanConfig securityCheckConfig = SecurityScanConfig.Factory.newInstance();

@@ -27,7 +27,7 @@ public class RestTestRequestContentView extends RestRequestContentView
 		super( restRequestMessageEditor, restRequest );
 	}
 
-	@Override
+	
 	protected RestParamsTable buildParamsTable()
 	{
 		RestParamsTableModel restTestParamsTableModel = new RestParamsTableModel( super.getRestRequest().getParams() )
@@ -37,7 +37,7 @@ public class RestTestRequestContentView extends RestRequestContentView
 				return 4;
 			}
 
-			@Override
+			
 			public void setValueAt( Object value, int rowIndex, int columnIndex )
 			{
 				RestParamProperty prop = params.getProperty( ( String )getValueAt( rowIndex, 0 ) );
@@ -45,7 +45,7 @@ public class RestTestRequestContentView extends RestRequestContentView
 					prop.setValue( value.toString() );
 			}
 
-			@Override
+			
 			public String getColumnName( int columnIndex )
 			{
 				if( columnIndex == 1 )
@@ -56,7 +56,7 @@ public class RestTestRequestContentView extends RestRequestContentView
 				return super.getColumnName( columnIndex );
 			}
 
-			@Override
+			
 			public boolean isCellEditable( int rowIndex, int columnIndex )
 			{
 				// Only value is editable

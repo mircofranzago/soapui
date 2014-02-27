@@ -50,7 +50,7 @@ public class CompositeHttpRoutePlanner implements HttpRoutePlanner
 		cachedProxySelector = null;
 	}
 
-	@Override
+	
 	public HttpRoute determineRoute( HttpHost target, HttpRequest request, HttpContext context ) throws HttpException
 	{
 		Object proxy = request.getParams().getParameter( ConnRoutePNames.DEFAULT_PROXY );

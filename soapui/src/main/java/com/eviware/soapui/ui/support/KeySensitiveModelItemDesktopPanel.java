@@ -36,14 +36,14 @@ public abstract class KeySensitiveModelItemDesktopPanel<T extends ModelItem> ext
 		this.addKeyListener( this );
 	}
 
-	@Override
+	
 	protected boolean release()
 	{
 		removeKeyListener( this );
 		return super.release();
 	}
 
-	@Override
+	
 	public void keyPressed( KeyEvent e )
 	{
 		switch( e.getKeyCode() )
@@ -58,14 +58,14 @@ public abstract class KeySensitiveModelItemDesktopPanel<T extends ModelItem> ext
 		e.consume();
 	}
 
-	@Override
+	
 	public void keyReleased( KeyEvent e )
 	{
 		// TODO Auto-generated method stub
 
 	}
 
-	@Override
+	
 	public void keyTyped( KeyEvent e )
 	{
 		// TODO Auto-generated method stub

@@ -77,7 +77,7 @@ public class TunnelServlet extends ProxyServlet
 		}
 	}
 
-	@Override
+	
 	public void init( ServletConfig config ) throws ServletException
 	{
 		this.config = config;

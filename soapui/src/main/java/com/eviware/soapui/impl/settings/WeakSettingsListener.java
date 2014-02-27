@@ -37,7 +37,7 @@ public final class WeakSettingsListener implements SettingsListener
 			listenerReference.get().settingChanged( name, newValue, oldValue );
 	}
 
-	@Override
+	
 	public void settingsReloaded()
 	{
 		if( listenerReference.get() != null )

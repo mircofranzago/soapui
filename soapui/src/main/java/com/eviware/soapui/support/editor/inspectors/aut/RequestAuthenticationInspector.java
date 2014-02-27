@@ -78,7 +78,7 @@ public class RequestAuthenticationInspector extends AbstractXmlInspector
 		return mainPanel;
 	}
 
-	@Override
+	
 	public void release()
 	{
 		super.release();
@@ -87,7 +87,7 @@ public class RequestAuthenticationInspector extends AbstractXmlInspector
 			form.getPresentationModel().release();
 	}
 
-	@Override
+	
 	public boolean isEnabledFor( EditorView<XmlDocument> view )
 	{
 		return !view.getViewId().equals( RawXmlEditorFactory.VIEW_ID );

@@ -41,7 +41,7 @@ import com.eviware.soapui.support.types.StringToStringMap;
 public class WsdlPackagingRequestFilter extends AbstractRequestFilter
 {
 
-	@Override
+	
 	public void filterWsdlRequest( SubmitContext context, WsdlRequest request )
 	{
 		ExtendedPostMethod postMethod = ( ExtendedPostMethod )context.getProperty( BaseHttpRequestTransport.HTTP_METHOD );

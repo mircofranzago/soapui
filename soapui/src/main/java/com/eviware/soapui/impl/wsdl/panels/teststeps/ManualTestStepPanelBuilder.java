@@ -31,20 +31,20 @@ public class ManualTestStepPanelBuilder extends EmptyPanelBuilder<ManualTestStep
 	{
 	}
 
-	@Override
+	
 	public Component buildOverviewPanel( ManualTestStep modelItem )
 	{
 		JPropertiesTable<ManualTestStep> table = buildDefaultProperties( modelItem, "Step Properties" );
 		return table;
 	}
 
-	@Override
+	
 	public DesktopPanel buildDesktopPanel( ManualTestStep modelItem )
 	{
 		return new ManualTestStepDesktopPanel( modelItem );
 	}
 
-	@Override
+	
 	public boolean hasDesktopPanel()
 	{
 		return true;

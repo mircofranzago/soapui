@@ -106,19 +106,19 @@ public class WSARequestAssertion extends WsdlMessageAssertion implements Request
 					WsdlMockResponseTestStep.class );
 		}
 
-		@Override
+		
 		public String getCategory()
 		{
 			return AssertionCategoryMapping.STATUS_CATEGORY;
 		}
 
-		@Override
+		
 		public Class<? extends WsdlMessageAssertion> getAssertionClassType()
 		{
 			return WSARequestAssertion.class;
 		}
 
-		@Override
+		
 		public AssertionListEntry getAssertionListEntry()
 		{
 			return new AssertionListEntry( WSARequestAssertion.ID, WSARequestAssertion.LABEL,
@@ -126,7 +126,7 @@ public class WSARequestAssertion extends WsdlMessageAssertion implements Request
 		}
 	}
 
-	@Override
+	
 	protected String internalAssertRequest( MessageExchange messageExchange, SubmitContext context )
 			throws AssertionException
 	{
@@ -149,7 +149,7 @@ public class WSARequestAssertion extends WsdlMessageAssertion implements Request
 		return "Request WS-Addressing is valid";
 	}
 
-	@Override
+	
 	protected String internalAssertResponse( MessageExchange messageExchange, SubmitContext context )
 			throws AssertionException
 	{

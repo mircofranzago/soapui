@@ -115,7 +115,7 @@ public class AMFHeadersInspector extends AbstractXmlInspector implements Propert
 		return headersTable;
 	}
 
-	@Override
+	
 	public void release()
 	{
 		super.release();
@@ -190,7 +190,7 @@ public class AMFHeadersInspector extends AbstractXmlInspector implements Propert
 		}
 	}
 
-	@Override
+	
 	public boolean isEnabledFor( EditorView<XmlDocument> view )
 	{
 		return !view.getViewId().equals( RawXmlEditorFactory.VIEW_ID );

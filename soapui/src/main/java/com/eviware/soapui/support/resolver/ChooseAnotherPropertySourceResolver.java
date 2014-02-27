@@ -79,7 +79,7 @@ public class ChooseAnotherPropertySourceResolver implements Resolver
 		return "Change source property";
 	}
 
-	@Override
+	
 	public String toString()
 	{
 		return getDescription();
@@ -225,7 +225,7 @@ public class ChooseAnotherPropertySourceResolver implements Resolver
 	private class StepComboRenderer extends DefaultListCellRenderer
 	{
 		@SuppressWarnings( "finally" )
-		@Override
+		
 		public Component getListCellRendererComponent( JList list, Object value, int index, boolean isSelected,
 				boolean cellHasFocus )
 		{

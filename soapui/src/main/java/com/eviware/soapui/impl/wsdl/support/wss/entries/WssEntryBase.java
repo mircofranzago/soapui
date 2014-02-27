@@ -165,7 +165,7 @@ public abstract class WssEntryBase implements WssEntry, PropertyExpansionContain
 		this.config = config;
 	}
 
-	@Override
+	
 	public String toString()
 	{
 		return getLabel();
@@ -226,7 +226,7 @@ public abstract class WssEntryBase implements WssEntry, PropertyExpansionContain
 
 	protected class KeyIdentifierTypeRenderer extends DefaultListCellRenderer
 	{
-		@Override
+		
 		public Component getListCellRendererComponent( JList list, Object value, int index, boolean isSelected,
 				boolean cellHasFocus )
 		{

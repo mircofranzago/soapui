@@ -25,19 +25,19 @@ public class InterfaceToProjectDropHandler extends AbstractAfterModelItemDropHan
 		super( ( Class<AbstractInterface<?>> )( Class )AbstractInterface.class, WsdlProject.class );
 	}
 
-	@Override
+	
 	boolean canCopyAfter( AbstractInterface<?> source, WsdlProject target )
 	{
 		return source.getProject() != target && target.isOpen();
 	}
 
-	@Override
+	
 	boolean canMoveAfter( AbstractInterface<?> source, WsdlProject target )
 	{
 		return source.getProject() != target && target.isOpen();
 	}
 
-	@Override
+	
 	boolean copyAfter( AbstractInterface<?> source, WsdlProject target )
 	{
 		AbstractInterface<?> targetInterface = target.getInterfaceByTechnicalId( source.getTechnicalId() );
@@ -58,7 +58,7 @@ public class InterfaceToProjectDropHandler extends AbstractAfterModelItemDropHan
 		return true;
 	}
 
-	@Override
+	
 	boolean moveAfter( AbstractInterface<?> source, WsdlProject target )
 	{
 		AbstractInterface<?> targetInterface = target.getInterfaceByTechnicalId( source.getTechnicalId() );
@@ -102,13 +102,13 @@ public class InterfaceToProjectDropHandler extends AbstractAfterModelItemDropHan
 		return true;
 	}
 
-	@Override
+	
 	String getCopyAfterInfo( AbstractInterface<?> source, WsdlProject target )
 	{
 		return "Copy Interface [" + source.getName() + "] to Project [" + target.getName() + "]";
 	}
 
-	@Override
+	
 	String getMoveAfterInfo( AbstractInterface<?> source, WsdlProject target )
 	{
 		return "Move Interface [" + source.getName() + "] to Project [" + target.getName() + "]";

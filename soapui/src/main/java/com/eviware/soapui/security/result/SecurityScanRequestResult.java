@@ -173,20 +173,20 @@ public class SecurityScanRequestResult implements SecurityResult
 		timeTaken = ( ( System.nanoTime() - startTime ) / 1000000 );
 	}
 
-	@Override
+	
 	public String getResultType()
 	{
 		return TYPE;
 	}
 
-	@Override
+	
 	public ResultStatus getExecutionProgressStatus()
 	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
+	
 	public ResultStatus getLogIconStatus()
 	{
 		// TODO Auto-generated method stub

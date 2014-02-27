@@ -31,7 +31,7 @@ public class AMFMessageExchange extends AbstractNonHttpMessageExchange<AMFReques
 		this.response = response;
 	}
 
-	@Override
+	
 	public Response getResponse()
 	{
 		return response;

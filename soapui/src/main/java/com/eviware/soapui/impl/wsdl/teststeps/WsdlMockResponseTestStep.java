@@ -168,7 +168,7 @@ public class WsdlMockResponseTestStep extends WsdlTestStepWithProperties impleme
 		testCase.addPropertyChangeListener( this );
 	}
 
-	@Override
+	
 	public void afterLoad()
 	{
 		super.afterLoad();
@@ -200,7 +200,7 @@ public class WsdlMockResponseTestStep extends WsdlTestStepWithProperties impleme
 		}, this ) );
 	}
 
-	@Override
+	
 	public ImageIcon getIcon()
 	{
 		if( forLoadTest || UISupport.isHeadless() )
@@ -319,7 +319,7 @@ public class WsdlMockResponseTestStep extends WsdlTestStepWithProperties impleme
 		assertionsSupport.refresh();
 	}
 
-	@Override
+	
 	public boolean cancel()
 	{
 		if( mockRunner != null )
@@ -336,7 +336,7 @@ public class WsdlMockResponseTestStep extends WsdlTestStepWithProperties impleme
 		return true;
 	}
 
-	@Override
+	
 	public void prepare( TestCaseRunner testRunner, TestCaseRunContext testRunContext ) throws Exception
 	{
 		super.prepare( testRunner, testRunContext );
@@ -574,7 +574,7 @@ public class WsdlMockResponseTestStep extends WsdlTestStepWithProperties impleme
 		}
 	}
 
-	@Override
+	
 	public void finish( TestCaseRunner testRunner, TestCaseRunContext testRunContext )
 	{
 		if( mockRunListener != null )
@@ -701,7 +701,7 @@ public class WsdlMockResponseTestStep extends WsdlTestStepWithProperties impleme
 			wait( timeout );
 		}
 
-		@Override
+		
 		public void onMockRunnerStart( MockRunner mockRunner )
 		{
 			waiting = false;
@@ -1096,7 +1096,7 @@ public class WsdlMockResponseTestStep extends WsdlTestStepWithProperties impleme
 		return this;
 	}
 
-	@Override
+	
 	public void setName( String name )
 	{
 		super.setName( name );
@@ -1160,7 +1160,7 @@ public class WsdlMockResponseTestStep extends WsdlTestStepWithProperties impleme
 		}
 	}
 
-	@Override
+	
 	public void release()
 	{
 		super.release();
@@ -1202,7 +1202,7 @@ public class WsdlMockResponseTestStep extends WsdlTestStepWithProperties impleme
 		return AssertableType.REQUEST;
 	}
 
-	@Override
+	
 	public Collection<Interface> getRequiredInterfaces()
 	{
 		ArrayList<Interface> result = new ArrayList<Interface>();
@@ -1220,7 +1220,7 @@ public class WsdlMockResponseTestStep extends WsdlTestStepWithProperties impleme
 		return "Request";
 	}
 
-	@Override
+	
 	public void beforeSave()
 	{
 		super.beforeSave();
@@ -1244,7 +1244,7 @@ public class WsdlMockResponseTestStep extends WsdlTestStepWithProperties impleme
 		notifyPropertyChanged( TIMEOUT_PROPERTY, old, timeout );
 	}
 
-	@Override
+	
 	public boolean dependsOn( AbstractWsdlModelItem<?> modelItem )
 	{
 		return modelItem == getOperation().getInterface();
@@ -1273,7 +1273,7 @@ public class WsdlMockResponseTestStep extends WsdlTestStepWithProperties impleme
 			}
 		}
 
-		@Override
+		
 		public void operationUpdated( Operation operation )
 		{
 			if( operation == getOperation() )
@@ -1299,7 +1299,7 @@ public class WsdlMockResponseTestStep extends WsdlTestStepWithProperties impleme
 		return new ArrayList<TestAssertion>( assertionsSupport.getAssertionList() );
 	}
 
-	@Override
+	
 	public List<? extends ModelItem> getChildren()
 	{
 		return assertionsSupport.getAssertionList();
@@ -1368,7 +1368,7 @@ public class WsdlMockResponseTestStep extends WsdlTestStepWithProperties impleme
 		return getOperation().createRequest( true );
 	}
 
-	@Override
+	
 	public void resolve( ResolveContext<?> context )
 	{
 		super.resolve( context );
@@ -1383,7 +1383,7 @@ public class WsdlMockResponseTestStep extends WsdlTestStepWithProperties impleme
 					new RemoveTestStepResolver( this ), new ImportInterfaceResolver( this )
 					{
 
-						@Override
+						
 						protected boolean update()
 						{
 							initMockObjects( getTestCase() );
@@ -1394,7 +1394,7 @@ public class WsdlMockResponseTestStep extends WsdlTestStepWithProperties impleme
 					}, new ChangeOperationResolver( this, "Operation" )
 					{
 
-						@Override
+						
 						public boolean update()
 						{
 							WsdlOperation operation = ( WsdlOperation )getSelectedOperation();
@@ -1459,7 +1459,7 @@ public class WsdlMockResponseTestStep extends WsdlTestStepWithProperties impleme
 
 	private class InternalTestRunListener extends TestRunListenerAdapter
 	{
-		@Override
+		
 		public void beforeStep( TestCaseRunner testRunner, TestCaseRunContext runContext, TestStep testStep )
 		{
 			if( runContext.getCurrentStep() == startTestStep )

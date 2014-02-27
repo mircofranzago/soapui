@@ -21,7 +21,7 @@ public class RSyntaxTextAreaPropertyExpansionTarget extends AbstractPropertyExpa
 		this.textField = textField;
 	}
 
-	@Override
+	
 	public void insertPropertyExpansion( PropertyExpansion expansion, Point pt )
 	{
 		int pos = pt == null ? -1 : textField.viewToModel( pt );
@@ -45,13 +45,13 @@ public class RSyntaxTextAreaPropertyExpansionTarget extends AbstractPropertyExpa
 		}
 	}
 
-	@Override
+	
 	public String getValueForCreation()
 	{
 		return textField.getSelectedText();
 	}
 
-	@Override
+	
 	public String getNameForCreation()
 	{
 		return textField.getName();

@@ -47,7 +47,7 @@ public class CrossSiteScriptingTest extends AbstractSecurityTestCaseWithMockServ
 		securityCheckName = CrossSiteScriptingScan.NAME;
 	}
 
-	@Override
+	
 	protected void addSecurityScanConfig( SecurityScanConfig securityScanConfig )
 	{
 		SoapUI.getSoapUICore().getSecurityScanRegistry().getFactory( securityCheckType )

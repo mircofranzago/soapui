@@ -42,13 +42,13 @@ public class SQLInjectionScanFactory extends AbstractSecurityScanFactory
 				|| testStep instanceof HttpTestRequestStep;
 	}
 
-	@Override
+	
 	public AbstractSecurityScan buildSecurityScan( TestStep testStep, SecurityScanConfig config, ModelItem parent )
 	{
 		return new SQLInjectionScan( testStep, config, parent, "/sql_injection_scan.gif" );
 	}
 
-	@Override
+	
 	public SecurityScanConfig createNewSecurityScan( String name )
 	{
 		SecurityScanConfig securityCheckConfig = SecurityScanConfig.Factory.newInstance();

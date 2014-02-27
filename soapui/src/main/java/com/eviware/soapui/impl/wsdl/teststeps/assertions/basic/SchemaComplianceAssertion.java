@@ -81,7 +81,7 @@ public class SchemaComplianceAssertion extends WsdlMessageAssertion implements R
 		definition = reader.readString( "definition", null );
 	}
 
-	@Override
+	
 	public void prepare( TestCaseRunner testRunner, TestCaseRunContext testRunContext ) throws Exception
 	{
 		super.prepare( testRunner, testRunContext );
@@ -118,7 +118,7 @@ public class SchemaComplianceAssertion extends WsdlMessageAssertion implements R
 		throw new AssertionException( new AssertionError( "Unknown MessageExchange type" ) );
 	}
 
-	@Override
+	
 	protected String internalAssertProperty( TestPropertyHolder source, String propertyName,
 			MessageExchange messageExchange, SubmitContext context ) throws AssertionException
 	{
@@ -329,13 +329,13 @@ public class SchemaComplianceAssertion extends WsdlMessageAssertion implements R
 			super( SchemaComplianceAssertion.ID, SchemaComplianceAssertion.LABEL, SchemaComplianceAssertion.class );
 		}
 
-		@Override
+		
 		public String getCategory()
 		{
 			return AssertionCategoryMapping.STATUS_CATEGORY;
 		}
 
-		@Override
+		
 		public boolean canAssert( Assertable assertable )
 		{
 			try
@@ -350,13 +350,13 @@ public class SchemaComplianceAssertion extends WsdlMessageAssertion implements R
 			}
 		}
 
-		@Override
+		
 		public Class<? extends WsdlMessageAssertion> getAssertionClassType()
 		{
 			return SchemaComplianceAssertion.class;
 		}
 
-		@Override
+		
 		public AssertionListEntry getAssertionListEntry()
 		{
 			return new AssertionListEntry( SchemaComplianceAssertion.ID, SchemaComplianceAssertion.LABEL,

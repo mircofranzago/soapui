@@ -34,7 +34,7 @@ public class CaptureInputStream extends FilterInputStream
 		super( in );
 	}
 
-	@Override
+	
 	public int read() throws IOException
 	{
 		if( inCapture )
@@ -52,7 +52,7 @@ public class CaptureInputStream extends FilterInputStream
 		}
 	}
 
-	@Override
+	
 	public int read( byte[] b ) throws IOException
 	{
 		if( inCapture )
@@ -82,7 +82,7 @@ public class CaptureInputStream extends FilterInputStream
 		}
 	}
 
-	@Override
+	
 	public int read( byte[] b, int off, int len ) throws IOException
 	{
 		if( inCapture )

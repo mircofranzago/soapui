@@ -70,7 +70,7 @@ public class HttpHtmlMessageExchangeResponseView extends AbstractXmlEditorView<H
 		return panel;
 	}
 
-	@Override
+	
 	public void release()
 	{
 		super.release();
@@ -246,7 +246,7 @@ public class HttpHtmlMessageExchangeResponseView extends AbstractXmlEditorView<H
 		}
 	}
 
-	@Override
+	
 	public void setXml( String xml )
 	{
 	}

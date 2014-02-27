@@ -350,7 +350,7 @@ public class WsdlTestSuite extends AbstractTestPropertyHolderWsdlModelItem<TestS
 		return testCases.indexOf( testCase );
 	}
 
-	@Override
+	
 	public void release()
 	{
 		super.release();
@@ -528,7 +528,7 @@ public class WsdlTestSuite extends AbstractTestPropertyHolderWsdlModelItem<TestS
 		return tearDownScriptEngine.run();
 	}
 
-	@Override
+	
 	public void setName( String name )
 	{
 		String oldLabel = getLabel();

@@ -274,7 +274,7 @@ public class RestTestRequest extends RestRequest implements RestTestRequestInter
 		return currentStatus;
 	}
 
-	@Override
+	
 	public ImageIcon getIcon()
 	{
 		if( forLoadTest || UISupport.isHeadless() )
@@ -322,7 +322,7 @@ public class RestTestRequest extends RestRequest implements RestTestRequestInter
 		assertionsSupport.refresh();
 	}
 
-	@Override
+	
 	public void release()
 	{
 		super.release();
@@ -351,7 +351,7 @@ public class RestTestRequest extends RestRequest implements RestTestRequestInter
 		return getOperation() == null ? null : getOperation().getInterface();
 	}
 
-	@Override
+	
 	public RestResource getOperation()
 	{
 		return testStep instanceof RestTestRequestStepInterface ? ( ( RestTestRequestStepInterface )testStep )
@@ -365,7 +365,7 @@ public class RestTestRequest extends RestRequest implements RestTestRequestInter
 			super( ( RestTestRequest )modelItem, "/rest_request.gif", "/exec_rest_request", 4, "gif" );
 		}
 
-		@Override
+		
 		public boolean beforeSubmit( Submit submit, SubmitContext context )
 		{
 			if( SoapUI.getTestMonitor() != null
@@ -376,7 +376,7 @@ public class RestTestRequest extends RestRequest implements RestTestRequestInter
 			return super.beforeSubmit( submit, context );
 		}
 
-		@Override
+		
 		public void afterSubmit( Submit submit, SubmitContext context )
 		{
 			if( submit.getRequest() == getTarget() )

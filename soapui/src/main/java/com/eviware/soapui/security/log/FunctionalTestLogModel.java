@@ -47,7 +47,7 @@ public class FunctionalTestLogModel extends AbstractListModel
 		}
 	}
 
-	@Override
+	
 	public int getSize()
 	{
 		return items.size();

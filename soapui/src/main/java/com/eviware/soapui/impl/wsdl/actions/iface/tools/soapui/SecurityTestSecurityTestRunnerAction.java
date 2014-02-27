@@ -27,7 +27,7 @@ public class SecurityTestSecurityTestRunnerAction extends AbstractSoapUIAction<S
 		super( "Launch SecurityTestRunner", "Launch command-line SecurityTestRunner for this SecurityTest" );
 	}
 
-	@Override
+	
 	public void perform( SecurityTest target, Object param )
 	{
 		SoapUIAction<ModelItem> action = SoapUI.getActionRegistry().getAction( SecurityTestRunnerAction.SOAPUI_ACTION_ID );

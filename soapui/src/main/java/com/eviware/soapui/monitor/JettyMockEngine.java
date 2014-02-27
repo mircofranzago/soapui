@@ -284,21 +284,21 @@ public class JettyMockEngine implements MockEngine
 	{
 		private Set<HttpConnection> connections = new HashSet<HttpConnection>();
 
-		@Override
+		
 		protected void connectionClosed( HttpConnection arg0 )
 		{
 			super.connectionClosed( arg0 );
 			connections.remove( arg0 );
 		}
 
-		@Override
+		
 		protected void connectionOpened( HttpConnection arg0 )
 		{
 			super.connectionOpened( arg0 );
 			connections.add( arg0 );
 		}
 
-		@Override
+		
 		protected Connection newConnection( SocketChannel socketChannel, SelectChannelEndPoint selectChannelEndPoint )
 		{
 			return new SoapUIHttpConnection( SoapUIConnector.this, selectChannelEndPoint, getServer() );
@@ -339,7 +339,7 @@ public class JettyMockEngine implements MockEngine
 			super( connector, endPoint, server );
 		}
 
-		@Override
+		
 		public ServletInputStream getInputStream()
 		{
 			if( SoapUI.getSettings().getBoolean( HttpSettings.ENABLE_MOCK_WIRE_LOG ) )
@@ -358,7 +358,7 @@ public class JettyMockEngine implements MockEngine
 			return bufferedServletInputStream;
 		}
 
-		@Override
+		
 		public ServletOutputStream getOutputStream()
 		{
 			if( SoapUI.getSettings().getBoolean( HttpSettings.ENABLE_MOCK_WIRE_LOG ) )

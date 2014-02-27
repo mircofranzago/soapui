@@ -72,7 +72,7 @@ public class KeyMaterialWssCrypto implements WssCrypto
 		sourceProperty = new BeanPathPropertySupport( ( AbstractWsdlModelItem<?> )container.getModelItem(), config,
 				"source" )
 		{
-			@Override
+			
 			protected void notifyUpdate( String value, String old )
 			{
 				getWssContainer().fireCryptoUpdated( KeyMaterialWssCrypto.this );
@@ -304,7 +304,7 @@ public class KeyMaterialWssCrypto implements WssCrypto
 			super( properties );
 		}
 
-		@Override
+		
 		public KeyStore load( InputStream input, String storepass, String provider, String type )
 				throws CredentialException
 		{
@@ -323,7 +323,7 @@ public class KeyMaterialWssCrypto implements WssCrypto
 				return super.load( input, storepass, provider, type );
 		}
 
-		@Override
+		
 		public String getCryptoProvider()
 		{
 			return config.getCryptoProvider();
@@ -342,7 +342,7 @@ public class KeyMaterialWssCrypto implements WssCrypto
 		getWssContainer().fireCryptoUpdated( this );
 	}
 
-	@Override
+	
 	public CryptoType getType()
 	{
 		String typeConfig = config.getType();

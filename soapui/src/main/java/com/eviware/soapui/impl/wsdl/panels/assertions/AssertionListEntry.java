@@ -23,19 +23,19 @@ public class AssertionListEntry implements Comparable<AssertionListEntry>
 		return description;
 	}
 
-	@Override
+	
 	public String toString()
 	{
 		return name + " " + description;
 	}
 
-	@Override
+	
 	public int hashCode()
 	{
 		return name.length() + description.length();
 	}
 
-	@Override
+	
 	public int compareTo( AssertionListEntry o )
 	{
 		return name.compareToIgnoreCase( o.getName() );

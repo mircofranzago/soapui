@@ -36,7 +36,7 @@ public class JHyperlinkLabel extends JLabel
 		addMouseListener( new HyperlinkLabelMouseAdapter() );
 	}
 
-	@Override
+	
 	protected void paintComponent( Graphics g )
 	{
 		super.paintComponent( g );
@@ -55,7 +55,7 @@ public class JHyperlinkLabel extends JLabel
 
 	public class HyperlinkLabelMouseAdapter extends MouseAdapter
 	{
-		@Override
+		
 		public void mouseClicked( MouseEvent e )
 		{
 			Tools.openURL( getText() );

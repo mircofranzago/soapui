@@ -32,7 +32,7 @@ public class MockResponseStepPanelBuilder extends EmptyPanelBuilder<WsdlMockResp
 		return new WsdlMockResponseStepDesktopPanel( mockResponseStep );
 	}
 
-	@Override
+	
 	public boolean hasDesktopPanel()
 	{
 		return true;

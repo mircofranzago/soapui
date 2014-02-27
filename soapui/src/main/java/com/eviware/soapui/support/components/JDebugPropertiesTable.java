@@ -254,7 +254,7 @@ public class JDebugPropertiesTable<T>
 				return tableModel.getPropertyDescriptorAt( row ).getCellEditor();
 		}
 
-		@Override
+		
 		public Component prepareRenderer( TableCellRenderer renderer, int row, int column )
 		{
 			Component defaultRenderer = super.prepareRenderer( renderer, row, column );
@@ -262,7 +262,7 @@ public class JDebugPropertiesTable<T>
 			return defaultRenderer;
 		}
 
-		@Override
+		
 		public boolean getShowVerticalLines()
 		{
 			return UISupport.isMac() ? false : super.getShowVerticalLines();

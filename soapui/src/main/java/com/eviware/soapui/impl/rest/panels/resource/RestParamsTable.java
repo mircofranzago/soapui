@@ -91,7 +91,7 @@ public class RestParamsTable extends JPanel
 		paramsTable = new JTable( paramsTableModel )
 		{
 
-			@Override
+			
 			public Component prepareRenderer( TableCellRenderer renderer, int row, int column )
 			{
 				Component defaultRenderer = super.prepareRenderer( renderer, row, column );
@@ -102,7 +102,7 @@ public class RestParamsTable extends JPanel
 				return defaultRenderer;
 			}
 
-			@Override
+			
 			public void removeEditor()
 			{
 				TableCellEditor editor = getCellEditor();
@@ -116,7 +116,7 @@ public class RestParamsTable extends JPanel
 				}
 			}
 
-			@Override
+			
 			public Component prepareEditor( TableCellEditor editor, int row, int column )
 			{
 				Component component = super.prepareEditor( editor, row, column );
@@ -255,7 +255,7 @@ public class RestParamsTable extends JPanel
 		}
 	}
 
-	@Override
+	
 	public synchronized void addKeyListener( KeyListener l )
 	{
 		super.addKeyListener( l );

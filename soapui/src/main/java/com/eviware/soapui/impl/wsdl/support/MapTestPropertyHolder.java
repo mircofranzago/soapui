@@ -246,13 +246,13 @@ public class MapTestPropertyHolder implements MutableTestPropertyHolder
 			return null;
 		}
 
-		@Override
+		
 		public boolean isRequestPart()
 		{
 			return false;
 		}
 
-		@Override
+		
 		public SchemaType getSchemaType()
 		{
 			return XmlBeans.getBuiltinTypeSystem().findType( getType() );

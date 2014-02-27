@@ -257,7 +257,7 @@ public class SwingDialogs implements XDialogs
 			SwingUtilities.invokeLater( new Runnable()
 			{
 
-				@Override
+				
 				public void run()
 				{
 					JComponent component = ( JComponent )e.getComponent();

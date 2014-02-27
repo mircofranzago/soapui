@@ -109,7 +109,7 @@ public class RestRequestParamsPropertyHolder implements RestParamsPropertyHolder
 		methodParams.addParameter( prop );
 	}
 
-	@Override
+	
 	public void setParameterLocation( RestParamProperty parameter, NewRestResourceActionBase.ParamLocation newLocation )
 	{
 		if (newLocation == parameter.getParamLocation())
@@ -669,13 +669,13 @@ public class RestRequestParamsPropertyHolder implements RestParamsPropertyHolder
 			overriddenProp.setStyle( style );
 		}
 
-		@Override
+		
 		public NewRestResourceActionBase.ParamLocation getParamLocation()
 		{
 			return overriddenProp.getParamLocation();
 		}
 
-		@Override
+		
 		public void setParamLocation( NewRestResourceActionBase.ParamLocation paramLocation )
 		{
 			overriddenProp.setParamLocation( paramLocation );
@@ -698,25 +698,25 @@ public class RestRequestParamsPropertyHolder implements RestParamsPropertyHolder
 			propertySupport = null;
 		}
 
-		@Override
+		
 		public String getPath()
 		{
 			return overriddenProp.getPath();
 		}
 
-		@Override
+		
 		public void setPath( String path )
 		{
 			overriddenProp.setPath( path );
 		}
 
-		@Override
+		
 		public boolean isRequestPart()
 		{
 			return false;
 		}
 
-		@Override
+		
 		public SchemaType getSchemaType()
 		{
 			return overriddenProp.getSchemaType();

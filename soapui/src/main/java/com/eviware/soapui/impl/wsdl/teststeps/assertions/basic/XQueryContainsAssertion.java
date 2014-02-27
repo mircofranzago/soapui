@@ -636,7 +636,7 @@ public class XQueryContainsAssertion extends WsdlMessageAssertion implements Req
 		}
 	}
 
-	@Override
+	
 	protected String internalAssertRequest( MessageExchange messageExchange, SubmitContext context )
 			throws AssertionException
 	{
@@ -690,26 +690,26 @@ public class XQueryContainsAssertion extends WsdlMessageAssertion implements Req
 			super( XQueryContainsAssertion.ID, XQueryContainsAssertion.LABEL, XQueryContainsAssertion.class );
 		}
 
-		@Override
+		
 		public String getCategory()
 		{
 			return AssertionCategoryMapping.VALIDATE_RESPONSE_CONTENT_CATEGORY;
 		}
 
-		@Override
+		
 		public Class<? extends WsdlMessageAssertion> getAssertionClassType()
 		{
 			return XQueryContainsAssertion.class;
 		}
 
-		@Override
+		
 		public AssertionListEntry getAssertionListEntry()
 		{
 			return new AssertionListEntry( XQueryContainsAssertion.ID, XQueryContainsAssertion.LABEL,
 					XQueryContainsAssertion.DESCRIPTION );
 		}
 
-		@Override
+		
 		public boolean canAssert( TestPropertyHolder modelItem, String property )
 		{
 			if( !modelItem.getProperty( property ).getSchemaType().isPrimitiveType() )

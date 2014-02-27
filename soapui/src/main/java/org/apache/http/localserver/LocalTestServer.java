@@ -302,7 +302,7 @@ public class LocalTestServer
 		}
 	}
 
-	@Override
+	
 	public String toString()
 	{
 		ServerSocket ssock = servicedSocket; // avoid synchronization
@@ -344,7 +344,7 @@ public class LocalTestServer
 			super();
 		}
 
-		@Override
+		
 		public void run()
 		{
 			try
@@ -409,7 +409,7 @@ public class LocalTestServer
 			this.conn = conn;
 		}
 
-		@Override
+		
 		public void run()
 		{
 			HttpContext context = new BasicHttpContext();

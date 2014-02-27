@@ -53,7 +53,7 @@ public class SecurityTreeCellRender implements TreeCellRenderer
 	//	Color noSecurable = new Color( 102, 102, 102 );
 	private boolean released;
 
-	@Override
+	
 	public Component getTreeCellRendererComponent( JTree arg0, Object node, boolean sel, boolean exp, boolean leaf,
 			int arg5, boolean arg6 )
 	{
@@ -253,7 +253,7 @@ public class SecurityTreeCellRender implements TreeCellRenderer
 			return testStep;
 		}
 
-		@Override
+		
 		public void propertyChange( PropertyChangeEvent arg0 )
 		{
 			label.setIcon( testStep.getIcon() );
@@ -262,7 +262,7 @@ public class SecurityTreeCellRender implements TreeCellRenderer
 			( ( DefaultTreeModel )tree.getModel() ).nodeChanged( node );
 		}
 
-		@Override
+		
 		public void setExpandedIcon( boolean exp )
 		{
 			if( securityTest.getSecurityScansMap().get( testStep.getId() ) == null
@@ -282,7 +282,7 @@ public class SecurityTreeCellRender implements TreeCellRenderer
 				expandCollapseBtn.setIcon( collapsed );
 		}
 
-		@Override
+		
 		public void updateLabel()
 		{
 			if( AbstractSecurityScan.isSecurable( testStep ) )
@@ -410,21 +410,21 @@ public class SecurityTreeCellRender implements TreeCellRenderer
 			}
 		}
 
-		@Override
+		
 		public void propertyChange( PropertyChangeEvent arg0 )
 		{
 			label.setEnabled( !securityCheck.isDisabled() );
 			( ( DefaultTreeModel )tree.getModel() ).nodeChanged( node );
 		}
 
-		@Override
+		
 		public void setExpandedIcon( boolean exp )
 		{
 			// TODO Auto-generated method stub
 
 		}
 
-		@Override
+		
 		public void updateLabel()
 		{
 			label.setEnabled( !securityCheck.isDisabled() );

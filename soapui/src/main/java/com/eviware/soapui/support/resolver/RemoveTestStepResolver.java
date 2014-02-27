@@ -26,7 +26,7 @@ public class RemoveTestStepResolver implements Resolver
 		this.testStep = testStep;
 	}
 
-	@Override
+	
 	public String toString()
 	{
 		return getDescription();

@@ -61,7 +61,7 @@ public class GroovyEditorComponent extends JPanel implements PropertyChangeListe
 		return editor;
 	}
 
-	@Override
+	
 	public void setEnabled( boolean enabled )
 	{
 		super.setEnabled( enabled );

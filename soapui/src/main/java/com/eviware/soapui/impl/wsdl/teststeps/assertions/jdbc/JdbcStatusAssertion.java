@@ -40,7 +40,7 @@ public class JdbcStatusAssertion extends WsdlMessageAssertion implements Respons
 		super( assertionConfig, assertable, false, false, false, true );
 	}
 
-	@Override
+	
 	protected String internalAssertResponse( MessageExchange messageExchange, SubmitContext context )
 			throws AssertionException
 	{
@@ -54,7 +54,7 @@ public class JdbcStatusAssertion extends WsdlMessageAssertion implements Respons
 		return "JDBC Status OK";
 	}
 
-	@Override
+	
 	protected String internalAssertRequest( MessageExchange messageExchange, SubmitContext context )
 			throws AssertionException
 	{
@@ -74,25 +74,25 @@ public class JdbcStatusAssertion extends WsdlMessageAssertion implements Respons
 			super( JdbcStatusAssertion.ID, JdbcStatusAssertion.LABEL, JdbcStatusAssertion.class, WsdlRequest.class );
 		}
 
-		@Override
+		
 		public String getCategory()
 		{
 			return AssertionCategoryMapping.JDBC_CATEGORY;
 		}
 
-		@Override
+		
 		public boolean canAssert( Assertable assertable )
 		{
 			return assertable instanceof JdbcRequestTestStep;
 		}
 
-		@Override
+		
 		public Class<? extends WsdlMessageAssertion> getAssertionClassType()
 		{
 			return JdbcStatusAssertion.class;
 		}
 
-		@Override
+		
 		public AssertionListEntry getAssertionListEntry()
 		{
 			return new AssertionListEntry( JdbcStatusAssertion.ID, JdbcStatusAssertion.LABEL,

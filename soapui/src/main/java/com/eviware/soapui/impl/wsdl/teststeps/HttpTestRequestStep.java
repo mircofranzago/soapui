@@ -111,7 +111,7 @@ public class HttpTestRequestStep extends WsdlTestStepWithProperties implements H
 		// init properties
 		addProperty( new TestStepBeanProperty( "Request", false, testRequest, "requestContent", this, true )
 		{
-			@Override
+			
 			public String getDefaultValue()
 			{
 				return createDefaultRequestContent();
@@ -121,7 +121,7 @@ public class HttpTestRequestStep extends WsdlTestStepWithProperties implements H
 		addProperty( new TestStepBeanProperty( WsdlTestStepWithProperties.RESPONSE_AS_XML, true, testRequest,
 				"responseContentAsXml", this )
 		{
-			@Override
+			
 			public String getDefaultValue()
 			{
 				return createDefaultResponseXmlContent();
@@ -130,7 +130,7 @@ public class HttpTestRequestStep extends WsdlTestStepWithProperties implements H
 
 		addProperty( new TestStepBeanProperty( "Response", true, testRequest, "responseContentAsString", this )
 		{
-			@Override
+			
 			public String getDefaultValue()
 			{
 				return createDefaultRawResponseContent();
@@ -139,7 +139,7 @@ public class HttpTestRequestStep extends WsdlTestStepWithProperties implements H
 
 		addProperty( new DefaultTestStepProperty( "RawRequest", true, this )
 		{
-			@Override
+			
 			public String getValue()
 			{
 				HttpResponse response = testRequest.getResponse();
@@ -173,7 +173,7 @@ public class HttpTestRequestStep extends WsdlTestStepWithProperties implements H
 		return httpRequestConfig;
 	}
 
-	@Override
+	
 	public WsdlTestStep clone( WsdlTestCase targetTestCase, String name )
 	{
 		beforeSave();
@@ -193,7 +193,7 @@ public class HttpTestRequestStep extends WsdlTestStepWithProperties implements H
 		return result;
 	}
 
-	@Override
+	
 	public void release()
 	{
 		super.release();
@@ -206,7 +206,7 @@ public class HttpTestRequestStep extends WsdlTestStepWithProperties implements H
 		}
 	}
 
-	@Override
+	
 	public void resetConfigOnMove( TestStepConfig config )
 	{
 		super.resetConfigOnMove( config );
@@ -215,7 +215,7 @@ public class HttpTestRequestStep extends WsdlTestStepWithProperties implements H
 		testRequest.updateConfig( httpRequestConfig );
 	}
 
-	@Override
+	
 	public ImageIcon getIcon()
 	{
 		return testRequest == null ? null : testRequest.getIcon();
@@ -226,7 +226,7 @@ public class HttpTestRequestStep extends WsdlTestStepWithProperties implements H
 		return testRequest;
 	}
 
-	@Override
+	
 	public void setName( String name )
 	{
 		super.setName( name );
@@ -424,7 +424,7 @@ public class HttpTestRequestStep extends WsdlTestStepWithProperties implements H
 		return testRequest == null ? 0 : testRequest.getAssertionCount();
 	}
 
-	@Override
+	
 	public boolean cancel()
 	{
 		if( submit == null )
@@ -435,13 +435,13 @@ public class HttpTestRequestStep extends WsdlTestStepWithProperties implements H
 		return true;
 	}
 
-	@Override
+	
 	public boolean dependsOn( AbstractWsdlModelItem<?> modelItem )
 	{
 		return false;
 	}
 
-	@Override
+	
 	public void beforeSave()
 	{
 		super.beforeSave();
@@ -450,13 +450,13 @@ public class HttpTestRequestStep extends WsdlTestStepWithProperties implements H
 			testRequest.beforeSave();
 	}
 
-	@Override
+	
 	public String getDescription()
 	{
 		return testRequest == null ? "<missing>" : testRequest.getDescription();
 	}
 
-	@Override
+	
 	public void setDescription( String description )
 	{
 		if( testRequest != null )
@@ -464,7 +464,7 @@ public class HttpTestRequestStep extends WsdlTestStepWithProperties implements H
 	}
 
 	@SuppressWarnings( "unchecked" )
-	@Override
+	
 	public List<? extends ModelItem> getChildren()
 	{
 		return testRequest == null ? Collections.EMPTY_LIST : testRequest.getAssertionList();
@@ -620,7 +620,7 @@ public class HttpTestRequestStep extends WsdlTestStepWithProperties implements H
 		return testRequest.getAssertions();
 	}
 
-	@Override
+	
 	public void prepare( TestCaseRunner testRunner, TestCaseRunContext testRunContext ) throws Exception
 	{
 		super.prepare( testRunner, testRunContext );
@@ -655,7 +655,7 @@ public class HttpTestRequestStep extends WsdlTestStepWithProperties implements H
 		testRequest.resolve( context );
 	}
 
-	@Override
+	
 	protected void addExternalDependencies( List<ExternalDependency> dependencies )
 	{
 		super.addExternalDependencies( dependencies );
@@ -664,31 +664,31 @@ public class HttpTestRequestStep extends WsdlTestStepWithProperties implements H
 
 	private class InternalTestPropertyListener extends TestPropertyListenerAdapter
 	{
-		@Override
+		
 		public void propertyAdded( String name )
 		{
 			HttpTestRequestStep.this.addProperty( new RestTestStepProperty( getTestRequest().getProperty( name ) ), true );
 		}
 
-		@Override
+		
 		public void propertyRemoved( String name )
 		{
 			HttpTestRequestStep.this.deleteProperty( name, true );
 		}
 
-		@Override
+		
 		public void propertyRenamed( String oldName, String newName )
 		{
 			HttpTestRequestStep.this.propertyRenamed( oldName );
 		}
 
-		@Override
+		
 		public void propertyValueChanged( String name, String oldValue, String newValue )
 		{
 			HttpTestRequestStep.this.firePropertyValueChanged( name, oldValue, newValue );
 		}
 
-		@Override
+		
 		public void propertyMoved( String name, int oldIndex, int newIndex )
 		{
 			HttpTestRequestStep.this.firePropertyMoved( name, oldIndex, newIndex );
@@ -749,13 +749,13 @@ public class HttpTestRequestStep extends WsdlTestStepWithProperties implements H
 			return getTestRequest();
 		}
 
-		@Override
+		
 		public boolean isRequestPart()
 		{
 			return true;
 		}
 
-		@Override
+		
 		public SchemaType getSchemaType()
 		{
 			return property.getSchemaType();

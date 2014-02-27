@@ -43,7 +43,7 @@ public class WssEntryRegistry extends AbstractRegistry<WssEntry, WSSEntryConfig,
 		return instance;
 	}
 
-	@Override
+	
 	protected WSSEntryConfig addNewConfig( OutgoingWss container )
 	{
 		return container.getConfig().addNewEntry();

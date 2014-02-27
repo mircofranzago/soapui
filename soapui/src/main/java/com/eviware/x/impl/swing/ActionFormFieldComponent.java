@@ -40,7 +40,7 @@ public class ActionFormFieldComponent extends AbstractSwingXFormField<JButton> i
 	{
 	}
 
-	@Override
+	
 	public void setProperty( String name, Object value )
 	{
 		if( name.equals( "action" ) )

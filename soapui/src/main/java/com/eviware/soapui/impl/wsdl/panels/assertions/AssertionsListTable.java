@@ -33,7 +33,7 @@ public class AssertionsListTable extends JXTable
 		this.selectable = selectable;
 	}
 
-	@Override
+	
 	/*
 	 * Used for disabling certain assertions to be selected. When
 	 * AddAssertionPanel is opened and no category has yet been selected all
@@ -58,7 +58,7 @@ public class AssertionsListTable extends JXTable
 		super.changeSelection( rowIndex, columnIndex, toggle, extend );
 	}
 
-	@Override
+	
 	public Component prepareRenderer( TableCellRenderer renderer, int row, int column )
 	{
 		Component defaultRenderer = super.prepareRenderer( renderer, row, column );
@@ -69,7 +69,7 @@ public class AssertionsListTable extends JXTable
 		return defaultRenderer;
 	}
 
-	@Override
+	
 	public boolean getShowVerticalLines()
 	{
 		return UISupport.isMac() ? false : super.getShowVerticalLines();

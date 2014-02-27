@@ -95,13 +95,13 @@ public class WSPartsTable extends JPanel
 			return parts.size();
 		}
 
-		@Override
+		
 		public boolean isCellEditable( int rowIndex, int columnIndex )
 		{
 			return true;
 		}
 
-		@Override
+		
 		public String getColumnName( int column )
 		{
 			switch( column )
@@ -119,7 +119,7 @@ public class WSPartsTable extends JPanel
 			return null;
 		}
 
-		@Override
+		
 		public void setValueAt( Object aValue, int rowIndex, int columnIndex )
 		{
 			StringToStringMap part = parts.get( rowIndex );

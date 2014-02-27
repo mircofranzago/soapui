@@ -18,7 +18,7 @@ public class NormalisedStringBoundary extends AbstractBoundary
 {
 	public static final String AVAILABLE_VALUES = " abcdefghijklmnopqrstuvwxyz";
 
-	@Override
+	
 	public String outOfBoundary( int restrictionAttribute, String value )
 	{
 		switch( restrictionAttribute )

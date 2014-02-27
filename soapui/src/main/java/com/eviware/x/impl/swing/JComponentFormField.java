@@ -44,7 +44,7 @@ public class JComponentFormField extends AbstractSwingXFormField<JPanel>
 			return null;
 	}
 
-	@Override
+	
 	public void setProperty( String name, Object value )
 	{
 		if( name.equals( "component" ) )

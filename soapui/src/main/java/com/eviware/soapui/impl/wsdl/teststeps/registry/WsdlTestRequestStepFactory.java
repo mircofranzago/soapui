@@ -255,7 +255,7 @@ public class WsdlTestRequestStepFactory extends WsdlTestStepFactory
 		dialogValues.put( ADD_SOAP_RESPONSE_ASSERTION, Boolean.TRUE.toString() );
 	}
 
-	@Override
+	
 	public boolean canAddTestStepToTestCase( WsdlTestCase testCase )
 	{
 		for( Interface iface : testCase.getTestSuite().getProject().getInterfaceList() )

@@ -79,7 +79,7 @@ public class XPathMockOperationDispatcher extends AbstractMockOperationDispatche
 		return null;
 	}
 
-	@Override
+	
 	public JComponent getEditorComponent()
 	{
 		JPanel xpathEditorPanel = new JPanel( new BorderLayout() );
@@ -96,14 +96,14 @@ public class XPathMockOperationDispatcher extends AbstractMockOperationDispatche
 		return xpathEditor;
 	}
 
-	@Override
+	
 	public void release()
 	{
 		releaseEditorComponent();
 		super.release();
 	}
 
-	@Override
+	
 	public void releaseEditorComponent()
 	{
 		if( xpathEditor != null )

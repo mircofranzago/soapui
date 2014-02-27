@@ -84,7 +84,7 @@ public class HttpRequest extends AbstractHttpRequest<HttpRequestConfig> implemen
 		return params.renameProperty( name, newName );
 	}
 
-	@Override
+	
 	public void addTestPropertyListener( TestPropertyListener listener )
 	{
 		params.addTestPropertyListener( listener );
@@ -112,7 +112,7 @@ public class HttpRequest extends AbstractHttpRequest<HttpRequestConfig> implemen
 				|| method == RestRequestInterface.RequestMethod.PATCH;
 	}
 
-	@Override
+	
 	public RestParamsPropertyHolder getParams()
 	{
 		return params;
@@ -222,7 +222,7 @@ public class HttpRequest extends AbstractHttpRequest<HttpRequestConfig> implemen
 		return new HttpAttachmentPart[0];
 	}
 
-	@Override
+	
 	public RestRequestInterface.RequestMethod getMethod()
 	{
 		String method = getConfig().getMethod();
@@ -319,19 +319,19 @@ public class HttpRequest extends AbstractHttpRequest<HttpRequestConfig> implemen
 
 	public class HttpContentPart extends ContentPart implements MessagePart
 	{
-		@Override
+		
 		public SchemaGlobalElement getPartElement()
 		{
 			return null;
 		}
 
-		@Override
+		
 		public QName getPartElementName()
 		{
 			return null;
 		}
 
-		@Override
+		
 		public SchemaType getSchemaType()
 		{
 			return null;
@@ -392,7 +392,7 @@ public class HttpRequest extends AbstractHttpRequest<HttpRequestConfig> implemen
 		notifyPropertyChanged( responseContentProperty, ( Object )oldContent, ( Object )responseContent );
 	}
 
-	@Override
+	
 	public String getMultiValueDelimiter()
 	{
 		return getConfig().getMultiValueDelimiter();

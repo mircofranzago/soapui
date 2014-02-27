@@ -29,7 +29,7 @@ public class SecurityAssertionPanel extends AssertionsPanel
 		super( assertable );
 	}
 
-	@Override
+	
 	protected void initListAndModel()
 	{
 		assertionListModel = new SecurityAssertionListModel();
@@ -50,7 +50,7 @@ public class SecurityAssertionPanel extends AssertionsPanel
 	private class SecurityAssertionCellRenderer extends JLabel implements ListCellRenderer
 	{
 
-		@Override
+		
 		public Component getListCellRendererComponent( JList list, Object value, int index, boolean isSelected,
 				boolean cellHasFocus )
 		{

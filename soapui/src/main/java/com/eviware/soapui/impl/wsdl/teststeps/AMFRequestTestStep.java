@@ -123,7 +123,7 @@ public class AMFRequestTestStep extends WsdlTestStepWithProperties implements As
 		TestStepBeanProperty responseProperty = new TestStepBeanProperty( WsdlTestStepWithProperties.RESPONSE_AS_XML,
 				false, amfRequest, "responseContent", this )
 		{
-			@Override
+			
 			public String getDefaultValue()
 			{
 				return "";
@@ -139,7 +139,7 @@ public class AMFRequestTestStep extends WsdlTestStepWithProperties implements As
 		return amfRequestTestStepConfig;
 	}
 
-	@Override
+	
 	public WsdlTestStep clone( WsdlTestCase targetTestCase, String name )
 	{
 		beforeSave();
@@ -150,7 +150,7 @@ public class AMFRequestTestStep extends WsdlTestStepWithProperties implements As
 		return result;
 	}
 
-	@Override
+	
 	public void release()
 	{
 		super.release();
@@ -278,7 +278,7 @@ public class AMFRequestTestStep extends WsdlTestStepWithProperties implements As
 		return testStepResult;
 	}
 
-	@Override
+	
 	public boolean cancel()
 	{
 		if( submit == null )
@@ -534,68 +534,68 @@ public class AMFRequestTestStep extends WsdlTestStepWithProperties implements As
 	}
 
 	// FIXME Remove the overridden methods in TestPropertyHolder
-	@Override
+	
 	public Map<String, TestProperty> getProperties()
 	{
 		return propertyHolderSupport.getProperties();
 	}
 
-	@Override
+	
 	public TestProperty getProperty( String name )
 	{
 		return propertyHolderSupport.getProperty( name );
 	}
 
-	@Override
+	
 	public TestProperty getPropertyAt( int index )
 	{
 		return propertyHolderSupport.getPropertyAt( index );
 	}
 
-	@Override
+	
 	public int getPropertyCount()
 	{
 		return propertyHolderSupport.getPropertyCount();
 	}
 
 
-	@Override
+	
 	public List<TestProperty> getPropertyList()
 	{
 		return propertyHolderSupport.getPropertyList();
 	}
 
-	@Override
+	
 	public String[] getPropertyNames()
 	{
 		return propertyHolderSupport.getPropertyNames();
 	}
 
-	@Override
+	
 	public String getPropertyValue( String name )
 	{
 		return propertyHolderSupport.getPropertyValue( name );
 	}
 
-	@Override
+	
 	public void addTestPropertyListener( TestPropertyListener listener )
 	{
 		propertyHolderSupport.addTestPropertyListener( listener );
 	}
 
-	@Override
+	
 	public void removeTestPropertyListener( TestPropertyListener listener )
 	{
 		propertyHolderSupport.removeTestPropertyListener( listener );
 	}
 
-	@Override
+	
 	public boolean hasProperty( String name )
 	{
 		return propertyHolderSupport.hasProperty( name );
 	}
 
-	@Override
+	
 	public void setPropertyValue( String name, String value )
 	{
 		propertyHolderSupport.setPropertyValue( name, value );
@@ -606,7 +606,7 @@ public class AMFRequestTestStep extends WsdlTestStepWithProperties implements As
 		setPropertyValue( name, String.valueOf( value ) );
 	}
 
-	@Override
+	
 	public void moveProperty( String propertyName, int targetIndex )
 	{
 		propertyHolderSupport.moveProperty( propertyName, targetIndex );

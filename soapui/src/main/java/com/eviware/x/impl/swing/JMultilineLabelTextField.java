@@ -59,7 +59,7 @@ public class JMultilineLabelTextField extends AbstractSwingXFormField<JComponent
 		getTextArea().setColumns( columns );
 	}
 
-	@Override
+	
 	public boolean isMultiRow()
 	{
 		return true;

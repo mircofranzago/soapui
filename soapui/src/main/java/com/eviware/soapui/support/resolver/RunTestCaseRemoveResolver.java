@@ -31,7 +31,7 @@ public class RunTestCaseRemoveResolver implements Resolver
 		target.setDisabled( true );
 	}
 
-	@Override
+	
 	public String toString()
 	{
 		return getDescription();

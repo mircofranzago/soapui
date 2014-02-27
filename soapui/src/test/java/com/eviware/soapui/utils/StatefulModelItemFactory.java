@@ -54,13 +54,13 @@ public class StatefulModelItemFactory
 		final RestResource restResource = makeRestResource();
 		RestMethod restMethod = new RestMethod( restResource, methodConfig )
 		{
-			@Override
+			
 			public RestRequestInterface.RequestMethod getMethod()
 			{
 				return RestRequestInterface.RequestMethod.GET;
 			}
 
-			@Override
+			
 			public RestResource getOperation()
 			{
 				return restResource;

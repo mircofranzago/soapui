@@ -259,7 +259,7 @@ public abstract class AbstractTestRunner<T extends TestRunnable, T2 extends Test
 
 	private final class TimeoutTimerTask extends TimerTask
 	{
-		@Override
+		
 		public void run()
 		{
 			fail( "TestCase timed out" );

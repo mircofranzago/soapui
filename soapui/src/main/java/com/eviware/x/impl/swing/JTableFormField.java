@@ -62,7 +62,7 @@ public class JTableFormField extends AbstractSwingXFormField<JComponent> impleme
 		return scrollPane;
 	}
 
-	@Override
+	
 	public void setProperty( String name, Object value )
 	{
 		if( "tableModel".equals( name ) )
@@ -73,7 +73,7 @@ public class JTableFormField extends AbstractSwingXFormField<JComponent> impleme
 			super.setProperty( name, value );
 	}
 
-	@Override
+	
 	public Object getProperty( String name )
 	{
 		if( "tableModel".equals( name ) )
@@ -98,7 +98,7 @@ public class JTableFormField extends AbstractSwingXFormField<JComponent> impleme
 	{
 	}
 
-	@Override
+	
 	public boolean isMultiRow()
 	{
 		return true;

@@ -66,14 +66,14 @@ public class TestCaseRunLogReport extends TestRunListenerAdapter
 		initShutDownHook();
 	}
 
-	@Override
+	
 	public void beforeStep( TestCaseRunner testRunner, TestCaseRunContext runContext, TestStep testStep )
 	{
 		currentTestStep = testStep;
 		currentTestCaseRunLogTestStepConfig = testCaseRunLog.addNewTestCaseRunLogTestStep();
 	}
 
-	@Override
+	
 	public void afterStep( TestCaseRunner testRunner, TestCaseRunContext runContext, TestStepResult result )
 	{
 		currentTestCaseRunLogTestStepConfig.setName( result.getTestStep().getName() );
@@ -111,7 +111,7 @@ public class TestCaseRunLogReport extends TestRunListenerAdapter
 		}
 	}
 
-	@Override
+	
 	public void afterRun( TestCaseRunner testRunner, TestCaseRunContext runContext )
 	{
 		testCaseRunLog.setTestCase( ( testRunner.getTestCase().getName() ) );
@@ -124,7 +124,7 @@ public class TestCaseRunLogReport extends TestRunListenerAdapter
 		saveReportToFile();
 	}
 
-	@Override
+	
 	public void beforeRun( TestCaseRunner testRunner, TestCaseRunContext runContext )
 	{
 		super.beforeRun( testRunner, runContext );
@@ -136,7 +136,7 @@ public class TestCaseRunLogReport extends TestRunListenerAdapter
 	{
 		Runtime.getRuntime().addShutdownHook( new Thread()
 		{
-			@Override
+			
 			public void run()
 			{
 				if( !testRunHasFinished )

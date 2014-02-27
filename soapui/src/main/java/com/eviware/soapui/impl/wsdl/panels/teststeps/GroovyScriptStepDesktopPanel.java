@@ -130,7 +130,7 @@ public class GroovyScriptStepDesktopPanel extends ModelItemDesktopPanel<WsdlGroo
 		logArea.getLogList().getModel().addListDataListener( new ListDataChangeListener()
 		{
 
-			@Override
+			
 			public void dataChanged( ListModel model )
 			{
 				logInspector.setTitle( "Log Output (" + model.getSize() + ")" );

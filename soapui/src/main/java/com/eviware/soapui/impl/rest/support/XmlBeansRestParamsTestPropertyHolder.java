@@ -527,7 +527,7 @@ public class XmlBeansRestParamsTestPropertyHolder implements RestParamsPropertyH
 			return propertyConfig;
 		}
 
-		@Override
+		
 		public boolean equals( Object obj )
 		{
 			if( obj instanceof XmlBeansRestParamProperty )
@@ -543,14 +543,14 @@ public class XmlBeansRestParamsTestPropertyHolder implements RestParamsPropertyH
 			setValue( getDefaultValue() );
 		}
 
-		@Override
+		
 		public String getPath()
 		{
 			return propertyConfig.getPath();
 
 		}
 
-		@Override
+		
 		public void setPath( String path )
 		{
 			String old = getPath();
@@ -559,13 +559,13 @@ public class XmlBeansRestParamsTestPropertyHolder implements RestParamsPropertyH
 
 		}
 
-		@Override
+		
 		public boolean isRequestPart()
 		{
 			return false;
 		}
 
-		@Override
+		
 		public SchemaType getSchemaType()
 		{
 			return XmlBeans.getBuiltinTypeSystem().findType( getType() );
@@ -902,7 +902,7 @@ public class XmlBeansRestParamsTestPropertyHolder implements RestParamsPropertyH
 		prop.setRequired( property.getRequired() );
 	}
 
-	@Override
+	
 	public void setParameterLocation( RestParamProperty parameter, ParamLocation newLocation )
 	{
 		// defensive programming, since parameter may be a disconnected XmlObject

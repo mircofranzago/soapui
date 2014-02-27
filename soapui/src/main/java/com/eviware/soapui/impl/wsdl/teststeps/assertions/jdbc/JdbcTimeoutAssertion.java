@@ -40,7 +40,7 @@ public class JdbcTimeoutAssertion extends WsdlMessageAssertion implements Respon
 		super( assertionConfig, assertable, false, false, false, true );
 	}
 
-	@Override
+	
 	protected String internalAssertResponse( MessageExchange messageExchange, SubmitContext context )
 			throws AssertionException
 	{
@@ -55,7 +55,7 @@ public class JdbcTimeoutAssertion extends WsdlMessageAssertion implements Respon
 		return "JDBC Timeout OK";
 	}
 
-	@Override
+	
 	protected String internalAssertRequest( MessageExchange messageExchange, SubmitContext context )
 			throws AssertionException
 	{
@@ -75,25 +75,25 @@ public class JdbcTimeoutAssertion extends WsdlMessageAssertion implements Respon
 			super( JdbcTimeoutAssertion.ID, JdbcTimeoutAssertion.LABEL, JdbcTimeoutAssertion.class, WsdlRequest.class );
 		}
 
-		@Override
+		
 		public String getCategory()
 		{
 			return AssertionCategoryMapping.JDBC_CATEGORY;
 		}
 
-		@Override
+		
 		public boolean canAssert( Assertable assertable )
 		{
 			return assertable instanceof JdbcRequestTestStep;
 		}
 
-		@Override
+		
 		public Class<? extends WsdlMessageAssertion> getAssertionClassType()
 		{
 			return JdbcTimeoutAssertion.class;
 		}
 
-		@Override
+		
 		public AssertionListEntry getAssertionListEntry()
 		{
 			return new AssertionListEntry( JdbcTimeoutAssertion.ID, JdbcTimeoutAssertion.LABEL,

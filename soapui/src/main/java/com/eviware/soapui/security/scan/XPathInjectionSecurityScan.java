@@ -75,7 +75,7 @@ public class XPathInjectionSecurityScan extends AbstractSecurityScanWithProperti
 			xpathList = ( XPathInjectionConfig )getConfig().getConfig();
 	}
 
-	@Override
+	
 	public void updateSecurityConfig( SecurityScanConfig config )
 	{
 		super.updateSecurityConfig( config );
@@ -94,7 +94,7 @@ public class XPathInjectionSecurityScan extends AbstractSecurityScanWithProperti
 		xpathList.setXpathListArray( defaultXPathInjectionStrings );
 	}
 
-	@Override
+	
 	public JComponent getComponent()
 	{
 		JPanel p = UISupport.createEmptyPanel( 5, 75, 0, 5 );
@@ -102,7 +102,7 @@ public class XPathInjectionSecurityScan extends AbstractSecurityScanWithProperti
 		return p;
 	}
 
-	@Override
+	
 	protected void execute( SecurityTestRunner runner, TestStep testStep, SecurityTestRunContext context )
 	{
 		try
@@ -292,31 +292,31 @@ public class XPathInjectionSecurityScan extends AbstractSecurityScanWithProperti
 
 	}
 
-	@Override
+	
 	public String getConfigDescription()
 	{
 		return "Configures XPath Injection Security Scan";
 	}
 
-	@Override
+	
 	public String getConfigName()
 	{
 		return "XPath Injection Security Scan";
 	}
 
-	@Override
+	
 	public String getHelpURL()
 	{
 		return "http://soapui.org/Security/xpath-injection.html";
 	}
 
-	@Override
+	
 	public String getType()
 	{
 		return TYPE;
 	}
 
-	@Override
+	
 	protected boolean hasNext( TestStep testStep, SecurityTestRunContext context )
 	{
 		boolean hasNext = false;
@@ -346,7 +346,7 @@ public class XPathInjectionSecurityScan extends AbstractSecurityScanWithProperti
 		return hasNext;
 	}
 
-	@Override
+	
 	public JComponent getAdvancedSettingsPanel()
 	{
 		dialog = ( JFormDialog )ADialogBuilder.buildDialog( AdvancedSettings.class );
@@ -357,7 +357,7 @@ public class XPathInjectionSecurityScan extends AbstractSecurityScanWithProperti
 		stringField.getComponent().addPropertyChangeListener( "options", new PropertyChangeListener()
 		{
 
-			@Override
+			
 			public void propertyChange( PropertyChangeEvent evt )
 			{
 				String[] newOptions = ( String[] )evt.getNewValue();
@@ -402,7 +402,7 @@ public class XPathInjectionSecurityScan extends AbstractSecurityScanWithProperti
 		return dialog.getPanel();
 	}
 
-	@Override
+	
 	public void release()
 	{
 		if( dialog != null )
@@ -420,7 +420,7 @@ public class XPathInjectionSecurityScan extends AbstractSecurityScanWithProperti
 
 	}
 
-	@Override
+	
 	protected void clear()
 	{
 		parameterMutations.clear();

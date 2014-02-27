@@ -26,20 +26,20 @@ public class MockResponseToTestStepDropHandler extends
 		super( WsdlMockResponse.class, WsdlTestStep.class );
 	}
 
-	@Override
+	
 	boolean canCopyAfter( WsdlMockResponse source, WsdlTestStep target )
 	{
 		return source.getMockOperation().getMockService().getProject() == target.getTestCase().getTestSuite()
 				.getProject();
 	}
 
-	@Override
+	
 	boolean canMoveAfter( WsdlMockResponse source, WsdlTestStep target )
 	{
 		return canCopyAfter( source, target );
 	}
 
-	@Override
+	
 	boolean copyAfter( WsdlMockResponse source, WsdlTestStep target )
 	{
 		SoapUIAction<WsdlMockResponse> action = SoapUI.getActionRegistry().getAction(
@@ -50,19 +50,19 @@ public class MockResponseToTestStepDropHandler extends
 		return true;
 	}
 
-	@Override
+	
 	boolean moveAfter( WsdlMockResponse source, WsdlTestStep target )
 	{
 		return copyAfter( source, target );
 	}
 
-	@Override
+	
 	String getCopyAfterInfo( WsdlMockResponse source, WsdlTestStep target )
 	{
 		return "Insert MockResponse TestStep in TestCase [" + target.getTestCase().getName() + "]";
 	}
 
-	@Override
+	
 	String getMoveAfterInfo( WsdlMockResponse source, WsdlTestStep target )
 	{
 		return getCopyAfterInfo( source, target );

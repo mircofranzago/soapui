@@ -80,7 +80,7 @@ public class SimpleNotContainsAssertion extends WsdlMessageAssertion implements 
 		return assertContent( context, messageExchange.getResponseContent(), "Response" );
 	}
 
-	@Override
+	
 	protected String internalAssertProperty( TestPropertyHolder source, String propertyName,
 			MessageExchange messageExchange, SubmitContext context ) throws AssertionException
 	{
@@ -220,26 +220,26 @@ public class SimpleNotContainsAssertion extends WsdlMessageAssertion implements 
 			super( SimpleNotContainsAssertion.ID, SimpleNotContainsAssertion.LABEL, SimpleNotContainsAssertion.class );
 		}
 
-		@Override
+		
 		public String getCategory()
 		{
 			return AssertionCategoryMapping.VALIDATE_RESPONSE_CONTENT_CATEGORY;
 		}
 
-		@Override
+		
 		public Class<? extends WsdlMessageAssertion> getAssertionClassType()
 		{
 			return SimpleNotContainsAssertion.class;
 		}
 
-		@Override
+		
 		public AssertionListEntry getAssertionListEntry()
 		{
 			return new AssertionListEntry( SimpleNotContainsAssertion.ID, SimpleNotContainsAssertion.LABEL,
 					SimpleNotContainsAssertion.DESCRIPTION );
 		}
 
-		@Override
+		
 		public boolean canAssert( TestPropertyHolder modelItem, String property )
 		{
 			String content = modelItem.getPropertyValue( property );

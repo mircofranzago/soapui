@@ -46,7 +46,7 @@ public class DirectAccessPropertyHolderTableModel<T extends TestPropertyHolder>
 		return params.getPropertyAt( rowIndex );
 	}
 
-	@Override
+	
 	public void moveProperty( String name, int oldIndex, int newIndex )
 	{
 		( ( MutableTestPropertyHolder )params ).moveProperty( name, newIndex );

@@ -101,7 +101,7 @@ abstract public class WsdlTestStep extends AbstractWsdlModelItem<TestStepConfig>
 			return name;
 	}
 
-	@Override
+	
 	public void setName( String name )
 	{
 		if( getName().equals( name ) )

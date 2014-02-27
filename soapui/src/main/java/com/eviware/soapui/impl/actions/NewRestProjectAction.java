@@ -53,7 +53,7 @@ public class NewRestProjectAction extends AbstractSoapUIAction<WorkspaceImpl>
 	{
 		dialog = dialogBuilder.buildDialog( messages, new AbstractAction( "Import WADL..." )
 		{
-			@Override
+			
 			public void actionPerformed( ActionEvent e )
 			{
 				dialog.setVisible( false );

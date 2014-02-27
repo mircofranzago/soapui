@@ -100,19 +100,19 @@ public class WSAResponseAssertion extends WsdlMessageAssertion implements Reques
 			super( WSAResponseAssertion.ID, WSAResponseAssertion.LABEL, WSAResponseAssertion.class, WsdlRequest.class );
 		}
 
-		@Override
+		
 		public String getCategory()
 		{
 			return AssertionCategoryMapping.STATUS_CATEGORY;
 		}
 
-		@Override
+		
 		public Class<? extends WsdlMessageAssertion> getAssertionClassType()
 		{
 			return WSAResponseAssertion.class;
 		}
 
-		@Override
+		
 		public AssertionListEntry getAssertionListEntry()
 		{
 			return new AssertionListEntry( WSAResponseAssertion.ID, WSAResponseAssertion.LABEL,
@@ -120,7 +120,7 @@ public class WSAResponseAssertion extends WsdlMessageAssertion implements Reques
 		}
 	}
 
-	@Override
+	
 	protected String internalAssertRequest( MessageExchange messageExchange, SubmitContext context )
 			throws AssertionException
 	{
@@ -146,7 +146,7 @@ public class WSAResponseAssertion extends WsdlMessageAssertion implements Reques
 		return null;
 	}
 
-	@Override
+	
 	protected String internalAssertResponse( MessageExchange messageExchange, SubmitContext context )
 			throws AssertionException
 	{

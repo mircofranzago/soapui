@@ -78,7 +78,7 @@ public class ResolveDialog
 	{
 		dialog = new SimpleDialog( title, description, helpUrl, true )
 		{
-			@Override
+			
 			protected Component buildContent()
 			{
 				JPanel panel = new JPanel( new BorderLayout() );
@@ -90,7 +90,7 @@ public class ResolveDialog
 				table.getColumn( 3 ).setWidth( 100 );
 				table.addMouseListener( new MouseAdapter()
 				{
-					@Override
+					
 					public void mouseClicked( MouseEvent e )
 					{
 						if( e.getClickCount() > 1 )
@@ -117,7 +117,7 @@ public class ResolveDialog
 			/*
 			 * Change Cancel into Update
 			 */
-			@Override
+			
 			protected void modifyButtons()
 			{
 				super.modifyButtons();
@@ -135,7 +135,7 @@ public class ResolveDialog
 				}
 			}
 
-			@Override
+			
 			protected boolean handleCancel()
 			{
 				return handleUpdate();
@@ -160,7 +160,7 @@ public class ResolveDialog
 			}
 
 			@SuppressWarnings( "unchecked" )
-			@Override
+			
 			protected boolean handleOk()
 			{
 				for( PathToResolve path : resolveContextTableModel.getContext().getPathsToResolve() )
@@ -186,7 +186,7 @@ public class ResolveDialog
 		{
 
 			@SuppressWarnings( "unchecked" )
-			@Override
+			
 			public void windowClosing( WindowEvent arg0 )
 			{
 				for( PathToResolve path : resolveContextTableModel.getContext().getPathsToResolve() )
@@ -281,7 +281,7 @@ public class ResolveDialog
 			fireTableDataChanged();
 		}
 
-		@Override
+		
 		public String getColumnName( int column )
 		{
 			switch( column )
@@ -299,7 +299,7 @@ public class ResolveDialog
 			return super.getColumnName( column );
 		}
 
-		@Override
+		
 		public Class<?> getColumnClass( int arg0 )
 		{
 			if( arg0 == 3 )
@@ -313,7 +313,7 @@ public class ResolveDialog
 			return context.getPathsToResolve().size();
 		}
 
-		@Override
+		
 		public boolean isCellEditable( int rowIndex, int columnIndex )
 		{
 			return columnIndex == 3;
@@ -456,7 +456,7 @@ public class ResolveDialog
 		private Color redColor = Color.RED.darker().darker();
 
 		@SuppressWarnings( "unchecked" )
-		@Override
+		
 		public Component getTableCellRendererComponent( JTable arg0, Object arg1, boolean arg2, boolean arg3, int arg4,
 				int arg5 )
 		{

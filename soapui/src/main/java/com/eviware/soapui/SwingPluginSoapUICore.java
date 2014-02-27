@@ -32,7 +32,7 @@ public class SwingPluginSoapUICore extends SwingSoapUICore
 		SoapUI.setSoapUICore( this );
 	}
 
-	@Override
+	
 	protected String importSettingsOnStartup( String fileName ) throws Exception
 	{
 		return fileName;

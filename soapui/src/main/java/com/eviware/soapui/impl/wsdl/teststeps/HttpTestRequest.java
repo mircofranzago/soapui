@@ -139,7 +139,7 @@ public class HttpTestRequest extends HttpRequest implements HttpTestRequestInter
 		notifier.notifyChange();
 	}
 
-	@Override
+	
 	public ImageIcon getIcon()
 	{
 		if( forLoadTest || UISupport.isHeadless() )

@@ -180,7 +180,7 @@ public class AMFRequestTestStepDesktopPanel extends ModelItemDesktopPanel<AMFReq
 		addFocusListener( new FocusAdapter()
 		{
 
-			@Override
+			
 			public void focusGained( FocusEvent e )
 			{
 				if( requestTabs.getSelectedIndex() == 1 || responseHasFocus )
@@ -244,7 +244,7 @@ public class AMFRequestTestStepDesktopPanel extends ModelItemDesktopPanel<AMFReq
 		reqEditor.addEditorView( ( EditorView )new AbstractEditorView<AMFRequestDocument>( "AMF",
 				( Editor<AMFRequestDocument> )reqEditor, "amf" )
 		{
-			@Override
+			
 			public JComponent buildUI()
 			{
 				return split;
@@ -298,7 +298,7 @@ public class AMFRequestTestStepDesktopPanel extends ModelItemDesktopPanel<AMFReq
 		addFocusListener( new FocusAdapter()
 		{
 
-			@Override
+			
 			public void focusGained( FocusEvent e )
 			{
 				if( requestTabs.getSelectedIndex() == 1 || responseHasFocus )
@@ -321,12 +321,12 @@ public class AMFRequestTestStepDesktopPanel extends ModelItemDesktopPanel<AMFReq
 	{
 		propertyHolderTable = new PropertyHolderTable( getModelItem() )
 		{
-			@Override
+			
 			protected DefaultPropertyHolderTableModel getPropertyHolderTableModel()
 			{
 				return new DefaultPropertyHolderTableModel( holder )
 				{
-					@Override
+					
 					public String[] getPropertyNames()
 					{
 						List<String> propertyNamesList = new ArrayList<String>();
@@ -433,7 +433,7 @@ public class AMFRequestTestStepDesktopPanel extends ModelItemDesktopPanel<AMFReq
 	{
 		amfCallField.getDocument().addDocumentListener( new DocumentListenerAdapter()
 		{
-			@Override
+			
 			public void update( Document document )
 			{
 				if( !updating )
@@ -448,7 +448,7 @@ public class AMFRequestTestStepDesktopPanel extends ModelItemDesktopPanel<AMFReq
 	{
 		endpointField.getDocument().addDocumentListener( new DocumentListenerAdapter()
 		{
-			@Override
+			
 			public void update( Document document )
 			{
 				if( !updating )
@@ -584,7 +584,7 @@ public class AMFRequestTestStepDesktopPanel extends ModelItemDesktopPanel<AMFReq
 			super( new AMFResponseDocument(), amfRequestTestStep );
 		}
 
-		@Override
+		
 		public void release()
 		{
 			getDocument().release();
@@ -599,7 +599,7 @@ public class AMFRequestTestStepDesktopPanel extends ModelItemDesktopPanel<AMFReq
 			super( new AMFRequestDocument(), amfRequestTestStep );
 		}
 
-		@Override
+		
 		public void release()
 		{
 			getDocument().release();

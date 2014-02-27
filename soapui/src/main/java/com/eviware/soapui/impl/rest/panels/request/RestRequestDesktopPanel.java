@@ -39,7 +39,7 @@ public class RestRequestDesktopPanel extends
 		setName( REST_REQUEST_EDITOR );
 	}
 
-	@Override
+	
 	protected void initializeFields()
 	{
 		String path = getRequest().getResource().getFullPath();
@@ -48,7 +48,7 @@ public class RestRequestDesktopPanel extends
 		queryPanel = new ParametersField( getRequest() );
 	}
 
-	@Override
+	
 	protected void init( RestRequestInterface request )
 	{
 		addToTestCaseButton = createActionButton( SwingActionDelegate.createDelegate(
@@ -68,19 +68,19 @@ public class RestRequestDesktopPanel extends
 		addToTestCaseButton.setEnabled( enabled );
 	}
 
-	@Override
+	
 	protected void addTopToolbarComponents( JXToolBar toolBar )
 	{
 		addResourceAndQueryField( toolBar );
 	}
 
-	@Override
+	
 	protected void addBottomToolbar( JPanel panel )
 	{
 		//RestRequestDesktopPanel does not need a bottom tool bar
 	}
 
-	@Override
+	
 	protected void updateUiValues()
 	{
 		if( updating.booleanValue() )
@@ -94,7 +94,7 @@ public class RestRequestDesktopPanel extends
 
 	}
 
-	@Override
+	
 	protected void insertButtons( JXToolBar toolbar )
 	{
 		toolbar.add( addToTestCaseButton );
@@ -147,7 +147,7 @@ public class RestRequestDesktopPanel extends
 			setToolTipText( text );
 		}
 
-		@Override
+		
 		public void setToolTipText( String text )
 		{
 			super.setToolTipText( text );

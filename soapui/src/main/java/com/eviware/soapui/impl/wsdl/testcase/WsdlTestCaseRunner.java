@@ -39,7 +39,7 @@ public class WsdlTestCaseRunner extends AbstractTestCaseRunner<WsdlTestCase, Wsd
 		return new WsdlTestRunContext( this, properties, this.getTestCase() );
 	}
 
-	@Override
+	
 	protected int runCurrentTestStep( WsdlTestRunContext runContext, int currentStepIndex )
 	{
 		TestStep currentStep = runContext.getCurrentStep();
@@ -63,13 +63,13 @@ public class WsdlTestCaseRunner extends AbstractTestCaseRunner<WsdlTestCase, Wsd
 		return currentStepIndex;
 	}
 
-	@Override
+	
 	public WsdlTestCase getTestCase()
 	{
 		return getTestRunnable();
 	}
 
-	@Override
+	
 	protected void failTestRunnableOnErrors( WsdlTestRunContext runContext )
 	{
 		if( runContext.getProperty( TestCaseRunner.Status.class.getName() ) == TestCaseRunner.Status.FAILED

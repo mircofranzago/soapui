@@ -721,7 +721,7 @@ public class DefaultSoapUICore implements SoapUICore
 
 	private class SettingsWatcher extends TimerTask
 	{
-		@Override
+		
 		public void run()
 		{
 			if( settingsFile != null && !isSavingSettings )
@@ -737,7 +737,7 @@ public class DefaultSoapUICore implements SoapUICore
 		}
 	}
 
-	@Override
+	
 	public SoapUIFactoryRegistry getFactoryRegistry()
 	{
 		if( factoryRegistry == null )
@@ -756,7 +756,7 @@ public class DefaultSoapUICore implements SoapUICore
 		securityScanRegistry = SecurityScanRegistry.getInstance();
 	}
 
-	@Override
+	
 	public SecurityScanRegistry getSecurityScanRegistry()
 	{
 		if( securityScanRegistry == null )

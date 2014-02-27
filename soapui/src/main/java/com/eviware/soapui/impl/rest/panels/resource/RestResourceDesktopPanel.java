@@ -55,7 +55,7 @@ public class RestResourceDesktopPanel extends ModelItemDesktopPanel<RestResource
 		return UISupport.createTabPanel( tabs, false );
 	}
 
-	@Override
+	
 	public String getTitle()
 	{
 		return getName( getModelItem() );
@@ -66,7 +66,7 @@ public class RestResourceDesktopPanel extends ModelItemDesktopPanel<RestResource
 		return paramsTable;
 	}
 
-	@Override
+	
 	protected boolean release()
 	{
 		paramsTable.release();
@@ -102,7 +102,7 @@ public class RestResourceDesktopPanel extends ModelItemDesktopPanel<RestResource
 		return toolbar;
 	}
 
-	@Override
+	
 	public boolean dependsOn( ModelItem modelItem )
 	{
 		return getModelItem().dependsOn( modelItem );
@@ -113,7 +113,7 @@ public class RestResourceDesktopPanel extends ModelItemDesktopPanel<RestResource
 		return release();
 	}
 
-	@Override
+	
 	public void propertyChange( PropertyChangeEvent evt )
 	{
 		if( evt.getPropertyName().equals( "path" ) )

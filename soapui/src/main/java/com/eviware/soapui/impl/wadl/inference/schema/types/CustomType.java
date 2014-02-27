@@ -68,7 +68,7 @@ public class CustomType implements Type
 		return this;
 	}
 
-	@Override
+	
 	public String toString()
 	{
 		return xsd;

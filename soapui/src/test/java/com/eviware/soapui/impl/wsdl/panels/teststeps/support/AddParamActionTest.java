@@ -111,7 +111,7 @@ public class AddParamActionTest
 	{
 		paramTable.setDefaultEditor( String.class, new DefaultCellEditor( new JTextField() )
 		{
-			@Override
+			
 			public Object getCellEditorValue()
 			{
 				return value;

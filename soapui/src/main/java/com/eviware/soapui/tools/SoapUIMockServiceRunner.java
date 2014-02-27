@@ -241,7 +241,7 @@ public class SoapUIMockServiceRunner extends AbstractSoapUIRunner
 		}
 	}
 
-	@Override
+	
 	protected SoapUIOptions initCommandLineOptions()
 	{
 		SoapUIOptions options = new SoapUIOptions( "mockservicerunner" );
@@ -260,7 +260,7 @@ public class SoapUIMockServiceRunner extends AbstractSoapUIRunner
 		return options;
 	}
 
-	@Override
+	
 	protected boolean processCommandLine( CommandLine cmd )
 	{
 		if( cmd.hasOption( "m" ) )

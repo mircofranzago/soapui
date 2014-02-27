@@ -23,13 +23,13 @@ public class TimeBoundary extends AbstractBoundary
 	public static final String TIME_FORMAT = "HH:mm:ssZ";
 
 	private static final ThreadLocal<SimpleDateFormat> simpleDateFormat = new ThreadLocal<SimpleDateFormat>() {
-		@Override
+		
 		protected SimpleDateFormat initialValue() {
 			 return new SimpleDateFormat( TIME_FORMAT );
 		}
 	};
 	
-	@Override
+	
 	public String outOfBoundary( int restrictionAttribute, String value )
 	{
 		switch( restrictionAttribute )

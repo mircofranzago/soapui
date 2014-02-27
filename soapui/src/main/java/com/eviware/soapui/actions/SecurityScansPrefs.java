@@ -51,7 +51,7 @@ public class SecurityScansPrefs implements Prefs
 				{
 					propertiesModel = new DefaultPropertyHolderTableModel( holder )
 					{
-						@Override
+						
 						public String getColumnName( int columnIndex )
 						{
 							switch( columnIndex )

@@ -161,7 +161,7 @@ public class AttachmentsTableModel extends AbstractTableModel implements Propert
 			return null;
 	}
 
-	@Override
+	
 	public Class<?> getColumnClass( int columnIndex )
 	{
 		return columnIndex == 6 ? Boolean.class : super.getColumnClass( columnIndex );

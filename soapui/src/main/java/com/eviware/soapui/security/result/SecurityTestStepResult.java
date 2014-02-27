@@ -299,13 +299,13 @@ public class SecurityTestStepResult implements SecurityResult
 		return tl.toString();
 	}
 
-	@Override
+	
 	public String getResultType()
 	{
 		return TYPE;
 	}
 
-	@Override
+	
 	public ResultStatus getExecutionProgressStatus()
 	{
 		return executionProgressStatus;
@@ -316,7 +316,7 @@ public class SecurityTestStepResult implements SecurityResult
 		executionProgressStatus = status;
 	}
 
-	@Override
+	
 	public ResultStatus getLogIconStatus()
 	{
 		return logIconStatus;

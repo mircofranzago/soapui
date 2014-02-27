@@ -195,7 +195,7 @@ public abstract class AbstractSoapUIRunner implements CmdLineRunner
 	 * 
 	 * @see com.eviware.soapui.tools.CmdLineRunner#getProjectFile()
 	 */
-	@Override
+	
 	public String getProjectFile()
 	{
 		return projectFile;
@@ -206,7 +206,7 @@ public abstract class AbstractSoapUIRunner implements CmdLineRunner
 	 * 
 	 * @see com.eviware.soapui.tools.CmdLineRunner#getSettingsFile()
 	 */
-	@Override
+	
 	public String getSettingsFile()
 	{
 		return settingsFile;
@@ -222,7 +222,7 @@ public abstract class AbstractSoapUIRunner implements CmdLineRunner
 	 * 
 	 * @see com.eviware.soapui.tools.CmdLineRunner#getOutputFolder()
 	 */
-	@Override
+	
 	public String getOutputFolder()
 	{
 		return this.outputFolder;
@@ -379,7 +379,7 @@ public abstract class AbstractSoapUIRunner implements CmdLineRunner
 	 * 
 	 * @see com.eviware.soapui.tools.CmdLineRunner#getLog()
 	 */
-	@Override
+	
 	public Logger getLog()
 	{
 		return log;
@@ -390,7 +390,7 @@ public abstract class AbstractSoapUIRunner implements CmdLineRunner
 	 * 
 	 * @see com.eviware.soapui.tools.CmdLineRunner#getProjectProperties()
 	 */
-	@Override
+	
 	public String[] getProjectProperties()
 	{
 		return projectProperties;

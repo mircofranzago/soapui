@@ -85,7 +85,7 @@ public class GroovySecurityScan extends AbstractSecurityScanWithProperties
 		getExecutionStrategy().setImmutable( true );
 	}
 
-	@Override
+	
 	protected boolean hasNext( TestStep testStep, SecurityTestRunContext context )
 	{
 		if( !context.hasProperty( PARAMETERS_INITIALIZED ) )
@@ -114,7 +114,7 @@ public class GroovySecurityScan extends AbstractSecurityScanWithProperties
 		}
 	}
 
-	@Override
+	
 	protected void execute( SecurityTestRunner securityTestRunner, TestStep testStep, SecurityTestRunContext context )
 	{
 		scriptEngine.setScript( groovyscc.getExecuteScript().getStringValue() );
@@ -230,31 +230,31 @@ public class GroovySecurityScan extends AbstractSecurityScanWithProperties
 		return groovyscc.getExecuteScript().getStringValue();
 	}
 
-	@Override
+	
 	public SecurityScanConfigPanel getComponent()
 	{
 		return new GroovySecurityScanPanel( this );
 	}
 
-	@Override
+	
 	public String getType()
 	{
 		return TYPE;
 	}
 
-	@Override
+	
 	public String getConfigDescription()
 	{
 		return "Configuration for Custom Script Security Scan";
 	}
 
-	@Override
+	
 	public String getConfigName()
 	{
 		return "Configuration for Custom Script Security Scan";
 	}
 
-	@Override
+	
 	public String getHelpURL()
 	{
 		return "http://soapui.org/Security/script-custom-scan.html";

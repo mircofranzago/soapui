@@ -28,26 +28,26 @@ public class SecurityParametersTableModel extends DefaultTableModel
 		this.holder = holder;
 	}
 
-	@Override
+	
 	public int getColumnCount()
 	{
 		return 4;
 	}
 
-	@Override
+	
 	public String getColumnName( int column )
 	{
 		return columnNames[column];
 	}
 
-	@Override
+	
 	public boolean isCellEditable( int row, int column )
 	{
 		return column != 1;
 
 	}
 
-	@Override
+	
 	public Object getValueAt( int row, int column )
 	{
 		SecurityCheckedParameter param = holder.getParameterList().get( row );
@@ -65,13 +65,13 @@ public class SecurityParametersTableModel extends DefaultTableModel
 		return super.getValueAt( row, column );
 	}
 
-	@Override
+	
 	public Class<?> getColumnClass( int columnIndex )
 	{
 		return columnIndex == 3 ? Boolean.class : columnIndex == 2 ? String.class : Object.class;
 	}
 
-	@Override
+	
 	public void setValueAt( Object aValue, int row, int column )
 	{
 		if( holder.getParameterList().isEmpty() )
@@ -104,7 +104,7 @@ public class SecurityParametersTableModel extends DefaultTableModel
 			return false;
 	}
 
-	@Override
+	
 	public int getRowCount()
 	{
 		return holder == null ? 0 : holder.getParameterList().size();

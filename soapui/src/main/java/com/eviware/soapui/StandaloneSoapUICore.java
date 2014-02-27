@@ -52,7 +52,7 @@ public class StandaloneSoapUICore extends SwingSoapUICore
 			init( DEFAULT_SETTINGS_FILE );
 	}
 
-	@Override
+	
 	public void prepareUI()
 	{
 		super.prepareUI();
@@ -113,19 +113,19 @@ public class StandaloneSoapUICore extends SwingSoapUICore
 	{
 		public static final Color BACKGROUND_COLOR = new Color( 240, 240, 240 );
 
-		@Override
+		
 		public ColorUIResource getControl()
 		{
 			return new ColorUIResource( BACKGROUND_COLOR );
 		}
 
-		@Override
+		
 		public ColorUIResource getMenuBackground()
 		{
 			return getControl();
 		}
 
-		@Override
+		
 		public ColorUIResource getMenuItemBackground()
 		{
 			return new ColorUIResource( new Color( 248, 248, 248 ) );

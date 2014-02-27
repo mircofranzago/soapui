@@ -63,7 +63,7 @@ public final class ExtendedPutMethod extends HttpPut implements ExtendedEntityEn
 		httpMethodSupport.afterReadResponse( session );
 	}
 
-	@Override
+	
 	public String getResponseCharSet()
 	{
 		return httpMethodSupport.getResponseCharset();

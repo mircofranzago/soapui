@@ -38,7 +38,7 @@ public class WsdlSubmitContext extends AbstractSubmitContext
 		return getProperty( name, step, ( WsdlTestCase )( step == null ? null : step.getTestCase() ) );
 	}
 
-	@Override
+	
 	public Object get( Object key )
 	{
 		if( "settings".equals( key ) )
@@ -47,7 +47,7 @@ public class WsdlSubmitContext extends AbstractSubmitContext
 		return getProperty( key.toString() );
 	}
 
-	@Override
+	
 	public Object put( String key, Object value )
 	{
 		Object oldValue = get( key );

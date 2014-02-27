@@ -57,7 +57,7 @@ public class ChooseAnotherTestCase implements Resolver
 		return "Choose another test step";
 	}
 
-	@Override
+	
 	public String toString()
 	{
 		return getDescription();
@@ -187,7 +187,7 @@ public class ChooseAnotherTestCase implements Resolver
 	@SuppressWarnings( "serial" )
 	private class TestSuiteComboRenderer extends DefaultListCellRenderer
 	{
-		@Override
+		
 		public Component getListCellRendererComponent( JList list, Object value, int index, boolean isSelected,
 				boolean cellHasFocus )
 		{
@@ -208,7 +208,7 @@ public class ChooseAnotherTestCase implements Resolver
 	private class TestCaseComboRender extends DefaultListCellRenderer
 	{
 
-		@Override
+		
 		public Component getListCellRendererComponent( JList list, Object value, int index, boolean isSelected,
 				boolean cellHasFocus )
 		{

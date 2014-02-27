@@ -261,14 +261,14 @@ public abstract class BaseHttpResponse implements HttpResponse
 			this.maxSize = maxSize;
 		}
 
-		@Override
+		
 		public synchronized void write( int b )
 		{
 			if( maxSize > 0 && size() < maxSize )
 				super.write( b );
 		}
 
-		@Override
+		
 		public synchronized void write( byte[] b, int off, int len )
 		{
 			if( maxSize > 0 && size() < maxSize )
@@ -280,7 +280,7 @@ public abstract class BaseHttpResponse implements HttpResponse
 			}
 		}
 
-		@Override
+		
 		public void write( byte[] b ) throws IOException
 		{
 			if( maxSize > 0 && size() < maxSize )

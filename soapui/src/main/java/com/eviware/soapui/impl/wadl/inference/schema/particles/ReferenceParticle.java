@@ -116,7 +116,7 @@ public class ReferenceParticle implements Particle
 		context.popPath();
 	}
 
-	@Override
+	
 	public String toString()
 	{
 		StringBuilder s = new StringBuilder( "<" + schema.getPrefixForNamespace( Settings.xsdns ) + ":"

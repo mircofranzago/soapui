@@ -1481,7 +1481,7 @@ public final class XmlUtils
 			// p.parse( new StringInputStream( str ), new HandlerBase()
 			// {
 			//
-			// @Override
+			// 
 			// public InputSource resolveEntity( String arg0, String arg1 ) throws
 			// SAXException
 			// {

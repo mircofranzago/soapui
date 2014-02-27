@@ -129,13 +129,13 @@ public class XPathData
 		return new XPathData( nsMap2, pathComponents2, absolute );
 	}
 
-	@Override
+	
 	public String toString()
 	{
 		return getShortPath();
 	}
 
-	@Override
+	
 	public boolean equals( Object obj )
 	{
 		if( obj == null || obj.getClass() != XPathData.class )
@@ -145,7 +145,7 @@ public class XPathData
 		return this.getHashKey().equals( other.getHashKey() );
 	}
 
-	@Override
+	
 	public int hashCode()
 	{
 		return getHashKey().hashCode();

@@ -243,7 +243,7 @@ public class WsdlMockResponseStepFactory extends WsdlTestStepFactory
 		return true;
 	}
 
-	@Override
+	
 	public boolean canAddTestStepToTestCase( WsdlTestCase testCase )
 	{
 		for( Interface iface : testCase.getTestSuite().getProject().getInterfaceList() )

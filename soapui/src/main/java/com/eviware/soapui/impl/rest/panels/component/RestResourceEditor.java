@@ -80,13 +80,13 @@ public class RestResourceEditor extends JTextField
 			setCursor( Cursor.getPredefinedCursor( Cursor.TEXT_CURSOR ) );
 			mouseListener = new MouseAdapter()
 			{
-				@Override
+				
 				public void mouseClicked( MouseEvent e )
 				{
 					final RestResource focusedResource = new RestResourceFinder( editingRestResource ).findResourceAt( lastSelectedPosition );
 					SwingUtilities.invokeLater( new Runnable()
 					{
-						@Override
+						
 						public void run()
 						{
 							openPopup( focusedResource );
@@ -97,7 +97,7 @@ public class RestResourceEditor extends JTextField
 			addMouseListener( mouseListener );
 			addCaretListener( new CaretListener()
 			{
-				@Override
+				
 				public void caretUpdate( final CaretEvent e )
 				{
 					lastSelectedPosition = e.getDot();
@@ -157,7 +157,7 @@ public class RestResourceEditor extends JTextField
 
 	private class LonelyDocumentListener extends DocumentListenerAdapter
 	{
-		@Override
+		
 		public void update( Document document )
 		{
 			if( updating.booleanValue() )

@@ -68,7 +68,7 @@ public abstract class AbstractWsdlModelItem<T extends ModelItemConfig> extends
 		return icon;
 	}
 
-	@Override
+	
 	public void setIcon( ImageIcon icon )
 	{
 		if( icon == this.icon )

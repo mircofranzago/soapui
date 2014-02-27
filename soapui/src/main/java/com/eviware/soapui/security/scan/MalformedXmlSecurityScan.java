@@ -91,7 +91,7 @@ public class MalformedXmlSecurityScan extends AbstractSecurityScanWithProperties
 		malformedAttributeConfig.setNewAttributeValue( "XXX" );
 	}
 
-	@Override
+	
 	protected void execute( SecurityTestRunner runner, TestStep testStep, SecurityTestRunContext context )
 	{
 		try
@@ -482,31 +482,31 @@ public class MalformedXmlSecurityScan extends AbstractSecurityScanWithProperties
 		return XmlUtils.removeUnneccessaryNamespaces( xml );
 	}
 
-	@Override
+	
 	public String getConfigDescription()
 	{
 		return "Configures Malformed XML Security Scan";
 	}
 
-	@Override
+	
 	public String getConfigName()
 	{
 		return "Malformed XML Security Scan";
 	}
 
-	@Override
+	
 	public String getHelpURL()
 	{
 		return "http://soapui.org/Security/malformed-xml.html";
 	}
 
-	@Override
+	
 	public String getType()
 	{
 		return TYPE;
 	}
 
-	@Override
+	
 	protected boolean hasNext( TestStep testStep, SecurityTestRunContext context )
 	{
 		boolean hasNext = false;
@@ -536,14 +536,14 @@ public class MalformedXmlSecurityScan extends AbstractSecurityScanWithProperties
 		return hasNext;
 	}
 
-	@Override
+	
 	protected void clear()
 	{
 		parameterMutations.clear();
 		mutation = false;
 	}
 
-	@Override
+	
 	public JComponent getAdvancedSettingsPanel()
 	{
 		if( advancedSettingsPanel == null )
@@ -552,7 +552,7 @@ public class MalformedXmlSecurityScan extends AbstractSecurityScanWithProperties
 		return advancedSettingsPanel.getPanel();
 	}
 
-	@Override
+	
 	public void release()
 	{
 		if( advancedSettingsPanel != null )

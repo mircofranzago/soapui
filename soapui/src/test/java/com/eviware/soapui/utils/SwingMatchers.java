@@ -15,13 +15,13 @@ public class SwingMatchers
 	public static Matcher<Component> enabled() {
 		 return new TypeSafeMatcher<Component>()
 		 {
-			 @Override
+			 
 			 public boolean matchesSafely( Component component )
 			 {
 				 return component.isEnabled();
 			 }
 
-			 @Override
+			 
 			 public void describeTo( Description description )
 			 {
 				 description.appendText( "an enabled component");

@@ -30,19 +30,19 @@ public class PathPropertyExternalDependency implements ExternalDependency
 		this.type = type;
 	}
 
-	@Override
+	
 	public String getPath()
 	{
 		return pathProperty.expand();
 	}
 
-	@Override
+	
 	public Type getType()
 	{
 		return type;
 	}
 
-	@Override
+	
 	public void updatePath( String path )
 	{
 		pathProperty.set( path, true );

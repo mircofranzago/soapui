@@ -31,19 +31,19 @@ public class RequestToTestStepsDropHandler extends
 		super( WsdlRequest.class, WsdlTestStepsModelItem.class );
 	}
 
-	@Override
+	
 	boolean canCopyAfter( WsdlRequest source, WsdlTestStepsModelItem target )
 	{
 		return true;
 	}
 
-	@Override
+	
 	boolean canMoveAfter( WsdlRequest source, WsdlTestStepsModelItem target )
 	{
 		return true;
 	}
 
-	@Override
+	
 	boolean copyAfter( WsdlRequest source, WsdlTestStepsModelItem target )
 	{
 		return addRequestToTestCase( source, target );
@@ -73,19 +73,19 @@ public class RequestToTestStepsDropHandler extends
 		return ( ( AddRequestToTestCaseAction )action ).addRequest( target.getTestCase(), source, 0 ) != null;
 	}
 
-	@Override
+	
 	boolean moveAfter( WsdlRequest source, WsdlTestStepsModelItem target )
 	{
 		return addRequestToTestCase( source, target );
 	}
 
-	@Override
+	
 	String getCopyAfterInfo( WsdlRequest source, WsdlTestStepsModelItem target )
 	{
 		return "Add Request [" + source.getName() + "] to TestCase [" + target.getTestCase().getName() + "]";
 	}
 
-	@Override
+	
 	String getMoveAfterInfo( WsdlRequest source, WsdlTestStepsModelItem target )
 	{
 		return getCopyAfterInfo( source, target );

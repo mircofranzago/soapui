@@ -36,13 +36,13 @@ public class NewRestResourceAction extends NewRestResourceActionBase<RestService
 	}
 
 
-	@Override
+	
 	protected List<RestResource> getResourcesFor( RestService item )
 	{
 		return item.getResourceList();
 	}
 
-	@Override
+	
 	protected RestResource addResourceTo( RestService service, String name, String path )
 	{
 		return service.addNewResource( name, path );

@@ -270,7 +270,7 @@ public abstract class AbstractHttpRequest<T extends AbstractRequestConfig> exten
 		getSettings().setBoolean( CommonSettings.ENTITIZE_PROPERTIES, entitizeProperties );
 	}
 
-	@Override
+	
 	public void release()
 	{
 		submitListeners.clear();
@@ -464,7 +464,7 @@ public abstract class AbstractHttpRequest<T extends AbstractRequestConfig> exten
 		notifyPropertyChanged( REQUEST_HEADERS_PROPERTY, old, map );
 	}
 
-	@Override
+	
 	public ImageIcon getIcon()
 	{
 		return iconAnimator == null || UISupport.isHeadless() ? null : iconAnimator.getIcon();
@@ -673,7 +673,7 @@ public abstract class AbstractHttpRequest<T extends AbstractRequestConfig> exten
 		notifyPropertyChanged( FOLLOW_REDIRECTS, old, followRedirects );
 	}
 
-	@Override
+	
 	public void beforeSave()
 	{
 		super.beforeSave();
@@ -740,7 +740,7 @@ public abstract class AbstractHttpRequest<T extends AbstractRequestConfig> exten
 			attachment.resolve( context );
 	}
 
-	@Override
+	
 	public void addExternalDependencies( List<ExternalDependency> dependencies )
 	{
 		super.addExternalDependencies( dependencies );

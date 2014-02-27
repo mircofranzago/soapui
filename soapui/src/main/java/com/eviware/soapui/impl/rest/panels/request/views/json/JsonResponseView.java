@@ -68,7 +68,7 @@ public class JsonResponseView extends AbstractXmlEditorView<HttpResponseDocument
 		return panel;
 	}
 
-	@Override
+	
 	public void release()
 	{
 		super.release();
@@ -151,7 +151,7 @@ public class JsonResponseView extends AbstractXmlEditorView<HttpResponseDocument
 		}
 	}
 
-	@Override
+	
 	public void setXml( String xml )
 	{
 	}

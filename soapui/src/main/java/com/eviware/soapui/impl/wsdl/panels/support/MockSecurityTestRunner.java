@@ -31,13 +31,13 @@ public class MockSecurityTestRunner extends AbstractMockTestRunner<SecurityTest>
 		this.securityTest = modelItem;
 	}
 
-	@Override
+	
 	public SecurityTest getSecurityTest()
 	{
 		return securityTest;
 	}
 
-	@Override
+	
 	public SecurityScanResult runTestStepSecurityScan( SecurityTestRunContext runContext, TestStep testStep,
 			SecurityScan securityCheck )
 	{

@@ -14,7 +14,7 @@ public class SecurityScanNode extends DefaultMutableTreeNode
 		this.securityCheck = sc;
 	}
 
-	@Override
+	
 	public String toString()
 	{
 		return securityCheck.toString();

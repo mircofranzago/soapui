@@ -61,7 +61,7 @@ public class BoundarySecurityScan extends AbstractSecurityScanWithProperties
 		super( testStep, config, parent, icon );
 	}
 
-	@Override
+	
 	public JComponent getComponent()
 	{
 		JPanel panel = UISupport.createEmptyPanel( 5, 75, 0, 5 );
@@ -69,13 +69,13 @@ public class BoundarySecurityScan extends AbstractSecurityScanWithProperties
 		return panel;
 	}
 
-	@Override
+	
 	public String getType()
 	{
 		return TYPE;
 	}
 
-	@Override
+	
 	protected void execute( SecurityTestRunner securityTestRunner, TestStep testStep, SecurityTestRunContext context )
 	{
 		PropertyMutation mutation = popMutation( context );
@@ -314,25 +314,25 @@ public class BoundarySecurityScan extends AbstractSecurityScanWithProperties
 			return true;
 	}
 
-	@Override
+	
 	public boolean isConfigurable()
 	{
 		return true;
 	}
 
-	@Override
+	
 	public String getConfigDescription()
 	{
 		return "Configuration for Boundary Security Scan";
 	}
 
-	@Override
+	
 	public String getConfigName()
 	{
 		return "Configuration for Boundary Security Scan";
 	}
 
-	@Override
+	
 	public String getHelpURL()
 	{
 		return "http://www.soapui.org/Security/boundary-scan.html";

@@ -54,7 +54,7 @@ public class ManualTestStepDesktopPanel extends ModelItemDesktopPanel<ManualTest
 		nameField = new JUndoableTextField( getModelItem().getName() );
 		nameField.getDocument().addDocumentListener( new DocumentListenerAdapter()
 		{
-			@Override
+			
 			public void update( Document document )
 			{
 				getModelItem().setName( nameField.getText() );
@@ -72,7 +72,7 @@ public class ManualTestStepDesktopPanel extends ModelItemDesktopPanel<ManualTest
 
 		SwingUtilities.invokeLater( new Runnable()
 		{
-			@Override
+			
 			public void run()
 			{
 				split.setDividerLocation( 200 );
@@ -106,7 +106,7 @@ public class ManualTestStepDesktopPanel extends ModelItemDesktopPanel<ManualTest
 		descriptionField = new JUndoableTextArea( getModelItem().getDescription() );
 		descriptionField.getDocument().addDocumentListener( new DocumentListenerAdapter()
 		{
-			@Override
+			
 			public void update( Document document )
 			{
 				getModelItem().setDescription( descriptionField.getText() );
@@ -129,7 +129,7 @@ public class ManualTestStepDesktopPanel extends ModelItemDesktopPanel<ManualTest
 		expectedResultField = new JUndoableTextArea( getModelItem().getExpectedResult() );
 		expectedResultField.getDocument().addDocumentListener( new DocumentListenerAdapter()
 		{
-			@Override
+			
 			public void update( Document document )
 			{
 				getModelItem().setExpectedResult( expectedResultField.getText() );
@@ -141,7 +141,7 @@ public class ManualTestStepDesktopPanel extends ModelItemDesktopPanel<ManualTest
 		return panel;
 	}
 
-	@Override
+	
 	public void propertyChange( PropertyChangeEvent evt )
 	{
 		super.propertyChange( evt );

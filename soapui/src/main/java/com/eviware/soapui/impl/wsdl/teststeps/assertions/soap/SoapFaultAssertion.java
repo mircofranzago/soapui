@@ -67,7 +67,7 @@ public class SoapFaultAssertion extends WsdlMessageAssertion implements Response
 		return "Response is a SOAP Fault";
 	}
 
-	@Override
+	
 	protected String internalAssertRequest( MessageExchange messageExchange, SubmitContext context )
 			throws AssertionException
 	{
@@ -87,19 +87,19 @@ public class SoapFaultAssertion extends WsdlMessageAssertion implements Response
 			super( SoapFaultAssertion.ID, SoapFaultAssertion.LABEL, SoapFaultAssertion.class, WsdlRequest.class );
 		}
 
-		@Override
+		
 		public String getCategory()
 		{
 			return AssertionCategoryMapping.STATUS_CATEGORY;
 		}
 
-		@Override
+		
 		public Class<? extends WsdlMessageAssertion> getAssertionClassType()
 		{
 			return SoapFaultAssertion.class;
 		}
 
-		@Override
+		
 		public AssertionListEntry getAssertionListEntry()
 		{
 			return new AssertionListEntry( SoapFaultAssertion.ID, SoapFaultAssertion.LABEL, SoapFaultAssertion.DESCRIPTION );

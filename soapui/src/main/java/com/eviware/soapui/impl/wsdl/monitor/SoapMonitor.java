@@ -395,7 +395,7 @@ public class SoapMonitor extends JPanel
 		requestModelItem = new MessageExchangeModelItem( "monitor message exchange", null )
 		{
 
-			@Override
+			
 			public boolean hasRawData()
 			{
 				return true;
@@ -490,7 +490,7 @@ public class SoapMonitor extends JPanel
 	{
 		int localPort = getLocalPort();
 		listenerCallBack = new SoapMonitorListenerCallBack(){
-			@Override
+			
 			public void fireAddMessageExchange( WsdlMonitorMessageExchange messageExchange )
 			{
 				addMessageExchange( messageExchange );
@@ -931,7 +931,7 @@ public class SoapMonitor extends JPanel
 			return exchanges.get( logTable.convertRowIndexToModel( tableRow ) );
 		}
 
-		@Override
+		
 		public String getColumnName( int column )
 		{
 			switch( column )

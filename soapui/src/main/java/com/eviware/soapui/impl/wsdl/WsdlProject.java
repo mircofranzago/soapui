@@ -499,7 +499,7 @@ public class WsdlProject extends AbstractTestPropertyHolderWsdlModelItem<Project
 		return 1;
 	}
 
-	@Override
+	
 	public void afterLoad()
 	{
 		super.afterLoad();
@@ -551,7 +551,7 @@ public class WsdlProject extends AbstractTestPropertyHolderWsdlModelItem<Project
 		return getConfig().getResourceRoot();
 	}
 
-	@Override
+	
 	public ImageIcon getIcon()
 	{
 		if( isDisabled() )
@@ -583,7 +583,7 @@ public class WsdlProject extends AbstractTestPropertyHolderWsdlModelItem<Project
 		return ix == -1 ? path : path.substring( ix + 1 );
 	}
 
-	@Override
+	
 	public String getDescription()
 	{
 		if( isOpen() )
@@ -1237,7 +1237,7 @@ public class WsdlProject extends AbstractTestPropertyHolderWsdlModelItem<Project
 		return result;
 	}
 
-	@Override
+	
 	public void release()
 	{
 		super.release();
@@ -1575,7 +1575,7 @@ public class WsdlProject extends AbstractTestPropertyHolderWsdlModelItem<Project
 		return wssContainer;
 	}
 
-	@Override
+	
 	public void resolve( ResolveContext<?> context )
 	{
 		super.resolve( context );
@@ -1593,7 +1593,7 @@ public class WsdlProject extends AbstractTestPropertyHolderWsdlModelItem<Project
 
 	}
 
-	@Override
+	
 	protected void addExternalDependencies( List<ExternalDependency> dependencies )
 	{
 		super.addExternalDependencies( dependencies );

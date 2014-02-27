@@ -126,19 +126,19 @@ public class JdbcRequestTestStep extends WsdlTestStepWithProperties implements A
 		TestStepBeanProperty responseProperty = new TestStepBeanProperty( WsdlTestStepWithProperties.RESPONSE_AS_XML,
 				true, this, "responseContent", this )
 		{
-			@Override
+			
 			public String getDefaultValue()
 			{
 				return "</no-response>";
 			}
 
-			@Override
+			
 			public QName getType()
 			{
 				return getSchemaType().getName();
 			}
 
-			@Override
+			
 			public SchemaType getSchemaType()
 			{
 				return XmlAnyTypeImpl.type;
@@ -148,13 +148,13 @@ public class JdbcRequestTestStep extends WsdlTestStepWithProperties implements A
 		propertyHolderSupport.addVirtualProperty( WsdlTestStepWithProperties.RESPONSE_AS_XML, responseProperty );
 	}
 
-	@Override
+	
 	public void addTestPropertyListener( TestPropertyListener listener )
 	{
 		propertyHolderSupport.addTestPropertyListener( listener );
 	}
 
-	@Override
+	
 	public void removeTestPropertyListener( TestPropertyListener listener )
 	{
 		propertyHolderSupport.removeTestPropertyListener( listener );
@@ -165,7 +165,7 @@ public class JdbcRequestTestStep extends WsdlTestStepWithProperties implements A
 		return jdbcRequestTestStepConfig;
 	}
 
-	@Override
+	
 	public void resetConfigOnMove( TestStepConfig config )
 	{
 		super.resetConfigOnMove( config );
@@ -177,7 +177,7 @@ public class JdbcRequestTestStep extends WsdlTestStepWithProperties implements A
 		assertionsSupport.refresh();
 	}
 
-	@Override
+	
 	public WsdlTestStep clone( WsdlTestCase targetTestCase, String name )
 	{
 		beforeSave();
@@ -188,7 +188,7 @@ public class JdbcRequestTestStep extends WsdlTestStepWithProperties implements A
 		return result;
 	}
 
-	@Override
+	
 	public void release()
 	{
 		super.release();
@@ -312,7 +312,7 @@ public class JdbcRequestTestStep extends WsdlTestStepWithProperties implements A
 		return testStepResult;
 	}
 
-	@Override
+	
 	public boolean cancel()
 	{
 		if( submit == null )
@@ -323,7 +323,7 @@ public class JdbcRequestTestStep extends WsdlTestStepWithProperties implements A
 		return true;
 	}
 
-	@Override
+	
 	public String getDefaultSourcePropertyName()
 	{
 		return "Response";
@@ -491,7 +491,7 @@ public class JdbcRequestTestStep extends WsdlTestStepWithProperties implements A
 		return jdbcRequest.getAssertionStatus();
 	}
 
-	@Override
+	
 	public ImageIcon getIcon()
 	{
 		return jdbcRequest.getIcon();
@@ -594,55 +594,55 @@ public class JdbcRequestTestStep extends WsdlTestStepWithProperties implements A
 	//		propertyHolderSupport.addTestPropertyListener( listener );
 	//	}
 
-	@Override
+	
 	public Map<String, TestProperty> getProperties()
 	{
 		return propertyHolderSupport.getProperties();
 	}
 
-	@Override
+	
 	public TestProperty getProperty( String name )
 	{
 		return propertyHolderSupport.getProperty( name );
 	}
 
-	@Override
+	
 	public TestProperty getPropertyAt( int index )
 	{
 		return propertyHolderSupport.getPropertyAt( index );
 	}
 
-	@Override
+	
 	public int getPropertyCount()
 	{
 		return propertyHolderSupport.getPropertyCount();
 	}
 
-	@Override
+	
 	public List<TestProperty> getPropertyList()
 	{
 		return propertyHolderSupport.getPropertyList();
 	}
 
-	@Override
+	
 	public String[] getPropertyNames()
 	{
 		return propertyHolderSupport.getPropertyNames();
 	}
 
-	@Override
+	
 	public String getPropertyValue( String name )
 	{
 		return propertyHolderSupport.getPropertyValue( name );
 	}
 
-	@Override
+	
 	public boolean hasProperty( String name )
 	{
 		return propertyHolderSupport.hasProperty( name );
 	}
 
-	@Override
+	
 	public void setPropertyValue( String name, String value )
 	{
 		propertyHolderSupport.setPropertyValue( name, value );
@@ -653,7 +653,7 @@ public class JdbcRequestTestStep extends WsdlTestStepWithProperties implements A
 		setPropertyValue( name, String.valueOf( value ) );
 	}
 
-	@Override
+	
 	public void moveProperty( String propertyName, int targetIndex )
 	{
 		propertyHolderSupport.moveProperty( propertyName, targetIndex );
@@ -794,7 +794,7 @@ public class JdbcRequestTestStep extends WsdlTestStepWithProperties implements A
 		return this;
 	}
 
-	@Override
+	
 	public void prepare( TestCaseRunner testRunner, TestCaseRunContext testRunContext ) throws Exception
 	{
 		super.prepare( testRunner, testRunContext );

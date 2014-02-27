@@ -95,7 +95,7 @@ public class JTestStepList extends JPanel
 
 		testStepList.addMouseListener( new ModelItemListMouseListener()
 		{
-			@Override
+			
 			public void mouseClicked( MouseEvent e )
 			{
 				int row = testStepList.locationToIndex( e.getPoint() );
@@ -141,7 +141,7 @@ public class JTestStepList extends JPanel
 
 	private final class TestStepListKeyHandler extends ModelItemListKeyListener
 	{
-		@Override
+		
 		public ModelItem getModelItemAt( int ix )
 		{
 			return testCase.getTestStepAt( ix );
@@ -365,7 +365,7 @@ public class JTestStepList extends JPanel
 				}
 			}
 
-			@Override
+			
 			public void testStepMoved( TestStep testStep, int fromIndex, int offset )
 			{
 				if( testStep.getTestCase() == testCase )

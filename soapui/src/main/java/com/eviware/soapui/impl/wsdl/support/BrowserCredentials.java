@@ -38,7 +38,7 @@ public class BrowserCredentials
 			this.password = password;
 		}
 
-		@Override
+		
 		public CloseStatus loginRequested( LoginParams params )
 		{
 			params.setUserName( username );

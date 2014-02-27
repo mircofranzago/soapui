@@ -35,7 +35,7 @@ public final class HyperlinkLabelMouseAdapter extends MouseAdapter
 		this.label = label;
 	}
 
-	@Override
+	
 	public void mouseClicked( MouseEvent e )
 	{
 		String text = label instanceof JLabel ? ( ( JLabel )label ).getText() : ( ( JTextComponent )label ).getText();

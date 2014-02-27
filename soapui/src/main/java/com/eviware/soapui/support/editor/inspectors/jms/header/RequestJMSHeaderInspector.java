@@ -43,7 +43,7 @@ public class RequestJMSHeaderInspector extends AbstractJMSHeaderInspector implem
 		}
 	}
 
-	@Override
+	
 	public void release()
 	{
 		super.release();

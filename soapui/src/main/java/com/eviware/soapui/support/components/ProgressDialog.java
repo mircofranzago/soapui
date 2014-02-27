@@ -81,7 +81,7 @@ public class ProgressDialog extends JDialog implements XProgressDialog, XProgres
 		this.worker = worker;
 		SwingWorkerDelegator swingWorker = new SwingWorkerDelegator( this, this, worker )
 		{
-			@Override
+			
 			public void finished()
 			{
 				super.finished();

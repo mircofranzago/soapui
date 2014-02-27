@@ -42,7 +42,7 @@ public class HttpDownloadAllResourcesAssertion extends WsdlMessageAssertion impl
 		super( assertionConfig, assertable, false, false, false, true );
 	}
 
-	@Override
+	
 	protected String internalAssertResponse( MessageExchange messageExchange, SubmitContext context )
 			throws AssertionException
 	{
@@ -62,14 +62,14 @@ public class HttpDownloadAllResourcesAssertion extends WsdlMessageAssertion impl
 		return "HTTP Download all resources OK";
 	}
 
-	@Override
+	
 	protected String internalAssertProperty( TestPropertyHolder source, String propertyName,
 			MessageExchange messageExchange, SubmitContext context ) throws AssertionException
 	{
 		return "OK";
 	}
 
-	@Override
+	
 	protected String internalAssertRequest( MessageExchange messageExchange, SubmitContext context )
 			throws AssertionException
 	{
@@ -84,20 +84,20 @@ public class HttpDownloadAllResourcesAssertion extends WsdlMessageAssertion impl
 					HttpDownloadAllResourcesAssertion.class, HttpRequest.class );
 		}
 
-		@Override
+		
 		public Class<? extends WsdlMessageAssertion> getAssertionClassType()
 		{
 			return HttpDownloadAllResourcesAssertion.class;
 		}
 
-		@Override
+		
 		public String getCategory()
 		{
 			//TODO change the category when decided where it really goes
 			return AssertionCategoryMapping.STATUS_CATEGORY;
 		}
 
-		@Override
+		
 		public AssertionListEntry getAssertionListEntry()
 		{
 			return new AssertionListEntry( HttpDownloadAllResourcesAssertion.ID, HttpDownloadAllResourcesAssertion.LABEL,

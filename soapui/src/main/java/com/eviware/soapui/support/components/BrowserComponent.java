@@ -160,7 +160,7 @@ public class BrowserComponent implements nsIWebProgressListener, nsIWeakReferenc
 
 	private final class InternalNavigationAdapter extends NavigationAdapter
 	{
-		@Override
+		
 		public void navigationFinished( NavigationFinishedEvent evt )
 		{
 			if( evt.getUrl().equals( SoapUI.PUSH_PAGE_URL ) && !( evt.getStatusCode().equals( NavigationStatusCode.OK ) ) )
@@ -172,7 +172,7 @@ public class BrowserComponent implements nsIWebProgressListener, nsIWeakReferenc
 
 	private final class InternalHttpSecurityHandler implements HttpSecurityHandler
 	{
-		@Override
+		
 		public HttpSecurityAction onSecurityProblem( Set<SecurityProblem> arg0 )
 		{
 			return HttpSecurityAction.CONTINUE;
@@ -824,7 +824,7 @@ public class BrowserComponent implements nsIWebProgressListener, nsIWeakReferenc
 			{
 				proxyConf.setAuthenticationHandler( ServerType.HTTP, new AuthenticationHandler()
 				{
-					@Override
+					
 					public ProxyServerLogin authenticationRequired( ServerType arg0 )
 					{
 						Settings settings = SoapUI.getSettings();

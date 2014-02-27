@@ -107,19 +107,19 @@ public class WSSStatusAssertion extends WsdlMessageAssertion implements Response
 					WsdlRequest.class, WsdlMockResponseTestStep.class } );
 		}
 
-		@Override
+		
 		public String getCategory()
 		{
 			return AssertionCategoryMapping.STATUS_CATEGORY;
 		}
 
-		@Override
+		
 		public Class<? extends WsdlMessageAssertion> getAssertionClassType()
 		{
 			return WSSStatusAssertion.class;
 		}
 
-		@Override
+		
 		public AssertionListEntry getAssertionListEntry()
 		{
 			return new AssertionListEntry( WSSStatusAssertion.ID, WSSStatusAssertion.LABEL, WSSStatusAssertion.DESCRIPTION );

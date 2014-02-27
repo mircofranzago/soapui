@@ -71,7 +71,7 @@ public class InvalidTypesSecurityScan extends AbstractSecurityScanWithProperties
 
 	}
 
-	@Override
+	
 	public void updateSecurityConfig( SecurityScanConfig config )
 	{
 		super.updateSecurityConfig( config );
@@ -105,7 +105,7 @@ public class InvalidTypesSecurityScan extends AbstractSecurityScanWithProperties
 		}
 	}
 
-	@Override
+	
 	public JComponent getAdvancedSettingsPanel()
 	{
 		return new InvalidTypesTable( getInvalidTypeConfig() );
@@ -116,7 +116,7 @@ public class InvalidTypesSecurityScan extends AbstractSecurityScanWithProperties
 	 * 
 	 * @see com.eviware.soapui.security.scan.AbstractSecurityScan#getComponent()
 	 */
-	@Override
+	
 	public JComponent getComponent()
 	{
 		JPanel panel = UISupport.createEmptyPanel( 5, 75, 0, 5 );
@@ -124,19 +124,19 @@ public class InvalidTypesSecurityScan extends AbstractSecurityScanWithProperties
 		return panel;
 	}
 
-	@Override
+	
 	public String getType()
 	{
 		return TYPE;
 	}
 
-	@Override
+	
 	public boolean isConfigurable()
 	{
 		return true;
 	}
 
-	@Override
+	
 	protected void execute( SecurityTestRunner securityTestRunner, TestStep testStep, SecurityTestRunContext context )
 	{
 		try
@@ -345,7 +345,7 @@ public class InvalidTypesSecurityScan extends AbstractSecurityScanWithProperties
 		}
 	}
 
-	@Override
+	
 	protected boolean hasNext( TestStep testStep, SecurityTestRunContext context )
 	{
 		boolean hasNext = false;
@@ -461,25 +461,25 @@ public class InvalidTypesSecurityScan extends AbstractSecurityScanWithProperties
 
 	}
 
-	@Override
+	
 	public String getConfigDescription()
 	{
 		return "Configures invalid type security scan";
 	}
 
-	@Override
+	
 	public String getConfigName()
 	{
 		return "Invalid Types Security Scan";
 	}
 
-	@Override
+	
 	public String getHelpURL()
 	{
 		return "http://soapui.org/Security/invalid-types.html";
 	}
 
-	@Override
+	
 	protected void clear()
 	{
 		parameterMutations.clear();

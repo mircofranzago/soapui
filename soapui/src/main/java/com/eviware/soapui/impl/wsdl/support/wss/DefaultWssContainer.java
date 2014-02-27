@@ -134,7 +134,7 @@ public class DefaultWssContainer implements WssContainer
 		return cryptos.size();
 	}
 
-	@Override
+	
 	public void removeCrypto( WssCrypto crypto )
 	{
 		int index = cryptos.indexOf( crypto );

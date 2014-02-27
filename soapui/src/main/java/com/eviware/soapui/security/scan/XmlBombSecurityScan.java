@@ -143,7 +143,7 @@ public class XmlBombSecurityScan extends AbstractSecurityScanWithProperties
 
 	}
 
-	@Override
+	
 	protected void execute( SecurityTestRunner securityTestRunner, TestStep testStep, SecurityTestRunContext context )
 	{
 		try
@@ -214,13 +214,13 @@ public class XmlBombSecurityScan extends AbstractSecurityScanWithProperties
 
 	}
 
-	@Override
+	
 	public JComponent getAdvancedSettingsPanel()
 	{
 		return new XmlBombSecurityScanConfigPanel( this );
 	}
 
-	@Override
+	
 	public String getType()
 	{
 		return TYPE;
@@ -286,7 +286,7 @@ public class XmlBombSecurityScan extends AbstractSecurityScanWithProperties
 		xmlBombConfig.setXmlAttachmentPrefix( prefix );
 	}
 
-	@Override
+	
 	protected boolean hasNext( TestStep testStep, SecurityTestRunContext context )
 	{
 		boolean hasNext = false;
@@ -323,7 +323,7 @@ public class XmlBombSecurityScan extends AbstractSecurityScanWithProperties
 		return hasNext;
 	}
 
-	@Override
+	
 	protected void clear()
 	{
 		parameterMutations.clear();
@@ -331,19 +331,19 @@ public class XmlBombSecurityScan extends AbstractSecurityScanWithProperties
 		currentIndex = 0;
 	}
 
-	@Override
+	
 	public String getConfigDescription()
 	{
 		return "Configures Xml bomb security scan";
 	}
 
-	@Override
+	
 	public String getConfigName()
 	{
 		return "XML Bomb Security Scan";
 	}
 
-	@Override
+	
 	public String getHelpURL()
 	{
 		return "http://soapui.org/Security/xml-bomb.html";

@@ -74,7 +74,7 @@ public class SAMLAttributeValuesTable extends JPanel
 		setPreferredSize( new Dimension( 175, 150 ) );
 	}
 
-	@Override
+	
 	public void setEnabled( boolean b )
 	{
 		attributeValuesTable.setEnabled( b );
@@ -106,13 +106,13 @@ public class SAMLAttributeValuesTable extends JPanel
 			return attributeValues.size();
 		}
 
-		@Override
+		
 		public boolean isCellEditable( int rowIndex, int columnIndex )
 		{
 			return true;
 		}
 
-		@Override
+		
 		public void setValueAt( Object aValue, int rowIndex, int columnIndex )
 		{
 			StringToStringMap attributeValue = attributeValues.get( rowIndex );

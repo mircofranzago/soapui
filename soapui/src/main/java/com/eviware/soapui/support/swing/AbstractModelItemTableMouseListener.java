@@ -36,7 +36,7 @@ public abstract class AbstractModelItemTableMouseListener extends AbstractTableM
 		super( enablePopup );
 	}
 
-	@Override
+	
 	protected ActionList getActionsForRow( JTable table, int row )
 	{
 		ModelItem item = ( ModelItem )getModelItemAt( row );

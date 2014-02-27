@@ -67,7 +67,7 @@ public class Location
 		return decodedName;
 	}
 
-	@Override
+	
 	public String toString()
 	{
 		return getURLDecodedName();

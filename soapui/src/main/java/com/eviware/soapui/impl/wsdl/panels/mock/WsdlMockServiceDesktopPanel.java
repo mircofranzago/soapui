@@ -241,7 +241,7 @@ public class WsdlMockServiceDesktopPanel extends KeySensitiveModelItemDesktopPan
 		operationList.addKeyListener( new ModelItemListKeyListener()
 		{
 
-			@Override
+			
 			public ModelItem getModelItemAt( int ix )
 			{
 				return getModelItem().getMockOperationAt( ix );
@@ -425,7 +425,7 @@ public class WsdlMockServiceDesktopPanel extends KeySensitiveModelItemDesktopPan
 
 	private final class InternalMockRunListener extends MockRunListenerAdapter
 	{
-		@Override
+		
 		public void onMockRunnerStart( MockRunner runner )
 		{
 			mockRunner = ( WsdlMockRunner )runner;
@@ -442,7 +442,7 @@ public class WsdlMockServiceDesktopPanel extends KeySensitiveModelItemDesktopPan
 			runInfoLabel.setText( "running on port " + getModelItem().getPort() );
 		}
 
-		@Override
+		
 		public void onMockRunnerStop( MockRunner mockRunner )
 		{
 			progressBar.setIndeterminate( false );
@@ -801,7 +801,7 @@ public class WsdlMockServiceDesktopPanel extends KeySensitiveModelItemDesktopPan
 
 	private final class LogListMouseListener extends AbstractListMouseListener
 	{
-		@Override
+		
 		protected ActionList getActionsForRow( JList list, int row )
 		{
 			MockResult result = ( MockResult )logListModel.getElementAt( row );
@@ -827,7 +827,7 @@ public class WsdlMockServiceDesktopPanel extends KeySensitiveModelItemDesktopPan
 			WsdlMockServiceDesktopPanel.this.getModelItem().setStartScript( text );
 		}
 
-		@Override
+		
 		public Action createRunAction()
 		{
 			return new AbstractAction()
@@ -868,7 +868,7 @@ public class WsdlMockServiceDesktopPanel extends KeySensitiveModelItemDesktopPan
 			WsdlMockServiceDesktopPanel.this.getModelItem().setStopScript( text );
 		}
 
-		@Override
+		
 		public Action createRunAction()
 		{
 			return new AbstractAction()
@@ -909,7 +909,7 @@ public class WsdlMockServiceDesktopPanel extends KeySensitiveModelItemDesktopPan
 			WsdlMockServiceDesktopPanel.this.getModelItem().setOnRequestScript( text );
 		}
 
-		@Override
+		
 		public Action createRunAction()
 		{
 			return new AbstractAction()
@@ -950,7 +950,7 @@ public class WsdlMockServiceDesktopPanel extends KeySensitiveModelItemDesktopPan
 			WsdlMockServiceDesktopPanel.this.getModelItem().setAfterRequestScript( text );
 		}
 
-		@Override
+		
 		public Action createRunAction()
 		{
 			return new AbstractAction()
@@ -973,13 +973,13 @@ public class WsdlMockServiceDesktopPanel extends KeySensitiveModelItemDesktopPan
 		}
 	}
 
-	@Override
+	
 	protected void renameModelItem()
 	{
 		SoapUI.getActionRegistry().performAction( "RenameMockServiceAction", getModelItem(), null );
 	}
 
-	@Override
+	
 	protected void cloneModelItem()
 	{
 		SoapUI.getActionRegistry().performAction( "CloneMockServiceAction", getModelItem(), null );

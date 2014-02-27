@@ -422,13 +422,13 @@ public class WsdlLoadTest extends AbstractWsdlModelItem<LoadTestConfig> implemen
 
 	private class InternalTestRunListener extends LoadTestRunListenerAdapter
 	{
-		@Override
+		
 		public void afterLoadTest( LoadTestRunner loadTestRunner, LoadTestRunContext context )
 		{
 			statisticsLogger.finish();
 		}
 
-		@Override
+		
 		public void beforeLoadTest( LoadTestRunner loadTestRunner, LoadTestRunContext context )
 		{
 			statisticsLogger.init( context );
@@ -437,7 +437,7 @@ public class WsdlLoadTest extends AbstractWsdlModelItem<LoadTestConfig> implemen
 				statisticsLogger.start();
 		}
 
-		@Override
+		
 		public void afterTestCase( LoadTestRunner loadTestRunner, LoadTestRunContext context, TestCaseRunner testRunner,
 				TestCaseRunContext runContext )
 		{
@@ -466,7 +466,7 @@ public class WsdlLoadTest extends AbstractWsdlModelItem<LoadTestConfig> implemen
 			}
 		}
 
-		@Override
+		
 		public void afterTestStep( LoadTestRunner loadTestRunner, LoadTestRunContext context, TestCaseRunner testRunner,
 				TestCaseRunContext runContext, TestStepResult result )
 		{
@@ -699,7 +699,7 @@ public class WsdlLoadTest extends AbstractWsdlModelItem<LoadTestConfig> implemen
 	 * Release internal objects so they can remove listeners
 	 */
 
-	@Override
+	
 	public void release()
 	{
 		super.release();

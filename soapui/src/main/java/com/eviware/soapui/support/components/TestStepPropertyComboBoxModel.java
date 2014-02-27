@@ -93,14 +93,14 @@ public class TestStepPropertyComboBoxModel extends AbstractListModel implements 
 
 	private final class InternalTestPropertyListener extends TestPropertyListenerAdapter
 	{
-		@Override
+		
 		public void propertyAdded( String name )
 		{
 			names.add( name );
 			fireIntervalAdded( TestStepPropertyComboBoxModel.this, names.size() - 1, names.size() - 1 );
 		}
 
-		@Override
+		
 		public void propertyRemoved( String name )
 		{
 			int ix = names.indexOf( name );
@@ -114,7 +114,7 @@ public class TestStepPropertyComboBoxModel extends AbstractListModel implements 
 			}
 		}
 
-		@Override
+		
 		public void propertyRenamed( String oldName, String newName )
 		{
 			int ix = names.indexOf( oldName );
@@ -124,7 +124,7 @@ public class TestStepPropertyComboBoxModel extends AbstractListModel implements 
 				setSelectedItem( newName );
 		}
 
-		@Override
+		
 		public void propertyMoved( String name, int oldIndex, int newIndex )
 		{
 			fireContentsChanged( TestStepPropertyComboBoxModel.this, 0, getSize() - 1 );

@@ -27,7 +27,7 @@ import com.eviware.soapui.settings.HttpSettings;
 public class PostPackagingRequestFilter extends AbstractRequestFilter
 {
 
-	@Override
+	
 	public void filterAbstractHttpRequest( SubmitContext context, AbstractHttpRequest<?> request )
 	{
 		ExtendedHttpMethod httpMethod = ( ExtendedHttpMethod )context.getProperty( BaseHttpRequestTransport.HTTP_METHOD );

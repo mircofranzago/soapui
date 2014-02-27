@@ -120,7 +120,7 @@ public class WsdlOperation extends AbstractWsdlModelItem<OperationConfig> implem
 		return requests.size();
 	}
 
-	@Override
+	
 	public ImageIcon getIcon()
 	{
 		if( isOneWay() )
@@ -738,7 +738,7 @@ public class WsdlOperation extends AbstractWsdlModelItem<OperationConfig> implem
 		}
 	}
 
-	@Override
+	
 	public void release()
 	{
 		super.release();
@@ -924,7 +924,7 @@ public class WsdlOperation extends AbstractWsdlModelItem<OperationConfig> implem
 			this.name = name;
 		}
 
-		@Override
+		
 		public javax.wsdl.Part[] getWsdlParts()
 		{
 			try
@@ -939,7 +939,7 @@ public class WsdlOperation extends AbstractWsdlModelItem<OperationConfig> implem
 			return new javax.wsdl.Part[0];
 		}
 
-		@Override
+		
 		public QName getPartElementName()
 		{
 			return null;
@@ -955,13 +955,13 @@ public class WsdlOperation extends AbstractWsdlModelItem<OperationConfig> implem
 			return name;
 		}
 
-		@Override
+		
 		public SchemaType getSchemaType()
 		{
 			return null;
 		}
 
-		@Override
+		
 		public SchemaGlobalElement getPartElement()
 		{
 			return null;

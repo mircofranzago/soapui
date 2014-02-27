@@ -39,13 +39,13 @@ public class XmlBombSecurityScanFactory extends AbstractSecurityScanFactory
 		return testStep instanceof WsdlTestRequestStep;
 	}
 
-	@Override
+	
 	public AbstractSecurityScan buildSecurityScan( TestStep testStep, SecurityScanConfig config, ModelItem parent )
 	{
 		return new XmlBombSecurityScan( testStep, config, parent, "/xml_bomb_scan.gif" );
 	}
 
-	@Override
+	
 	public SecurityScanConfig createNewSecurityScan( String name )
 	{
 		SecurityScanConfig securityCheckConfig = SecurityScanConfig.Factory.newInstance();

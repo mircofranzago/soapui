@@ -69,7 +69,7 @@ public class HttpClientSupport
 			super( conman, null );
 		}
 
-		@Override
+		
 		protected HttpRequestExecutor createRequestExecutor()
 		{
 			return new SoapUIHttpRequestExecutor();
@@ -80,7 +80,7 @@ public class HttpClientSupport
 	public static class SoapUIHttpRequestExecutor extends HttpRequestExecutor
 	{
 
-		@Override
+		
 		public void preProcess( final HttpRequest request, final HttpProcessor processor, final HttpContext context )
 				throws HttpException, IOException
 		{
@@ -101,7 +101,7 @@ public class HttpClientSupport
 			super.preProcess( request, processor, context );
 		}
 
-		@Override
+		
 		protected HttpResponse doSendRequest( HttpRequest request, HttpClientConnection conn, HttpContext context )
 				throws IOException, HttpException
 		{
@@ -109,7 +109,7 @@ public class HttpClientSupport
 			return response;
 		}
 
-		@Override
+		
 		protected HttpResponse doReceiveResponse( final HttpRequest request, final HttpClientConnection conn,
 																final HttpContext context ) throws HttpException, IOException
 		{
@@ -255,7 +255,7 @@ public class HttpClientSupport
 
 		public final class SSLSettingsListener implements SettingsListener
 		{
-			@Override
+			
 			public void settingChanged( String name, String newValue, String oldValue )
 			{
 
@@ -283,7 +283,7 @@ public class HttpClientSupport
 				}
 			}
 
-			@Override
+			
 			public void settingsReloaded()
 			{
 				try

@@ -110,7 +110,7 @@ public class WsdlRunTestCaseTestStep extends WsdlTestStep
 		}
 	}
 
-	@Override
+	
 	public void afterLoad()
 	{
 		setTargetTestCase( findTargetTestCase() );
@@ -302,7 +302,7 @@ public class WsdlRunTestCaseTestStep extends WsdlTestStep
 		return result;
 	}
 
-	@Override
+	
 	public String getLabel()
 	{
 		String name = getName();
@@ -318,7 +318,7 @@ public class WsdlRunTestCaseTestStep extends WsdlTestStep
 			return name;
 	}
 
-	@Override
+	
 	public boolean cancel()
 	{
 		if( testCaseRunner != null )
@@ -481,25 +481,25 @@ public class WsdlRunTestCaseTestStep extends WsdlTestStep
 
 	private final class InternalTestPropertyListener extends TestPropertyListenerAdapter
 	{
-		@Override
+		
 		public void propertyAdded( String name )
 		{
 			propertyHolderSupport.addProperty( name );
 		}
 
-		@Override
+		
 		public void propertyRemoved( String name )
 		{
 			propertyHolderSupport.removeProperty( name );
 		}
 
-		@Override
+		
 		public void propertyRenamed( String oldName, String newName )
 		{
 			propertyHolderSupport.renameProperty( oldName, newName );
 		}
 
-		@Override
+		
 		public void propertyMoved( String name, int oldIndex, int newIndex )
 		{
 			propertyHolderSupport.moveProperty( name, newIndex );
@@ -508,32 +508,32 @@ public class WsdlRunTestCaseTestStep extends WsdlTestStep
 
 	private final class InternalTestRunListener extends TestRunListenerAdapter
 	{
-		@Override
+		
 		public void beforeRun( TestCaseRunner testRunner, TestCaseRunContext runContext )
 		{
 			updateLabelDuringRun();
 		}
 
-		@Override
+		
 		public void afterRun( TestCaseRunner testRunner, TestCaseRunContext runContext )
 		{
 			updateLabelDuringRun();
 		}
 
-		@Override
+		
 		public void afterStep( TestCaseRunner testRunner, TestCaseRunContext runContext, TestStepResult result )
 		{
 			updateLabelDuringRun();
 		}
 
-		@Override
+		
 		public void beforeStep( TestCaseRunner testRunner, TestCaseRunContext runContext, TestStep testStep )
 		{
 			updateLabelDuringRun();
 		}
 	}
 
-	@Override
+	
 	public void resetConfigOnMove( TestStepConfig config )
 	{
 		super.resetConfigOnMove( config );
@@ -542,7 +542,7 @@ public class WsdlRunTestCaseTestStep extends WsdlTestStep
 		propertyHolderSupport.resetPropertiesConfig( stepConfig.getProperties() );
 	}
 
-	@Override
+	
 	public void release()
 	{
 		if( targetTestCase != null )
@@ -556,7 +556,7 @@ public class WsdlRunTestCaseTestStep extends WsdlTestStep
 
 	private final class InternalTestSuiteListener extends TestSuiteListenerAdapter
 	{
-		@Override
+		
 		public void testCaseRemoved( TestCase testCase )
 		{
 			setTargetTestCase( findTargetTestCase() );
@@ -608,7 +608,7 @@ public class WsdlRunTestCaseTestStep extends WsdlTestStep
 		return propertyHolderSupport.getPropertyCount();
 	}
 
-	@Override
+	
 	public void resolve( ResolveContext<?> context )
 	{
 		super.resolve( context );

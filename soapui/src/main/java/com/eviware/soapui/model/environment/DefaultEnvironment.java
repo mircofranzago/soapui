@@ -38,13 +38,13 @@ public class DefaultEnvironment implements Environment
 		return NAME;
 	}
 
-	@Override
+	
 	public boolean equals( Object obj )
 	{
 		return( obj instanceof DefaultEnvironment );
 	}
 
-	@Override
+	
 	public int hashCode()
 	{
 		return getName().hashCode();
@@ -89,7 +89,7 @@ public class DefaultEnvironment implements Environment
 	{
 	}
 
-	@Override
+	
 	public void setName( String name )
 	{
 		// TODO Auto-generated method stub

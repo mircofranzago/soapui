@@ -23,13 +23,13 @@ public class CommonMatchers
 	{
 		return new TypeSafeMatcher<String>()
 		{
-			@Override
+			
 			public boolean matchesSafely( String s )
 			{
 				return s.endsWith( suffix );
 			}
 
-			@Override
+			
 			public void describeTo( Description description )
 			{
 				description.appendText( "a string ending with " + suffix );
@@ -41,13 +41,13 @@ public class CommonMatchers
 	{
 		return new TypeSafeMatcher<String>()
 		{
-			@Override
+			
 			public boolean matchesSafely( String s )
 			{
 				return s.startsWith( prefix );
 			}
 
-			@Override
+			
 			public void describeTo( Description description )
 			{
 				description.appendText( "a string starting with " + prefix );
@@ -59,13 +59,13 @@ public class CommonMatchers
 	{
 		return new TypeSafeMatcher<String>()
 		{
-			@Override
+			
 			public boolean matchesSafely( String s )
 			{
 				return s.isEmpty();
 			}
 
-			@Override
+			
 			public void describeTo( Description description )
 			{
 				description.appendText( "an empty string" );
@@ -77,13 +77,13 @@ public class CommonMatchers
 	{
 		return new TypeSafeMatcher<Object[]>()
 		{
-			@Override
+			
 			public boolean matchesSafely( Object[] objects )
 			{
 				return objects != null && objects.length == 0;
 			}
 
-			@Override
+			
 			public void describeTo( Description description )
 			{
 				description.appendText( "an empty array" );
@@ -95,13 +95,13 @@ public class CommonMatchers
 	{
 		return new TypeSafeMatcher<Collection>()
 		{
-			@Override
+			
 			public boolean matchesSafely( Collection collection )
 			{
 				return collection != null && collection.size() == size;
 			}
 
-			@Override
+			
 			public void describeTo( Description description )
 			{
 				description.appendText( "a collection with " + size + " elements" );
@@ -113,7 +113,7 @@ public class CommonMatchers
 	{
 		return new TypeSafeMatcher<Node>()
 		{
-			@Override
+			
 			public boolean matchesSafely( Node node )
 			{
 				URL schemaURL = CommonMatchers.class.getResource( schemaPath );
@@ -146,7 +146,7 @@ public class CommonMatchers
 				}
 			}
 
-			@Override
+			
 			public void describeTo( Description description )
 			{
 				description.appendText( "an XML node compliant with the XML schema at " + schemaPath );

@@ -113,14 +113,14 @@ public class XPathCellRender extends AbstractCellEditor implements TableCellEdit
 		resizeBtn.addMouseMotionListener( new MouseMotionListener()
 		{
 
-			@Override
+			
 			public void mouseMoved( MouseEvent e )
 			{
 				// TODO Auto-generated method stub
 
 			}
 
-			@Override
+			
 			public void mouseDragged( MouseEvent e )
 			{
 				frame.setSize( frame.getWidth() - mouseX + e.getX(), frame.getHeight() - mouseY + e.getY() );
@@ -156,7 +156,7 @@ public class XPathCellRender extends AbstractCellEditor implements TableCellEdit
 			putValue( Action.SHORT_DESCRIPTION, "Save XPath" );
 		}
 
-		@Override
+		
 		public void actionPerformed( ActionEvent arg0 )
 		{
 			textField.setText( textArea.getText() );
@@ -175,7 +175,7 @@ public class XPathCellRender extends AbstractCellEditor implements TableCellEdit
 			putValue( Action.SHORT_DESCRIPTION, "Cancel Changes" );
 		}
 
-		@Override
+		
 		public void actionPerformed( ActionEvent e )
 		{
 			frame.setVisible( false );
@@ -183,7 +183,7 @@ public class XPathCellRender extends AbstractCellEditor implements TableCellEdit
 
 	}
 
-	@Override
+	
 	public Component getTableCellEditorComponent( JTable table, Object value, boolean isSelected, int row, int column )
 	{
 		String val = ( String )table.getModel().getValueAt( row, column );
@@ -191,13 +191,13 @@ public class XPathCellRender extends AbstractCellEditor implements TableCellEdit
 		return textField;
 	}
 
-	@Override
+	
 	public Object getCellEditorValue()
 	{
 		return textField.getText();
 	}
 
-	@Override
+	
 	public void mouseClicked( MouseEvent e )
 	{
 		if( !frame.isVisible() )
@@ -210,42 +210,42 @@ public class XPathCellRender extends AbstractCellEditor implements TableCellEdit
 		}
 	}
 
-	@Override
+	
 	public void mouseEntered( MouseEvent e )
 	{
 		// TODO Auto-generated method stub
 
 	}
 
-	@Override
+	
 	public void mouseExited( MouseEvent e )
 	{
 		// TODO Auto-generated method stub
 
 	}
 
-	@Override
+	
 	public void mousePressed( MouseEvent e )
 	{
 		// TODO Auto-generated method stub
 
 	}
 
-	@Override
+	
 	public void mouseReleased( MouseEvent e )
 	{
 		// TODO Auto-generated method stub
 
 	}
 
-	@Override
+	
 	public void windowGainedFocus( WindowEvent e )
 	{
 		// TODO Auto-generated method stub
 
 	}
 
-	@Override
+	
 	public void windowLostFocus( WindowEvent e )
 	{
 		frame.setVisible( false );

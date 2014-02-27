@@ -30,19 +30,19 @@ public class TestCaseToProjectDropHandler extends AbstractAfterModelItemDropHand
 		super( WsdlTestCase.class, WsdlProject.class );
 	}
 
-	@Override
+	
 	boolean canCopyAfter( WsdlTestCase source, WsdlProject target )
 	{
 		return true;
 	}
 
-	@Override
+	
 	boolean canMoveAfter( WsdlTestCase source, WsdlProject target )
 	{
 		return true;
 	}
 
-	@Override
+	
 	boolean copyAfter( WsdlTestCase testCase, WsdlProject target )
 	{
 		WsdlTestSuite testSuite = getTargetTestSuite( target, "Copy TestCase" );
@@ -97,7 +97,7 @@ public class TestCaseToProjectDropHandler extends AbstractAfterModelItemDropHand
 			return testSuite;
 	}
 
-	@Override
+	
 	boolean moveAfter( WsdlTestCase testCase, WsdlProject target )
 	{
 		WsdlTestSuite testSuite = getTargetTestSuite( target, "Move TestCase" );
@@ -111,13 +111,13 @@ public class TestCaseToProjectDropHandler extends AbstractAfterModelItemDropHand
 		return testCase != null;
 	}
 
-	@Override
+	
 	String getCopyAfterInfo( WsdlTestCase source, WsdlProject target )
 	{
 		return "Copy TestCase [" + source.getName() + "] to TestSuite in Project [" + target.getName() + "]";
 	}
 
-	@Override
+	
 	String getMoveAfterInfo( WsdlTestCase source, WsdlProject target )
 	{
 		return "Move TestCase [" + source.getName() + "] to TestSuite in Project [" + target.getName() + "]";

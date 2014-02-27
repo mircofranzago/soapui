@@ -41,7 +41,7 @@ public class WsdlMockResponseMessageExchange extends AbstractWsdlMessageExchange
 		return null;
 	}
 
-	@Override
+	
 	public Response getResponse()
 	{
 		return null;
@@ -79,7 +79,7 @@ public class WsdlMockResponseMessageExchange extends AbstractWsdlMessageExchange
 		return getModelItem().getResponseHeaders();
 	}
 
-	@Override
+	
 	public WsdlOperation getOperation()
 	{
 		return getModelItem().getMockOperation().getOperation();
@@ -120,13 +120,13 @@ public class WsdlMockResponseMessageExchange extends AbstractWsdlMessageExchange
 		return getModelItem().getMockResult().getResponseContentType();
 	}
 
-	@Override
+	
 	public boolean hasRawData()
 	{
 		return true;
 	}
 
-	@Override
+	
 	public byte[] getRawResponseData()
 	{
 		return getModelItem().getMockResult().getRawResponseData();

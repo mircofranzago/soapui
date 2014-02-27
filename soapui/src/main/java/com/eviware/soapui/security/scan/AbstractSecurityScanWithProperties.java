@@ -48,7 +48,7 @@ public abstract class AbstractSecurityScanWithProperties extends AbstractSecurit
 		this.parameterHolder = parameterHolder;
 	}
 
-	@Override
+	
 	public void copyConfig( SecurityScanConfig config )
 	{
 		super.copyConfig( config );
@@ -78,7 +78,7 @@ public abstract class AbstractSecurityScanWithProperties extends AbstractSecurit
 		return result.toArray( new XPathReference[result.size()] );
 	}
 
-	@Override
+	
 	public void updateSecurityConfig( SecurityScanConfig config )
 	{
 		super.updateSecurityConfig( config );
@@ -141,7 +141,7 @@ public abstract class AbstractSecurityScanWithProperties extends AbstractSecurit
 		getSecurityScanRequestResult().setMessageExchange( message );
 	}
 
-	@Override
+	
 	public void release()
 	{
 		if( parameterHolder != null )

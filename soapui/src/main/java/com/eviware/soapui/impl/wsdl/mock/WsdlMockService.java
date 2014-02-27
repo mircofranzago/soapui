@@ -273,7 +273,7 @@ public class WsdlMockService extends AbstractTestPropertyHolderWsdlModelItem<Moc
 		return result.toArray( new WsdlInterface[result.size()] );
 	}
 
-	@Override
+	
 	public void release()
 	{
 		super.release();
@@ -390,7 +390,7 @@ public class WsdlMockService extends AbstractTestPropertyHolderWsdlModelItem<Moc
 		}
 	}
 
-	@Override
+	
 	public ImageIcon getIcon()
 	{
 		return iconAnimator.getIcon();
@@ -738,14 +738,14 @@ public class WsdlMockService extends AbstractTestPropertyHolderWsdlModelItem<Moc
 		return docrootProperty.get();
 	}
 
-	@Override
+	
 	public void addExternalDependencies( List<ExternalDependency> dependencies )
 	{
 		super.addExternalDependencies( dependencies );
 		dependencies.add( new MockServiceExternalDependency( docrootProperty ) );
 	}
 
-	@Override
+	
 	public void resolve( ResolveContext<?> context )
 	{
 		super.resolve( context );

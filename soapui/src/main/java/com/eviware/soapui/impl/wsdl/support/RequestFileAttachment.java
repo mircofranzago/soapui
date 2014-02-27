@@ -47,7 +47,7 @@ public class RequestFileAttachment extends FileAttachment<AbstractHttpRequest<?>
 			return AttachmentEncoding.NONE;
 	}
 
-	@Override
+	
 	public AttachmentType getAttachmentType()
 	{
 		if( getModelItem() == null || getPart() == null || getModelItem().getAttachmentPart( getPart() ) == null )
@@ -60,7 +60,7 @@ public class RequestFileAttachment extends FileAttachment<AbstractHttpRequest<?>
 		return getName();
 	}
 
-	@Override
+	
 	public String getId()
 	{
 		return getConfig().getId();

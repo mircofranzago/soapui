@@ -38,7 +38,7 @@ public class SwingXFormDialogBuilder extends XFormDialogBuilder
 		this.name = name;
 	}
 
-	@Override
+	
 	public XForm createForm( String name )
 	{
 		XForm form = new SwingXFormImpl( name );
@@ -47,7 +47,7 @@ public class SwingXFormDialogBuilder extends XFormDialogBuilder
 		return form;
 	}
 
-	@Override
+	
 	public XFormDialog buildDialog( ActionList actions, String description, ImageIcon icon )
 	{
 		XForm[] forms = getForms();
@@ -57,7 +57,7 @@ public class SwingXFormDialogBuilder extends XFormDialogBuilder
 		return dialog;
 	}
 
-	@Override
+	
 	public XFormDialog buildWizard( String description, ImageIcon icon, String helpURL )
 	{
 		Action helpAction = ( helpURL.length() > 0 ? new HelpAction( helpURL ) : null );
@@ -67,7 +67,7 @@ public class SwingXFormDialogBuilder extends XFormDialogBuilder
 		return dialog;
 	}
 
-	@Override
+	
 	public ActionList buildOkCancelActions()
 	{
 		DefaultActionList actions = new DefaultActionList( "Actions" );
@@ -76,7 +76,7 @@ public class SwingXFormDialogBuilder extends XFormDialogBuilder
 		return actions;
 	}
 
-	@Override
+	
 	public ActionList buildOkCancelHelpActions( String url )
 	{
 		DefaultActionList actions = new DefaultActionList( "Actions" );
@@ -88,7 +88,7 @@ public class SwingXFormDialogBuilder extends XFormDialogBuilder
 		return actions;
 	}
 
-	@Override
+	
 	public ActionList buildHelpActions( String url )
 	{
 		DefaultActionList actions = new DefaultActionList( "Actions" );

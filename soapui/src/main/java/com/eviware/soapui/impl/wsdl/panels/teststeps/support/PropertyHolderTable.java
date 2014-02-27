@@ -158,7 +158,7 @@ public class PropertyHolderTable extends JPanel
 			}
 		}
 
-		@Override
+		
 		public void removeEditor()
 		{
 			TableCellEditor editor = getCellEditor();
@@ -181,7 +181,7 @@ public class PropertyHolderTable extends JPanel
 			return defaultRenderer;
 		}
 
-		@Override
+		
 		public boolean getShowVerticalLines()
 		{
 			return !UISupport.isMac();

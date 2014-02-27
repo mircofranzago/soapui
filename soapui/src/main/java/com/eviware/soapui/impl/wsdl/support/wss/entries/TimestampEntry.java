@@ -39,7 +39,7 @@ public class TimestampEntry extends WssEntryBase
 		super.init( config, container, TYPE );
 	}
 
-	@Override
+	
 	protected JComponent buildUI()
 	{
 		SimpleBindingForm form = new SimpleBindingForm( new PresentationModel<TimestampEntry>( this ) );
@@ -50,14 +50,14 @@ public class TimestampEntry extends WssEntryBase
 		return form.getPanel();
 	}
 
-	@Override
+	
 	protected void load( XmlObjectConfigurationReader reader )
 	{
 		timeToLive = reader.readInt( "timeToLive", 0 );
 		strictTimestamp = reader.readBoolean( "strictTimestamp", true );
 	}
 
-	@Override
+	
 	protected void save( XmlObjectConfigurationBuilder builder )
 	{
 		builder.add( "timeToLive", timeToLive );

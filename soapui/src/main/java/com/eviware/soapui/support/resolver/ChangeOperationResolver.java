@@ -69,7 +69,7 @@ public abstract class ChangeOperationResolver implements Resolver
 		return "Resolve: Select another " + operationType;
 	}
 
-	@Override
+	
 	public String toString()
 	{
 		return getDescription();

@@ -62,7 +62,7 @@ public class WssContainerListenerAdapter implements WssContainerListener
 
 	}
 
-	@Override
+	
 	public void outgoingWssEntryMoved( WssEntry entry, int offset )
 	{
 		// TODO Auto-generated method stub

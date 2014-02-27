@@ -177,7 +177,7 @@ public class ProjectSensitiveInformationPanel
 			putValue( Action.SHORT_DESCRIPTION, "Adds a token to assertion" );
 		}
 
-		@Override
+		
 		public void actionPerformed( ActionEvent arg0 )
 		{
 			String newToken = "";
@@ -200,7 +200,7 @@ public class ProjectSensitiveInformationPanel
 			putValue( Action.SHORT_DESCRIPTION, "Removes token from assertion" );
 		}
 
-		@Override
+		
 		public void actionPerformed( ActionEvent arg0 )
 		{
 			sensitiveInformationTableModel.removeRows( tokenTable.getSelectedRows() );

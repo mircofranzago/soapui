@@ -117,7 +117,7 @@ public class JMSPropertyInspector extends AbstractXmlInspector implements Proper
 		return headersTable;
 	}
 
-	@Override
+	
 	public void release()
 	{
 		super.release();
@@ -192,7 +192,7 @@ public class JMSPropertyInspector extends AbstractXmlInspector implements Proper
 		}
 	}
 
-	@Override
+	
 	public boolean isEnabledFor( EditorView<XmlDocument> view )
 	{
 		return !view.getViewId().equals( RawXmlEditorFactory.VIEW_ID );

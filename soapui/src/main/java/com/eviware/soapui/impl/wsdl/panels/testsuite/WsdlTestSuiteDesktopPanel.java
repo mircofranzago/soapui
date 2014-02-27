@@ -402,7 +402,7 @@ public class WsdlTestSuiteDesktopPanel extends KeySensitiveModelItemDesktopPanel
 			WsdlTestSuiteDesktopPanel.this.getModelItem().setSetupScript( text );
 		}
 
-		@Override
+		
 		public Action createRunAction()
 		{
 			return new AbstractAction()
@@ -444,7 +444,7 @@ public class WsdlTestSuiteDesktopPanel extends KeySensitiveModelItemDesktopPanel
 			WsdlTestSuiteDesktopPanel.this.getModelItem().setTearDownScript( text );
 		}
 
-		@Override
+		
 		public Action createRunAction()
 		{
 			return new AbstractAction()
@@ -526,13 +526,13 @@ public class WsdlTestSuiteDesktopPanel extends KeySensitiveModelItemDesktopPanel
 		return testSuiteRunner;
 	}
 
-	@Override
+	
 	protected void renameModelItem()
 	{
 		SoapUI.getActionRegistry().performAction( "RenameTestSuiteAction", getModelItem(), null );
 	}
 
-	@Override
+	
 	protected void cloneModelItem()
 	{
 		SoapUI.getActionRegistry().performAction( "CloneTestSuiteAction", getModelItem(), null );

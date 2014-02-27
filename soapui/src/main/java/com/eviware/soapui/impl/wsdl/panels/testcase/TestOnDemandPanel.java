@@ -303,7 +303,7 @@ public class TestOnDemandPanel extends JPanel
 
 	private class LocationComboBoxAction implements ActionListener
 	{
-		@Override
+		
 		public void actionPerformed( ActionEvent e )
 		{
 			Object selectedItem = locationsComboBox.getSelectedItem();
@@ -390,7 +390,7 @@ public class TestOnDemandPanel extends JPanel
 	// Used to prevent soapUI from halting while waiting for the Test On Demand server to respond
 	private class TestOnDemandCallerThread extends Thread
 	{
-		@Override
+		
 		public void run()
 		{
 			try

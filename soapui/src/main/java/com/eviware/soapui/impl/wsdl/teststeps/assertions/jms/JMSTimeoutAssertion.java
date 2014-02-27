@@ -45,7 +45,7 @@ public class JMSTimeoutAssertion extends WsdlMessageAssertion implements Respons
 		super( assertionConfig, assertable, false, false, false, true );
 	}
 
-	@Override
+	
 	protected String internalAssertResponse( MessageExchange messageExchange, SubmitContext context )
 			throws AssertionException
 	{
@@ -62,7 +62,7 @@ public class JMSTimeoutAssertion extends WsdlMessageAssertion implements Respons
 		return "JMS Timeout OK";
 	}
 
-	@Override
+	
 	protected String internalAssertRequest( MessageExchange messageExchange, SubmitContext context )
 			throws AssertionException
 	{
@@ -82,19 +82,19 @@ public class JMSTimeoutAssertion extends WsdlMessageAssertion implements Respons
 			super( JMSTimeoutAssertion.ID, JMSTimeoutAssertion.LABEL, JMSTimeoutAssertion.class, WsdlRequest.class );
 		}
 
-		@Override
+		
 		public String getCategory()
 		{
 			return AssertionCategoryMapping.JMS_CATEGORY;
 		}
 
-		@Override
+		
 		public Class<? extends WsdlMessageAssertion> getAssertionClassType()
 		{
 			return JMSTimeoutAssertion.class;
 		}
 
-		@Override
+		
 		public AssertionListEntry getAssertionListEntry()
 		{
 			return new AssertionListEntry( JMSTimeoutAssertion.ID, JMSTimeoutAssertion.LABEL,
