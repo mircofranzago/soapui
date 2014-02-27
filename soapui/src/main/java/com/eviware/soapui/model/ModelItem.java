@@ -12,12 +12,11 @@
 
 package com.eviware.soapui.model;
 
-import java.util.List;
-
-import javax.swing.ImageIcon;
-
 import com.eviware.soapui.model.settings.Settings;
 import com.eviware.soapui.support.PropertyChangeNotifier;
+
+import javax.swing.ImageIcon;
+import java.util.List;
 
 /**
  * General behaviour for all soapui model items
@@ -45,4 +44,6 @@ public interface ModelItem extends PropertyChangeNotifier
 	public List<? extends ModelItem> getChildren();
 
 	public ModelItem getParent();
+
+	ModelItem findModelItem( String id );
 }

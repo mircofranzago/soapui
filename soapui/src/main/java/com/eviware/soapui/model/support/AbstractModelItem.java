@@ -12,13 +12,13 @@
 
 package com.eviware.soapui.model.support;
 
+import com.eviware.soapui.SoapUI;
+import com.eviware.soapui.model.ModelItem;
+
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 import java.util.Collections;
 import java.util.List;
-
-import com.eviware.soapui.SoapUI;
-import com.eviware.soapui.model.ModelItem;
 
 /**
  * Base-class for ModelItem implementations
@@ -168,4 +168,27 @@ public abstract class AbstractModelItem implements ModelItem
 		return Collections.EMPTY_LIST;
 	}
 
+	@Override
+	public ModelItem findModelItem( String id )
+	{
+		if (this.getId().equals( id ))
+		{
+			return this;
+		}
+		List<? extends ModelItem> children = getChildren();
+		// Unfortunately, some subclasses return null from getChildren()
+		if (children == null)
+		{
+			return null;
+		}
+		for( ModelItem modelItem : children )
+		{
+			ModelItem foundModelItem = modelItem.findModelItem( id );
+			if( foundModelItem != null )
+			{
+				return foundModelItem;
+			}
+		}
+		return null;
+	}
 }

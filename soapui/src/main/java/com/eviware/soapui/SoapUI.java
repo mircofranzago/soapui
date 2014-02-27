@@ -106,6 +106,7 @@ import com.eviware.soapui.ui.desktop.NullDesktop;
 import com.eviware.soapui.ui.desktop.SoapUIDesktop;
 import com.eviware.soapui.ui.desktop.standalone.StandaloneDesktop;
 import com.eviware.soapui.ui.support.DesktopListenerAdapter;
+import com.eviware.soapui.ui.support.ModelItemDesktopPanel;
 import com.eviware.x.impl.swing.SwingDialogs;
 import com.google.common.base.Objects;
 import com.jgoodies.looks.HeaderStyle;
@@ -191,6 +192,8 @@ public class SoapUI
 	private static final int DEFAULT_DESKTOP_ACTIONS_COUNT = 3;
 	private static final int DEFAULT_MAX_THREADPOOL_SIZE = 200;
 	private static final String BROWSER_DISABLED_SYSTEM_PROPERTY = "soapui.browser.disabled";
+
+	private static final String OPENED_MODEL_ITEMS_SETTING = "OpenedModelItems";
 
 
 	// ------------------------------ FIELDS ------------------------------
@@ -635,7 +638,7 @@ public class SoapUI
 
 	public static boolean isSelectingMostRecentlyUsedDesktopPanelOnClose()
 	{
-		return getSettings().getBoolean(UISettings.MRU_PANEL_SELECTOR, true);
+		return getSettings().getBoolean( UISettings.MRU_PANEL_SELECTOR, true );
 	}
 
 	// -------------------------- OTHER METHODS --------------------------
@@ -881,6 +884,7 @@ public class SoapUI
 		soapUI.show( workspace );
 		new WindowInitializationTask().run();
 		core.afterStartup( workspace );
+		reopenClosedDesktopPanels();
 
 		String[] args2 = cmd.getArgs();
 		if( args2 != null && args2.length > 0 )
@@ -905,7 +909,30 @@ public class SoapUI
 		return soapUI;
 	}
 
-    public static List<Image> getFrameIcons() {
+	private static void reopenClosedDesktopPanels()
+	{
+		String idString = soapUICore.getSettings().getString( OPENED_MODEL_ITEMS_SETTING , null);
+		if (idString != null)
+		{
+			for( String id : idString.split( "\\," ) )
+			{
+				final ModelItem item = workspace.findModelItem(id);
+				if( item != null )
+				{
+					Runnable runnable = new Runnable()
+					{
+						public void run()
+						{
+							desktop.showDesktopPanel( item );
+						}
+					};
+					SwingUtilities.invokeLater( runnable );
+				}
+			}
+		}
+	}
+
+	public static List<Image> getFrameIcons() {
         List<Image> iconList = new ArrayList<Image>();
         for( String iconPath : FRAME_ICON.split( ";" ) )
         {
@@ -1055,6 +1082,7 @@ public class SoapUI
 
 			try
 			{
+				saveOpenedModelItems();
 				soapUICore.saveSettings();
 				SaveStatus saveStatus = workspace.onClose();
 				if( saveStatus == SaveStatus.CANCELLED || saveStatus == SaveStatus.FAILED )
@@ -1079,6 +1107,24 @@ public class SoapUI
 		shutdown();
 
 		return true;
+	}
+
+	private void saveOpenedModelItems()
+	{
+		StringBuilder buf = new StringBuilder(  );
+		for( DesktopPanel desktopPanel : desktop.getDesktopPanels() )
+		{
+			if (desktopPanel instanceof ModelItemDesktopPanel )
+			{
+				ModelItemDesktopPanel panel = (ModelItemDesktopPanel )desktopPanel;
+				if (buf.length() > 0)
+				{
+					buf.append(',');
+				}
+				buf.append(panel.getModelItem().getId());
+			}
+		}
+		soapUICore.getSettings().setString(OPENED_MODEL_ITEMS_SETTING, buf.toString());
 	}
 
 	public static void shutdown()

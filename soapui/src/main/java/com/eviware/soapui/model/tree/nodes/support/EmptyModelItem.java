@@ -12,15 +12,14 @@
 
 package com.eviware.soapui.model.tree.nodes.support;
 
-import java.util.Collections;
-import java.util.List;
-
-import javax.swing.ImageIcon;
-
 import com.eviware.soapui.SoapUI;
 import com.eviware.soapui.model.ModelItem;
 import com.eviware.soapui.model.settings.Settings;
 import com.eviware.soapui.model.support.AbstractModelItem;
+
+import javax.swing.ImageIcon;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * Empty ModelItem used by intermediary TreeNodes
@@ -83,6 +82,12 @@ public class EmptyModelItem extends AbstractModelItem
 	}
 
 	public ModelItem getParent()
+	{
+		return null;
+	}
+
+	@Override
+	public ModelItem findModelItem( String id )
 	{
 		return null;
 	}

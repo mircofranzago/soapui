@@ -12,12 +12,6 @@
 
 package com.eviware.soapui.impl.wsdl.teststeps;
 
-import java.util.List;
-
-import javax.swing.ImageIcon;
-
-import org.apache.xmlbeans.XmlObject;
-
 import com.eviware.soapui.config.AssertionEntryConfig;
 import com.eviware.soapui.config.GroupAssertionListConfig;
 import com.eviware.soapui.config.TestAssertionConfig;
@@ -40,6 +34,10 @@ import com.eviware.soapui.model.testsuite.TestCaseRunContext;
 import com.eviware.soapui.model.testsuite.TestCaseRunner;
 import com.eviware.soapui.support.UISupport;
 import com.eviware.soapui.support.resolver.ResolveContext;
+import org.apache.xmlbeans.XmlObject;
+
+import javax.swing.ImageIcon;
+import java.util.List;
 
 /**
  * Base class for WsdlAssertions
@@ -482,5 +480,11 @@ public abstract class WsdlMessageAssertion extends AbstractModelItem implements 
 
 	public void resolve( ResolveContext<?> context )
 	{
+	}
+
+	@Override
+	public ModelItem findModelItem( String id )
+	{
+		return getId().equals(id) ? this : null;
 	}
 }

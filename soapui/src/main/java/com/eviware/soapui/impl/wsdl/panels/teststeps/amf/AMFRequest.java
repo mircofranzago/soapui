@@ -12,15 +12,6 @@
 
 package com.eviware.soapui.impl.wsdl.panels.teststeps.amf;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
-import javax.swing.ImageIcon;
-
 import com.eviware.soapui.SoapUI;
 import com.eviware.soapui.config.ModelItemConfig;
 import com.eviware.soapui.impl.wsdl.support.ModelItemIconAnimator;
@@ -51,6 +42,14 @@ import com.eviware.soapui.support.scripting.SoapUIScriptEngine;
 import com.eviware.soapui.support.types.StringToObjectMap;
 import com.eviware.soapui.support.types.StringToStringMap;
 import com.eviware.soapui.support.types.StringToStringsMap;
+
+import javax.swing.ImageIcon;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 public class AMFRequest extends AbstractAnimatableModelItem<ModelItemConfig> implements Assertable, TestRequest
 {
@@ -506,6 +505,12 @@ public class AMFRequest extends AbstractAnimatableModelItem<ModelItemConfig> imp
 	public ModelItem getParent()
 	{
 		return testStep.getParent();
+	}
+
+	@Override
+	public ModelItem findModelItem( String id )
+	{
+		return getId().equals(id) ? this : null;
 	}
 
 	public Settings getSettings()

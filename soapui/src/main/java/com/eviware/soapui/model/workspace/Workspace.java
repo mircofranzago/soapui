@@ -60,4 +60,5 @@ public interface Workspace extends ModelItem
 
 	public void inspectProjects();
 
+	ModelItem findModelItem( String id );
 }
