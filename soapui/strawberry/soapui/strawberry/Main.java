@@ -12,11 +12,14 @@ import org.apache.xmlbeans.SchemaParticle;
 import org.apache.xmlbeans.SchemaProperty;
 import org.apache.xmlbeans.SchemaType;
 import org.apache.xmlbeans.XmlAnySimpleType;
+import org.apache.xmlbeans.XmlObject;
 import org.w3c.dom.Document;
 
-import soapui.strawberry.mxgraph.ProtocolAutomaton;
-import soapui.strawberry.mxgraph.ProtocolAutomatonVertex;
+import soapui.strawberry.jgraph.ProtocolAutomaton;
+import soapui.strawberry.jgraph.ProtocolAutomatonVertex;
 
+import com.eviware.soapui.SoapUI;
+import com.eviware.soapui.StandaloneSoapUICore;
 import com.eviware.soapui.impl.WsdlInterfaceFactory;
 import com.eviware.soapui.impl.settings.XmlBeansSettingsImpl;
 import com.eviware.soapui.impl.wsdl.WsdlContentPart;
@@ -26,6 +29,7 @@ import com.eviware.soapui.impl.wsdl.WsdlProject;
 import com.eviware.soapui.impl.wsdl.WsdlRequest;
 import com.eviware.soapui.impl.wsdl.WsdlSubmit;
 import com.eviware.soapui.impl.wsdl.WsdlSubmitContext;
+import com.eviware.soapui.impl.wsdl.panels.operation.WsdlOperationPanelBuilder;
 import com.eviware.soapui.impl.wsdl.support.wsdl.WsdlUtils;
 import com.eviware.soapui.model.iface.MessagePart.ContentPart;
 import com.eviware.soapui.model.iface.MessagePart.PartType;
@@ -38,6 +42,8 @@ public class Main {
 	public static void main(String[] args) {
 
 		try {	
+			SoapUI.setSoapUICore(new StandaloneSoapUICore(true));
+			
 			// create new project
 			WsdlProject wsdlProject = new WsdlProject();
 
@@ -48,23 +54,34 @@ public class Main {
 			
 			//instance pool creation
 			ProtocolAutomatonVertex instancePool = new ProtocolAutomatonVertex();
-			WsdlOperation instancePoolOperation1 = (WsdlOperation) wsdlInterface.getOperationByName("openSession");
+			WsdlOperation instancePoolOperation1 = wsdlInterface.getOperationByName("openSession");
 			
 			String instancePoolString1 = "<username> username </username>";
 			instancePool.addParameter(((ContentPart)instancePoolOperation1.getDefaultRequestParts()[0]).getSchemaType(), 
-										XmlUtils.parseXml(instancePoolString1));
+										XmlUtils.createXmlObject(instancePoolString1));
 			
 			String instancePoolString2 = "<password> password </password>";
 			instancePool.addParameter(((ContentPart)instancePoolOperation1.getDefaultRequestParts()[1]).getSchemaType(), 
-					XmlUtils.parseXml(instancePoolString2));
-			
+					XmlUtils.createXmlObject(instancePoolString2));
+		
 			ProtocolAutomaton protocolAutomaton = new ProtocolAutomaton(instancePool);
 			
 			protocolAutomaton.automatonConstructionBaseStep(wsdlInterface);
 			
+			System.out.println(protocolAutomaton.toString());
 			
+			int i = 0;
+			while (i<=20) {
+				ProtocolAutomatonVertex next = protocolAutomaton.getNextNonVisited();
+				if (next != null) {
+					protocolAutomaton.automatonConstructionStep(wsdlInterface, next);
+					//System.out.println(protocolAutomaton.toString());
+				}
+				i++;
+			}
 			
-			
+			System.out.println("contatore: " + i);
+			System.out.println(protocolAutomaton.toString());
 			
 
 			// get desired operation
@@ -89,7 +106,7 @@ public class Main {
 
 			
 			//SchemaType scddfdsf = aa[0].getType();
-			ArrayList<SchemaType> asas = StawberryUtils.getAllSubTypes(st, new ArrayList<SchemaType>());
+			ArrayList<SchemaType> asas = StrawberryUtils.getAllSubTypes(st, new ArrayList<SchemaType>());
 			
 			//true
 boolean b = ((ContentPart)(operation.getDefaultRequestParts()[0])).getSchemaType().equals(
@@ -166,7 +183,7 @@ boolean b1 = ((ContentPart)(operation.getDefaultRequestParts()[0])).getSchemaTyp
 			WsdlRequest request2 = wsdlInterface.getOperationByName("destroySession").addNewRequest("My request");
 			String string2 = wsdlInterface.getOperationByName("destroySession").createRequest(true); //INPUT2
 
-			String PROVA = StawberryUtils.response2request(null, responseXml , null, string2);
+			String PROVA = StrawberryUtils.response2request(null, responseXml , null, string2);
 			
 
 System.err.println(PROVA);

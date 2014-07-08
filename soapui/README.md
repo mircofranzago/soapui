@@ -1,4 +1,4 @@
-# The SoapUI core module
+# The SoapUI core module -
 
 *This is a submodule of [The SoapUI project](../)*
 
