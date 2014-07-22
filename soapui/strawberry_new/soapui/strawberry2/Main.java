@@ -63,24 +63,24 @@ public class Main {
 			
 			String instancePoolString1 = "<username> username </username>";
 			instancePool.addParameter(((ContentPart)instancePoolOperation1.getDefaultRequestParts()[0]).getSchemaType(), 
-										XmlUtils.createXmlObject(instancePoolString1));
+										XmlUtils.createXmlObject(instancePoolString1), true);
 			
 			String instancePoolString2 = "<password> password </password>";
 			instancePool.addParameter(((ContentPart)instancePoolOperation1.getDefaultRequestParts()[1]).getSchemaType(), 
-					XmlUtils.createXmlObject(instancePoolString2));
+					XmlUtils.createXmlObject(instancePoolString2), true);
 		
 			ProtocolAutomaton protocolAutomaton = new ProtocolAutomaton(instancePool);
 			
 			Stack<ProtocolAutomatonVertex> stack = new Stack<ProtocolAutomatonVertex>();
 			stack.push(protocolAutomaton.getRoot());
 			int i = 0;
-			while (i<=50 || !stack.isEmpty()) {
-				System.out.println(protocolAutomaton.toString());
+			while (i<=50 && !stack.isEmpty()) {
+				//System.out.println(protocolAutomaton.toString());
 				
 				ProtocolAutomatonVertex vertex = stack.peek();
 				OperationAndParameters operation = vertex.getNonTestedOp();
 				if (operation != null) {
-					System.err.println(operation.getOperation().getName());
+					//System.err.println(operation.getOperation().getName());
 					ProtocolAutomatonVertex tempVertex = protocolAutomaton.automatonConstructionStep(vertex, operation);
 						if (tempVertex != null && !tempVertex.equals(vertex)) {
 							stack.push(tempVertex);
@@ -88,12 +88,15 @@ public class Main {
 						}
 				}
 				else {
-					operation = vertex.getResetOperation();
 					if (stack.size() >= 1)
 						stack.pop();
-					protocolAutomaton.automatonResetStep(vertex, operation);
+					for (OperationAndParameters resetOperation : vertex.getResetOperation()) {
+						protocolAutomaton.automatonResetStep(vertex, resetOperation);
+					}
 					if (stack.size() >= 1)
-						protocolAutomaton.restart(stack.peek());					
+						protocolAutomaton.restart(stack.peek());	
+					System.out.println(protocolAutomaton.toString());
+					System.out.println("\n");
 				}
 			}
 			

@@ -33,6 +33,7 @@ public class ProtocolAutomatonVertex {
 		this.parameters = new ArrayList<ParameterEntry>();
 		this.operationAndParameters = new ArrayList<OperationAndParameters>();
 		this.visited = false;
+		this.OpToTest = new ArrayList<OperationAndParametersToTest>();
 	}
 	
 	public ProtocolAutomatonVertex(ProtocolAutomatonVertex old) {
@@ -41,25 +42,27 @@ public class ProtocolAutomatonVertex {
 		this.parameters = new ArrayList<ParameterEntry>(old.getParameters());
 		this.operationAndParameters = new ArrayList<OperationAndParameters>(old.getOperationAndParameters());
 		this.visited = false;
+		this.OpToTest = new ArrayList<OperationAndParametersToTest>();
 	}
 	
 	public ArrayList<ParameterEntry> getParameters() {
 		return parameters;
 	}
 	
-	public void addParameter(SchemaType schemaType, XmlObject value) {
+	public void addParameter(SchemaType schemaType, XmlObject value, boolean newOpToTest) {
 		ParameterEntry newParameter = new ParameterEntry(schemaType, value);
 		if (!this.parameters.contains(newParameter)) {
 			this.parameters.add(newParameter);
+			
+			this.refreshOpToTest(newOpToTest);
 		}
-		
-		this.refreshOpToTest();
 	}
 	
 	//aggiorno lo stato con una lista di tutte le operazioni che è possibile chiamare SINTATTICAMENTE
 	//data la knowledge dello stato stesso
-	public void refreshOpToTest () {	
-		this.OpToTest = new ArrayList<OperationAndParametersToTest>();
+	public void refreshOpToTest (boolean newOpToTest) {
+		if (newOpToTest) 
+			this.OpToTest = new ArrayList<OperationAndParametersToTest>();
 		List<Operation> operations = this.wsdlInterface.getOperationList();
 		for (Operation operation : operations) {
 			WsdlOperation wsdlOperation = wsdlInterface.getOperationByName(operation.getName());
@@ -69,27 +72,38 @@ public class ProtocolAutomatonVertex {
 					Generator<ParameterEntry> matchingParams = Combinatorics.combinParams(this, wsdlOperation);
 					for (ICombinatoricsVector<ParameterEntry> vector : matchingParams) {
 						if (StrawberryUtils.canCallOperation(vector, wsdlOperation)) {
-							this.OpToTest.add(new OperationAndParametersToTest(new OperationAndParameters(wsdlOperation, vector)));
+							OperationAndParametersToTest op = new OperationAndParametersToTest(new OperationAndParameters(wsdlOperation, vector));
+							if (!this.OpToTest.contains(op)) {
+								if (!newOpToTest) {
+									//perchè non vogliamo testare nuovamente operazioni già testate con dati 
+									//dello stesso tipo ma con valore diverso (modificato dall'operazione di reset) 
+									op.tested = true;
+								}
+								this.OpToTest.add(op);
+							}
 						}
 					}
 				}
 				//l'operation non ha parametri in input
 				else {
-					this.OpToTest.add(new OperationAndParametersToTest(new OperationAndParameters(wsdlOperation, null)));
+					OperationAndParametersToTest op = new OperationAndParametersToTest(new OperationAndParameters(wsdlOperation, null));
+					if (!this.OpToTest.contains(op)) 
+						this.OpToTest.add(op);
 				}
 			}
 		}
 	}
 	
-	public OperationAndParameters getResetOperation () {
+	public ArrayList<OperationAndParameters> getResetOperation () {
+		ArrayList<OperationAndParameters> result = new ArrayList<OperationAndParameters>();
 		for (OperationAndParametersToTest opToTest : this.OpToTest) {
 			OperationAndParameters op = opToTest.operationAndParameters;
 			if (op.getOperation().getName().equals("destroySession")) {
 				opToTest.tested = true;
-				return op;
+				result.add(op);
 			}
 		}
-		return null;
+		return result;
 	}
 	
 	public OperationAndParameters getNonTestedOp () {
@@ -187,5 +201,10 @@ class OperationAndParametersToTest {
 		super();
 		this.operationAndParameters = operationAndParameters;
 		this.tested = false;
+	}
+	
+	public boolean equals(Object op) {
+	
+		return this.operationAndParameters.equals(((OperationAndParametersToTest)op).operationAndParameters);
 	}
 }

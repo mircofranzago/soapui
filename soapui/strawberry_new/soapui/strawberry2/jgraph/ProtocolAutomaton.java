@@ -99,11 +99,33 @@ public class ProtocolAutomaton extends AbstractBaseGraph<ProtocolAutomatonVertex
 		//TODO durante l'operazione di 'restart' assumo che la sequenza di operazione la posso rieseguire correttamente
 		//in generale si dovrebbe togliere l'arco se una operazione non va a buon fine quando sarebbe dovuta andarci
 		for (OperationAndParameters op : vertex.getOperationAndParameters()) {
+			OpResponse opResponse;
 			if (op.getParameterEntries() != null) {
-				StrawberryUtils.requestWithInputs(op);
+				opResponse = StrawberryUtils.requestWithInputs(op);
 			}
 			else {
-				StrawberryUtils.requestWithoutInputs(op);
+				opResponse = StrawberryUtils.requestWithoutInputs(op);
+			}
+			
+			//aggiorniamo la knowledge dello stato con evenutuali nuovi dati derivanti dalle nuove chiamate
+			Response response = opResponse.getResponse();
+			WsdlOperation wsdlOperation = op.getOperation();
+			if (response != null && 
+					!StrawberryUtils.isFaultResponse(response, wsdlOperation)) {
+				//TODO assumiamo per ora che sia solo "additivo" (tutte le operazioni arricchiscono la knowledge base
+				MessagePart[] messageParts = wsdlOperation.getDefaultResponseParts();
+				//scorro gli output dell'operazione
+				for (int i = 0; i < messageParts.length; i++) {
+					if (messageParts[i] instanceof ContentPart) {
+						SchemaType schemaType = ((ContentPart) messageParts[i]).getSchemaType();
+						String outputPartName = ((ContentPart) messageParts[i]).getName();
+						XmlObject xmlObject = StrawberryUtils.getNodeFromResponse(response, outputPartName);
+						if (xmlObject != null) {
+							//aggiungo alla knowledge base attuale
+							vertex.addParameter(schemaType, xmlObject, false);
+						}
+					}
+				}
 			}
 		}
 	}
@@ -157,7 +179,7 @@ public class ProtocolAutomaton extends AbstractBaseGraph<ProtocolAutomatonVertex
 						XmlObject xmlObject = StrawberryUtils.getNodeFromResponse(response, outputPartName);
 						if (xmlObject != null) {
 							//aggiungo alla knowledge base attuale
-							targetVertex.addParameter(schemaType, xmlObject);
+							targetVertex.addParameter(schemaType, xmlObject, true);
 							targetVertex.addOperationAndParameters(opResponse.getOperationAndParameters());
 						}
 					}
