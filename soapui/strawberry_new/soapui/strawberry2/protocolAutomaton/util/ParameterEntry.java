@@ -1,17 +1,15 @@
-package soapui.strawberry2.jgraph;
+package soapui.strawberry2.protocolAutomaton.util;
 
 import org.apache.xmlbeans.SchemaType;
 import org.apache.xmlbeans.XmlObject;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
-import soapui.strawberry2.jgraph.ParameterEntry;
-
 import com.eviware.soapui.support.xml.XmlUtils;
 
 public class ParameterEntry {
-	SchemaType schemaType;
-	XmlObject value;
+	public SchemaType schemaType;
+	public XmlObject value;
 	
 	public SchemaType getSchemaType() {
 		return schemaType;

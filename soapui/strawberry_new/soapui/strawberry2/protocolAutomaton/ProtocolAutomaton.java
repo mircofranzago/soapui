@@ -1,4 +1,4 @@
-package soapui.strawberry2.jgraph;
+package soapui.strawberry2.protocolAutomaton;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -14,10 +14,12 @@ import org.paukov.combinatorics.Generator;
 import org.w3c.dom.Node;
 
 import soapui.strawberry2.StrawberryUtils;
-import soapui.strawberry2.jgraph.Combinatorics;
-import soapui.strawberry2.jgraph.ParameterEntry;
-import soapui.strawberry2.jgraph.ProtocolAutomatonEdge;
-import soapui.strawberry2.jgraph.ProtocolAutomatonVertex;
+import soapui.strawberry2.protocolAutomaton.util.Combinatorics;
+import soapui.strawberry2.protocolAutomaton.util.OpResponse;
+import soapui.strawberry2.protocolAutomaton.util.OperationAndParameters;
+import soapui.strawberry2.protocolAutomaton.util.ParameterEntry;
+import soapui.strawberry2.protocolAutomaton.ProtocolAutomatonEdge;
+import soapui.strawberry2.protocolAutomaton.ProtocolAutomatonVertex;
 
 import com.eviware.soapui.model.iface.MessagePart;
 import com.eviware.soapui.model.iface.Operation;
@@ -35,18 +37,21 @@ public class ProtocolAutomaton extends AbstractBaseGraph<ProtocolAutomatonVertex
 	private static final long serialVersionUID = -2801741081358753349L;
 	
 	private ProtocolAutomatonVertex root;
+	private boolean flattening;
 	
 	public ProtocolAutomatonVertex getRoot() {
 		return root;
 	}
 
-	public ProtocolAutomaton(ProtocolAutomatonVertex root) {
+	public ProtocolAutomaton(ProtocolAutomatonVertex root, boolean flattening) {
 		super(new ClassBasedEdgeFactory<ProtocolAutomatonVertex, ProtocolAutomatonEdge>(
 				ProtocolAutomatonEdge.class), true, true);
 		
 		this.root = root;
 		//insert the root node that contains the instance pool
-		this.addVertex(root);		
+		this.addVertex(root);	
+		
+		this.flattening = flattening;
 	}
 	
 //	public void automatonConstructionBaseStep(WsdlInterface wsdlInterface) {
@@ -175,6 +180,9 @@ public class ProtocolAutomaton extends AbstractBaseGraph<ProtocolAutomatonVertex
 				for (int i = 0; i < messageParts.length; i++) {
 					if (messageParts[i] instanceof ContentPart) {
 						SchemaType schemaType = ((ContentPart) messageParts[i]).getSchemaType();
+						
+						ArrayList<SchemaType> prova = StrawberryUtils.getAllSubTypes(schemaType, new ArrayList<SchemaType>());
+						
 						String outputPartName = ((ContentPart) messageParts[i]).getName();
 						XmlObject xmlObject = StrawberryUtils.getNodeFromResponse(response, outputPartName);
 						if (xmlObject != null) {

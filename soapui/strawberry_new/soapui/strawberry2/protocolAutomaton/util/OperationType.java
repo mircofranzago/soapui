@@ -1,4 +1,4 @@
-package soapui.strawberry2.jgraph;
+package soapui.strawberry2.protocolAutomaton.util;
 
 public class OperationType {
 	public enum Type {

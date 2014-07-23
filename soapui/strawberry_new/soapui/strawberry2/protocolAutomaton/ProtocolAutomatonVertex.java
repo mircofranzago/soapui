@@ -1,4 +1,4 @@
-package soapui.strawberry2.jgraph;
+package soapui.strawberry2.protocolAutomaton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,9 +11,11 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
 import soapui.strawberry2.StrawberryUtils;
-import soapui.strawberry2.jgraph.OperationType;
-import soapui.strawberry2.jgraph.ParameterEntry;
-import soapui.strawberry2.jgraph.ProtocolAutomatonVertex;
+import soapui.strawberry2.protocolAutomaton.util.Combinatorics;
+import soapui.strawberry2.protocolAutomaton.util.OperationAndParameters;
+import soapui.strawberry2.protocolAutomaton.util.OperationType;
+import soapui.strawberry2.protocolAutomaton.util.ParameterEntry;
+import soapui.strawberry2.protocolAutomaton.ProtocolAutomatonVertex;
 
 import com.eviware.soapui.impl.wsdl.WsdlInterface;
 import com.eviware.soapui.impl.wsdl.WsdlOperation;

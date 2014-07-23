@@ -19,9 +19,9 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import soapui.strawberry2.StrawberryUtils;
-import soapui.strawberry2.jgraph.OpResponse;
-import soapui.strawberry2.jgraph.OperationAndParameters;
-import soapui.strawberry2.jgraph.ParameterEntry;
+import soapui.strawberry2.protocolAutomaton.util.ParameterEntry;
+import soapui.strawberry2.protocolAutomaton.util.OpResponse;
+import soapui.strawberry2.protocolAutomaton.util.OperationAndParameters;
 
 import com.eviware.soapui.impl.wsdl.WsdlOperation;
 import com.eviware.soapui.impl.wsdl.WsdlRequest;

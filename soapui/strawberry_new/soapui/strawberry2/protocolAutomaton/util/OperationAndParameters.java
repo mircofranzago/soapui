@@ -1,4 +1,4 @@
-package soapui.strawberry2.jgraph;
+package soapui.strawberry2.protocolAutomaton.util;
 
 import java.util.ArrayList;
 import java.util.List;

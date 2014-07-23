@@ -1,4 +1,4 @@
-package soapui.strawberry2.jgraph;
+package soapui.strawberry2.protocolAutomaton.util;
 
 import java.util.ArrayList;
 
@@ -8,8 +8,8 @@ import org.paukov.combinatorics.Generator;
 import org.paukov.combinatorics.ICombinatoricsVector;
 
 import soapui.strawberry2.StrawberryUtils;
-import soapui.strawberry2.jgraph.ParameterEntry;
-import soapui.strawberry2.jgraph.ProtocolAutomatonVertex;
+import soapui.strawberry2.protocolAutomaton.util.ParameterEntry;
+import soapui.strawberry2.protocolAutomaton.ProtocolAutomatonVertex;
 
 import com.eviware.soapui.impl.wsdl.WsdlOperation;
 import com.eviware.soapui.model.iface.Operation;

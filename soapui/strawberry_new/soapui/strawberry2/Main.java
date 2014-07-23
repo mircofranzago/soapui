@@ -18,9 +18,9 @@ import org.apache.xmlbeans.XmlObject;
 import org.w3c.dom.Document;
 
 import soapui.strawberry2.StrawberryUtils;
-import soapui.strawberry2.jgraph.OperationAndParameters;
-import soapui.strawberry2.jgraph.ProtocolAutomaton;
-import soapui.strawberry2.jgraph.ProtocolAutomatonVertex;
+import soapui.strawberry2.protocolAutomaton.ProtocolAutomaton;
+import soapui.strawberry2.protocolAutomaton.ProtocolAutomatonVertex;
+import soapui.strawberry2.protocolAutomaton.util.OperationAndParameters;
 
 import com.eviware.soapui.SoapUI;
 import com.eviware.soapui.StandaloneSoapUICore;
@@ -69,7 +69,8 @@ public class Main {
 			instancePool.addParameter(((ContentPart)instancePoolOperation1.getDefaultRequestParts()[1]).getSchemaType(), 
 					XmlUtils.createXmlObject(instancePoolString2), true);
 		
-			ProtocolAutomaton protocolAutomaton = new ProtocolAutomaton(instancePool);
+			boolean flattening = true;
+			ProtocolAutomaton protocolAutomaton = new ProtocolAutomaton(instancePool, flattening);
 			
 			Stack<ProtocolAutomatonVertex> stack = new Stack<ProtocolAutomatonVertex>();
 			stack.push(protocolAutomaton.getRoot());

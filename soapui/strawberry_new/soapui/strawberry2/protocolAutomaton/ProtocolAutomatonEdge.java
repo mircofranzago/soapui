@@ -1,11 +1,11 @@
-package soapui.strawberry2.jgraph;
+package soapui.strawberry2.protocolAutomaton;
 
 import java.util.ArrayList;
 
 import org.jgrapht.graph.DefaultEdge;
 import org.paukov.combinatorics.ICombinatoricsVector;
 
-import soapui.strawberry2.jgraph.ParameterEntry;
+import soapui.strawberry2.protocolAutomaton.util.ParameterEntry;
 
 import com.eviware.soapui.impl.wsdl.WsdlOperation;
 
