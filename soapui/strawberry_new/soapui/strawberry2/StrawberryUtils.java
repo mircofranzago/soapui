@@ -88,22 +88,6 @@ public class StrawberryUtils {
 	//restituisce il valore del node corrispondente al nome del parametro passato 
 	public static XmlObject getNodeFromResponse (Response response, String outputPartName)  {
 		
-//		String responseXml = response.getContentAsXml();
-//		XmlObject xmlObject;
-//		try {
-//			xmlObject = XmlUtils.createXmlObject(responseXml);
-//			XmlObject[] xmlObjects = xmlObject.selectChildren(new QName(outputPartName));
-//			//assumo che i parametri di ritorno hanno tutti nomi diversi, quindi prendo il primo
-//			//poichè nella lista ce ne sarà solo uno
-//			if (xmlObjects.length > 0) {
-//				return xmlObjects[0];
-//			}
-//			else return null;
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//			return null;
-//		}
-		
 		String responseXml = response.getContentAsXml();
 		Document responseDoc;
 		try {
@@ -117,20 +101,49 @@ public class StrawberryUtils {
 			return null;
 		}
 	}
+	
+	//restituisce i valori dei nodes corrispondenti al nome del parametro passato 
+	public static ArrayList<XmlObject> getNodesFromResponse (Response response, String outputPartName)  {
+		
+		ArrayList<XmlObject> result = new ArrayList<XmlObject>();
+		String responseXml = response.getContentAsXml();
+		Document responseDoc;
+		try {
+			responseDoc = XmlUtils.parseXml(responseXml);
+			NodeList responseNodeList = responseDoc.getElementsByTagName(outputPartName);
 
+			for (int i = 0; i < responseNodeList.getLength(); i++) {
+				result.add(XmlUtils.createXmlObject(responseNodeList.item(i)));
+			}
+			
+			return result;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+
+	public static ArrayList<SchemaProperty> getAllSubSchemaTypes (SchemaType schemaType) {
+		
+		ArrayList<SchemaProperty> schemaProperties = new ArrayList<SchemaProperty>();
+		schemaProperties = getAllSubTypes(schemaType, schemaProperties);
+		return schemaProperties;
+	}
+	
 	// dato uno SchemaType restituise un array con tutti i suoi sub-schematypes
-	public static ArrayList<SchemaType> getAllSubTypes(SchemaType schemaType,
-			ArrayList<SchemaType> schemaSubTypes) {
-		SchemaProperty[] schemaProperties = schemaType.getElementProperties();
-		for (int i = 0; i < schemaProperties.length; i++) {
-			SchemaType st = schemaProperties[i].getType();
-			if (!schemaSubTypes.contains(st)) {
-				schemaSubTypes.add(st);
-				schemaSubTypes = getAllSubTypes(st, schemaSubTypes);
+	private static ArrayList<SchemaProperty> getAllSubTypes(SchemaType schemaType,
+			ArrayList<SchemaProperty> schemaProperties) {
+		
+		SchemaProperty[] properties = schemaType.getElementProperties();
+		for (int i = 0; i < properties.length; i++) {
+			SchemaProperty sp = properties[i];
+			if (!schemaProperties.contains(sp)) {
+				schemaProperties.add(sp);
+				schemaProperties = getAllSubTypes(sp.getType(), schemaProperties);
 			}
 		}
 
-		return schemaSubTypes;
+		return schemaProperties;
 	}
 
 	public static ArrayList<SchemaType> getInputSchemaTypesByOperation(

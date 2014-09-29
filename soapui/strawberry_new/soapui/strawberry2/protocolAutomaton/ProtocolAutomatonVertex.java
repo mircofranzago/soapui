@@ -13,7 +13,6 @@ import org.w3c.dom.Node;
 import soapui.strawberry2.StrawberryUtils;
 import soapui.strawberry2.protocolAutomaton.util.Combinatorics;
 import soapui.strawberry2.protocolAutomaton.util.OperationAndParameters;
-import soapui.strawberry2.protocolAutomaton.util.OperationType;
 import soapui.strawberry2.protocolAutomaton.util.ParameterEntry;
 import soapui.strawberry2.protocolAutomaton.ProtocolAutomatonVertex;
 
@@ -77,7 +76,7 @@ public class ProtocolAutomatonVertex {
 							OperationAndParametersToTest op = new OperationAndParametersToTest(new OperationAndParameters(wsdlOperation, vector));
 							if (!this.OpToTest.contains(op)) {
 								if (!newOpToTest) {
-									//perchè non vogliamo testare nuovamente operazioni già testate con dati 
+									//non vogliamo testare nuovamente operazioni già testate con dati 
 									//dello stesso tipo ma con valore diverso (modificato dall'operazione di reset) 
 									op.tested = true;
 								}
@@ -180,7 +179,7 @@ public class ProtocolAutomatonVertex {
 		stringBuilder.append("< ");
 		for (ParameterEntry paramEntry : parameters) {
 			//stringBuilder.append(paramEntry.schemaType.getName().getLocalPart() + " - ");
-			if (paramEntry.value.xmlText().length() > 50)
+			if (paramEntry.value.xmlText().length() > 70)
 				stringBuilder.append(paramEntry.value.xmlText().substring(0, 70) + " : "+ paramEntry.schemaType.getName().getLocalPart() + " | ");
 			else 
 				stringBuilder.append(paramEntry.value.xmlText() + " : "+ paramEntry.schemaType.getName().getLocalPart() + " | ");

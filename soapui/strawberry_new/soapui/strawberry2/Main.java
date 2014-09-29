@@ -1,5 +1,8 @@
 package soapui.strawberry2;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
@@ -21,6 +24,7 @@ import soapui.strawberry2.StrawberryUtils;
 import soapui.strawberry2.protocolAutomaton.ProtocolAutomaton;
 import soapui.strawberry2.protocolAutomaton.ProtocolAutomatonVertex;
 import soapui.strawberry2.protocolAutomaton.util.OperationAndParameters;
+import soapui.strawberry2.protocolAutomaton.util.OperationSideEffect;
 
 import com.eviware.soapui.SoapUI;
 import com.eviware.soapui.StandaloneSoapUICore;
@@ -46,7 +50,7 @@ public class Main {
 	@SuppressWarnings({ "rawtypes", "unused" })
 	public static void main(String[] args) {
 
-		try {	
+		try {			
 			SoapUI.setSoapUICore(new StandaloneSoapUICore(true));
 			
 			// create new project
@@ -70,6 +74,16 @@ public class Main {
 					XmlUtils.createXmlObject(instancePoolString2), true);
 		
 			boolean flattening = true;
+			
+			ArrayList<OperationSideEffect> operationSideEffects = new ArrayList<OperationSideEffect>();
+			operationSideEffects.add(new OperationSideEffect("destroySession", OperationSideEffect.SideEffect.RESET));
+			operationSideEffects.add(new OperationSideEffect("openSession", OperationSideEffect.SideEffect.ADD));
+			operationSideEffects.add(new OperationSideEffect("getAvailableProducts", OperationSideEffect.SideEffect.ADD));
+			operationSideEffects.add(new OperationSideEffect("emptyShoppingCart", OperationSideEffect.SideEffect.EDIT));
+			operationSideEffects.add(new OperationSideEffect("getShoppingCart", OperationSideEffect.SideEffect.ADD));
+			operationSideEffects.add(new OperationSideEffect("addProductToShoppingCart", OperationSideEffect.SideEffect.EDIT));
+			operationSideEffects.add(new OperationSideEffect("buyProductsInShoppingCart", OperationSideEffect.SideEffect.EDIT));
+			
 			ProtocolAutomaton protocolAutomaton = new ProtocolAutomaton(instancePool, flattening);
 			
 			Stack<ProtocolAutomatonVertex> stack = new Stack<ProtocolAutomatonVertex>();
@@ -96,7 +110,8 @@ public class Main {
 					}
 					if (stack.size() >= 1)
 						protocolAutomaton.restart(stack.peek());	
-					System.out.println(protocolAutomaton.toString());
+					//System.out.println(protocolAutomaton.toString());
+					toFile(protocolAutomaton.toString());
 					System.out.println("\n");
 				}
 			}
@@ -140,7 +155,7 @@ public class Main {
 
 			
 			//SchemaType scddfdsf = aa[0].getType();
-			ArrayList<SchemaType> asas = StrawberryUtils.getAllSubTypes(st, new ArrayList<SchemaType>());
+			//ArrayList<SchemaType> asas = StrawberryUtils.getAllSubTypes(st, new ArrayList<SchemaType>());
 			
 			//true
 boolean b = ((ContentPart)(operation.getDefaultRequestParts()[0])).getSchemaType().equals(
@@ -245,6 +260,32 @@ System.err.println(content2);
 
 		// assertNotNull( content );
 		// assertTrue( content.indexOf( "404 Not Found" ) > 0 );
+	}
+	
+	private static void toFile (String text) {
+		BufferedWriter writer = null;
+		try
+		{
+		    writer = new BufferedWriter( new FileWriter( "C://Users//Public//strawberryconsole.txt"));
+		    writer.write( text);
+
+		}
+		catch ( IOException e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+		    try
+		    {
+		        if ( writer != null)
+		        writer.close( );
+		    }
+		    catch ( IOException e)
+		    {
+		    	e.printStackTrace();
+		    }
+		}
 	}
 
 }

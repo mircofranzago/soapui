@@ -5,6 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
+import org.apache.xmlbeans.SchemaProperty;
 import org.apache.xmlbeans.SchemaType;
 import org.apache.xmlbeans.XmlObject;
 import org.jgrapht.DirectedGraph;
@@ -102,7 +103,7 @@ public class ProtocolAutomaton extends AbstractBaseGraph<ProtocolAutomatonVertex
 	
 	public void restart(ProtocolAutomatonVertex vertex) {
 		//TODO durante l'operazione di 'restart' assumo che la sequenza di operazione la posso rieseguire correttamente
-		//in generale si dovrebbe togliere l'arco se una operazione non va a buon fine quando sarebbe dovuta andarci
+		//in generale si dovrebbe togliere l'arco se una operazione non va a buon fine quando sarebbe dovuta terminare con successo
 		for (OperationAndParameters op : vertex.getOperationAndParameters()) {
 			OpResponse opResponse;
 			if (op.getParameterEntries() != null) {
@@ -128,6 +129,20 @@ public class ProtocolAutomaton extends AbstractBaseGraph<ProtocolAutomatonVertex
 						if (xmlObject != null) {
 							//aggiungo alla knowledge base attuale
 							vertex.addParameter(schemaType, xmlObject, false);
+							
+							if (this.flattening) {
+								ArrayList<SchemaProperty> schemaProperties = StrawberryUtils.getAllSubSchemaTypes(schemaType);
+								for (SchemaProperty schemaProperty : schemaProperties) {
+									SchemaType schemaTypeCurr = schemaProperty.getType();
+									String schemaNameCurr = schemaProperty.getName().getLocalPart();
+									ArrayList<XmlObject> xmlObjects = StrawberryUtils.getNodesFromResponse(response, schemaNameCurr);
+									for (XmlObject xmObjectCurr : xmlObjects) {
+										if (xmObjectCurr != null) {
+											vertex.addParameter(schemaTypeCurr, xmObjectCurr, true);
+										}
+									}
+								}
+							}
 						}
 					}
 				}
@@ -181,14 +196,26 @@ public class ProtocolAutomaton extends AbstractBaseGraph<ProtocolAutomatonVertex
 					if (messageParts[i] instanceof ContentPart) {
 						SchemaType schemaType = ((ContentPart) messageParts[i]).getSchemaType();
 						
-						ArrayList<SchemaType> prova = StrawberryUtils.getAllSubTypes(schemaType, new ArrayList<SchemaType>());
-						
 						String outputPartName = ((ContentPart) messageParts[i]).getName();
 						XmlObject xmlObject = StrawberryUtils.getNodeFromResponse(response, outputPartName);
 						if (xmlObject != null) {
 							//aggiungo alla knowledge base attuale
 							targetVertex.addParameter(schemaType, xmlObject, true);
 							targetVertex.addOperationAndParameters(opResponse.getOperationAndParameters());
+							
+							if (this.flattening) {
+								ArrayList<SchemaProperty> schemaProperties = StrawberryUtils.getAllSubSchemaTypes(schemaType);
+								for (SchemaProperty schemaProperty : schemaProperties) {
+									SchemaType schemaTypeCurr = schemaProperty.getType();
+									String schemaNameCurr = schemaProperty.getName().getLocalPart();
+									ArrayList<XmlObject> xmlObjects = StrawberryUtils.getNodesFromResponse(response, schemaNameCurr);
+									for (XmlObject xmObjectCurr : xmlObjects) {
+										if (xmObjectCurr != null) {
+											targetVertex.addParameter(schemaTypeCurr, xmObjectCurr, true);
+										}
+									}
+								}
+							}
 						}
 					}
 				}
